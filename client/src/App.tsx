@@ -1,37 +1,65 @@
+/*
+ * PreciseHire — App router
+ * Style commitment: Trusted Modernism design system applies globally.
+ * SiteLayout wraps every route with Header/Footer and the cream background.
+ */
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import Home from "./pages/Home";
 
+import SiteLayout from "@/components/site/SiteLayout";
+import Home from "./pages/Home";
+import Services from "./pages/Services";
+import ServiceDetail from "./pages/ServiceDetail";
+import Pricing from "./pages/Pricing";
+import About from "./pages/About";
+import Compliance from "./pages/Compliance";
+import Integrations from "./pages/Integrations";
+import Industries from "./pages/Industries";
+import FAQ from "./pages/FAQ";
+import Contact from "./pages/Contact";
+import Legal from "./pages/Legal";
+import NotFound from "./pages/NotFound";
 
 function Router() {
   return (
-    <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/404"} component={NotFound} />
-      {/* Final fallback route */}
-      <Route component={NotFound} />
-    </Switch>
+    <SiteLayout>
+      <Switch>
+        <Route path="/" component={Home} />
+        <Route path="/services" component={Services} />
+        <Route path="/services/:slug" component={ServiceDetail} />
+        <Route path="/industries" component={Industries} />
+        <Route path="/pricing" component={Pricing} />
+        <Route path="/compliance" component={Compliance} />
+        <Route path="/integrations" component={Integrations} />
+        <Route path="/about" component={About} />
+        <Route path="/faq" component={FAQ} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/legal/:slug" component={Legal} />
+
+        {/* Legacy redirects from old WordPress URLs to new equivalents */}
+        <Route path="/criminal-background-checks">{() => <ServiceDetail />}</Route>
+        <Route path="/employment-verification">{() => <ServiceDetail />}</Route>
+        <Route path="/driving-record-checks-mvr">{() => <ServiceDetail />}</Route>
+        <Route path="/drug-testing">{() => <ServiceDetail />}</Route>
+        <Route path="/education-verification">{() => <ServiceDetail />}</Route>
+        <Route path="/international-background-checks">{() => <ServiceDetail />}</Route>
+
+        <Route path="/404" component={NotFound} />
+        <Route component={NotFound} />
+      </Switch>
+    </SiteLayout>
   );
 }
-
-// NOTE: About Theme
-// - First choose a default theme according to your design style (dark or light bg), than change color palette in index.css
-//   to keep consistent foreground/background color across components
-// - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
 
 function App() {
   return (
     <ErrorBoundary>
-      <ThemeProvider
-        defaultTheme="light"
-        // switchable
-      >
+      <ThemeProvider defaultTheme="light">
         <TooltipProvider>
-          <Toaster />
+          <Toaster richColors position="top-center" />
           <Router />
         </TooltipProvider>
       </ThemeProvider>

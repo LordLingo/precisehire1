@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://precisehire.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://precisehire.com/services</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://precisehire.com/services/criminal-background-checks</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://precisehire.com/services/employment-verification</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://precisehire.com/services/driving-record-checks-mvr</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://precisehire.com/services/drug-testing</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://precisehire.com/services/education-verification</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://precisehire.com/services/international-background-checks</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://precisehire.com/industries</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://precisehire.com/pricing</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://precisehire.com/compliance</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://precisehire.com/integrations</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://precisehire.com/about</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://precisehire.com/faq</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://precisehire.com/contact</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://precisehire.com/legal/privacy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://precisehire.com/legal/terms</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://precisehire.com/legal/accessibility</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+</urlset>
