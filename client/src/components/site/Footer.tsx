@@ -13,12 +13,17 @@ export default function Footer() {
       <div className="container py-16 lg:py-20">
         <div className="grid lg:grid-cols-12 gap-12">
           <div className="lg:col-span-4">
-            <div className="flex items-center gap-2.5">
-              <svg viewBox="0 0 32 32" className="size-7" aria-hidden="true">
-                <path d="M6 17.5 L13 24 L26 9" stroke="#FAF7F2" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-                <circle cx="16" cy="16" r="14" stroke="#B7232A" strokeWidth="2" fill="none" />
-              </svg>
-              <span className="font-display text-2xl font-semibold tracking-tight">
+            <div className="flex items-center gap-3">
+              <span className="inline-flex h-11 w-11 items-center justify-center rounded-md bg-white/95 p-1">
+                <img
+                  src="/manus-storage/precisehire-logo-icon_32dff38e.png"
+                  alt=""
+                  aria-hidden="true"
+                  className="h-full w-auto"
+                  draggable={false}
+                />
+              </span>
+              <span className="font-display text-2xl font-semibold tracking-tight leading-none">
                 Precise<span className="text-[#B7232A]">Hire</span>
               </span>
             </div>
