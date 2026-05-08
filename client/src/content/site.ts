@@ -28,8 +28,8 @@ export const COMPANY = {
   tagline: "Background checks employers actually trust.",
   established: 2003,
   yearsInBusiness: new Date().getFullYear() - 2003,
-  phone: "(800) 555-0144",
-  phoneRaw: "+18005550144",
+  phone: "(866) 773-5486",
+  phoneRaw: "+18667735486",
   email: "hello@precisehire.com",
   address: {
     street: "—",
