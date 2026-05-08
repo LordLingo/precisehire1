@@ -53,14 +53,14 @@ export default function Industries() {
                     <ul className="mt-3 flex flex-wrap gap-2.5">
                       {services.map((s) => (
                         <li key={s.slug}>
-                          <Link href={`/services/${s.slug}`} className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#FFFCF7] border border-[#0B1F3A]/15 text-sm font-medium text-[#0B1F3A] hover:border-[#FF5A4E]/60 hover:text-[#FF5A4E] transition-colors">
+                          <Link href={`/services/${s.slug}`} className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#FFFCF7] border border-[#0B1F3A]/15 text-sm font-medium text-[#0B1F3A] hover:border-[#B7232A]/60 hover:text-[#B7232A] transition-colors">
                             {s.title} <ArrowRight className="size-3.5" />
                           </Link>
                         </li>
                       ))}
                     </ul>
                   </div>
-                  <Link href="/contact" className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-[#0B1F3A] hover:text-[#FF5A4E]">Build a {ind.title.toLowerCase()} package <ArrowRight className="size-4" /></Link>
+                  <Link href="/contact" className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-[#0B1F3A] hover:text-[#B7232A]">Build a {ind.title.toLowerCase()} package <ArrowRight className="size-4" /></Link>
                 </div>
               </article>
             </Reveal>

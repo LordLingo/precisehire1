@@ -72,7 +72,7 @@ export default function Compliance() {
                 "Candidate consent samples",
               ].map((doc) => (
                 <li key={doc} className="flex gap-2.5">
-                  <span className="mt-2 size-1.5 rounded-full bg-[#FF5A4E] shrink-0" />
+                  <span className="mt-2 size-1.5 rounded-full bg-[#B7232A] shrink-0" />
                   <span>{doc}</span>
                 </li>
               ))}

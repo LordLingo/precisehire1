@@ -2,7 +2,7 @@
  * PreciseHire — Trusted Modernism design system
  * Display font: Fraunces (warm humanist serif, 600/700)
  * Body font:    Inter (400/500/600)
- * Brand:        navy #0B1F3A · coral #FF5A4E · sky #7CC4E8 · cream #FAF7F2
+ * Brand:        navy #0B1F3A · deep-red #B7232A · light-gray #E5E7EB · cream #FAF7F2
  * Layout rule:  asymmetric — never the centered card-grid generic pattern
  */
 @import "tailwindcss";
@@ -41,17 +41,17 @@
 
   --color-navy: #0B1F3A;
   --color-navy-700: #16335A;
-  --color-coral: #FF5A4E;
-  --color-coral-600: #E84235;
-  --color-sky: #7CC4E8;
+  --color-coral: #B7232A; /* renamed conceptually to 'red' but token name preserved for backwards compat */
+  --color-coral-600: #8C161C;
+  --color-sky: #E5E7EB;
   --color-cream: #FAF7F2;
   --color-cream-2: #F2EBDF;
   --color-ink: #1A1A1A;
 
   --color-chart-1: #0B1F3A;
   --color-chart-2: #16335A;
-  --color-chart-3: #7CC4E8;
-  --color-chart-4: #FF5A4E;
+  --color-chart-3: #E5E7EB;
+  --color-chart-4: #B7232A;
   --color-chart-5: #E2C9A0;
 }
 
@@ -69,13 +69,13 @@
   --secondary-foreground: oklch(0.22 0.04 260);
   --muted: oklch(0.95 0.012 80);
   --muted-foreground: oklch(0.45 0.02 260);
-  --accent: #FF5A4E;
+  --accent: #B7232A;
   --accent-foreground: #FFFFFF;
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
   --border: oklch(0.9 0.01 80);
   --input: oklch(0.92 0.01 80);
-  --ring: oklch(0.6 0.18 25); /* coral focus ring */
+  --ring: oklch(0.5 0.18 25); /* deep red focus ring */
 }
 
 @layer base {
@@ -108,7 +108,7 @@
     @apply cursor-pointer;
   }
   ::selection {
-    background: #FF5A4E;
+    background: #B7232A;
     color: #FAF7F2;
   }
 }
@@ -135,7 +135,7 @@
     font-weight: 600;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: #FF5A4E;
+    color: #B7232A;
   }
 
   .display-xl {
@@ -162,15 +162,15 @@
 
   /* Soft press effect for primary CTA */
   .btn-coral {
-    background: linear-gradient(180deg, #FF6B5F 0%, #FF5A4E 100%);
+    background: linear-gradient(180deg, #C82A32 0%, #B7232A 100%);
     color: #fff;
-    box-shadow: 0 1px 0 rgba(255,255,255,0.2) inset, 0 8px 18px -8px rgba(232, 66, 53, 0.55);
+    box-shadow: 0 1px 0 rgba(255,255,255,0.18) inset, 0 8px 18px -8px rgba(140, 22, 28, 0.55);
     transition: transform 200ms ease, box-shadow 200ms ease, filter 200ms ease;
   }
   .btn-coral:hover {
     transform: translateY(-1px);
-    filter: brightness(1.04);
-    box-shadow: 0 1px 0 rgba(255,255,255,0.25) inset, 0 12px 22px -10px rgba(232, 66, 53, 0.7);
+    filter: brightness(1.06);
+    box-shadow: 0 1px 0 rgba(255,255,255,0.22) inset, 0 12px 22px -10px rgba(140, 22, 28, 0.7);
   }
   .btn-coral:active { transform: translateY(0); filter: brightness(0.97); }
 

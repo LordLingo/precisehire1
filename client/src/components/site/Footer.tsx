@@ -16,10 +16,10 @@ export default function Footer() {
             <div className="flex items-center gap-2.5">
               <svg viewBox="0 0 32 32" className="size-7" aria-hidden="true">
                 <path d="M6 17.5 L13 24 L26 9" stroke="#FAF7F2" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-                <circle cx="16" cy="16" r="14" stroke="#FF5A4E" strokeWidth="2" fill="none" />
+                <circle cx="16" cy="16" r="14" stroke="#B7232A" strokeWidth="2" fill="none" />
               </svg>
               <span className="font-display text-2xl font-semibold tracking-tight">
-                Precise<span className="text-[#FF5A4E]">Hire</span>
+                Precise<span className="text-[#B7232A]">Hire</span>
               </span>
             </div>
             <p className="mt-5 max-w-sm text-[15px] leading-relaxed text-white/70">
@@ -28,13 +28,13 @@ export default function Footer() {
             </p>
             <div className="mt-6 grid gap-2 text-sm text-white/75">
               <a href={`tel:${COMPANY.phoneRaw}`} className="inline-flex items-center gap-2 hover:text-white">
-                <Phone className="size-4 text-[#FF5A4E]" /> {COMPANY.phone}
+                <Phone className="size-4 text-[#B7232A]" /> {COMPANY.phone}
               </a>
               <a href={`mailto:${COMPANY.email}`} className="inline-flex items-center gap-2 hover:text-white">
-                <Mail className="size-4 text-[#FF5A4E]" /> {COMPANY.email}
+                <Mail className="size-4 text-[#B7232A]" /> {COMPANY.email}
               </a>
               <span className="inline-flex items-center gap-2">
-                <MapPin className="size-4 text-[#FF5A4E]" /> United States
+                <MapPin className="size-4 text-[#B7232A]" /> United States
               </span>
             </div>
           </div>
@@ -42,7 +42,7 @@ export default function Footer() {
           <div className="lg:col-span-8 grid sm:grid-cols-3 gap-10">
             {FOOTER_NAV.map((col) => (
               <div key={col.title}>
-                <h4 className="text-xs font-semibold uppercase tracking-[0.18em] text-[#FF5A4E]">{col.title}</h4>
+                <h4 className="text-xs font-semibold uppercase tracking-[0.18em] text-[#B7232A]">{col.title}</h4>
                 <ul className="mt-5 space-y-3">
                   {col.links.map((link) => (
                     <li key={link.href}>

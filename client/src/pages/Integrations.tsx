@@ -64,7 +64,7 @@ export default function Integrations() {
         <Reveal>
           <div className="grid lg:grid-cols-12 gap-8 items-center rounded-[28px] bg-[#0B1F3A] text-white px-8 lg:px-14 py-14">
             <div className="lg:col-span-8">
-              <span className="eyebrow text-[#FF8077]">Need something custom?</span>
+              <span className="eyebrow text-[#E26C72]">Need something custom?</span>
               <h2 className="display-md mt-3">A documented REST API and webhooks.</h2>
               <p className="mt-3 text-white/70 max-w-xl">
                 Build your own flow on top of our platform. Order checks, listen for

@@ -44,8 +44,8 @@ export default function Contact() {
                 business day with a recommended package and pricing.
               </p>
               <div className="mt-8 grid gap-3 text-[#0B1F3A]/85">
-                <a href={`tel:${COMPANY.phoneRaw}`} className="inline-flex items-center gap-3 hover:text-[#FF5A4E]"><Phone className="size-4 text-[#FF5A4E]" /> {COMPANY.phone}</a>
-                <a href={`mailto:${COMPANY.email}`} className="inline-flex items-center gap-3 hover:text-[#FF5A4E]"><Mail className="size-4 text-[#FF5A4E]" /> {COMPANY.email}</a>
+                <a href={`tel:${COMPANY.phoneRaw}`} className="inline-flex items-center gap-3 hover:text-[#B7232A]"><Phone className="size-4 text-[#B7232A]" /> {COMPANY.phone}</a>
+                <a href={`mailto:${COMPANY.email}`} className="inline-flex items-center gap-3 hover:text-[#B7232A]"><Mail className="size-4 text-[#B7232A]" /> {COMPANY.email}</a>
               </div>
               <div className="mt-8 p-5 rounded-2xl bg-[#FFFCF7] border border-[#0B1F3A]/10 text-sm text-[#0B1F3A]/75">
                 <p><strong className="text-[#0B1F3A]">Hours:</strong> Mon–Fri, 7am–7pm CT</p>
@@ -83,11 +83,11 @@ export default function Contact() {
 function Field({ name, label, type = "text", textarea, required }: { name: string; label: string; type?: string; textarea?: boolean; required?: boolean }) {
   return (
     <label className="block">
-      <span className="text-sm font-medium text-[#0B1F3A]/85">{label}{required && <span className="text-[#FF5A4E]"> *</span>}</span>
+      <span className="text-sm font-medium text-[#0B1F3A]/85">{label}{required && <span className="text-[#B7232A]"> *</span>}</span>
       {textarea ? (
-        <textarea name={name} required={required} rows={4} className="mt-2 w-full rounded-xl border border-[#0B1F3A]/15 bg-white px-4 py-3 text-[15px] text-[#0B1F3A] placeholder:text-[#0B1F3A]/40 focus:outline-none focus:border-[#FF5A4E] focus:ring-2 focus:ring-[#FF5A4E]/20" />
+        <textarea name={name} required={required} rows={4} className="mt-2 w-full rounded-xl border border-[#0B1F3A]/15 bg-white px-4 py-3 text-[15px] text-[#0B1F3A] placeholder:text-[#0B1F3A]/40 focus:outline-none focus:border-[#B7232A] focus:ring-2 focus:ring-[#B7232A]/20" />
       ) : (
-        <input name={name} type={type} required={required} className="mt-2 w-full rounded-xl border border-[#0B1F3A]/15 bg-white px-4 py-3 text-[15px] text-[#0B1F3A] placeholder:text-[#0B1F3A]/40 focus:outline-none focus:border-[#FF5A4E] focus:ring-2 focus:ring-[#FF5A4E]/20" />
+        <input name={name} type={type} required={required} className="mt-2 w-full rounded-xl border border-[#0B1F3A]/15 bg-white px-4 py-3 text-[15px] text-[#0B1F3A] placeholder:text-[#0B1F3A]/40 focus:outline-none focus:border-[#B7232A] focus:ring-2 focus:ring-[#B7232A]/20" />
       )}
     </label>
   );
@@ -96,8 +96,8 @@ function Field({ name, label, type = "text", textarea, required }: { name: strin
 function SelectField({ name, label, options, required }: { name: string; label: string; options: string[]; required?: boolean }) {
   return (
     <label className="block">
-      <span className="text-sm font-medium text-[#0B1F3A]/85">{label}{required && <span className="text-[#FF5A4E]"> *</span>}</span>
-      <select name={name} required={required} defaultValue="" className="mt-2 w-full rounded-xl border border-[#0B1F3A]/15 bg-white px-4 py-3 text-[15px] text-[#0B1F3A] focus:outline-none focus:border-[#FF5A4E] focus:ring-2 focus:ring-[#FF5A4E]/20">
+      <span className="text-sm font-medium text-[#0B1F3A]/85">{label}{required && <span className="text-[#B7232A]"> *</span>}</span>
+      <select name={name} required={required} defaultValue="" className="mt-2 w-full rounded-xl border border-[#0B1F3A]/15 bg-white px-4 py-3 text-[15px] text-[#0B1F3A] focus:outline-none focus:border-[#B7232A] focus:ring-2 focus:ring-[#B7232A]/20">
         <option value="" disabled>Select…</option>
         {options.map((o) => <option key={o} value={o}>{o}</option>)}
       </select>

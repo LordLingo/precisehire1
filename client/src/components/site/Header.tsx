@@ -12,14 +12,14 @@ function Logo() {
   return (
     <Link href="/" aria-label="Precise Hire — home" className="flex items-center gap-2.5 group">
       <span className="relative inline-flex size-8 items-center justify-center">
-        <span className="absolute inset-0 rounded-full bg-[#FF5A4E]/15 group-hover:bg-[#FF5A4E]/25 transition-colors" />
+        <span className="absolute inset-0 rounded-full bg-[#B7232A]/15 group-hover:bg-[#B7232A]/25 transition-colors" />
         <svg viewBox="0 0 32 32" className="relative size-7" aria-hidden="true">
           <path d="M6 17.5 L13 24 L26 9" stroke="#0B1F3A" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-          <circle cx="16" cy="16" r="14" stroke="#FF5A4E" strokeWidth="2" fill="none" />
+          <circle cx="16" cy="16" r="14" stroke="#B7232A" strokeWidth="2" fill="none" />
         </svg>
       </span>
       <span className="font-display text-[1.35rem] font-semibold text-[#0B1F3A] tracking-tight">
-        Precise<span className="text-[#FF5A4E]">Hire</span>
+        Precise<span className="text-[#B7232A]">Hire</span>
       </span>
     </Link>
   );

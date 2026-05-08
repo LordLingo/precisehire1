@@ -48,18 +48,18 @@ export default function Services() {
                     </div>
                   </div>
                   <div className="lg:col-span-6">
-                    <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[#FF5A4E]">{svc.eyebrow}</span>
+                    <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[#B7232A]">{svc.eyebrow}</span>
                     <h2 className="display-md mt-3 text-[#0B1F3A]">{svc.title}</h2>
                     <p className="mt-4 text-[#0B1F3A]/75 text-[17px] leading-relaxed">{svc.intro}</p>
                     <ul className="mt-6 grid sm:grid-cols-2 gap-x-6 gap-y-2.5">
                       {svc.bullets.slice(0, 4).map((b) => (
                         <li key={b} className="flex gap-2.5 text-[15px] text-[#0B1F3A]/80">
-                          <span className="mt-2 inline-block size-1.5 rounded-full bg-[#FF5A4E] shrink-0" />
+                          <span className="mt-2 inline-block size-1.5 rounded-full bg-[#B7232A] shrink-0" />
                           <span>{b}</span>
                         </li>
                       ))}
                     </ul>
-                    <Link href={`/services/${svc.slug}`} className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-[#0B1F3A] hover:text-[#FF5A4E] transition-colors">
+                    <Link href={`/services/${svc.slug}`} className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-[#0B1F3A] hover:text-[#B7232A] transition-colors">
                       See how it works <ArrowRight className="size-4" />
                     </Link>
                   </div>

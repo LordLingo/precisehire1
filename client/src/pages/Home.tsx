@@ -64,7 +64,7 @@ export default function Home() {
           <div className="lg:col-span-7">
             <Reveal>
               <span className="eyebrow inline-flex items-center gap-2">
-                <span className="size-1.5 rounded-full bg-[#FF5A4E]" />
+                <span className="size-1.5 rounded-full bg-[#B7232A]" />
                 Trusted by employers since 2003
               </span>
             </Reveal>
@@ -74,7 +74,7 @@ export default function Home() {
                 <span className="relative inline-block">
                   <span className="relative z-10">Hire</span>
                   <svg viewBox="0 0 200 16" className="absolute left-0 right-0 -bottom-2 w-full h-3 z-0" aria-hidden="true">
-                    <path d="M2 10 C 50 2, 150 18, 198 6" stroke="#FF5A4E" strokeWidth="6" strokeLinecap="round" fill="none" />
+                    <path d="M2 10 C 50 2, 150 18, 198 6" stroke="#B7232A" strokeWidth="6" strokeLinecap="round" fill="none" />
                   </svg>
                 </span>{" "}
                 with <span className="italic text-[#0B1F3A]/95">certainty.</span>
@@ -194,10 +194,10 @@ export default function Home() {
                   <img src={svc.hero} alt={svc.title} className="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-[1.04]" loading="lazy" />
                 </div>
                 <div className="p-6">
-                  <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[#FF5A4E]">{svc.eyebrow}</span>
+                  <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[#B7232A]">{svc.eyebrow}</span>
                   <h3 className="mt-2 font-display text-[1.4rem] font-semibold text-[#0B1F3A] leading-snug">{svc.title}</h3>
                   <p className="mt-3 text-[15px] text-[#0B1F3A]/65 leading-relaxed line-clamp-3">{svc.intro}</p>
-                  <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#0B1F3A] group-hover:text-[#FF5A4E] transition-colors">
+                  <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#0B1F3A] group-hover:text-[#B7232A] transition-colors">
                     Learn more <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
                   </span>
                 </div>
@@ -280,7 +280,7 @@ export default function Home() {
               >
                 <h3 className="font-display text-xl font-semibold text-[#0B1F3A]">{ind.title}</h3>
                 <p className="mt-3 text-[15px] text-[#0B1F3A]/70 leading-relaxed">{ind.blurb}</p>
-                <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#0B1F3A] group-hover:text-[#FF5A4E] transition-colors">
+                <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#0B1F3A] group-hover:text-[#B7232A] transition-colors">
                   See the package <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
                 </span>
               </Link>
@@ -305,7 +305,7 @@ export default function Home() {
               <blockquote className="mt-5 font-display text-2xl lg:text-[2rem] leading-snug text-[#0B1F3A]">
                 "We moved off a legacy provider that took two days for a basic county
                 check. With Precise Hire, our recruiters open the dashboard in the
-                morning and most reports are <em className="not-italic underline decoration-[#FF5A4E] decoration-4 underline-offset-4">already cleared</em>.
+                morning and most reports are <em className="not-italic underline decoration-[#B7232A] decoration-4 underline-offset-4">already cleared</em>.
                 It changed our time-to-hire by a full week."
               </blockquote>
               <div className="mt-6 flex items-center gap-3">
@@ -362,7 +362,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-r from-[#0B1F3A]/95 via-[#0B1F3A]/80 to-[#0B1F3A]/40" />
             <div className="relative grid lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-8">
-                <span className="eyebrow text-[#FF8077]">Ready when you are</span>
+                <span className="eyebrow text-[#E26C72]">Ready when you are</span>
                 <h2 className="display-lg mt-3">Make your next hire your most confident one.</h2>
                 <p className="mt-4 text-white/75 max-w-xl">
                   Most teams are up and running the same day they sign. No setup fees,

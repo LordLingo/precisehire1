@@ -152,10 +152,10 @@ export default function ServiceDetail() {
                     <img src={r.hero} alt={r.title} className="absolute inset-0 size-full object-cover" loading="lazy" />
                   </div>
                   <div className="col-span-3 p-6">
-                    <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[#FF5A4E]">{r.eyebrow}</span>
+                    <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[#B7232A]">{r.eyebrow}</span>
                     <h3 className="mt-2 font-display text-xl font-semibold text-[#0B1F3A]">{r.title}</h3>
                     <p className="mt-2 text-sm text-[#0B1F3A]/65 line-clamp-3">{r.intro}</p>
-                    <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#0B1F3A] group-hover:text-[#FF5A4E] transition-colors">
+                    <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#0B1F3A] group-hover:text-[#B7232A] transition-colors">
                       Learn more <ArrowRight className="size-4" />
                     </span>
                   </div>

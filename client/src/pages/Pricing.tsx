@@ -63,7 +63,7 @@ export default function Pricing() {
                   ].join(" ")}
                 >
                   {featured && (
-                    <span className="absolute -top-3 left-8 inline-flex items-center px-3 py-1 rounded-full bg-[#FF5A4E] text-white text-xs font-semibold uppercase tracking-[0.14em]">
+                    <span className="absolute -top-3 left-8 inline-flex items-center px-3 py-1 rounded-full bg-[#B7232A] text-white text-xs font-semibold uppercase tracking-[0.14em]">
                       Most popular
                     </span>
                   )}
@@ -76,7 +76,7 @@ export default function Pricing() {
                   <ul className="mt-7 space-y-3 text-sm">
                     {pkg.includes.map((item) => (
                       <li key={item} className="flex gap-2.5">
-                        <Check className={`size-4 mt-0.5 shrink-0 ${featured ? "text-[#FF8077]" : "text-[#FF5A4E]"}`} />
+                        <Check className={`size-4 mt-0.5 shrink-0 ${featured ? "text-[#E26C72]" : "text-[#B7232A]"}`} />
                         <span className={featured ? "text-white/90" : "text-[#0B1F3A]/85"}>{item}</span>
                       </li>
                     ))}
@@ -133,7 +133,7 @@ export default function Pricing() {
         <Reveal>
           <div className="rounded-[28px] bg-[#0B1F3A] text-white px-8 lg:px-14 py-14 grid lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-8">
-              <span className="eyebrow text-[#FF8077]">Running 100+ checks a month?</span>
+              <span className="eyebrow text-[#E26C72]">Running 100+ checks a month?</span>
               <h2 className="display-md mt-3">Custom volume pricing for staffing & enterprise.</h2>
               <p className="mt-3 text-white/70 max-w-xl">
                 A specialist will price your typical mix of checks and put together a
