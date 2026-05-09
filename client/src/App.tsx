@@ -21,6 +21,8 @@ import Industries from "./pages/Industries";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
 import Legal from "./pages/Legal";
+import Resources from "./pages/Resources";
+import ResourcePost from "./pages/ResourcePost";
 import NotFound from "./pages/NotFound";
 
 function Router() {
@@ -38,6 +40,11 @@ function Router() {
         <Route path="/faq" component={FAQ} />
         <Route path="/contact" component={Contact} />
         <Route path="/legal/:slug" component={Legal} />
+        <Route path="/resources" component={Resources} />
+        <Route path="/resources/:slug" component={ResourcePost} />
+        {/* Legacy WordPress blog URLs redirect into the new Resources index */}
+        <Route path="/blog" component={Resources} />
+        <Route path="/category/:cat*" component={Resources} />
 
         {/* Legacy redirects from old WordPress URLs to new equivalents */}
         <Route path="/criminal-background-checks">{() => <ServiceDetail />}</Route>

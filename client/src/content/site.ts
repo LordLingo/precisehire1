@@ -353,7 +353,7 @@ export const NAV_PRIMARY = [
   { label: "Industries", href: "/industries" },
   { label: "Pricing", href: "/pricing" },
   { label: "Compliance", href: "/compliance" },
-  { label: "Integrations", href: "/integrations" },
+  { label: "Resources", href: "/resources" },
   { label: "About", href: "/about" },
 ];
 
@@ -373,6 +373,7 @@ export const FOOTER_NAV = [
       { label: "Compliance", href: "/compliance" },
       { label: "Integrations", href: "/integrations" },
       { label: "Pricing", href: "/pricing" },
+      { label: "Resources", href: "/resources" },
       { label: "Contact", href: "/contact" },
       { label: "FAQ", href: "/faq" },
     ],
