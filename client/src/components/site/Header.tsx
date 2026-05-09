@@ -65,9 +65,14 @@ export default function Header() {
           <a href={`tel:${COMPANY.phoneRaw}`} className="inline-flex items-center gap-2 text-sm font-medium text-[#0B1F3A]/80 hover:text-[#0B1F3A] transition-colors">
             <Phone className="size-4" /> {COMPANY.phone}
           </a>
-          <Link href="/contact" className="btn-ghost-navy rounded-full px-4 py-2 text-sm font-semibold">
+          <a
+            href="https://dot.precisehire.com/login.php"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-ghost-navy rounded-full px-4 py-2 text-sm font-semibold"
+          >
             Sign in
-          </Link>
+          </a>
           <Link href="/contact" className="btn-coral rounded-full px-5 py-2.5 text-sm font-semibold">
             Get started
           </Link>
@@ -92,9 +97,14 @@ export default function Header() {
               </Link>
             ))}
             <div className="flex gap-3 pt-4">
-              <Link href="/contact" className="btn-ghost-navy flex-1 text-center rounded-full px-4 py-2.5 text-sm font-semibold">
+              <a
+                href="https://dot.precisehire.com/login.php"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-ghost-navy flex-1 text-center rounded-full px-4 py-2.5 text-sm font-semibold"
+              >
                 Sign in
-              </Link>
+              </a>
               <Link href="/contact" className="btn-coral flex-1 text-center rounded-full px-4 py-2.5 text-sm font-semibold">
                 Get started
               </Link>
