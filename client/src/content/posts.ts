@@ -41,6 +41,99 @@ export const POST_CATEGORIES = ["All", "Compliance", "Hiring Tips", "Industry", 
 
 export const POSTS: Post[] = [
   {
+    slug: "fcra-disclosure-and-authorization-form-what-most-employers-get-wrong",
+    title: "The FCRA Disclosure and Authorization Form: What Most Employers Get Wrong",
+    metaTitle: "FCRA Disclosure and Authorization Form: Common Employer Mistakes",
+    description:
+      "The single most-litigated document in U.S. hiring. A 2026 walkthrough of the FCRA disclosure and authorization form — every mistake that costs employers, and how to fix it.",
+    category: "Compliance",
+    tags: ["FCRA", "Disclosure", "Authorization", "Hiring Compliance"],
+    author: "PreciseHire Editorial",
+    datePublished: "2026-05-10",
+    readingMin: 8,
+    image: ASSETS.serviceCriminal,
+    excerpt:
+      "Costco paid $2.5M. Petco $1.2M. Frito-Lay $2.4M. None of those cases turned on a bad background report — they turned on a single sheet of paper.",
+    markdown: `Costco paid $2.5 million. Petco paid $1.2 million. Frito-Lay paid $2.4 million. Omnicare paid $1.3 million. In September 2025, [PeopleFacts settled a similar case for $2.4 million](https://www.classaction.org/news/2.4m-peoplefacts-settlement-ends-lawsuit-over-alleged-employment-background-check-violations), and in May 2025 Robert Half settled its own background-check class action for $2.2 million. None of those cases turned on a bad background report. They turned on a single sheet of paper: the **FCRA disclosure and authorization form** that every employer hands a candidate before running a check.
+
+Of all the documents in a U.S. hiring process, this is the one with the highest ratio of class-action exposure to actual employer attention. Most teams treat it as a formality and copy-paste a template that has been quietly out of compliance for years. This walkthrough lays out exactly what the form has to do under federal law, the patterns courts have rejected, and the specific edits most employers need to make right now.
+
+## What the law actually says
+
+The operative provision is [FCRA section 604(b)(2)(A), 15 U.S.C. § 1681b(b)(2)(A)](https://www.ftc.gov/legal-library/browse/statutes/fair-credit-reporting-act). Before an employer can lawfully order a consumer report for employment purposes, two things must happen.
+
+First, the employer must provide a **clear and conspicuous disclosure** to the candidate, **in writing**, **in a document that consists solely of the disclosure**, telling the candidate that a consumer report may be obtained for employment purposes. Second, the candidate must **authorize the report in writing**. The authorization may appear on the same physical document as the disclosure, but the disclosure portion itself must stand alone.
+
+Those two words — *solely* and *clear and conspicuous* — are where almost every lawsuit lives.
+
+## What the FTC says employers can and cannot include
+
+The Federal Trade Commission, which enforces this section of the FCRA, has been unusually specific in its employer guidance. The agency's ["Using Consumer Reports: What Employers Need to Know"](https://www.ftc.gov/business-guidance/resources/using-consumer-reports-what-employers-need-know) bulletin says the disclosure must be in a stand-alone format, that it **cannot be included in an employment application**, and that an employer may include "some minor additional information in the notice, like a brief description of the nature of consumer reports — but only if it does not confuse or detract from the notice."
+
+That is a narrow lane, and the case law has narrowed it further. In [*Syed v. M-I, LLC*](https://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/20/14-17186.pdf) (9th Cir. 2017), the court held that a liability waiver bundled into the disclosure form was a **willful** FCRA violation — willful because the statute is unambiguous and the employer had no reasonable basis for its reading. In *Gilberg v. California Check Cashing Stores* (9th Cir. 2019), the same court held that including **state-law disclosures** in the same document also violates the standalone rule. The court took the word *solely* literally and refused to imply an exception for state disclosures, even though the state disclosures arguably helped the candidate.
+
+*Gilberg* also flunked the form on the second prong — clear and conspicuous — because it described the consent as "all-encompassing," used an incomplete sentence missing a subject, and mixed federal and state language in a way that would confuse a reasonable reader. *Walker v. Fred Meyer* (9th Cir. 2020) softened the geography a bit by holding that the disclosure can be delivered *alongside* other onboarding documents, but the document itself still must contain only the disclosure (and, if combined, the authorization).
+
+## The ten mistakes we see most often
+
+When we audit a new employer's hiring stack, ten patterns account for roughly 90 percent of the FCRA-disclosure violations we find. Most of them are template artifacts — employers inherited a form from a prior vendor or from generic HR software and never re-read it.
+
+**1. The disclosure is buried inside the employment application.** This is the most common and the most clearly unlawful. The FTC says explicitly that the notice cannot be in an employment application. If your applicant tracking system surfaces the disclosure as one paragraph among many on a multi-section application form, you are out of compliance.
+
+**2. The form includes a liability release.** A line like "I release the employer and any consumer reporting agency from any and all claims arising from the report" is the *Syed* pattern. It converts a technical violation into a **willful** one, which under the FCRA opens the door to statutory damages of $100 to $1,000 per violation plus attorneys' fees.
+
+**3. The form is padded with state-specific disclosures.** Employers operating in California, New York, Washington, or Massachusetts often try to be thorough by stacking every state's required language on the same page. *Gilberg* rejected exactly this in the Ninth Circuit, and the same reasoning has been adopted by district courts elsewhere. The defensible pattern is a single federal disclosure plus separate state notices delivered as separate documents.
+
+**4. The "explanatory" language crosses into confusion.** The FTC allows a brief plain-English description of what a consumer report is. It does not allow a one-page recitation of every kind of record the report might cover, written in legalese. If your form contains a paragraph that begins with "This notice and authorization is all-encompassing," delete it.
+
+**5. The authorization isn't actually separate.** The disclosure and authorization may sit on the same document, but they must be two distinct elements. An e-signature that lives on a generic application page and isn't tied to a specific "I authorize a consumer report" sentence is vulnerable to challenge.
+
+**6. The form uses the outdated CFPB *Summary of Your Rights* version.** The CFPB updated the mandatory *Summary of Your Rights* form, and as of [March 20, 2024 every employer and CRA is required to use the new version](https://www.clearstar.net/employers-using-background-checks-must-use-updated-fcra-rights-form-by-march-20-2024/). Using the prior version is itself a violation. Check the revision date on the form your provider delivers with every report — it should be the 2023 version.
+
+**7. The "throughout employment" language is buried.** Many employers want a single authorization that covers periodic re-checks throughout employment. The statute permits this, but only if the authorization says so **clearly and conspicuously**. A six-point footnote at the bottom of the form is not clear and conspicuous and will not support a re-check three years later.
+
+**8. Investigative consumer reports skip the extra notice.** If the report includes personal interviews about character, reputation, or lifestyle — the FCRA calls these *investigative consumer reports* under section 606 — the candidate is entitled to **an additional, separate notice** describing the scope and nature of the investigation. Most employers and most ATS templates miss this entirely.
+
+**9. The disclosure is delivered only by hyperlink.** A candidate clicking through an onboarding flow who sees a link labeled "Background check disclosure" but never opens it has not received the disclosure in any meaningful sense. The form must actually appear on the candidate's screen as part of the flow, not as a link to a PDF the candidate could ignore.
+
+**10. Algorithmic and AI-driven dossiers are run without any disclosure at all.** Per the CFPB's [October 2024 advisory circular](https://www.consumerfinance.gov/compliance/circulars/consumer-financial-protection-circular-2024-06-background-dossiers-and-algorithmic-scores-for-hiring-promotion-and-other-employment-decisions/), background dossiers and AI-generated scores from third-party vendors are **consumer reports** under the FCRA. The same disclosure-and-authorization procedure applies. If your hiring stack pulls a third-party risk score, retention prediction, or social-media analysis, you owe the candidate a disclosure for it.
+
+## What a clean form looks like
+
+A defensible FCRA disclosure and authorization form, in our experience, fits on a single page, contains the elements below, and contains nothing else.
+
+| Section | Contents |
+|---|---|
+| Title | "Disclosure Regarding Background Investigation" |
+| Disclosure paragraph | One short paragraph in plain English, stating that the employer may obtain a consumer report and, if applicable, an investigative consumer report, for employment purposes |
+| Optional brief description | One or two sentences describing the categories of information the report may include — only if it does not confuse the notice |
+| Throughout-employment language | If applicable, a clearly and conspicuously labeled sentence stating that the authorization covers reports during the term of employment |
+| Authorization paragraph | One short paragraph explicitly authorizing the report, with a signature line and date |
+
+State-specific notices, the CFPB *Summary of Your Rights*, and any other onboarding paperwork should be delivered as separate documents, with separate signature lines if required.
+
+For practical context on how this form connects to the rest of the hiring process, see our [criminal records service overview](/services/criminal-records) and our [step-by-step walkthrough of the FCRA adverse action procedure](/resources/adverse-action-fcra-step-by-step-walkthrough-for-hiring-managers).
+
+## What this means for employers
+
+The disclosure and authorization form is not a place for thoroughness or legal hedging. It is a place for radical simplicity, because the statute and the courts treat anything beyond the bare disclosure as a liability accelerator. Three practical moves protect most employers.
+
+Audit the form your ATS is actually presenting to candidates today. Not the form your vendor handed you at onboarding, and not the form sitting on your shared drive — the one a candidate sees in production right now. Print it. Read it. If it contains a liability release, state-law disclosures, an outdated *Summary of Rights*, or language buried in the employment application, replace it before your next hire.
+
+Separate the disclosure from everything else in your onboarding flow. The candidate should see the disclosure on its own screen, sign the authorization on the same document, and proceed. State notices, drug-test consents, and direct-deposit forms each get their own screen.
+
+Document every change with a dated revision history. When a plaintiff's attorney issues a discovery request three years from now, the difference between a $5,000 problem and a $500,000 problem is being able to show exactly when the form was updated and what was in each prior version.
+
+If you would like a second pair of eyes on the form your candidates are actually seeing, [our compliance team can review your current disclosure and authorization workflow](/contact) and flag the highest-risk language before anyone else does.
+
+## TL;DR
+
+- The FCRA disclosure and authorization form must consist solely of the disclosure, be clear and conspicuous, and be paired with a separate written authorization that may sit on the same document.
+- Liability waivers, state-specific disclosures, outdated *Summary of Your Rights* forms, and burial inside the employment application are the four mistakes that drive the largest class-action settlements.
+- As of the CFPB's October 2024 circular, algorithmic and AI-driven background dossiers are consumer reports too — the same disclosure-and-authorization rules apply to them.
+`
+  },
+  {
     slug: "adverse-action-fcra-step-by-step-walkthrough-for-hiring-managers",
     title: "Adverse Action Under the FCRA: A Step-by-Step Walkthrough for Hiring Managers",
     metaTitle: "FCRA Adverse Action: Step-by-Step Guide for Employers",
