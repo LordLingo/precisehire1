@@ -41,6 +41,87 @@ export const POST_CATEGORIES = ["All", "Compliance", "Hiring Tips", "Industry", 
 
 export const POSTS: Post[] = [
   {
+    slug: "adverse-action-fcra-step-by-step-walkthrough-for-hiring-managers",
+    title: "Adverse Action Under the FCRA: A Step-by-Step Walkthrough for Hiring Managers",
+    metaTitle: "FCRA Adverse Action: Step-by-Step Guide for Employers",
+    description:
+      "A 2026 walkthrough of the FCRA adverse action process for hiring managers — what to send, when to send it, and how to avoid the lawsuits that catch employers off guard.",
+    category: "Compliance",
+    tags: ["FCRA", "Adverse Action", "Hiring Compliance"],
+    author: "PreciseHire Editorial",
+    datePublished: "2026-05-10",
+    readingMin: 8,
+    image: ASSETS.serviceCriminal,
+    excerpt:
+      "The most expensive mistake on a background check isn't running the wrong report — it's rejecting a candidate without following the FCRA's two-notice procedure.",
+    markdown: `The most expensive mistake an employer can make on a background check is not running the wrong report. It is rejecting a candidate based on the report without following the Fair Credit Reporting Act's two-notice procedure. Class-action settlements in this area routinely run into the millions of dollars, and J.B. Hunt's $5 million 2025 resolution is only the latest reminder that hiring managers, not just compliance teams, need to know exactly what the law requires before clicking "do not hire."
+
+This walkthrough lays out the FCRA adverse action process the way a hiring manager actually encounters it: a candidate's background report comes back with something disqualifying, and you have to decide what happens next. We pull directly from [the FTC's employer guidance](https://www.ftc.gov/business-guidance/resources/using-consumer-reports-what-employers-need-know) and [the CFPB's October 2024 advisory circular on background dossiers and algorithmic scores](https://www.consumerfinance.gov/about-us/newsroom/cfpb-takes-action-to-curb-unchecked-worker-surveillance/), which together set the federal floor that every U.S. employer must meet as of 2026.
+
+## What "adverse action" actually means
+
+Under the Fair Credit Reporting Act (FCRA), an adverse action is any employment decision that hurts the candidate or employee and that is influenced — even partially — by information in a consumer report. That covers the obvious cases like rescinding an offer or terminating an employee, and it also covers the less obvious ones: pulling a promotion, reassigning someone to a lower-paying role, or moving a final-stage candidate back into the maybe pile because something showed up on the report.
+
+The trigger is the influence of the report, not the severity of the decision. If a hiring manager looks at the report and the report meaningfully shapes the outcome, the adverse action procedure applies. This is the part that catches employers by surprise: a manager who quietly removes a candidate from consideration without ever sending a formal rejection has still taken an adverse action under the FCRA, and the same notice obligations attach. For background on what these reports typically include, see our [criminal records service overview](/services/criminal-records).
+
+## Step 1 — Send the pre-adverse action notice
+
+Before you take the adverse action, the FCRA requires you to give the candidate three things. This is the **pre-adverse action notice**, and it is the step employers most often skip or rush.
+
+The first item is the notice itself, in writing, telling the candidate that you are considering taking adverse action based on information in their consumer report. Plain language is fine; legalese is not required. The second item is a complete copy of the consumer report you relied on. Not a summary, not the parts you found relevant — the full report exactly as you received it from the consumer reporting agency (CRA). The third item is a copy of the document titled *A Summary of Your Rights Under the Fair Credit Reporting Act*, which the CRA is required to supply to you and which you must pass through to the candidate.
+
+The purpose of this step, as the FTC puts it in its plain-language guide for employers, is to give the person "an opportunity to review the report and explain any negative information." That is not a courtesy. It is the candidate's statutory right, and it is the moment at which a clean compliance posture begins to diverge from a class-action exposure.
+
+## Step 2 — Wait a reasonable time before the final decision
+
+The FCRA does not put a number on how long you have to wait between the pre-adverse notice and the final adverse action notice. The statute says only that the wait must be "reasonable." In practice, FTC informal guidance and a long line of court decisions have settled on **five business days** as the durable industry minimum, and that is the figure most reputable background-screening providers, including PreciseHire, recommend.
+
+The five-business-day floor exists for a substantive reason. It gives the candidate enough time to actually look at the report, identify any errors, contact the CRA, and either dispute the record or submit a written explanation to you. If your hiring system automatically triggers the final adverse action notice 24 or 48 hours after the pre-adverse, you have effectively turned the FCRA's two-notice procedure into a one-step procedure with extra paperwork — and that is exactly the fact pattern plaintiffs' attorneys file class actions on.
+
+If a candidate disputes the report during the waiting period, pause the clock. Wait for the CRA to complete its reinvestigation under FCRA section 611 and issue an updated report. Only then should you decide whether to proceed with the adverse action based on the corrected record.
+
+## Step 3 — Send the final adverse action notice
+
+If, after the waiting period and any disputes, you decide to proceed with the adverse decision, the FCRA requires a second notice. This **final adverse action notice** can be delivered orally, in writing, or electronically, but most employers send it in writing for the same documentation reason they send everything else in writing.
+
+The notice must include four pieces of information. First, a statement that the adverse action was based at least in part on information in a consumer report. Second, the name, address, and toll-free phone number of the CRA that supplied the report. Third, a statement that the CRA did not make the adverse decision and cannot supply the specific reasons for it — this is required by [FCRA section 615(a)](https://www.ftc.gov/legal-library/browse/statutes/fair-credit-reporting-act) and is one of the most-litigated content requirements. Fourth, a notice of the candidate's right to dispute the accuracy or completeness of the report with the CRA and to request a free additional copy of the report from that CRA within 60 days.
+
+For a deeper template walkthrough of both notices, see our existing piece on [creating a pre-adverse action notice](/resources/guidelines-for-creating-a-pre-adverse-action-notice).
+
+## The 2024 CFPB modernization: AI and algorithmic background dossiers
+
+Until recently, employers could reasonably assume the FCRA's adverse action procedure applied only to traditional background checks: criminal records, employment verifications, education, motor vehicle records, drug tests. That assumption is no longer safe.
+
+In October 2024, the Consumer Financial Protection Bureau issued an advisory circular making clear that the FCRA's full set of obligations — disclosure, consent, adverse action notices, dispute rights — also apply to **algorithmic background dossiers and "black box" AI scores** that third parties sell to employers to predict worker behavior, flag retention risk, evaluate social media activity, or trigger automated discipline. As CFPB Director Rohit Chopra put it in the agency's announcement, "The kind of scoring and profiling we've long seen in credit markets is now creeping into employment."
+
+For hiring managers, the practical takeaway is simple: if you are buying any third-party assessment of a candidate or employee — not just a background check, but an AI-generated risk score, a social-media analysis, a productivity prediction — and you use it to make an adverse employment decision, the same two-notice procedure applies. The fact that the underlying technology is opaque does not relax the FCRA. If anything, it raises the bar, because the candidate's right to dispute inaccurate information is harder to satisfy when the report itself is a number rather than a record.
+
+## The Title VII overlay
+
+The FCRA is the federal floor, not the ceiling. When the report contains criminal-history information, [the EEOC's 2012 enforcement guidance on the consideration of arrest and conviction records](https://www.eeoc.gov/laws/guidance/enforcement-guidance-consideration-arrest-and-conviction-records-employment-decisions) requires employers to make an individualized assessment that is job-related and consistent with business necessity. The pre-adverse action waiting period is the natural — and practically the only — moment in your hiring process where you can do that assessment. If you have to defend the decision later, you want a written record showing that you considered the nature of the offense, the time elapsed since the offense, and the nature of the job before you sent the final notice.
+
+## What this means for employers
+
+Translating the federal framework into operational practice, four steps will keep most employers on the right side of the law as of 2026.
+
+**Build the two-notice procedure into your applicant-tracking system, not your hiring manager's discretion.** Adverse action is the single most-litigated FCRA requirement, and the most common pattern in class-action complaints is a hiring manager who sent the final rejection without ever sending the pre-adverse notice. Treat the pre-adverse notice as a system-enforced step that cannot be skipped. The system, not the manager, should be the gatekeeper.
+
+**Set a five-business-day default waiting period and document any deviation.** The statute says "reasonable." The defensible operational answer is five business days, and the burden to justify a shorter window will fall on you in litigation. If you have a genuine business reason to extend the window — for example, the candidate disputed the report and the CRA is mid-reinvestigation — pause the timer and document the reason in the file.
+
+**Use the same procedure for AI scores and algorithmic dossiers.** As of the CFPB's 2024 circular, the FCRA's adverse action procedure applies to any third-party-supplied assessment that influences an adverse decision, not just to traditional background reports. If your vendor stack includes AI-driven candidate scoring or social-media analysis, route those inputs through the same two-notice workflow.
+
+**Train hiring managers on what counts as adverse action.** Quietly removing a candidate from a shortlist counts. So does pulling a promotion or reassigning to a lower-paying role. Anyone in your organization who makes a candidate-facing decision based on a consumer report needs a working definition of adverse action and a clear escalation path back to the compliance procedure.
+
+If you would like a second pair of eyes on your adverse action workflow, [our compliance team can walk through your current process](/contact) and flag the highest-risk gaps before a plaintiff's attorney does.
+
+## TL;DR
+
+- Adverse action under the FCRA is a two-notice procedure: a pre-adverse notice with a copy of the report and the FCRA summary of rights, followed by a final adverse action notice after a reasonable waiting period.
+- "Reasonable" is not defined by statute, but five business days is the durable industry minimum and the figure most defensible in litigation.
+- The CFPB's October 2024 circular extends the same adverse action procedure to AI scores and algorithmic background dossiers — if a third-party assessment influences the decision, the two-notice procedure applies.
+`
+  },
+  {
     slug: "fcra-compliant-background-checks-guide",
     title: "The Complete Guide to FCRA-Compliant Background Checks",
     metaTitle: "FCRA-Compliant Background Checks: Employer Guide (2026)",
