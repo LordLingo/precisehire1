@@ -468,9 +468,6 @@ export default function Home() {
                 <Link href="/contact" className="btn-coral text-center rounded-full px-7 py-3.5 text-sm font-semibold">
                   Get started — Let&rsquo;s Talk
                 </Link>
-                <Link href="/contact" className="text-center rounded-full px-7 py-3.5 text-sm font-semibold border border-white/30 text-white hover:bg-white/10 transition-colors">
-                  Talk to a specialist
-                </Link>
               </div>
             </div>
           </div>
