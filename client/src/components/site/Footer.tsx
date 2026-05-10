@@ -16,7 +16,7 @@ export default function Footer() {
             <div className="flex items-center gap-3">
               <span className="inline-flex h-11 w-11 items-center justify-center rounded-md bg-white/95 p-1">
                 <img
-                  src="/manus-storage/precisehire-logo-icon_32dff38e.png"
+                  src="/brand/precisehire-logo-icon.png"
                   alt=""
                   aria-hidden="true"
                   className="h-full w-auto"

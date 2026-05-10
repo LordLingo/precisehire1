@@ -12,7 +12,7 @@ function Logo() {
   return (
     <Link href="/" aria-label="Precise Hire — Expert Talent Acquisition, home" className="flex items-center gap-2.5 group">
       <img
-        src="/manus-storage/precisehire-logo-icon_32dff38e.png"
+        src="/brand/precisehire-logo-icon.png"
         alt=""
         aria-hidden="true"
         className="h-10 w-auto select-none transition-transform group-hover:-translate-y-px"
