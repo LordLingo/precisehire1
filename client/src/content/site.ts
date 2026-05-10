@@ -30,7 +30,7 @@ export const COMPANY = {
   yearsInBusiness: new Date().getFullYear() - 2003,
   phone: "(866) 773-5486",
   phoneRaw: "+18667735486",
-  email: "Mark@precisehire.com",
+  email: "Info@precisehire.com",
   address: {
     street: "—",
     city: "—",

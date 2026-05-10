@@ -176,9 +176,7 @@ The contact form (`client/src/pages/Contact.tsx`) submits via a real `fetch` POS
 https://formspree.io/f/xnjworvg
 ```
 
-Submissions deliver to `Mark@precisehire.com`. The form includes a honeypot anti-spam field (`_gotcha`) and a generated `_subject` line. Spam protection level can be increased in the Formspree dashboard (reCAPTCHA, allowed domains, rate limiting).
-
-> **Important:** The Formspree form's *delivery* email address is set in the Formspree dashboard, not in this codebase. After changing the contact email here, log in to Formspree (form `xnjworvg`) and update the recipient address so submissions actually land in the new inbox.
+Submissions deliver to `Info@precisehire.com`. The form includes a honeypot anti-spam field (`_gotcha`) and a generated `_subject` line. Spam protection level can be increased in the Formspree dashboard (reCAPTCHA, allowed domains, rate limiting).
 
 If you ever migrate off Formspree, the change is one line — just update the `FORM_ENDPOINT` constant in `Contact.tsx`.
 
@@ -240,9 +238,9 @@ Avoid the temptation to "brighten" or "modernize" by adding teal/green/violet �
 
 ## 12. Contacts
 
-- **Site owner:** PreciseHire — Mark@precisehire.com — (866) 773-5486
+- **Site owner:** PreciseHire — Info@precisehire.com — (866) 773-5486
 - **Originally built by:** Manus AI agent in collaboration with the PreciseHire team
-- **Form submissions:** Mark@precisehire.com (via Formspree)
+- **Form submissions:** Info@precisehire.com (via Formspree)
 - **Client portal (existing):** https://dot.precisehire.com/login.php
 
 Last updated: 2026-05-10.
