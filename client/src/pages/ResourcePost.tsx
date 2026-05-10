@@ -5,13 +5,14 @@
  *
  * Note: We render Markdown via the Streamdown package that ships with the template.
  */
+import { useEffect, useState } from "react";
 import { Link, useParams, useLocation } from "wouter";
-import { ArrowLeft, ArrowRight, Calendar, Clock } from "lucide-react";
+import { ArrowLeft, ArrowRight, Calendar, Clock, Loader2 } from "lucide-react";
 import { Streamdown } from "streamdown";
 import SEO from "@/components/site/SEO";
 import Reveal from "@/components/site/Reveal";
 import { COMPANY } from "@/content/site";
-import { findPost, relatedPosts } from "@/content/posts";
+import { findPost, relatedPosts, getInlineMarkdown } from "@/content/posts";
 import NotFound from "./NotFound";
 
 export default function ResourcePost() {
@@ -19,6 +20,31 @@ export default function ResourcePost() {
   const slug = params?.slug ?? "";
   const post = findPost(slug);
   const [, navigate] = useLocation();
+
+  // Hand-written posts ship inline; migrated posts are fetched from /posts/<slug>.md
+  const inline = post ? getInlineMarkdown(post.slug) : null;
+  const [body, setBody] = useState<string | null>(inline);
+  const [bodyError, setBodyError] = useState(false);
+
+  useEffect(() => {
+    if (!post) return;
+    if (inline !== null) {
+      setBody(inline);
+      setBodyError(false);
+      return;
+    }
+    let cancelled = false;
+    setBody(null);
+    setBodyError(false);
+    fetch(`/posts/${post.slug}.md`)
+      .then((r) => (r.ok ? r.text() : Promise.reject(new Error(`HTTP ${r.status}`))))
+      .then((text) => { if (!cancelled) setBody(text); })
+      .catch(() => { if (!cancelled) setBodyError(true); });
+    return () => { cancelled = true; };
+  }, [post, inline]);
+
+  // scroll to top on slug change so the new article doesn't open mid-page
+  useEffect(() => { window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior }); }, [slug]);
 
   if (!post) return <NotFound />;
 
@@ -111,7 +137,17 @@ export default function ResourcePost() {
       <article className="container pb-20">
         <div className="mx-auto max-w-3xl">
           <div className="prose prose-lg prose-precisehire max-w-none">
-            <Streamdown>{post.markdown}</Streamdown>
+            {body !== null ? (
+              <Streamdown>{body}</Streamdown>
+            ) : bodyError ? (
+              <p className="text-[#0B1F3A]/70">
+                We couldn't load this article. Try refreshing, or <Link href="/resources" className="text-[#B7232A] underline">browse all resources</Link>.
+              </p>
+            ) : (
+              <div className="flex items-center gap-3 text-[#0B1F3A]/55">
+                <Loader2 className="size-5 animate-spin" /> Loading article…
+              </div>
+            )}
           </div>
 
           {/* Tags + back link */}

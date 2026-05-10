@@ -437,15 +437,30 @@ You still own the decision and the assessment. We make the paperwork unmissable.
   }
 ];
 
+// Lightweight type used for the combined index (excludes inline `markdown`).
+// Hand-written POSTS still carry markdown inline; migrated entries fetch it lazily.
+export type PostIndex = Omit<Post, "markdown"> & { legacySlug?: string };
+
+import { MIGRATED_POSTS } from "./migrated_posts";
+
+// Strip markdown from hand-written POSTS for the combined index
+const HANDWRITTEN_INDEX: PostIndex[] = POSTS.map(({ markdown: _markdown, ...rest }) => rest);
+
+// Combined index, hand-written first (newest editorial), then migrated by date
+export const ALL_POSTS_INDEX: PostIndex[] = [
+  ...HANDWRITTEN_INDEX,
+  ...MIGRATED_POSTS,
+].sort((a, b) => (a.datePublished < b.datePublished ? 1 : -1));
+
 export function postsByCategory(cat: typeof POST_CATEGORIES[number]) {
-  if (cat === "All") return POSTS;
-  return POSTS.filter((p) => p.category === cat);
+  if (cat === "All") return ALL_POSTS_INDEX;
+  return ALL_POSTS_INDEX.filter((p) => p.category === cat);
 }
 
-export function relatedPosts(slug: string, limit = 3): Post[] {
-  const target = POSTS.find((p) => p.slug === slug);
-  if (!target) return POSTS.slice(0, limit);
-  const scored = POSTS.filter((p) => p.slug !== slug)
+export function relatedPosts(slug: string, limit = 3): PostIndex[] {
+  const target = ALL_POSTS_INDEX.find((p) => p.slug === slug);
+  if (!target) return ALL_POSTS_INDEX.slice(0, limit);
+  const scored = ALL_POSTS_INDEX.filter((p) => p.slug !== slug)
     .map((p) => {
       const sharedTags = p.tags.filter((t) => target.tags.includes(t)).length;
       const sameCategory = p.category === target.category ? 2 : 0;
@@ -455,6 +470,12 @@ export function relatedPosts(slug: string, limit = 3): Post[] {
   return scored.slice(0, limit).map((s) => s.p);
 }
 
-export function findPost(slug: string): Post | undefined {
-  return POSTS.find((p) => p.slug === slug);
+// Returns combined index entry (no inline body for migrated posts)
+export function findPost(slug: string): PostIndex | undefined {
+  return ALL_POSTS_INDEX.find((p) => p.slug === slug);
+}
+
+// Returns the inline markdown for hand-written POSTS, or null if it must be lazy-loaded.
+export function getInlineMarkdown(slug: string): string | null {
+  return POSTS.find((p) => p.slug === slug)?.markdown ?? null;
 }

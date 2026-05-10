@@ -9,14 +9,14 @@ import { ArrowRight, Search } from "lucide-react";
 import SEO from "@/components/site/SEO";
 import Reveal from "@/components/site/Reveal";
 import { ASSETS, COMPANY } from "@/content/site";
-import { POSTS, POST_CATEGORIES } from "@/content/posts";
+import { ALL_POSTS_INDEX, POST_CATEGORIES } from "@/content/posts";
 
 export default function Resources() {
   const [cat, setCat] = useState<typeof POST_CATEGORIES[number]>("All");
   const [q, setQ] = useState("");
 
   const filtered = useMemo(() => {
-    const byCat = cat === "All" ? POSTS : POSTS.filter((p) => p.category === cat);
+    const byCat = cat === "All" ? ALL_POSTS_INDEX : ALL_POSTS_INDEX.filter((p) => p.category === cat);
     if (!q.trim()) return byCat;
     const needle = q.trim().toLowerCase();
     return byCat.filter(
@@ -27,7 +27,7 @@ export default function Resources() {
     );
   }, [cat, q]);
 
-  const featured = POSTS[0];
+  const featured = ALL_POSTS_INDEX[0];
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -35,7 +35,7 @@ export default function Resources() {
     name: "PreciseHire Resources",
     url: "https://precisehire.com/resources",
     publisher: { "@type": "Organization", name: COMPANY.legalName },
-    blogPost: POSTS.map((p) => ({
+    blogPost: ALL_POSTS_INDEX.slice(0, 50).map((p) => ({
       "@type": "BlogPosting",
       headline: p.title,
       datePublished: p.datePublished,
