@@ -13,15 +13,44 @@ import { COMPANY, ASSETS } from "@/content/site";
 export default function Contact() {
   const [submitting, setSubmitting] = useState(false);
 
-  function onSubmit(e: FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitting(true);
-    // Static frontend — simulate submission. (Backend wiring can be added with web-db-user.)
-    setTimeout(() => {
-      setSubmitting(false);
-      (e.target as HTMLFormElement).reset();
+    const formEl = e.currentTarget;
+    const formData = new FormData(formEl);
+
+    // Subject line that shows up in your Info@ inbox
+    const firstName = String(formData.get("firstName") || "").trim();
+    const company = String(formData.get("company") || "").trim();
+    const subjectBits = ["PreciseHire website lead", company, firstName].filter(Boolean);
+    formData.append("_subject", subjectBits.join(" — "));
+
+    // Honeypot: real users won't fill _gotcha; bots often will
+    if (formData.get("_gotcha")) {
       toast.success("Thanks — a Precise Hire specialist will be in touch shortly.");
-    }, 900);
+      formEl.reset();
+      return;
+    }
+
+    setSubmitting(true);
+    try {
+      const res = await fetch("https://formspree.io/f/xnjworvg", {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" },
+      });
+      if (res.ok) {
+        formEl.reset();
+        toast.success("Thanks — a Precise Hire specialist will be in touch shortly.");
+      } else {
+        const data = await res.json().catch(() => ({} as Record<string, unknown>));
+        const msg = (data as { errors?: { message?: string }[] })?.errors?.[0]?.message;
+        toast.error(msg || "Something went wrong sending your message. Please call (866) 773-5486 or email Info@precisehire.com.");
+      }
+    } catch {
+      toast.error("Network error. Please call (866) 773-5486 or email Info@precisehire.com.");
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   return (
@@ -67,6 +96,8 @@ export default function Contact() {
                   <SelectField name="industry" label="Industry" options={["Healthcare", "Transportation & Logistics", "Staffing", "Finance", "Retail & Hospitality", "Nonprofit", "Other"]} required />
                 </div>
                 <Field name="message" label="What are you hiring for?" textarea />
+                {/* Spam honeypot (hidden from real users) */}
+                <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ position: "absolute", left: "-5000px", height: 0, width: 0, opacity: 0 }} />
                 <button type="submit" disabled={submitting} className="btn-coral inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold disabled:opacity-70">
                   {submitting ? <><Loader2 className="size-4 animate-spin" /> Sending</> : <>Send message <ArrowRight className="size-4" /></>}
                 </button>
