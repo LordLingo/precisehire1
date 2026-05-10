@@ -18,7 +18,7 @@ export default function Contact() {
     const formEl = e.currentTarget;
     const formData = new FormData(formEl);
 
-    // Subject line that shows up in your Info@ inbox
+    // Subject line that shows up in your Mark@ inbox
     const firstName = String(formData.get("firstName") || "").trim();
     const company = String(formData.get("company") || "").trim();
     const subjectBits = ["PreciseHire website lead", company, firstName].filter(Boolean);
@@ -44,10 +44,10 @@ export default function Contact() {
       } else {
         const data = await res.json().catch(() => ({} as Record<string, unknown>));
         const msg = (data as { errors?: { message?: string }[] })?.errors?.[0]?.message;
-        toast.error(msg || "Something went wrong sending your message. Please call (866) 773-5486 or email Info@precisehire.com.");
+        toast.error(msg || "Something went wrong sending your message. Please call (866) 773-5486 or email Mark@precisehire.com.");
       }
     } catch {
-      toast.error("Network error. Please call (866) 773-5486 or email Info@precisehire.com.");
+      toast.error("Network error. Please call (866) 773-5486 or email Mark@precisehire.com.");
     } finally {
       setSubmitting(false);
     }
