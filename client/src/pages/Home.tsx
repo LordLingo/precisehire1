@@ -5,6 +5,7 @@
  * count-up numerals, subtle Framer Motion fade-ups.
  */
 import { Link } from "wouter";
+import { motion } from "framer-motion";
 import { ArrowRight, ShieldCheck, Clock3, Sparkles, Plug, CheckCircle2, Star, HeartPulse, Truck, Building2, ShoppingBag, Landmark, Wrench } from "lucide-react";
 import SEO from "@/components/site/SEO";
 import Reveal from "@/components/site/Reveal";
@@ -214,14 +215,33 @@ export default function Home() {
             <p className="text-center text-[11px] font-semibold uppercase tracking-[0.22em] text-[#0B1F3A]/55">
               Trusted by HR &amp; operations teams across regulated industries
             </p>
-            <div
+            <motion.div
               className="mt-7 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6
                          gap-x-6 gap-y-7 items-center justify-items-center"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-60px" }}
+              variants={{
+                hidden: {},
+                visible: { transition: { staggerChildren: 0.08, delayChildren: 0.05 } },
+              }}
             >
               {CLIENT_LOGOS.map((l) => (
-                <LogoMark key={l.name} icon={l.icon} name={l.name} sub={l.sub} />
+                <motion.div
+                  key={l.name}
+                  variants={{
+                    hidden: { opacity: 0, y: 16 },
+                    visible: {
+                      opacity: 1,
+                      y: 0,
+                      transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] },
+                    },
+                  }}
+                >
+                  <LogoMark icon={l.icon} name={l.name} sub={l.sub} />
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
             <p className="mt-6 text-center text-[11px] text-[#0B1F3A]/45">
               Representative of the verticals we screen for &mdash; healthcare, transportation, staffing,
               retail, financial services, and the trades.
