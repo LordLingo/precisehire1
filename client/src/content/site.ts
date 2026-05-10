@@ -8,7 +8,7 @@
  */
 
 export const ASSETS = {
-  hero: "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/precisehire-hero-portrait-v2-hKbuaeu9GkWabwnNcqwZsH.webp",
+  hero: "/manus-storage/hero-professional_c88b8c62.png",
   team: "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/about-team-4vFYYmnbKTDnGef5EPiZW5.webp",
   handshake: "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/cta-handshake-GwWopeADZ8kzKCsYCydWCb.webp",
   swooshCoral: "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/swoosh-red-T8JxWZgdAP94rTzeUjKULQ.webp",
