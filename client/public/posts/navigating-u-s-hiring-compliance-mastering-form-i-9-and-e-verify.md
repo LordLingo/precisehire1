@@ -1,8 +1,4 @@
-## Navigating U.S. Hiring Compliance: Mastering Form I-9 and E-Verify
-
-Estimated reading time: 6 minutes
-
-  * **Understand the key requirements of Form I-9 and E-Verify.**
+* **Understand the key requirements of Form I-9 and E-Verify.**
   * **Implement best practices for document verification.**
   * **Recognize the consequences of noncompliance.**
   * **Leverage technology to enhance recruitment processes.**

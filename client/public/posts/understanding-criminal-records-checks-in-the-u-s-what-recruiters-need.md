@@ -1,8 +1,4 @@
-## Understanding Criminal Records Checks in the U.S.: What Recruiters Need to Know
-
-Estimated reading time: 5 minutes
-
-  * Importance of understanding criminal records checks for employers.
+* Importance of understanding criminal records checks for employers.
   * Federal and state regulations influence hiring practices.
   * Best practices for conducting criminal background checks.
   * Strategies for effective implementation in recruitment processes.

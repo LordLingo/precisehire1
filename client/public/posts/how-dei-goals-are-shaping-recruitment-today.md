@@ -1,7 +1,5 @@
 ## How Optical Character Recognition \(OCR\) and Artificial Intelligence \(AI\) are Transforming Resume Screening
 
-Estimated reading time: 7 minutes
-
   * Integration of OCR and AI streamlines candidate review processes.
   * Automation significantly speeds up resume screening.
   * Objective scoring reduces bias and improves evaluation consistency.

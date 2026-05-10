@@ -1,7 +1,5 @@
 ## Background Checks vs. Polygraph Tests in Recruitment: Understanding the Basics
 
-Estimated reading time: 6 minutes
-
   * **Understand the differences** between background checks and polygraph tests.
   * **Recognize the legal implications** of each method in recruitment.
   * **Explore best practices** for implementing these checks effectively.

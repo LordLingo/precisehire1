@@ -1,8 +1,4 @@
-## Reducing Bias in Background Checks: A New Era of Fair Hiring
-
-Estimated reading time: 5 minutes
-
-  * Understanding key trends in fair hiring practices.
+* Understanding key trends in fair hiring practices.
   * Implementing best practices to minimize bias.
   * Recognizing legal guidelines and their impact on hiring.
   * Using individualized assessments to ensure fairness.
@@ -26,7 +22,7 @@ Fair chance hiring is a movement that emphasizes evaluating candidates on job-re
 
   * No criminal history questions be included on initial job applications.
   * Consideration of an applicant’s criminal record occurs only after a conditional job offer is made.
-  * An individualized assessment of relevant convictions takes place, evaluating factors such as the relevance of the conviction to the job and the time elapsed since the offense \([iProspectCheck](<https://iprospectcheck.com/fair-chance-hiring/>)\).
+  * An individualized assessment of relevant convictions takes place, evaluating factors such as the relevance of the conviction to the job and the time elapsed since the offense.
 
 This legislative focus helps candidates feel empowered and allows employers to evaluate talent fairly and equitably.
 
@@ -45,7 +41,7 @@ The Fair Credit Reporting Act \(FCRA\) mandates that organizations using third-p
 
   * Sending a pre-adverse action notice to candidates before making any hiring decision based on their background check.
   * Allowing candidates to respond or correct any errors.
-  * Issuing a final adverse action notice if a candidate is not hired, which must summarize their rights \([iProspectCheck](<https://iprospectcheck.com/fair-chance-hiring/>)\).
+  * Issuing a final adverse action notice if a candidate is not hired, which must summarize their rights.
 
 By establishing these protocols, hiring managers can create a fairer environment where candidates feel informed and respected throughout the hiring process.
 
@@ -59,7 +55,7 @@ To effectively reduce bias in background checks, organizations are increasingly 
 
 #### Individualized Assessments
 
-Many companies are transitioning to tailored evaluations of background check findings. This process involves a careful review of the nature of any offense, its relevance to the position, and the time that has elapsed since the incident. By doing so, organizations can avoid blanket bans that disproportionately affect marginalized groups \([iProspectCheck](<https://iprospectcheck.com/fair-chance-hiring/>)\).
+Many companies are transitioning to tailored evaluations of background check findings. This process involves a careful review of the nature of any offense, its relevance to the position, and the time that has elapsed since the incident. By doing so, organizations can avoid blanket bans that disproportionately affect marginalized groups.
 
 #### Minimizing Irrelevant Information
 
@@ -86,8 +82,8 @@ Embracing fair background checks yields numerous benefits for organizations. Res
 While progress is being made, certain challenges persist in mitigating bias in background checks:
 
   * **Implicit Bias:** Implicit biases can still influence how hiring managers interpret background data, resulting in unfair decisions \([Ref Hub](<https://www.refhub.com.au/us/post/overcoming-bias-and-ensuring-fairness-in-background-checks>)\).
-  * **Data Quality Disparities:** Discrepancies in background check data quality can lead to unjust exclusions if organizations do not verify accuracy \([iProspectCheck](<https://iprospectcheck.com/fair-chance-hiring/>)\).
-  * **Complex Compliance:** Navigating the complex landscape of federal, state, and local regulations can be a considerable challenge for organizations, necessitating ongoing vigilance and adaptation \([iProspectCheck](<https://iprospectcheck.com/fair-chance-hiring/>)\).
+  * **Data Quality Disparities:** Discrepancies in background check data quality can lead to unjust exclusions if organizations do not verify accuracy.
+  * **Complex Compliance:** Navigating the complex landscape of federal, state, and local regulations can be a considerable challenge for organizations, necessitating ongoing vigilance and adaptation.
 
 ### Practical Takeaways for Recruiters and HR Professionals
 

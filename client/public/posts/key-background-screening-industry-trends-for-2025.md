@@ -1,5 +1,3 @@
-## Key Background Screening Industry Trends for 2025
-
 Estimated Reading Time: 6 minutes
 
   * **AI and automation** are changing the hiring landscape.

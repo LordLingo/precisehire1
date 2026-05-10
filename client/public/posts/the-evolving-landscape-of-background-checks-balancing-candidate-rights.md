@@ -1,5 +1,3 @@
-## The Evolving Landscape of Background Checks: Balancing Candidate Rights and Employer Obligations
-
 **Estimated reading time:** 6 minutes
 
   * Understanding the evolving dynamics of background checks

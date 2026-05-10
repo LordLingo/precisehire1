@@ -1,5 +1,3 @@
-## Legal Limits of Social Media Screening in Hiring
-
 **Estimated Reading Time:** 5 minutes
 
   * Understanding the legal requirements for social media screening in hiring.

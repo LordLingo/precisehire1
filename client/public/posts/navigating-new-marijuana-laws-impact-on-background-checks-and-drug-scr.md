@@ -1,8 +1,4 @@
-## Navigating New Marijuana Laws: Impact on Background Checks and Drug Screening Policies in Recruitment
-
-Estimated reading time: 5 minutes
-
-  * **California ’s AB 2188**: Significant changes in drug testing policies for employers.
+* **California ’s AB 2188**: Significant changes in drug testing policies for employers.
   * **Prohibition on Testing** : Employers cannot test for marijuana outside work hours.
   * **Compliance Requirements** : Necessity to adapt hiring practices to align with evolving laws.
 

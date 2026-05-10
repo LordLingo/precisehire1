@@ -1,5 +1,3 @@
-## The Shift to Outsourced Background Checks: How Small Businesses Are Leveraging AI Consulting and n8n Workflows
-
 **Estimated Reading Time: 5 minutes**
 
   * Time and cost savings through outsourcing

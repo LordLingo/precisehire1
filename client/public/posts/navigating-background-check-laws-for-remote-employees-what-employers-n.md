@@ -1,8 +1,4 @@
-## Navigating Background Check Laws for Remote Employees: What Employers Need to Know
-
-Estimated reading time: 6 minutes
-
-  * **Understanding FCRA:** Importance of obtaining consent and disclosures.
+* **Understanding FCRA:** Importance of obtaining consent and disclosures.
   * **State Variability:** The impact of “Ban the Box” laws and disclosures.
   * **Best Practices:** Strategies for compliance in multi-state hiring.
   * **Legal Consultation:** Importance of advising legal counsel for sensitive roles.

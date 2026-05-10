@@ -1,7 +1,5 @@
 ## Choosing Between an ATS with Integrated Screening Add-Ons and Dedicated Standalone Screening Software
 
-Estimated reading time: 6 minutes
-
   * Understand the difference between ATS add-ons and standalone screening software.
   * Explore advantages and disadvantages of each option.
   * Get actionable insights for enhancing recruitment strategies.

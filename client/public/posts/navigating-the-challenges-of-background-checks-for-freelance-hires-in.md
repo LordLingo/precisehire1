@@ -1,5 +1,3 @@
-## Navigating the Challenges of Background Checks for Freelance Hires in the Gig Economy
-
 **Estimated Reading Time:** 8 minutes
 
   * Understanding the importance of background checks in the gig economy.

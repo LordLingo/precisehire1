@@ -1,8 +1,4 @@
-## Making Background Checks More Candidate-Friendly: Enhancing the Hiring Experience
-
-Estimated reading time: 7 minutes
-
-  * **Stronger Employer Brand** : Positive background check experiences enhance the organization’s reputation.
+* **Stronger Employer Brand** : Positive background check experiences enhance the organization’s reputation.
   * **Higher Offer Acceptance Rates** : 59% of job seekers feel more confident after a positive background check process [\(Sterling Check\)](<https://www.sterlingcheck.com/blog/2023/07/regulatory-recap-answers-to-your-top-compliance-questions/>).
   * **Reduced Candidate Drop-off** : A smoother process retains candidate engagement.
 

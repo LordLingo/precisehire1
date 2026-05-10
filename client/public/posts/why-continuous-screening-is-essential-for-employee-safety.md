@@ -1,7 +1,5 @@
 ## Continuous Screening: The Key to Preventing Costly Employee Incidents
 
-Estimated reading time: 5 minutes
-
   * **Boosts security and trust** within organizations.
   * Identifies potential red flags to prevent costly incidents.
   * Rapidly expanding across various sectors from healthcare to retail.

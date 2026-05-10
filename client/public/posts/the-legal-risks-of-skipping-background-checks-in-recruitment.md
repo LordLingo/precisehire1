@@ -1,8 +1,4 @@
-## The Legal Risks of Skipping Background Checks in Recruitment
-
-Estimated reading time: 6 minutes
-
-  * **Understand potential legal liabilities** linked to negligent hiring.
+* **Understand potential legal liabilities** linked to negligent hiring.
   * **Recognize the importance of regulatory compliance** to avoid significant penalties.
   * **Assess the impact of resume fraud** on hiring decisions and workplace safety.
   * **Prioritize comprehensive screening** to safeguard your organization’s integrity.

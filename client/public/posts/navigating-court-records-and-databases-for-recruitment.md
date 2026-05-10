@@ -1,7 +1,5 @@
 ## Direct Court Records vs. Third-Party Databases: The Essential Guide for Recruitment Professionals
 
-Estimated reading time: **5 minutes**
-
   * Understand the differences between direct court records and third-party databases.
   * Prioritize compliance to mitigate legal risks in hiring.
   * Leverage technology to streamline background checks.

@@ -1,5 +1,3 @@
-## Second Chance Hiring: Rethinking Background Check Policies
-
 Estimated Reading Time: 5 minutes
 
   * Understand the benefits of second chance hiring for employers and employees.

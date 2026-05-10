@@ -1,8 +1,4 @@
-## Understanding Fair Chance Hiring Ordinances: A Guide for HR Professionals in Canada
-
-Estimated reading time: 5 minutes
-
-  * **Understanding Fair Chance Hiring** : Employers must delay criminal history inquiries until after a conditional job offer.
+* **Understanding Fair Chance Hiring** : Employers must delay criminal history inquiries until after a conditional job offer.
   * **Scope of Coverage** : Ordinances apply to businesses of varying sizes and include both full-time and part-time roles.
   * **Compliance Requirements** : Key provisions include banning the box and individualized assessments.
   * **State vs. Local Nuances** : Requirements can vary between state and city ordinances.

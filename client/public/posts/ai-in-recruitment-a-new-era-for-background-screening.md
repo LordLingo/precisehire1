@@ -1,7 +1,5 @@
 ## The Future of Recruitment: How AI-Powered Background Screening is Transforming Candidate Vetting
 
-Estimated reading time: **5 minutes**
-
   * **AI-powered background screening enhances recruiting efficiency and accuracy.**
   * **Automation significantly reduces the time taken for background checks.**
   * **Hiring through AI minimizes biases and improves candidate evaluations.**

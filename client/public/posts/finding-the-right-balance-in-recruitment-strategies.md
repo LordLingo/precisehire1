@@ -1,7 +1,5 @@
 ## Navigating the Recruitment Landscape: Balancing Centralized Global Policies and Localized Screening
 
-Estimated reading time: 5 minutes
-
   * **Evaluate Recruitment Needs:** Assess whether a centralized, localized, or hybrid approach is suitable for your organization based on geographical reach and specific industry challenges.
   * **Leverage Technology:** Utilize [n8n workflow automation](<https://n8n.io>) to streamline compliance processes and enhance the efficiency of both centralized and localized strategies.
   * **Stay Informed:** Regularly review local regulations and changes, seeking guidance from experts to ensure compliance and foster good relationships with stakeholders.

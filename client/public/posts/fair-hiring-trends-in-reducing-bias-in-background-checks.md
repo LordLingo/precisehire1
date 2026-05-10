@@ -1,8 +1,4 @@
-## Fair Hiring: Trends in Reducing Bias in Background Checks
-
-Estimated reading time: 5 minutes
-
-  * **Understand the Shift:** Recognize the movement towards fair chance hiring and its implications.
+* **Understand the Shift:** Recognize the movement towards fair chance hiring and its implications.
   * **Focus on Individual Assessments:** Prioritize assessing candidates based on context rather than criminal history alone.
   * **Implement Best Practices:** Adopt procedures that mitigate both overt and implicit bias in hiring.
   * **Diversity is Key:** Embrace practices that enhance workplace diversity and inclusion.

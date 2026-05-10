@@ -1,7 +1,5 @@
 ## Understanding the Importance of Background Checks in Recruitment
 
-Estimated reading time: 5 minutes
-
   * **Background checks are crucial** for verifying candidates’ qualifications and trustworthiness.
   * **Key components** include identity verification, criminal records, employment history, and more.
   * **Compliance and risk mitigation** are vital reasons for conducting thorough checks.

@@ -53,7 +53,7 @@ Social media screening allows employers to gain deeper insights into candidates�
 
 #### 3\. Compliance and Efficiency
 
-Using tech-enabled solutions streamlines the screening process, helping companies remain compliant with employment laws and minimizing the risk of discrimination lawsuits. This efficiency is critical in today’s highly competitive job market \([Sterling Check](<https://www.sterlingcheck.com/blog/2024/01/4-reasons-to-use-tech-enabled-social-media-screening/>)\).
+Using tech-enabled solutions streamlines the screening process, helping companies remain compliant with employment laws and minimizing the risk of discrimination lawsuits. This efficiency is critical in today’s highly competitive job market.
 
 ### Best Practices for Implementing Social Media Screening
 
@@ -63,11 +63,11 @@ Crafting a well-defined social media screening policy is vital. This policy shou
 
 #### 2\. Legal Counsel
 
-Before rolling out social media screening, consulting legal counsel is advisable. This step helps ensure compliance with employment laws and minimizes liabilities related to candidate privacy and discrimination. Engaging in this due diligence is a best practice that reflects thoroughness in your hiring processes \([Sterling Check](<https://www.sterlingcheck.com/blog/2024/01/4-reasons-to-use-tech-enabled-social-media-screening/>)\).
+Before rolling out social media screening, consulting legal counsel is advisable. This step helps ensure compliance with employment laws and minimizes liabilities related to candidate privacy and discrimination. Engaging in this due diligence is a best practice that reflects thoroughness in your hiring processes.
 
 #### 3\. Consistent Application
 
-For social media screening to be effective, it must be applied consistently across all candidates. This consistency fosters fairness in hiring decisions and helps avoid potential claims of discriminatory practices \([Sterling Check](<https://www.sterlingcheck.com/blog/2024/01/4-reasons-to-use-tech-enabled-social-media-screening/>)\).
+For social media screening to be effective, it must be applied consistently across all candidates. This consistency fosters fairness in hiring decisions and helps avoid potential claims of discriminatory practices.
 
 ### Practical Takeaways for Recruiters and HR Professionals
 

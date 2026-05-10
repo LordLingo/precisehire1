@@ -1,5 +1,3 @@
-## Embracing Diversity, Equity, and Inclusion in Background Screening: The Future of Recruitment
-
 **Estimated Reading Time: 5 minutes**
 
   * **Organizations are standardizing background checks to promote fairness.**

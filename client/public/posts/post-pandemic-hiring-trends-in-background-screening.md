@@ -1,7 +1,5 @@
 ## Top Background Check Services in 2025: What Every HR Team Needs to Know
 
-Estimated reading time: 7 minutes
-
   * **Assess Your Company Needs:** Evaluate the size of your organization and specific industry compliance requirements.
   * **Consider Automation:** Services like Checkr can save time and reduce administrative burdens.
   * **User Experience Matters:** A user-friendly interface improves HR and candidate experiences.

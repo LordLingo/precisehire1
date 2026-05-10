@@ -1,7 +1,5 @@
 ## Fingerprint-Based Background Checks vs. Database Checks: What HR Professionals Need to Know
 
-Estimated reading time: 5 minutes
-
   * **Fingerprint-based checks provide superior accuracy and reliability.**
   * **Database checks offer speed and broader scope of information.**
   * **Employing a combination of both methods can enhance the hiring process.**

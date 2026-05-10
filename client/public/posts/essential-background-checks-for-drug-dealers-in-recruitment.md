@@ -1,7 +1,5 @@
 ## Understanding Background Checks for Drug Dealers: A Comprehensive Guide
 
-Estimated reading time: **7 minutes**
-
   * **Background checks are crucial** in recruitment to ensure compliance and safety.
   * **Types of checks** include criminal background checks, social media searches, fingerprinting, and drug screenings.
   * **Understand legal implications** regarding hiring individuals with potential links to drug dealing.

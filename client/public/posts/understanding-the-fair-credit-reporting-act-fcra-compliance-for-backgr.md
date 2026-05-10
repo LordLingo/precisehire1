@@ -1,7 +1,5 @@
 ## Understanding the Fair Credit Reporting Act \(FCRA\) Compliance for Background Checks in Recruitment
 
-Estimated reading time: 5 minutes
-
   * Always provide a stand-alone disclosure and obtain explicit written consent _before_ conducting any background check.
   * Utilize reputable, FCRA-compliant [CRAs](<https://iprospectcheck.com/fcra-background-check/>) to ensure data accuracy.
   * Follow the appropriate pre-adverse and adverse action procedures diligently.

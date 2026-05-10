@@ -1,5 +1,3 @@
-## The Transformative Impact of Hiring Ex-Offenders: A Second Chance for Businesses and Communities
-
 **Estimated Reading Time: 5 minutes**
 
   * Hiring ex-offenders positively impacts productivity and loyalty.

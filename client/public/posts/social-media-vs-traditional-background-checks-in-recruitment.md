@@ -51,12 +51,12 @@ Understanding the key differences between these two methods can help HR professi
 #### 2\. **Methodology**
 
   * **Traditional Checks:** Rely on documented records and databases, ensuring factual verification of a candidate’s qualifications.
-  * **Social Media Checks:** Employ advanced AI technologies to parse through vast amounts of publicly accessible content, combined with human reviews, to identify concerning patterns of behavior \([iProspectCheck](<https://iprospectcheck.com/social-media-checks/>)\).
+  * **Social Media Checks:** Employ advanced AI technologies to parse through vast amounts of publicly accessible content, combined with human reviews, to identify concerning patterns of behavior.
 
 #### 3\. **Risk Identification**
 
   * **Traditional Checks:** Primarily reveal criminal convictions, significant omissions in work history, or resume fraud.
-  * **Social Media Checks:** Can highlight potential workplace risks related to bad judgment or intolerance, like derogatory remarks about previous employers or inappropriate public interactions \([iProspectCheck](<https://iprospectcheck.com/social-media-checks/>)\).
+  * **Social Media Checks:** Can highlight potential workplace risks related to bad judgment or intolerance, like derogatory remarks about previous employers or inappropriate public interactions.
 
 #### 4\. **Legal and Ethical Considerations**
 

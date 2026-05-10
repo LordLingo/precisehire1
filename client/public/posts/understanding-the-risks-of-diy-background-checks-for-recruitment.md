@@ -46,7 +46,7 @@ DIY screenings can have serious implications in case of adverse actions being ta
 
 ##### 6\. Risk of Negligent Hiring
 
-Incomplete vetting stemming from DIY errors can increase the possibility of negligent hiring claims, leading to disastrous financial and reputational consequences should an employee cause harm in the workplace. Major court cases illustrate how costly mistakes often could have been avoided through professional consulting services \([source](<https://iprospectcheck.com/full-service-background-check-companies-vs-diy-background-checks/>)\).
+Incomplete vetting stemming from DIY errors can increase the possibility of negligent hiring claims, leading to disastrous financial and reputational consequences should an employee cause harm in the workplace. Major court cases illustrate how costly mistakes often could have been avoided through professional consulting services.
 
 ### When DIY Background Checks Might Suffice
 

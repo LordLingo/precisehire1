@@ -1,5 +1,3 @@
-## Navigating the 2025 Landscape: Key Screening Regulations Impacting Recruitment
-
 **Estimated Reading Time:** 6 minutes
 
   * **Florida ’s new regulations** will require background screenings for nearly all licensed healthcare professionals beginning on July 1, 2025.

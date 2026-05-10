@@ -1,5 +1,3 @@
-## The Future of Background Screening: What to Expect by 2026
-
 **Estimated Reading Time:** 5 minutes
 
   * AI and automation are transforming background screening processes.

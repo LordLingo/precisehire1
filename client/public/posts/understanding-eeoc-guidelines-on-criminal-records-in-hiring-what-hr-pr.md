@@ -1,8 +1,4 @@
-## Understanding EEOC Guidelines on Criminal Records in Hiring: What HR Professionals Need to Know
-
-Estimated reading time: 8 minutes
-
-  * **EEOC guidelines** provide a structured approach for employers to consider criminal histories.
+* **EEOC guidelines** provide a structured approach for employers to consider criminal histories.
   * Key **Do ’s and Don’ts** help HR professionals navigate compliance effectively.
   * Employers should conduct individualized assessments of criminal records.
   * Documentation and adherence to [EEOC guidelines](<https://lawyerscommittee.org/wp-content/uploads/2015/07/Best-Practices-Standards-The-Proper-Use-of-Criminal-Records-in-Hiring.pdf>) are essential for a fair hiring process.

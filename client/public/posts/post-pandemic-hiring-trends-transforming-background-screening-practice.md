@@ -1,8 +1,4 @@
-## Post-Pandemic Hiring Trends: Transforming Background Screening Practices
-
-Estimated reading time: 5 minutes
-
-  * **Continuous Record Check Monitoring:** Shift to ongoing employee monitoring.
+* **Continuous Record Check Monitoring:** Shift to ongoing employee monitoring.
   * **Expansion of Social Media Screening:** Increased reliance on social media for background checks.
   * **Focus on Efficiency and Risk Mitigation:** Streamlined processes for rapid candidate assessment.
   * **Skill-Based Hiring:** Evaluate candidates based on skills, not just credentials.

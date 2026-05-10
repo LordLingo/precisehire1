@@ -1,5 +1,3 @@
-## Adverse Action Notices in Background Checks: A Guide to Compliance
-
 **Estimated reading time: 5 minutes**
 
   * **Understanding adverse action:** It’s not just rejection—it’s a structured process.

@@ -1,7 +1,5 @@
 ## Understanding Background Checks and Employee Drug Tests: Best Practices for Recruitment
 
-Estimated reading time: 6 minutes
-
   * **Recognize the importance of both background checks and drug tests** in your hiring process.
   * **Stay compliant** with regulations relevant to your industry.
   * **Communicate clearly** with candidates about the screening process and results.

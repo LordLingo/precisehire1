@@ -1,7 +1,5 @@
 ## Why Background Checks Are Important for New Employees
 
-Estimated reading time: 5 minutes
-
   * Background checks mitigate hiring risks and enhance workplace safety.
   * They validate candidates’ qualifications and experiences.
   * Compliance with legal regulations is crucial in certain industries.

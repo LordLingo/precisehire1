@@ -1,8 +1,4 @@
-## Navigating the Complexities of International Background Checks in Recruitment
-
-Estimated reading time: 5 minutes
-
-  * **Compliance is crucial** to protect your organization from legal pitfalls.
+* **Compliance is crucial** to protect your organization from legal pitfalls.
   * **Understanding data protection laws** like GDPR is essential.
   * **Obtaining candidate consent** is a universal requirement.
   * **Collaborating with professional providers** can streamline the process.

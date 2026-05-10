@@ -1,5 +1,3 @@
-## The 2025 Hiring Outlook: Navigating Background Screening Trends
-
 **Estimated reading time: 7 minutes**
 
   * Prioritize accuracy over speed and cost in background screening.

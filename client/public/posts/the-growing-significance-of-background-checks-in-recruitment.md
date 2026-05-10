@@ -1,7 +1,5 @@
 ## Why Background Checks Are Becoming More Important
 
-Estimated reading time: 5 minutes
-
   * Integration of [AI](<https://www.ekentech.com/blog/2025/3/7/background-screening-trends-in-2025-what-employers-need-to-know>) and automation streamlines background checks.
   * Shift to continuous monitoring ensures ongoing employee compliance and safety.
   * Growing compliance pressures necessitate thorough and legally aligned screening processes.
