@@ -90,7 +90,7 @@ export default function Home() {
             <Reveal delay={0.15}>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link href="/contact" className="btn-coral inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold">
-                  Get started — see pricing <ArrowRight className="size-4" />
+                  Get started — Let&rsquo;s Talk <ArrowRight className="size-4" />
                 </Link>
                 <Link href="/services" className="btn-ghost-navy inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold">
                   Explore services
@@ -386,7 +386,7 @@ export default function Home() {
               </div>
               <div className="lg:col-span-4 flex flex-col gap-3">
                 <Link href="/contact" className="btn-coral text-center rounded-full px-7 py-3.5 text-sm font-semibold">
-                  Get started — see pricing
+                  Get started — Let&rsquo;s Talk
                 </Link>
                 <Link href="/contact" className="text-center rounded-full px-7 py-3.5 text-sm font-semibold border border-white/30 text-white hover:bg-white/10 transition-colors">
                   Talk to a specialist
