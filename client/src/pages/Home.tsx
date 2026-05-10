@@ -5,12 +5,13 @@
  * count-up numerals, subtle Framer Motion fade-ups.
  */
 import { Link } from "wouter";
-import { ArrowRight, ShieldCheck, Clock3, Sparkles, Plug, CheckCircle2, Star } from "lucide-react";
+import { ArrowRight, ShieldCheck, Clock3, Sparkles, Plug, CheckCircle2, Star, HeartPulse, Truck, Building2, ShoppingBag, Landmark, Wrench } from "lucide-react";
 import SEO from "@/components/site/SEO";
 import Reveal from "@/components/site/Reveal";
 import StatCounter from "@/components/site/StatCounter";
 import { ASSETS, SERVICES, INDUSTRIES, STATS, FAQ_ITEMS } from "@/content/site";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import type { LucideIcon } from "lucide-react";
 
 const HOMEPAGE_JSONLD = {
   "@context": "https://schema.org",
@@ -40,6 +41,48 @@ const HOMEPAGE_JSONLD = {
     },
   ],
 };
+
+// ---------------------------------------------------------------------------
+// Client logo strip — placeholder lockups (icon + Fraunces wordmark) until we
+// have permission-cleared real client logos from the PreciseHire team.
+// Each entry maps 1:1 to a slot in the 6-column grid below the hero.
+// ---------------------------------------------------------------------------
+const CLIENT_LOGOS: { name: string; sub: string; icon: LucideIcon }[] = [
+  { name: "Northbrook", sub: "Health",        icon: HeartPulse },
+  { name: "Atlas",      sub: "Logistics",    icon: Truck },
+  { name: "Beacon",     sub: "Staffing",     icon: Building2 },
+  { name: "Sterling",   sub: "Retail",       icon: ShoppingBag },
+  { name: "Cedar",      sub: "Trust Bank",   icon: Landmark },
+  { name: "Vector",     sub: "Build Co.",    icon: Wrench },
+];
+
+function LogoMark({ icon: Icon, name, sub }: { icon: LucideIcon; name: string; sub: string }) {
+  return (
+    <div
+      className="group inline-flex items-center gap-2.5 text-[#0B1F3A]/60
+                 motion-safe:transition-colors motion-safe:duration-300
+                 hover:text-[#0B1F3A]"
+      aria-label={`${name} ${sub}`}
+    >
+      <span
+        className="inline-flex size-9 items-center justify-center rounded-full
+                   border border-[#0B1F3A]/15 bg-white/60
+                   motion-safe:transition-colors motion-safe:duration-300
+                   group-hover:border-[#B7232A]/40 group-hover:bg-white"
+      >
+        <Icon className="size-[18px]" strokeWidth={1.6} />
+      </span>
+      <span className="leading-tight">
+        <span className="block font-display text-[1.05rem] font-semibold tracking-tight">
+          {name}
+        </span>
+        <span className="block text-[10px] font-semibold uppercase tracking-[0.18em] text-[#0B1F3A]/45">
+          {sub}
+        </span>
+      </span>
+    </div>
+  );
+}
 
 export default function Home() {
   return (
@@ -154,18 +197,35 @@ export default function Home() {
         </div>
 
         {/* Logo strip / social proof */}
-        <div className="container relative pb-10">
+        {/*
+          CLIENT LOGO STRIP
+          ----------------------------------------------------------------
+          These are stylized industry placeholders (lucide icon + Fraunces
+          wordmark) representing the sectors PreciseHire serves. When real
+          client logos are available, replace each <LogoMark /> entry with:
+              <img src="/brand/clients/<file>.svg" alt="Client name"
+                   className="h-7 w-auto opacity-70 grayscale
+                              hover:opacity-100 hover:grayscale-0
+                              transition" />
+          Keep the surrounding <Reveal>, label, and 6-column grid as-is.
+        */}
+        <div className="container relative pb-12">
           <Reveal>
-            <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-[#0B1F3A]/50">
-              Trusted by HR & operations teams nationwide
+            <p className="text-center text-[11px] font-semibold uppercase tracking-[0.22em] text-[#0B1F3A]/55">
+              Trusted by HR &amp; operations teams across regulated industries
             </p>
-            <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-x-6 gap-y-5 items-center justify-items-center opacity-80">
-              {["Northbrook Health", "Atlas Logistics", "Beacon Staffing", "Sterling Retail", "Cedar Trust", "Vector Build"].map((name) => (
-                <span key={name} className="font-display text-[#0B1F3A]/55 text-base lg:text-lg italic tracking-tight">
-                  {name}
-                </span>
+            <div
+              className="mt-7 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6
+                         gap-x-6 gap-y-7 items-center justify-items-center"
+            >
+              {CLIENT_LOGOS.map((l) => (
+                <LogoMark key={l.name} icon={l.icon} name={l.name} sub={l.sub} />
               ))}
             </div>
+            <p className="mt-6 text-center text-[11px] text-[#0B1F3A]/45">
+              Representative of the verticals we screen for &mdash; healthcare, transportation, staffing,
+              retail, financial services, and the trades.
+            </p>
           </Reveal>
         </div>
       </section>
