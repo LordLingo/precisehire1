@@ -39,6 +39,38 @@ export type Post = {
 
 export const POST_CATEGORIES = ["All", "Compliance", "Hiring Tips", "Industry", "Product"] as const;
 
+// Fine-grained topic facet derived from each post's title + tags.
+// Sits alongside the broader category chips so users can filter by service area.
+export const POST_TOPICS = [
+  "All Topics",
+  "Criminal Records",
+  "Drug & Alcohol",
+  "Driving Records (MVR)",
+  "Education",
+  "Employment & Identity",
+  "International",
+  "General Hiring",
+] as const;
+export type PostTopic = typeof POST_TOPICS[number];
+
+export function deriveTopic(p: { title: string; tags: string[] }): Exclude<PostTopic, "All Topics"> {
+  const blob = (p.title + " " + p.tags.join(" ")).toLowerCase();
+  // Order matters — most specific first; Criminal is broadest among service buckets so it comes last.
+  if (/(drug screen|drug test|drug panel|urine|5-panel|7-panel|4-panel|10-panel|mobile drug|rapid drug|non-dot drug|alcohol|blood test|high throughput)/.test(blob))
+    return "Drug & Alcohol";
+  if (/(driving record|\bmvr\b|motor vehicle|uber driver|dot driving)/.test(blob))
+    return "Driving Records (MVR)";
+  if (/(education verification|diploma|school record|transcript|degree verif)/.test(blob))
+    return "Education";
+  if (/(international|global background|overseas|foreign national)/.test(blob))
+    return "International";
+  if (/(employment verification|verification of employment|work history|employment eligibility|i-9|form i-9|employment form|employment letter|reference check|reference number|tenant screen|identity verification|kba|fingerprint|social media screen)/.test(blob))
+    return "Employment & Identity";
+  if (/(criminal background|criminal record|criminal check|criminal history|background check|ban-the-box|fair chance|felony|misdemeanor|conviction|arrest|expung|sex offender|fbi check|ncic)/.test(blob))
+    return "Criminal Records";
+  return "General Hiring";
+}
+
 export const POSTS: Post[] = [
   {
     slug: "fcra-disclosure-and-authorization-form-what-most-employers-get-wrong",
@@ -613,17 +645,26 @@ You still own the decision and the assessment. We make the paperwork unmissable.
 
 // Lightweight type used for the combined index (excludes inline `markdown`).
 // Hand-written POSTS still carry markdown inline; migrated entries fetch it lazily.
-export type PostIndex = Omit<Post, "markdown"> & { legacySlug?: string };
+export type PostIndex = Omit<Post, "markdown"> & { legacySlug?: string; topic: Exclude<PostTopic, "All Topics"> };
 
 import { MIGRATED_POSTS } from "./migrated_posts";
 
-// Strip markdown from hand-written POSTS for the combined index
-const HANDWRITTEN_INDEX: PostIndex[] = POSTS.map(({ markdown: _markdown, ...rest }) => rest);
+// Strip markdown from hand-written POSTS for the combined index, then attach derived topic.
+const HANDWRITTEN_INDEX: PostIndex[] = POSTS.map(({ markdown: _markdown, ...rest }) => ({
+  ...rest,
+  topic: deriveTopic(rest),
+}));
+
+// Migrated posts: attach derived topic at index build time so filtering is fast.
+const MIGRATED_INDEX: PostIndex[] = MIGRATED_POSTS.map((p) => ({
+  ...p,
+  topic: deriveTopic(p),
+}));
 
 // Combined index, hand-written first (newest editorial), then migrated by date
 export const ALL_POSTS_INDEX: PostIndex[] = [
   ...HANDWRITTEN_INDEX,
-  ...MIGRATED_POSTS,
+  ...MIGRATED_INDEX,
 ].sort((a, b) => (a.datePublished < b.datePublished ? 1 : -1));
 
 export function postsByCategory(cat: typeof POST_CATEGORIES[number]) {

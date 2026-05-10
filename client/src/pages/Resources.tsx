@@ -9,23 +9,35 @@ import { ArrowRight, Search } from "lucide-react";
 import SEO from "@/components/site/SEO";
 import Reveal from "@/components/site/Reveal";
 import { ASSETS, COMPANY } from "@/content/site";
-import { ALL_POSTS_INDEX, POST_CATEGORIES } from "@/content/posts";
+import { ALL_POSTS_INDEX, POST_CATEGORIES, POST_TOPICS } from "@/content/posts";
 
 export default function Resources() {
   const [cat, setCat] = useState<typeof POST_CATEGORIES[number]>("All");
+  const [topic, setTopic] = useState<typeof POST_TOPICS[number]>("All Topics");
   const [q, setQ] = useState("");
 
+  // Pre-compute counts per topic so chip labels can show "Drug & Alcohol · 34"
+  const topicCounts = useMemo(() => {
+    const map: Record<string, number> = { "All Topics": ALL_POSTS_INDEX.length };
+    for (const p of ALL_POSTS_INDEX) map[p.topic] = (map[p.topic] || 0) + 1;
+    return map;
+  }, []);
+
   const filtered = useMemo(() => {
-    const byCat = cat === "All" ? ALL_POSTS_INDEX : ALL_POSTS_INDEX.filter((p) => p.category === cat);
-    if (!q.trim()) return byCat;
+    let pool = ALL_POSTS_INDEX;
+    if (cat !== "All") pool = pool.filter((p) => p.category === cat);
+    if (topic !== "All Topics") pool = pool.filter((p) => p.topic === topic);
+    if (!q.trim()) return pool;
     const needle = q.trim().toLowerCase();
-    return byCat.filter(
+    return pool.filter(
       (p) =>
         p.title.toLowerCase().includes(needle) ||
         p.excerpt.toLowerCase().includes(needle) ||
         p.tags.some((t) => t.toLowerCase().includes(needle))
     );
-  }, [cat, q]);
+  }, [cat, topic, q]);
+
+  const isFiltered = cat !== "All" || topic !== "All Topics" || q.trim() !== "";
 
   const featured = ALL_POSTS_INDEX[0];
 
@@ -153,6 +165,61 @@ export default function Resources() {
               className="w-full rounded-full border border-[#0B1F3A]/15 bg-white py-2.5 pl-10 pr-4 text-sm placeholder:text-[#0B1F3A]/50 focus:outline-none focus:border-[#B7232A]/60 focus:ring-2 focus:ring-[#B7232A]/15"
             />
           </label>
+        </div>
+
+        {/* Topic row — fine-grained service-area filter */}
+        <div className="mt-5 pt-5 border-t border-[#0B1F3A]/10">
+          <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
+            <div className="flex items-center gap-3 flex-wrap">
+              <span className="text-xs uppercase tracking-[0.18em] font-semibold text-[#0B1F3A]/55">
+                Filter by topic
+              </span>
+              <div className="flex flex-wrap gap-2">
+                {POST_TOPICS.map((t) => {
+                  const active = t === topic;
+                  const count = topicCounts[t] ?? 0;
+                  if (count === 0 && t !== "All Topics") return null;
+                  return (
+                    <button
+                      key={t}
+                      onClick={() => setTopic(t)}
+                      className={[
+                        "group inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-[13px] font-medium transition-colors border",
+                        active
+                          ? "bg-[#B7232A] text-white border-[#B7232A]"
+                          : "bg-white text-[#0B1F3A]/80 border-[#0B1F3A]/15 hover:border-[#B7232A]/50 hover:text-[#B7232A]",
+                      ].join(" ")}
+                    >
+                      <span>{t}</span>
+                      <span
+                        className={[
+                          "text-[11px] font-semibold tabular-nums rounded-full px-1.5 py-0.5",
+                          active ? "bg-white/20" : "bg-[#0B1F3A]/5 group-hover:bg-[#B7232A]/10",
+                        ].join(" ")}
+                      >
+                        {count}
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+            {isFiltered && (
+              <button
+                onClick={() => {
+                  setCat("All");
+                  setTopic("All Topics");
+                  setQ("");
+                }}
+                className="self-start lg:self-auto text-xs font-semibold text-[#0B1F3A]/60 hover:text-[#B7232A] underline-offset-4 hover:underline"
+              >
+                Clear all filters
+              </button>
+            )}
+          </div>
+          <p className="mt-3 text-xs text-[#0B1F3A]/55">
+            Showing <span className="font-semibold text-[#0B1F3A]">{filtered.length}</span> of {ALL_POSTS_INDEX.length} articles
+          </p>
         </div>
       </section>
 
