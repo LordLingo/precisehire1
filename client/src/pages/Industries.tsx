@@ -60,7 +60,14 @@ export default function Industries() {
                       ))}
                     </ul>
                   </div>
-                  <Link href="/contact" className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-[#0B1F3A] hover:text-[#B7232A]">Build a {ind.title.toLowerCase()} package <ArrowRight className="size-4" /></Link>
+                  {ind.slug === "healthcare" ? (
+                    <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-2">
+                      <Link href="/industries/healthcare" className="inline-flex items-center gap-2 text-sm font-semibold text-[#B7232A] hover:underline">Read the healthcare deep-dive <ArrowRight className="size-4" /></Link>
+                      <Link href="/contact" className="inline-flex items-center gap-2 text-sm font-semibold text-[#0B1F3A]/65 hover:text-[#0B1F3A]">Or build a package directly <ArrowRight className="size-4" /></Link>
+                    </div>
+                  ) : (
+                    <Link href="/contact" className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-[#0B1F3A] hover:text-[#B7232A]">Build a {ind.title.toLowerCase()} package <ArrowRight className="size-4" /></Link>
+                  )}
                 </div>
               </article>
             </Reveal>

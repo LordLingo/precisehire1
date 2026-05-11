@@ -20,6 +20,7 @@ import Audit from "./pages/Audit";
 import Checklist from "./pages/Checklist";
 import Integrations from "./pages/Integrations";
 import Industries from "./pages/Industries";
+import IndustriesHealthcare from "./pages/IndustriesHealthcare";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
 import Legal from "./pages/Legal";
@@ -37,6 +38,7 @@ function Router() {
         <Route path="/services" component={Services} />
         <Route path="/services/:slug" component={ServiceDetail} />
         <Route path="/industries" component={Industries} />
+        <Route path="/industries/healthcare" component={IndustriesHealthcare} />
         <Route path="/pricing" component={Pricing} />
         <Route path="/compliance" component={Compliance} />
         <Route path="/compliance/audit" component={Audit} />
