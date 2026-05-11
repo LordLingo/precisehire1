@@ -24,6 +24,7 @@ import Legal from "./pages/Legal";
 import Resources from "./pages/Resources";
 import ResourcePost from "./pages/ResourcePost";
 import Support from "./pages/Support";
+import AuthorPage from "./pages/AuthorPage";
 import NotFound from "./pages/NotFound";
 
 function Router() {
@@ -44,6 +45,7 @@ function Router() {
         <Route path="/legal/:slug" component={Legal} />
         <Route path="/resources" component={Resources} />
         <Route path="/resources/:slug" component={ResourcePost} />
+        <Route path="/authors/:slug" component={AuthorPage} />
         {/* Legacy WordPress blog URLs redirect into the new Resources index */}
         <Route path="/blog" component={Resources} />
         <Route path="/category/:cat*" component={Resources} />

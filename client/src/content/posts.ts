@@ -29,7 +29,8 @@ export type Post = {
   description: string;
   category: "Compliance" | "Hiring Tips" | "Industry" | "Product";
   tags: string[];
-  author: string;
+  author: string;          // legacy display string — still rendered if no authorSlug
+  authorSlug?: string;     // preferred: resolves into AUTHORS in /content/authors.ts
   datePublished: string;
   readingMin: number;
   image: string;
@@ -73,6 +74,80 @@ export function deriveTopic(p: { title: string; tags: string[] }): Exclude<PostT
 
 export const POSTS: Post[] = [
   {
+    slug: "how-long-must-employers-wait-pre-adverse-action-state-by-state",
+    title: "How Long Must Employers Wait Between Pre-Adverse and Final Adverse Action \u2014 A State-by-State Cushion Table",
+    metaTitle: "Pre-Adverse Action Waiting Periods by State (2026)",
+    description:
+      "The federal FCRA floor is five business days, but Philadelphia, Los Angeles, NYC, and California impose more. A 2026 state-by-state cushion table for employers running background checks.",
+    category: "Compliance",
+    tags: ["FCRA", "Adverse Action", "Pre-Adverse Notice", "State Compliance", "Hiring"],
+    author: "Mark Cromwell",
+    authorSlug: "mark-cromwell",
+    datePublished: "2026-05-13",
+    readingMin: 8,
+    image: ASSETS.serviceCriminal,
+    excerpt:
+      "The federal FCRA waiting period is \"reasonable\" \u2014 operationally five business days. But four jurisdictions extend it, and one of them doubles it. A 2026 state-by-state cushion table for employers.",
+    markdown: `The single most expensive timing question in pre-employment screening is also one of the simplest: how many days do you have to wait between the pre-adverse action notice and the final adverse action? The Fair Credit Reporting Act answers it with the word "reasonable" and nothing more, which is part of why this is the step plaintiffs' firms most often turn into class actions. The honest answer is that the federal floor is five business days for almost every employer in the country, but four jurisdictions impose more \u2014 and one of them doubles it.
+
+This is the practical follow-on to our [walkthrough of the FCRA pre-adverse action notice itself](/resources/pre-adverse-action-notice-requirements-timing-content-and-documents). It assumes you have a compliant notice packet (cover letter, full report, current CFPB Summary of Rights) and only addresses the question of how long the waiting clock has to run before final adverse action.
+
+## The federal floor: five business days
+
+[Section 604(b)(3)(A) of the FCRA](https://www.law.cornell.edu/uscode/text/15/1681b) requires a "reasonable" period between the pre-adverse notice and the final decision so the candidate can review the report and dispute information they believe is inaccurate. The FTC has never issued a regulation pinning that to a specific number, but its [plain-language guidance for employers using consumer reports](https://www.ftc.gov/business-guidance/resources/using-consumer-reports-what-employers-need-know) and decades of informal staff guidance converge on the same operational floor: **five business days**, measured from candidate receipt rather than employer send date.
+
+Five business days is a floor, not a target. If the candidate disputes the report during the waiting window, the clock pauses while the consumer reporting agency investigates, and sending the final adverse action while a dispute is open is the fastest way to convert a routine hiring decision into a lawsuit. Many regulated employers adopt seven calendar days or ten calendar days as an internal cushion for exactly this reason. But for the simple case \u2014 no dispute filed, candidate received the package, employer is in a state with no fair-chance overlay \u2014 five business days is the durable industry minimum.
+
+## The four jurisdictions that impose more
+
+Four jurisdictions in the United States impose explicit statutory waiting periods that go beyond the federal floor when the adverse action is based on criminal history. Three of them require five business days plus an individualized written assessment; one of them requires ten business days flat. Together they cover the bulk of the United States population center.
+
+| Jurisdiction | Required wait | Triggered by | Authority |
+|---|---|---|---|
+| **Federal floor** | 5 business days (operational) | Any pre-adverse action | FCRA \u00a7604(b)(3)(A); FTC employer guidance |
+| **California** | 5 business days; +5 more if candidate disputes accuracy | Any decision rescinding offer based on conviction history | [2 CCR \u00a711017.1](https://calcivilrights.ca.gov/wp-content/uploads/sites/32/2022/11/Fair-Chance-Act-FAQ_ENG.pdf) (Fair Chance Act regs, Oct 2023) |
+| **Los Angeles (City)** | 5 business days, with written individualized assessment, position held open | Rescinding conditional offer based on criminal history | [LA Fair Chance Initiative for Hiring Ordinance](https://bca.lacity.gov/sites/default/files/Uploads/fciho/FCIHO%20Notice%20to%20Applicants%20for%20Private%20Employers%20-%20English%20ADA%20Final.pdf) |
+| **New York City** | 5 business days, with written Article 23-A analysis shared, position held open | Rescinding conditional offer based on criminal history | [NYC Fair Chance Act enforcement guidance](https://www.nyc.gov/site/cchr/law/fair-chance-act.page) |
+| **Philadelphia** | **10 business days** | Adverse action based on criminal records | [Bill 250373-A](https://files.amlegal.com/pdffiles/Philadelphia/250373-A.pdf) (Oct 2025 amendments to FCRSS) |
+
+Philadelphia is the outlier. The city's [Fair Criminal Record Screening Standards](https://www.phila.gov/services/crime-law-justice/report-a-crime-or-concern/discrimination-and-unfair-practices/file-a-complaint-about-criminal-record-discrimination-in-employment/) were amended in October 2025 to require employers to give candidates **a full ten business days** \u2014 twice the federal floor \u2014 to submit evidence of inaccuracy or evidence of rehabilitation and mitigating factors before final adverse action. That is not an industry rule of thumb; it is a city ordinance, enforced by the Philadelphia Commission on Human Relations, with damages exposure for noncompliance.
+
+California's regulations work differently. The Fair Chance Act regs at [2 CCR \u00a711017.1](https://calcivilrights.ca.gov/wp-content/uploads/sites/32/2022/11/Fair-Chance-Act-FAQ_ENG.pdf), modified in October 2023 and now in full effect, require five business days after the preliminary decision notice. But if the candidate notifies the employer in writing that they are disputing the accuracy of the conviction history report, the employer must give an additional five business days \u2014 extending the maximum waiting window in California to ten business days. California also requires a written preliminary decision notice that identifies the specific disqualifying conviction(s), which is more than the federal pre-adverse package requires.
+
+Los Angeles and New York City impose an additional procedural layer rather than a longer clock. Both require employers to perform a written individualized assessment of the criminal history against the duties of the specific job before adverse action can be finalized \u2014 Los Angeles under its [Fair Chance Initiative for Hiring Ordinance](https://bca.lacity.gov/sites/default/files/Uploads/fciho/FCIHO-factsheet-ADA-%20English%2004.14.26.pdf), and New York City under the [Fair Chance Act](https://www.nyc.gov/site/cchr/law/fair-chance-act.page) and the Article 23-A analysis it incorporates from the New York Correction Law. Both then require employers to share that assessment with the candidate, hold the position open, and give the candidate at least five business days to respond. The clock is the same as the federal floor, but the documentation is materially heavier, and skipping the assessment is treated as evidence of disparate impact in litigation.
+
+Los Angeles County added its own [Fair Chance Ordinance for Employers](https://www.seyfarth.com/news-insights/employers-face-onerous-compliance-obligations-under-the-new-los-angeles-county-fair-chance-ordinance.html) in 2024, layering further documentation requirements on top of the city ordinance for employers operating in the county. Employers physically located in the city of Los Angeles need to comply with both.
+
+## The states without an overlay
+
+The remaining forty-six states do not impose a statutory waiting period beyond the federal FCRA floor for adverse actions based on background reports. That includes Alabama, Alaska, Arizona, Arkansas, Colorado, Connecticut, Delaware, Florida, Georgia, Hawaii, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky, Louisiana, Maine, Maryland, Massachusetts, Michigan, Minnesota, Mississippi, Missouri, Montana, Nebraska, Nevada, New Hampshire, New Jersey, New Mexico, North Carolina, North Dakota, Ohio, Oklahoma, Oregon, Rhode Island, South Carolina, South Dakota, Tennessee, Texas, Utah, Vermont, Virginia, Washington, West Virginia, Wisconsin, and Wyoming. Several of these states \u2014 notably Illinois, Massachusetts, New Jersey, and Washington \u2014 have ban-the-box laws that govern *when* the criminal history can be considered, but they do not extend the waiting period itself once the pre-adverse notice has been sent.
+
+A handful of other cities \u2014 including Seattle, San Francisco, and Austin \u2014 have fair-chance ordinances with their own procedural requirements, but none currently extend the waiting clock beyond five business days. Multi-state employers should verify city-level overlays for any jurisdiction in which they have a meaningful headcount, but the four jurisdictions above are the only ones where a non-Philadelphia, non-California, non-LA, non-NYC waiting policy will produce a documented violation purely on the timing question.
+
+## What this means operationally
+
+The cleanest policy for a multi-state employer is to **default to ten business days everywhere**. It matches the strictest jurisdiction (Philadelphia), eliminates per-state branching in the ATS, and removes any "did we count business days correctly in this jurisdiction" exposure. The cost is a slightly longer time-to-fill, but for most non-hourly roles the marginal day or two is operationally invisible compared to the litigation exposure of getting the timing wrong.
+
+If ten business days is operationally too slow \u2014 in high-velocity hourly hiring, for example \u2014 the next best policy is to split: ten business days for Philadelphia hires, five business days everywhere else, with the clock measured from documented candidate receipt rather than employer send date, and an automatic pause built into the ATS the moment a dispute is filed. The split policy works, but it requires the ATS to know the candidate's work location and the disposition of any dispute, which is more engineering than most employers expect.
+
+A third pattern, common in regulated industries, is to default to seven calendar days everywhere and add California-specific and LA-specific and NYC-specific written-assessment templates that fire automatically when the candidate's location matches. Seven calendar days falls below the Philadelphia minimum, so this pattern only works for employers without a Philadelphia footprint.
+
+Whatever the policy, three things have to be true to defend the timing in court. First, the start of the clock has to be candidate receipt, not employer send date \u2014 which means certified mail with delivery confirmation, or an email-tracking step, or the candidate-portal acknowledgment workflow most modern background-check vendors provide. Second, the clock has to pause the moment a dispute is filed, and the final adverse action has to wait for the dispute to resolve. Third, the policy has to be written down somewhere the plaintiff's bar can be shown, because in a class action the absence of a documented policy is itself treated as evidence of recklessness.
+
+## How PreciseHire handles this
+
+Our [adverse action workflow](/services/criminal-background-checks) is built around the ten-business-day default with automatic per-jurisdiction overlays for California, Los Angeles, New York City, and Philadelphia. The Philadelphia overlay enforces the ten-business-day minimum even if a hiring manager tries to override it; the California overlay automatically extends the clock by five business days the moment a candidate flags a dispute; the LA and NYC overlays prompt the hiring manager to complete the written individualized assessment before the system will let the final notice go out. The clock starts on candidate-portal acknowledgment, not on employer send. We document every step in an audit trail you can hand to outside counsel.
+
+If you want a second pair of eyes on your current adverse-action timing \u2014 particularly if you have a Philadelphia or California footprint \u2014 [reach out](/contact) and we will review your current waiting-period policy, your dispute-pause logic, and your jurisdictional overlays before a plaintiff's attorney does.
+
+## TL;DR
+
+- The federal FCRA waiting period is "reasonable" \u2014 operationally five business days, measured from candidate receipt rather than employer send date.
+- Four jurisdictions extend it: California (5 business days, +5 more if disputed), Los Angeles, New York City (both 5 business days plus a written individualized assessment), and Philadelphia (a flat 10 business days).
+- The cleanest multi-state policy is to default to 10 business days everywhere, matching Philadelphia, and to pause the clock automatically when a candidate files a dispute.
+`,
+  },
+  {
     slug: "pre-adverse-action-notice-requirements-timing-content-and-documents",
     title: "Pre-Adverse Action Notice Requirements: Timing, Content, and the Documents You Must Include",
     metaTitle: "Pre-Adverse Action Notice Requirements (FCRA, 2026)",
@@ -80,7 +155,8 @@ export const POSTS: Post[] = [
       "What the FCRA requires in a pre-adverse action notice — the three documents, the wait time, the March 2024 CFPB form change, and the four mistakes that produce the most lawsuits.",
     category: "Compliance",
     tags: ["FCRA", "Adverse Action", "Pre-Adverse Notice", "Hiring Compliance"],
-    author: "PreciseHire Editorial",
+    author: "Mark Cromwell",
+    authorSlug: "mark-cromwell",
     datePublished: "2026-05-11",
     readingMin: 7,
     image: ASSETS.serviceCriminal,
@@ -169,7 +245,8 @@ If you would like a second pair of eyes on your adverse-action workflow, our [cr
       "The single most-litigated document in U.S. hiring. A 2026 walkthrough of the FCRA disclosure and authorization form — every mistake that costs employers, and how to fix it.",
     category: "Compliance",
     tags: ["FCRA", "Disclosure", "Authorization", "Hiring Compliance"],
-    author: "PreciseHire Editorial",
+    author: "Mark Cromwell",
+    authorSlug: "mark-cromwell",
     datePublished: "2026-05-10",
     readingMin: 8,
     image: ASSETS.serviceCriminal,
@@ -262,7 +339,8 @@ If you would like a second pair of eyes on the form your candidates are actually
       "A 2026 walkthrough of the FCRA adverse action process for hiring managers — what to send, when to send it, and how to avoid the lawsuits that catch employers off guard.",
     category: "Compliance",
     tags: ["FCRA", "Adverse Action", "Hiring Compliance"],
-    author: "PreciseHire Editorial",
+    author: "Mark Cromwell",
+    authorSlug: "mark-cromwell",
     datePublished: "2026-05-10",
     readingMin: 8,
     image: ASSETS.serviceCriminal,
@@ -344,6 +422,7 @@ If you would like a second pair of eyes on your adverse action workflow, [our co
     category: "Compliance",
     tags: ["FCRA", "Compliance", "Adverse Action"],
     author: "PreciseHire Team",
+    authorSlug: "precisehire-team",
     datePublished: "2026-01-14",
     readingMin: 9,
     image: ASSETS.serviceCriminal,
@@ -410,6 +489,7 @@ Every account includes a compliant disclosure/authorization template, automated 
     category: "Hiring Tips",
     tags: ["Turnaround", "Hiring"],
     author: "PreciseHire Team",
+    authorSlug: "precisehire-team",
     datePublished: "2026-01-22",
     readingMin: 6,
     image: ASSETS.serviceEmployment,
@@ -463,6 +543,7 @@ Want a turnaround SLA built into your contract? Talk to our team — for high-vo
     category: "Compliance",
     tags: ["Ban the Box", "Fair Chance", "State Law"],
     author: "PreciseHire Team",
+    authorSlug: "precisehire-team",
     datePublished: "2026-02-04",
     readingMin: 8,
     image: ASSETS.serviceCriminal,
@@ -512,6 +593,7 @@ Our platform geo-detects the candidate's location and surfaces the applicable st
     category: "Hiring Tips",
     tags: ["Background Check Basics", "Hiring"],
     author: "PreciseHire Team",
+    authorSlug: "precisehire-team",
     datePublished: "2026-02-18",
     readingMin: 7,
     image: ASSETS.serviceEmployment,
@@ -558,6 +640,7 @@ A warehouse worker, a CDL driver, and a CFO need different checks. A driver need
     category: "Industry",
     tags: ["MVR", "CDL", "Transportation", "DOT"],
     author: "PreciseHire Team",
+    authorSlug: "precisehire-team",
     datePublished: "2026-03-01",
     readingMin: 6,
     image: ASSETS.serviceMVR,
@@ -604,6 +687,7 @@ We can help you set up the recurring schedule and the DQ-file storage in one wor
     category: "Compliance",
     tags: ["Drug Testing", "Marijuana", "State Law"],
     author: "PreciseHire Team",
+    authorSlug: "precisehire-team",
     datePublished: "2026-03-15",
     readingMin: 7,
     image: ASSETS.serviceDrug,
@@ -659,6 +743,7 @@ This is why **supervisor training** is now as important as the testing itself. D
     category: "Compliance",
     tags: ["Adverse Action", "FCRA", "Compliance"],
     author: "PreciseHire Team",
+    authorSlug: "precisehire-team",
     datePublished: "2026-03-29",
     readingMin: 8,
     image: ASSETS.serviceCriminal,

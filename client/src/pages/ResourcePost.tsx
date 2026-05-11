@@ -13,6 +13,7 @@ import SEO from "@/components/site/SEO";
 import Reveal from "@/components/site/Reveal";
 import { COMPANY } from "@/content/site";
 import { findPost, relatedPosts, getInlineMarkdown } from "@/content/posts";
+import { resolveAuthor } from "@/content/authors";
 import NotFound from "./NotFound";
 
 export default function ResourcePost() {
@@ -50,6 +51,7 @@ export default function ResourcePost() {
 
   const related = relatedPosts(post.slug, 3);
   const url = `https://precisehire.com/resources/${post.slug}`;
+  const author = resolveAuthor(post.authorSlug);
 
   const jsonLd = [
     {
@@ -60,7 +62,13 @@ export default function ResourcePost() {
       image: post.image,
       datePublished: post.datePublished,
       dateModified: post.datePublished,
-      author: { "@type": "Organization", name: post.author },
+      author: {
+        "@type": "Person",
+        name: author.name,
+        jobTitle: author.role,
+        worksFor: { "@type": "Organization", name: COMPANY.legalName },
+        url: `https://precisehire.com/authors/${author.slug}`,
+      },
       publisher: {
         "@type": "Organization",
         name: COMPANY.legalName,
@@ -119,7 +127,7 @@ export default function ResourcePost() {
             <span className="inline-flex items-center gap-2">
               <Clock className="size-4" /> {post.readingMin} min read
             </span>
-            <span>By {post.author}</span>
+            <span>By <Link href={`/authors/${author.slug}`} className="text-[#0B1F3A] underline-offset-2 hover:underline">{author.name}</Link>{author.role ? `, ${author.role}` : ""}</span>
           </div>
         </Reveal>
       </header>
@@ -148,6 +156,34 @@ export default function ResourcePost() {
                 <Loader2 className="size-5 animate-spin" /> Loading article…
               </div>
             )}
+          </div>
+
+          {/* Author bio card */}
+          <div className="mt-12 rounded-2xl border border-[#0B1F3A]/10 bg-[#FFFCF7] p-6 sm:p-7 flex flex-col sm:flex-row gap-5 items-start">
+            <Link href={`/authors/${author.slug}`} className="shrink-0">
+              <img
+                src={author.photo}
+                alt={author.name}
+                className="size-20 sm:size-24 rounded-full object-cover border border-[#0B1F3A]/10"
+              />
+            </Link>
+            <div className="flex-1">
+              <p className="text-xs uppercase tracking-[0.14em] font-semibold text-[#B7232A]">About the author</p>
+              <Link href={`/authors/${author.slug}`} className="mt-1 block font-display text-xl font-semibold text-[#0B1F3A] hover:text-[#B7232A]">
+                {author.name}
+              </Link>
+              <p className="text-[13.5px] text-[#0B1F3A]/65 mt-0.5">{author.role}</p>
+              <p className="mt-3 text-[14.5px] text-[#0B1F3A]/80 leading-relaxed">{author.shortBio}</p>
+              {author.credentials.length > 0 && (
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {author.credentials.map((c) => (
+                    <span key={c} className="rounded-full bg-white border border-[#0B1F3A]/12 px-3 py-1 text-[11.5px] font-medium text-[#0B1F3A]/70">
+                      {c}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Tags + back link */}
