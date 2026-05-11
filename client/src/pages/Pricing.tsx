@@ -14,6 +14,7 @@ import { Check, ArrowRight, Clock, ShieldCheck, Phone, Sparkles, Minus } from "l
 import SEO from "@/components/site/SEO";
 import Reveal from "@/components/site/Reveal";
 import { PACKAGES, ASSETS } from "@/content/site";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 /**
  * UNIT-ECONOMICS BREAKDOWN
@@ -371,6 +372,120 @@ export default function Pricing() {
             </div>
           </div>
         </Reveal>
+      </section>
+
+      {/* TRUST STATEMENT + PRICING FAQ */}
+      <section className="container pb-20">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+          <div className="lg:col-span-5">
+            <Reveal>
+              <span className="eyebrow text-[#B7232A]">Why this page looks the way it does</span>
+              <h2 className="display-md mt-3 text-[#0B1F3A]">
+                We publish prices the way we wish vendors had published them to us.
+              </h2>
+              <p className="mt-5 text-[#0B1F3A]/75 leading-relaxed">
+                Most background-check companies treat pricing as a sales conversation
+                you have to qualify for. We treat it as a piece of information you
+                should be able to read on a Tuesday afternoon without filling out a
+                form. The three packages on this page are real packages with real
+                prices. The unit-economics breakdown is the actual cost structure of
+                a Professional-tier check, not a marketing chart. Where we cost more
+                than self-serve CRAs, we say so on the comparison table and we
+                explain why. The point is that you should be able to make an
+                informed decision about screening before you ever talk to us.
+              </p>
+              <p className="mt-4 text-[#0B1F3A]/75 leading-relaxed">
+                When you do reach out, you talk to a U.S.-based compliance specialist
+                who will tell you which package fits your role mix and your
+                jurisdictional footprint — even if the answer is "Essential" and not
+                the more expensive tier. We have been doing this since 2003 and the
+                shortest path to a long client relationship has always been the
+                honest one.
+              </p>
+            </Reveal>
+          </div>
+
+          <div className="lg:col-span-7">
+            <Reveal delay={0.05}>
+              <span className="eyebrow">Pricing FAQ</span>
+              <h2 className="display-md mt-3 text-[#0B1F3A]">
+                The four questions buyers actually ask.
+              </h2>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <Accordion type="single" collapsible className="mt-8 divide-y divide-[#0B1F3A]/10 border-y border-[#0B1F3A]/10">
+                <AccordionItem value="q1" className="border-0">
+                  <AccordionTrigger className="py-5 text-left font-display text-[17px] font-semibold text-[#0B1F3A] hover:no-underline">
+                    Why are you a few dollars more than the self-serve sites?
+                  </AccordionTrigger>
+                  <AccordionContent className="pb-6 text-[15px] leading-relaxed text-[#0B1F3A]/80">
+                    Three reasons, in order of how much they actually cost. First,
+                    we run U.S.-based verification labor instead of offshoring it,
+                    which is the largest single line item in our unit economics.
+                    Second, we include FCRA adverse-action workflow, dispute
+                    handling, and per-jurisdiction overlays for California, Los
+                    Angeles, NYC, and Philadelphia in the per-check price — not as
+                    add-ons. Third, we answer the phone in eleven seconds with a
+                    live compliance specialist instead of routing you to a chatbot
+                    or a 24-hour email queue. Self-serve CRAs are cheaper because
+                    they have decided not to do those three things.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="q2" className="border-0">
+                  <AccordionTrigger className="py-5 text-left font-display text-[17px] font-semibold text-[#0B1F3A] hover:no-underline">
+                    What does a typical custom-volume discount look like?
+                  </AccordionTrigger>
+                  <AccordionContent className="pb-6 text-[15px] leading-relaxed text-[#0B1F3A]/80">
+                    Volume discounts kick in around 250 checks per month and scale
+                    from there. As a directional benchmark, employers running 250
+                    – 500 Professional-tier checks per month typically see a 7–12%
+                    reduction off the published per-check rate; employers running
+                    500–1,500 per month typically see 12–20%; and staffing or
+                    enterprise contracts above 1,500 per month are priced against
+                    the actual jurisdictional mix and check composition. None of
+                    those tiers carry a setup fee or a multi-year lock-in. A
+                    specialist will put a real number on it within one business
+                    day if you share your typical monthly volume and role mix.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="q3" className="border-0">
+                  <AccordionTrigger className="py-5 text-left font-display text-[17px] font-semibold text-[#0B1F3A] hover:no-underline">
+                    Are court access fees included in the per-check price?
+                  </AccordionTrigger>
+                  <AccordionContent className="pb-6 text-[15px] leading-relaxed text-[#0B1F3A]/80">
+                    Yes for the vast majority of jurisdictions. The published
+                    per-check price includes court-access fees in every U.S. county
+                    and state we routinely search. A handful of higher-fee
+                    jurisdictions — New York Supreme Court, certain federal
+                    districts, and a small number of states that charge
+                    above-market access fees — are billed at pass-through cost and
+                    flagged in advance, never silently. International searches and
+                    DOT-specific MVR add-ons are quoted separately because the
+                    underlying fees vary too widely to bundle.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="q4" className="border-0">
+                  <AccordionTrigger className="py-5 text-left font-display text-[17px] font-semibold text-[#0B1F3A] hover:no-underline">
+                    What's your contract length, and is there a monthly minimum?
+                  </AccordionTrigger>
+                  <AccordionContent className="pb-6 text-[15px] leading-relaxed text-[#0B1F3A]/80">
+                    No contract and no monthly minimum on any of the three
+                    published packages. You pay per check whether you run one this
+                    quarter or two hundred, and you can pause or stop at any time
+                    without penalty. Custom-volume contracts above 250 checks per
+                    month are typically structured as a one-year commitment in
+                    exchange for the volume rate, but even those are exit-able
+                    with thirty days' notice if the relationship is not working.
+                    We have never asked a client to sign a multi-year deal.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </Reveal>
+          </div>
+        </div>
       </section>
 
       {/* CUSTOM VOLUME CTA */}

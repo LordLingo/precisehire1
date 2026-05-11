@@ -74,6 +74,97 @@ export function deriveTopic(p: { title: string; tags: string[] }): Exclude<PostT
 
 export const POSTS: Post[] = [
   {
+    slug: "background-check-disputes-what-employers-must-do",
+    title: "What Happens When a Candidate Disputes a Background Check \u2014 and What Employers Must Do",
+    metaTitle: "Background Check Disputes: Employer Guide (FCRA \u00a7611)",
+    description:
+      "FCRA \u00a7611 gives candidates 30 days to dispute a background check. Here's what the CRA must do, what the employer must do, and the workflow that keeps you out of court.",
+    category: "Compliance",
+    tags: ["FCRA", "Disputes", "Adverse Action", "Hiring Compliance"],
+    author: "Mark Cromwell",
+    authorSlug: "mark-cromwell",
+    datePublished: "2026-05-15",
+    readingMin: 9,
+    image: ASSETS.serviceCriminal,
+    excerpt:
+      "The fastest way to convert a routine background check into a class action is to send the final adverse action notice while a dispute is open. Here's the FCRA \u00a7611 dispute workflow \u2014 from both sides.",
+    markdown: `The single fastest way to convert a routine background check into a class-action lawsuit is to send the final adverse action notice while the candidate's dispute is still open. The Fair Credit Reporting Act gives candidates a specific, statutory right to challenge information in their own consumer report, gives the consumer reporting agency a specific timeline to investigate, and gives the employer no explicit instruction at all about what to do in the meantime. The result, predictably, is that employers do whatever feels efficient \u2014 and a meaningful percentage of those efficient decisions land in court.
+
+This article walks through what actually happens when a candidate files a dispute, what the consumer reporting agency is legally required to do, and what the employer is operationally required to do during the window. It is the third installment in our adverse-action series, following our [walkthrough of the pre-adverse action notice](/resources/pre-adverse-action-notice-requirements-timing-content-and-documents) and our [state-by-state cushion table on waiting periods](/resources/how-long-must-employers-wait-pre-adverse-action-state-by-state).
+
+## The candidate's right to dispute
+
+[Section 611 of the FCRA](https://www.law.cornell.edu/uscode/text/15/1681i), codified at 15 U.S.C. \u00a71681i, gives any consumer the right to dispute "the completeness or accuracy of any item of information contained in a consumer's file" with the consumer reporting agency that produced the report. There is no fee, no required form, and no requirement that the dispute be in any particular format \u2014 a phone call counts, an email counts, a letter counts, and most modern CRAs offer an online dispute portal as well.
+
+A candidate triggers a dispute by notifying the CRA, not the employer. In practice, employers find out a dispute has been filed because either the candidate tells them directly during the pre-adverse waiting window, or because the CRA contacts the employer to flag that the report is now under reinvestigation. Either way, the moment an employer becomes aware of a pending dispute, the operational rules change immediately.
+
+## The CRA's 30-day clock
+
+Once the CRA receives a dispute notice from the consumer, [\u00a71681i(a)(1)(A)](https://www.law.cornell.edu/uscode/text/15/1681i) requires it to complete a reinvestigation **free of charge** and within **30 days**. The clock is not optional, and it is not extendable except in one specific circumstance: under [\u00a71681i(a)(1)(B)](https://www.law.cornell.edu/uscode/text/15/1681i), if the consumer provides additional relevant information during the original 30-day window, the CRA may extend the reinvestigation by up to **15 additional days**, capping the maximum reinvestigation period at **45 days**.
+
+Within five business days of receiving the dispute, [\u00a71681i(a)(2)](https://www.law.cornell.edu/uscode/text/15/1681i) requires the CRA to notify every furnisher of the disputed information \u2014 the county clerk, the prior employer, the registrar, the database vendor \u2014 and forward all relevant information the consumer submitted. The furnisher then has its own statutory obligation under [\u00a71681s-2(b)](https://www.law.cornell.edu/uscode/text/15/1681s-2) to investigate, review the information the CRA forwarded, and report results back. Most disputes turn on this furnisher loop: if the original record source confirms the entry was wrong or cannot be verified, the CRA is required under [\u00a71681i(a)(5)(A)](https://www.law.cornell.edu/uscode/text/15/1681i) to **promptly delete or modify** the item.
+
+When the reinvestigation is complete, [\u00a71681i(d)](https://www.law.cornell.edu/uscode/text/15/1681i) gives the CRA five business days to send the consumer written notice of the results, including a revised report if anything was changed. If the disputed item was deleted or corrected, the corrected report becomes the operative document for the employer's hiring decision.
+
+## The "frivolous or irrelevant" escape hatch \u2014 and how it gets misused
+
+[Section \u00a71681i(a)(3)](https://www.law.cornell.edu/uscode/text/15/1681i) lets the CRA terminate a reinvestigation if it "reasonably determines" the dispute is "frivolous or irrelevant," including disputes where the consumer has failed to provide enough information for the CRA to investigate. The statute requires the CRA to notify the consumer in writing within five business days of that determination, explain the reason, and tell the consumer how to resubmit with additional information.
+
+The "frivolous or irrelevant" escape hatch exists for a legitimate reason \u2014 without it, CRAs would be obligated to spend 30 days investigating disputes that say nothing more than "this is wrong." But it is also one of the most heavily litigated provisions of the FCRA, because some CRAs use it to close legitimate disputes that simply require effort to investigate. Closing a county criminal record dispute as "frivolous" because it would require a manual courthouse pull is, in our reading, exactly what the statute does not contemplate. Employers relying on a CRA that aggressively closes disputes as frivolous are inheriting that CRA's litigation risk.
+
+## What the employer must do during the dispute
+
+The FCRA does not contain explicit language that says "pause the adverse action clock when a dispute is filed." What it says, in [\u00a7604(b)(3)(A)](https://www.law.cornell.edu/uscode/text/15/1681b), is that the employer must wait a "reasonable" period after the pre-adverse notice before taking final adverse action. The FTC's longstanding interpretive position \u2014 repeated across decades of staff opinion letters and the agency's [plain-language employer guidance](https://www.ftc.gov/business-guidance/resources/using-consumer-reports-what-employers-need-know) \u2014 is that proceeding to final adverse action while a timely dispute is open defeats the candidate's statutory right to dispute, and is therefore not "reasonable" under \u00a7604(b)(3)(A). Plaintiffs' firms have spent the last decade winning settlements on that exact theory.
+
+Operationally, this means three things every time an employer is notified that a candidate has filed a dispute.
+
+First, **the adverse action clock pauses**. The five (or ten, in Philadelphia) business-day waiting period that started when the candidate received the pre-adverse notice stops running, and does not resume until the CRA confirms the reinvestigation is complete and notifies the employer of the result.
+
+Second, **the position must be held open**. In jurisdictions with explicit fair-chance overlays \u2014 Los Angeles, New York City, Philadelphia, and California most prominently \u2014 this is a statutory requirement. In the rest of the country it is a defensible-conduct requirement: filling the position while the candidate's dispute is pending is the strongest possible evidence that the employer never intended to honor the dispute right at all.
+
+Third, **the corrected report becomes the operative report**. If the CRA deletes or modifies the disputed item, the employer must base any final adverse action on the corrected report \u2014 not the original. This sometimes means the original adverse-action rationale evaporates entirely, and the candidate's offer should be honored. We have seen employers continue to adverse-action candidates on the basis of a record that the CRA had already deleted, simply because the hiring team never updated their decision against the corrected report. That is an indefensible class of error.
+
+California's regulations make this explicit in a way the federal floor does not. Under [2 CCR \u00a711017.1](https://calcivilrights.ca.gov/wp-content/uploads/sites/32/2022/11/Fair-Chance-Act-FAQ_ENG.pdf), if the candidate notifies the employer in writing that they are disputing the accuracy of the conviction history report, the employer must give an additional five business days beyond the initial five-business-day waiting period \u2014 extending the maximum California waiting window to ten business days when a dispute is filed. California is the only state that has codified the dispute-pause this explicitly, but the operational logic applies everywhere.
+
+## The five most common dispute scenarios
+
+Most background check disputes fall into one of five categories. Knowing the typology helps employers triage incoming disputes faster and helps hiring managers understand which disputes are most likely to result in record changes.
+
+The first is **mistaken identity** \u2014 the most common type of legitimate dispute. County criminal indices in many jurisdictions key on name plus date of birth, and common-name candidates regularly surface records belonging to a different person. A well-run CRA catches most of these at the QA step before the report ever reaches the employer; weaker CRAs do not, and the dispute is the first time the candidate gets to see what was reported about them.
+
+The second is **sealed or expunged records that were reported anyway**. Once a record is sealed or expunged, [\u00a71681c](https://www.law.cornell.edu/uscode/text/15/1681c) generally prohibits its inclusion in a consumer report. Errors in this category are usually the result of stale court-records databases that did not pick up the seal, and disputes almost always result in deletion.
+
+The third is **misclassified dispositions** \u2014 dismissed cases reported as convictions, deferred adjudications reported as guilty pleas, pending charges reported as resolved. These are technical errors at the courthouse-data layer and almost always require a manual courthouse pull to resolve.
+
+The fourth is **wrong jurisdiction** \u2014 a record from a county the candidate has never lived in or worked in, surfacing through a national database that pulled in stale or mislabeled data. These almost always resolve as deletions, and they are a strong indicator that the original report relied too heavily on database screening rather than direct courthouse verification.
+
+The fifth is **stale records beyond the 7-year reporting limit**. [Section 605](https://www.law.cornell.edu/uscode/text/15/1681c) prohibits the inclusion of most non-conviction records older than seven years in a consumer report (with a salary-threshold carve-out for positions paying more than \\$75,000 annually). Disputes in this category are usually airtight and resolve quickly.
+
+## What a defensible dispute workflow looks like
+
+There is a meaningful difference between a CRA whose dispute workflow is designed to make disputes easy to file and resolve, and a CRA whose dispute workflow is designed to make disputes easy to close as frivolous. Hiring managers rarely see this distinction until they are sitting across from outside counsel during a class-action discovery process.
+
+A defensible workflow has three properties. First, **a human reviews every dispute** \u2014 not a portal-only triage step that closes anything missing a specific document. Second, **the original record source is contacted** \u2014 courthouse, prior employer, registrar \u2014 rather than a database refresh that simply re-pulls the same data that produced the disputed item. Third, **the employer is notified the moment a dispute is filed**, not at the end of the reinvestigation, so the adverse-action clock can be paused contemporaneously and documented.
+
+The Professional Background Screening Association's industry data suggests the typical accurate-dispute rate at a well-run CRA \u2014 disputes that result in some change to the report \u2014 is under 0.5% of reports. That is the right denominator for a healthy operation. CRAs whose disputed-but-unchanged rate is materially higher than that are typically running more name-based database screens, which produce more false positives, which produce more disputes that turn out to be legitimate.
+
+## How PreciseHire handles disputes
+
+Our dispute workflow is built around the three properties above. Every incoming dispute \u2014 phone, email, portal, or letter \u2014 goes to a U.S.-based compliance specialist within one business hour. The original record source is contacted directly; we do not refresh the database and call it a reinvestigation. The employer is notified the moment the dispute is logged, the adverse-action clock pauses automatically in the ATS integration, and the position-held-open status is documented in the audit trail.
+
+If the disputed item is found inaccurate, incomplete, or unverifiable, we delete or correct it under \u00a71681i(a)(5)(A) and reissue the report \u2014 typically within seven business days of the dispute, well inside the 30-day federal limit. If the dispute is found to be without merit after a real investigation, we document the basis in writing and notify the candidate with a clear explanation and instructions for providing additional information if they have it. We do not close disputes as "frivolous or irrelevant" except in the narrow circumstances the statute actually contemplates.
+
+If you want a second pair of eyes on your current dispute workflow \u2014 particularly the question of whether the adverse-action clock pauses automatically when a dispute is filed, and whether the corrected report becomes the operative report for downstream hiring decisions \u2014 [reach out](/contact) and we will walk through your current process before a candidate's attorney does.
+
+## TL;DR
+
+- Under FCRA \u00a7611 (15 U.S.C. \u00a71681i), a candidate can dispute any item in a background check with the consumer reporting agency. The CRA has 30 days (or 45 if the candidate provides more information) to complete a free reinvestigation.
+- The moment an employer learns a dispute has been filed, the adverse-action clock pauses, the position must be held open, and any final decision must be based on the corrected report \u2014 not the original.
+- The "frivolous or irrelevant" escape hatch in \u00a71681i(a)(3) is real but heavily abused; CRAs that aggressively close disputes as frivolous are passing litigation risk through to their employer clients.
+- A defensible dispute workflow has a human reviewing every dispute, contacts the original record source, and notifies the employer immediately so the clock can be paused contemporaneously.
+`,
+  },
+  {
     slug: "how-long-must-employers-wait-pre-adverse-action-state-by-state",
     title: "How Long Must Employers Wait Between Pre-Adverse and Final Adverse Action \u2014 A State-by-State Cushion Table",
     metaTitle: "Pre-Adverse Action Waiting Periods by State (2026)",
