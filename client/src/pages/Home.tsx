@@ -150,7 +150,7 @@ export default function Home() {
             </Reveal>
           </div>
 
-          <div className="lg:col-span-5 relative pb-16 lg:pb-12">
+          <div className="lg:col-span-5 relative pb-12 lg:pb-6">
             <Reveal delay={0.1} y={32}>
               <div className="relative group">
                 <img
@@ -161,15 +161,15 @@ export default function Home() {
                 />
                 {/* Hero portrait card — subtle lift + image zoom on hover */}
                 <div
-                  className="relative z-10 w-full max-w-[520px] mx-auto rounded-[28px] overflow-hidden shadow-[0_24px_60px_-22px_rgba(11,31,58,0.35)] motion-safe:transition-[transform,box-shadow] motion-safe:duration-500 motion-safe:ease-out group-hover:-translate-y-1.5 group-hover:shadow-[0_36px_70px_-20px_rgba(11,31,58,0.45)]"
+                  className="relative z-10 w-full max-w-[560px] mx-auto rounded-[28px] overflow-hidden shadow-[0_24px_60px_-22px_rgba(11,31,58,0.35)] motion-safe:transition-[transform,box-shadow] motion-safe:duration-500 motion-safe:ease-out group-hover:-translate-y-1.5 group-hover:shadow-[0_36px_70px_-20px_rgba(11,31,58,0.45)]"
                 >
                   <img
                     src={ASSETS.hero}
-                    alt="Hiring manager reviewing a background check report on a tablet"
+                    alt="PreciseHire support specialists on calls in our Springfield, Missouri office"
                     className="block w-full h-auto object-cover motion-safe:transition-transform motion-safe:duration-[900ms] motion-safe:ease-out group-hover:scale-[1.035]"
                     loading="eager"
-                    width={1056}
-                    height={1408}
+                    width={1408}
+                    height={1056}
                   />
                   {/* Soft cream overlay that warms on hover */}
                   <div
@@ -183,13 +183,13 @@ export default function Home() {
                   />
                 </div>
                 {/* Floating proof badge — gentle counter-lift on hover */}
-                <div className="absolute z-20 -bottom-12 right-4 lg:-right-6 bg-white rounded-2xl shadow-xl border border-[#0B1F3A]/8 px-5 py-4 flex items-center gap-3 max-w-[260px] motion-safe:transition-transform motion-safe:duration-500 motion-safe:ease-out group-hover:-translate-y-1 group-hover:-translate-x-1">
-                  <span className="inline-flex size-10 items-center justify-center rounded-full bg-[#0B1F3A] text-white">
+                <div className="absolute z-20 -bottom-10 left-4 lg:-left-8 bg-white rounded-2xl shadow-xl border border-[#0B1F3A]/8 px-5 py-4 flex items-center gap-3 max-w-[280px] motion-safe:transition-transform motion-safe:duration-500 motion-safe:ease-out group-hover:-translate-y-1 group-hover:translate-x-1">
+                  <span className="inline-flex size-10 items-center justify-center rounded-full bg-[#B7232A] text-white shrink-0">
                     <Clock3 className="size-5" />
                   </span>
                   <div>
-                    <p className="text-xs uppercase tracking-widest text-[#0B1F3A]/60 font-semibold">Median turnaround</p>
-                    <p className="font-display text-xl font-semibold text-[#0B1F3A]">3 hr 52 min</p>
+                    <p className="text-[10px] uppercase tracking-[0.18em] text-[#0B1F3A]/60 font-semibold">Median turnaround · this week</p>
+                    <p className="font-display text-xl font-semibold text-[#0B1F3A] leading-tight">3 hr 52 min</p>
                   </div>
                 </div>
               </div>

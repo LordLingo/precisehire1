@@ -8,7 +8,7 @@
  */
 
 export const ASSETS = {
-  hero: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663030097116/hJKSAKLuxwOWydNT.png",
+  hero: "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/precisehire-team-hero-R8zm5AtfAwACNvTg5rS4wf.webp",
   team: "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/about-team-4vFYYmnbKTDnGef5EPiZW5.webp",
   handshake: "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/cta-handshake-GwWopeADZ8kzKCsYCydWCb.webp",
   swooshCoral: "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/swoosh-red-T8JxWZgdAP94rTzeUjKULQ.webp",
