@@ -74,6 +74,89 @@ export function deriveTopic(p: { title: string; tags: string[] }): Exclude<PostT
 
 export const POSTS: Post[] = [
   {
+    slug: "continuous-monitoring-vs-periodic-rescreens",
+    title: "Continuous Criminal Monitoring vs. Periodic Re-Screens \u2014 When Each Makes Sense",
+    metaTitle: "Continuous Monitoring vs. Annual Re-Screens: Employer Guide",
+    description:
+      "Continuous monitoring sounds modern, but it carries FCRA, EEOC, and state-law obligations a one-time re-screen does not. Here's when each model is the right call.",
+    category: "Compliance",
+    tags: ["Continuous Monitoring", "Re-Screening", "FCRA", "Post-Hire"],
+    author: "Mark Cromwell",
+    authorSlug: "mark-cromwell",
+    datePublished: "2026-05-18",
+    readingMin: 10,
+    image: ASSETS.serviceCriminal,
+    excerpt:
+      "Continuous monitoring sounds like a modern upgrade to the annual re-screen, but the two have meaningfully different cost, compliance, and culture profiles. Here's how to choose.",
+    markdown: `Most employers ask about continuous criminal monitoring after they read a news story \u2014 a delivery driver arrested for a serious offense, a healthcare worker revealed to have a prior conviction, an executive whose new charge surfaces only after the press calls for comment. The instinct to move from a one-time pre-hire check to ongoing post-hire monitoring is a reasonable one. The execution is where it gets complicated.
+
+This article walks through the operational and legal differences between continuous criminal monitoring and periodic re-screens, the industries where each is the right answer, and the FCRA, EEOC, and state-law obligations that apply to both. It is the natural follow-on to our three-part adverse-action series \u2014 the [pre-adverse notice walkthrough](/resources/pre-adverse-action-notice-requirements-timing-content-and-documents), the [state-by-state cushion table](/resources/how-long-must-employers-wait-pre-adverse-action-state-by-state), and the [dispute workflow](/resources/background-check-disputes-what-employers-must-do) \u2014 because every continuous-monitoring program eventually fires an alert that triggers exactly that adverse-action sequence.
+
+## What "continuous monitoring" actually is
+
+Continuous criminal monitoring is the ongoing checking of public criminal records and certain regulatory databases against an existing employee's identity, with near-real-time alerts to the employer when a new record surfaces. The technology behind it is a combination of court-records data feeds, arrest-blotter aggregators, and (in regulated industries) direct database integrations like the FMCSA Drug & Alcohol Clearinghouse, the OIG List of Excluded Individuals/Entities, the GSA SAM.gov debarment list, and state nursing or medical licensing boards.
+
+The usual marketing language describes continuous monitoring as a "set and forget" upgrade to the annual re-screen. That language is misleading. A continuous-monitoring program is functionally an open-ended consumer reporting relationship with each enrolled employee, which means every alert that surfaces is a new consumer report under the Fair Credit Reporting Act, with the same disclosure, authorization, and adverse-action obligations as a pre-hire check.
+
+## Periodic re-screens \u2014 the older model
+
+A periodic re-screen is a discrete background check conducted at a fixed interval (commonly annually or every two years) or at a specific trigger event (promotion to a position of trust, transfer into a regulated role, renewal of a security clearance, contract renewal). Each re-screen is a single new consumer report with the same workflow as the original pre-hire check: a fresh FCRA disclosure, a fresh standalone written authorization under [\u00a7604(b)(2)(A)](https://www.law.cornell.edu/uscode/text/15/1681b), a fresh report, and a fresh adverse-action sequence if the employer plans to act on what the report contains.
+
+Periodic re-screens are the operationally simpler model and the easier model to defend in litigation. The disclosure-and-authorization moment is well-defined, the consumer report is a discrete artifact, and the employee knows exactly when the screening occurred. The downside is latency: anything that happens between re-screens is invisible until the next cycle.
+
+## Continuous monitoring \u2014 the newer model
+
+Continuous monitoring closes the latency gap by running the same kinds of checks on a rolling basis \u2014 typically daily court-feed sweeps for new dispositions, monthly arrest-record refreshes, and event-triggered pulls from regulatory databases. When a new record matches an enrolled employee, the CRA generates an alert and the employer receives a new consumer report on that employee.
+
+The FCRA implications are the part most employers underestimate. Each alert is a new consumer report, which means three things. First, the original pre-hire authorization the employee signed must explicitly contemplate ongoing monitoring \u2014 a one-time "for employment purposes" authorization is not generally sufficient if the employer never disclosed that screening would continue throughout employment. Second, every alert that the employer plans to act on triggers the full pre-adverse, waiting-period, and final adverse-action sequence we covered in the prior three articles. Third, the EEOC's [2012 enforcement guidance on the use of arrest and conviction records](https://www.eeoc.gov/laws/guidance/enforcement-guidance-consideration-arrest-and-conviction-records-employment-decisions-under) applies the same individualized-assessment framework to a continuous-monitoring alert that it applies to a pre-hire conviction \u2014 nature of the offense, time elapsed, nature of the job.
+
+## Where continuous monitoring is the right call
+
+Three categories of employer should be running continuous monitoring rather than periodic re-screens.
+
+**Regulated transportation.** Commercial driver's license holders fall under the FMCSA's [Drug & Alcohol Clearinghouse](https://www.fmcsa.dot.gov/regulations/commercial-drivers-license-drug-and-alcohol-clearinghouse), which requires real-time queries when a driver is hired and at minimum annual queries thereafter. Continuous monitoring at the MVR level is also strongly indicated for any employer whose drivers represent a meaningful liability surface \u2014 last-mile delivery, transportation network companies, school transportation. The marginal cost of a missed mid-year DUI is materially higher than the marginal cost of running ongoing monitoring.
+
+**Healthcare and direct patient care.** OIG and SAM.gov exclusion-list monitoring is functionally mandatory for any provider that bills federal healthcare programs; the False Claims Act exposure for employing an excluded individual is severe. State nursing and medical licensing-board monitoring is the second layer; license suspension or revocation needs to be discovered immediately, not at the next annual cycle.
+
+**Financial services and trust roles.** Anyone with discretionary access to client funds, customer PII at scale, or regulated systems benefits from continuous monitoring of criminal records and (where applicable) FINRA registration status. The case law on negligent retention is unambiguous: an employer who knew or should have known of a disqualifying event and continued the employee in a sensitive role carries the resulting liability.
+
+## Where periodic re-screens are the better answer
+
+For most other roles, periodic re-screens at one- or two-year intervals are the right answer. The reason is not cost \u2014 the per-employee delta between continuous and periodic is small at scale \u2014 it is operational and cultural.
+
+Continuous monitoring generates a steady stream of alerts that hiring managers must triage, most of which will not actually warrant adverse action under an EEOC-compliant individualized assessment. A six-year-old DUI on a non-driving employee is almost never grounds for termination under EEOC principles, but it is an alert that someone has to read, document, and dismiss. Multiply that by a workforce of several thousand and the burden becomes meaningful.
+
+Worse, continuous monitoring without a disciplined individualized-assessment process produces precisely the kind of pattern that disparate-impact litigation is built on: a steady stream of arrest-record alerts, disproportionately affecting the same protected classes that the original 2012 EEOC guidance was designed to protect, with terminations that look automatic from the outside even when the internal process was deliberate. Employers running continuous monitoring without a documented individualized-assessment workflow are inheriting that risk profile without realizing it.
+
+Periodic re-screens, by contrast, force the conversation into a structured, scheduled, batch process where every record is evaluated against the same individualized-assessment framework with the same documentation discipline. The latency cost is real, but for non-regulated, non-safety-sensitive roles it is the more defensible model.
+
+## What "FCRA-compliant continuous monitoring" actually requires
+
+Three things, all of which most off-the-shelf programs get partially wrong.
+
+First, **the original disclosure must explicitly contemplate ongoing monitoring**. The FCRA disclosure at the pre-hire stage must clearly state that consumer reports will be obtained throughout the employment relationship, not just at hire. Many employers' pre-hire disclosures are silent on this point because they were drafted before continuous monitoring existed as a product, and a subsequent enrollment in continuous monitoring without a re-disclosure and re-authorization is, in our reading, a defect.
+
+Second, **the authorization must be standalone, ongoing, and revocable in writing only**. The Ninth Circuit's decision in [Syed v. M-I, LLC](https://cdn.ca9.uscourts.gov/datastore/opinions/2017/01/20/14-17186.pdf) on the standalone-document requirement applies just as squarely to ongoing-monitoring authorizations as it does to pre-hire ones. Bundling the ongoing-monitoring language into a general employment agreement or an electronic signature flow with arbitration clauses is a known litigation trigger.
+
+Third, **every alert must be processed through the full adverse-action workflow**. There is no "continuous monitoring exception" to FCRA \u00a7604(b)(3) \u2014 the pre-adverse notice, the copy of the report, the Summary of Rights, the reasonable waiting period, the dispute right, and the final adverse-action notice all apply. Programs that handle continuous-monitoring alerts as internal HR matters without the formal adverse-action sequence are creating the documentation pattern that plaintiffs' firms specifically look for.
+
+## How to choose
+
+The practical decision rule is this. If your employees fall into a regulated category (DOT-regulated drivers, healthcare workers billing federal programs, financial services roles with discretionary fund access, federal contractors subject to ongoing fitness determinations), continuous monitoring is appropriate and arguably required. For everyone else, periodic re-screens at a one- or two-year cadence \u2014 paired with event-triggered re-screens at promotion, transfer, or contract renewal \u2014 is the more defensible default.
+
+If you do run continuous monitoring, the program is only as good as the adverse-action workflow attached to it. Audit your pre-hire disclosure language to confirm it contemplates ongoing monitoring; audit your authorization to confirm it is a standalone document that an employee actively re-signs (rather than passively accepts) when continuous monitoring is enrolled; and audit your alert-handling workflow to confirm every actionable alert flows through the full pre-adverse and final adverse-action sequence with documented individualized assessment.
+
+If you would like a second pair of eyes on either model, [reach out](/contact) and we will walk through your current screening cadence, the role categories that justify continuous monitoring, and the documentation pattern that holds up if a regulator or a plaintiff's firm comes asking. The conversation is free and you do not need to be a customer.
+
+## TL;DR
+
+- Continuous monitoring is the right model for DOT-regulated drivers, healthcare workers, financial-services trust roles, and federal contractors. For everyone else, periodic re-screens at a one- or two-year cadence are the more defensible default.
+- Every continuous-monitoring alert is a new consumer report under FCRA. The pre-adverse, waiting-period, and final adverse-action sequence applies to every alert the employer plans to act on.
+- The original FCRA disclosure must explicitly contemplate ongoing monitoring; the authorization must be a standalone document; and the alert-handling workflow must include EEOC-style individualized assessment.
+- The cost difference between continuous and periodic re-screens is smaller than most employers think. The operational and cultural difference is larger.
+`,
+  },
+  {
     slug: "background-check-disputes-what-employers-must-do",
     title: "What Happens When a Candidate Disputes a Background Check \u2014 and What Employers Must Do",
     metaTitle: "Background Check Disputes: Employer Guide (FCRA \u00a7611)",

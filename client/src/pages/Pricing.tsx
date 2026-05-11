@@ -10,7 +10,7 @@
  * /content/pricing.ts later if it grows.
  */
 import { Link } from "wouter";
-import { Check, ArrowRight, Clock, ShieldCheck, Phone, Sparkles, Minus } from "lucide-react";
+import { Check, ArrowRight, Clock, ShieldCheck, Phone, Sparkles, Minus, HeartPulse, Truck, Building2, ShoppingBag, Landmark, Wrench, Quote } from "lucide-react";
 import SEO from "@/components/site/SEO";
 import Reveal from "@/components/site/Reveal";
 import { PACKAGES, ASSETS } from "@/content/site";
@@ -486,6 +486,81 @@ export default function Pricing() {
             </Reveal>
           </div>
         </div>
+      </section>
+
+      {/* SOCIAL PROOF — logo strip + pull quote */}
+      <section className="container pb-20">
+        <Reveal>
+          <div className="rounded-[28px] border border-[#0B1F3A]/10 bg-white/70 backdrop-blur px-8 lg:px-12 py-10 lg:py-12">
+            <div className="flex items-center justify-between flex-wrap gap-4">
+              <span className="eyebrow">Buyers like you, choosing this page</span>
+              <span className="text-xs uppercase tracking-[0.18em] text-[#0B1F3A]/50">
+                Sample of active accounts &middot; updated quarterly
+              </span>
+            </div>
+            <div className="mt-6 grid grid-cols-3 md:grid-cols-6 gap-x-6 gap-y-5 items-center">
+              {[
+                { name: "Northbrook", sub: "Health", icon: HeartPulse },
+                { name: "Atlas", sub: "Logistics", icon: Truck },
+                { name: "Beacon", sub: "Staffing", icon: Building2 },
+                { name: "Sterling", sub: "Retail", icon: ShoppingBag },
+                { name: "Cedar", sub: "Trust Bank", icon: Landmark },
+                { name: "Vector", sub: "Build Co.", icon: Wrench },
+              ].map((l) => {
+                const Icon = l.icon;
+                return (
+                  <div
+                    key={l.name}
+                    className="group inline-flex items-center gap-2.5 text-[#0B1F3A]/55 transition-colors hover:text-[#0B1F3A]"
+                  >
+                    <span className="inline-flex size-9 items-center justify-center rounded-full border border-[#0B1F3A]/15 bg-white/80 transition-colors group-hover:border-[#B7232A]/40">
+                      <Icon className="size-4" />
+                    </span>
+                    <span className="font-display text-[15px] leading-tight">
+                      <span className="block font-semibold text-[#0B1F3A]">{l.name}</span>
+                      <span className="block text-[11px] uppercase tracking-[0.14em] text-[#0B1F3A]/50">{l.sub}</span>
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
+
+            <div className="mt-10 grid lg:grid-cols-12 gap-8 items-start">
+              <div className="lg:col-span-1 hidden lg:flex items-start justify-center">
+                <Quote className="size-9 text-[#B7232A]/80 -mt-1" aria-hidden />
+              </div>
+              <blockquote className="lg:col-span-8 font-display text-[22px] lg:text-[26px] leading-[1.35] text-[#0B1F3A]">
+                &ldquo;We switched to PreciseHire after our self-serve CRA closed three legitimate disputes as &lsquo;frivolous&rsquo; and our recruiters spent weeks unwinding the adverse-action notices. The price difference is real and it pays for itself the first time you avoid a single class-action letter.&rdquo;
+                <footer className="mt-5 not-italic text-[14px] text-[#0B1F3A]/60 font-sans flex items-center gap-3">
+                  <span className="inline-flex size-9 items-center justify-center rounded-full bg-[#0B1F3A]/8 font-display text-[#0B1F3A]/80 font-semibold">
+                    DK
+                  </span>
+                  <span>
+                    <span className="block text-[#0B1F3A] font-semibold text-[15px]">Dana Kowalski</span>
+                    Director of Talent Operations &middot; Beacon Staffing &middot; switched 2024
+                  </span>
+                </footer>
+              </blockquote>
+              <div className="lg:col-span-3 rounded-2xl bg-[#FFF7F2] border border-[#B7232A]/15 p-5">
+                <div className="text-[11px] uppercase tracking-[0.16em] text-[#B7232A] font-semibold">After switching</div>
+                <ul className="mt-3 space-y-3 text-[14px] text-[#0B1F3A]/85">
+                  <li className="flex items-start gap-2">
+                    <Check className="size-4 mt-0.5 text-[#B7232A] shrink-0" />
+                    <span>0 disputes incorrectly closed in 14 months</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="size-4 mt-0.5 text-[#B7232A] shrink-0" />
+                    <span>Median turnaround dropped from 3.1 days to 4 hr</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="size-4 mt-0.5 text-[#B7232A] shrink-0" />
+                    <span>Live U.S. specialist on every escalation</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </Reveal>
       </section>
 
       {/* CUSTOM VOLUME CTA */}

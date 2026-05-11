@@ -457,6 +457,15 @@ export default function Support() {
                 </Link>
               </div>
             </Reveal>
+            <Reveal delay={0.18}>
+              <p className="mt-6 text-[14px] text-[#0B1F3A]/65">
+                Not ready for a sales conversation? Book our{" "}
+                <Link href="/compliance/audit" className="font-semibold text-[#B7232A] underline underline-offset-4 hover:no-underline">
+                  free 15-minute compliance audit
+                </Link>{" "}
+                instead — written summary, no follow-up unless you ask.
+              </p>
+            </Reveal>
           </div>
         </div>
       </section>

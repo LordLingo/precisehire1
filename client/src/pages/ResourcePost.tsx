@@ -158,6 +158,32 @@ export default function ResourcePost() {
             )}
           </div>
 
+          {/* Compliance category audit CTA */}
+          {post.category === "Compliance" && (
+            <div className="mt-12 rounded-2xl bg-[#0B1F3A] text-white p-6 sm:p-8 flex flex-col sm:flex-row gap-5 sm:items-center">
+              <div className="flex-1">
+                <p className="text-xs uppercase tracking-[0.16em] font-semibold text-[#E26C72]">
+                  Want a second pair of eyes?
+                </p>
+                <h3 className="mt-2 font-display text-xl sm:text-2xl font-semibold leading-snug">
+                  We will audit your adverse-action workflow in 15 minutes — free.
+                </h3>
+                <p className="mt-2 text-[14.5px] text-white/70 leading-relaxed">
+                  Our Director of Compliance walks through your disclosure,
+                  authorization, pre-adverse template, dispute handling, and
+                  continuous-monitoring posture. Written summary, statute
+                  citations, no sales follow-up unless you ask.
+                </p>
+              </div>
+              <Link
+                href="/compliance/audit"
+                className="btn-coral shrink-0 inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-[13.5px] font-semibold whitespace-nowrap"
+              >
+                Book the audit
+              </Link>
+            </div>
+          )}
+
           {/* Author bio card */}
           <div className="mt-12 rounded-2xl border border-[#0B1F3A]/10 bg-[#FFFCF7] p-6 sm:p-7 flex flex-col sm:flex-row gap-5 items-start">
             <Link href={`/authors/${author.slug}`} className="shrink-0">
