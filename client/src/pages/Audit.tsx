@@ -173,7 +173,13 @@ export default function Audit() {
                 </a>
               </div>
             </Reveal>
-            <Reveal delay={0.2}>
+            <Reveal delay={0.18}>
+              <p className="mt-5 text-[14px] text-[#0B1F3A]/70">
+                Not ready to talk yet? <Link href="/compliance/checklist" className="font-semibold text-[#B7232A] underline underline-offset-4 hover:no-underline">Get the same 24-point checklist as a free PDF</Link>{" "}
+                and walk through it on your own — no email required.
+              </p>
+            </Reveal>
+            <Reveal delay={0.22}>
               <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-2 text-[13px] text-[#0B1F3A]/65">
                 <span className="inline-flex items-center gap-1.5">
                   <ShieldCheck className="size-4 text-[#0B1F3A]" /> No PII required

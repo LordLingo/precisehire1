@@ -17,6 +17,7 @@ import Pricing from "./pages/Pricing";
 import About from "./pages/About";
 import Compliance from "./pages/Compliance";
 import Audit from "./pages/Audit";
+import Checklist from "./pages/Checklist";
 import Integrations from "./pages/Integrations";
 import Industries from "./pages/Industries";
 import FAQ from "./pages/FAQ";
@@ -39,6 +40,7 @@ function Router() {
         <Route path="/pricing" component={Pricing} />
         <Route path="/compliance" component={Compliance} />
         <Route path="/compliance/audit" component={Audit} />
+        <Route path="/compliance/checklist" component={Checklist} />
         <Route path="/integrations" component={Integrations} />
         <Route path="/about" component={About} />
         <Route path="/faq" component={FAQ} />
