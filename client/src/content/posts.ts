@@ -73,6 +73,95 @@ export function deriveTopic(p: { title: string; tags: string[] }): Exclude<PostT
 
 export const POSTS: Post[] = [
   {
+    slug: "pre-adverse-action-notice-requirements-timing-content-and-documents",
+    title: "Pre-Adverse Action Notice Requirements: Timing, Content, and the Documents You Must Include",
+    metaTitle: "Pre-Adverse Action Notice Requirements (FCRA, 2026)",
+    description:
+      "What the FCRA requires in a pre-adverse action notice — the three documents, the wait time, the March 2024 CFPB form change, and the four mistakes that produce the most lawsuits.",
+    category: "Compliance",
+    tags: ["FCRA", "Adverse Action", "Pre-Adverse Notice", "Hiring Compliance"],
+    author: "PreciseHire Editorial",
+    datePublished: "2026-05-11",
+    readingMin: 7,
+    image: ASSETS.serviceCriminal,
+    excerpt:
+      "The pre-adverse action notice is the single most-litigated step in the background-check lifecycle. Three documents, one waiting period, and a 2024 form change most employers still haven't applied.",
+    markdown: `The pre-adverse action notice is the single most litigated step in the entire background-check lifecycle. It is also the step employers most often rush, skip, or fill in with the wrong form. Every year, plaintiffs' firms file class actions against well-meaning employers whose only mistake was sending the final adverse decision before the law allowed — or sending the right notice with the wrong attachment.
+
+This article walks through exactly what the Fair Credit Reporting Act requires in a pre-adverse action notice — the three things that must go in the envelope, how long you have to wait before acting, what the March 2024 CFPB form change means, and where the most expensive mistakes happen. It is the tactical complement to our broader [step-by-step walkthrough of the FCRA adverse action procedure](/resources/adverse-action-fcra-step-by-step-walkthrough-for-hiring-managers).
+
+## What the FCRA actually says
+
+The pre-adverse action requirement lives in [section 604(b)(3)(A) of the FCRA](https://www.law.cornell.edu/uscode/text/15/1681b), codified at 15 U.S.C. § 1681b(b)(3)(A). The statutory language is short, and worth reading in the original because most employer mistakes come from paraphrasing it badly:
+
+> "in using a consumer report for employment purposes, before taking any adverse action based in whole or in part on the report, the person intending to take such adverse action shall provide to the consumer to whom the report relates — (i) a copy of the report; and (ii) a description in writing of the rights of the consumer under this title, as prescribed by the Bureau under section 609(c)(3)."
+
+Two things to notice. First, the trigger is "based in whole or in part" — even if the report is one of several reasons you are leaning toward not hiring, the procedure applies. Second, the obligation runs *before* the adverse action, not after. There is no "send the rejection and then mail the report" version that complies with the statute.
+
+## The three documents you must include
+
+The pre-adverse package has three pieces. Skip any one of them and the package is non-compliant.
+
+**1. A pre-adverse action notice (the cover letter).** A short letter telling the candidate you are considering adverse action based in whole or in part on the consumer report and that you are providing the report and a summary of their rights so they can review the information. The notice itself does not have prescribed statutory language, but it has to make clear what is happening so the candidate understands why they are receiving the package and what their next step is.
+
+**2. A copy of the consumer report.** The full report you received from your background-check provider — not a summary, not a redacted version, not a "the only thing that hit was X" abstract. The candidate has a right to see exactly what the employer saw.
+
+**3. The CFPB's "Summary of Your Rights Under the Fair Credit Reporting Act."** This is the prescribed form referenced in the statute. The Consumer Financial Protection Bureau publishes it as Appendix K to 12 C.F.R. Part 1022 and provides current model versions in English and Spanish on its [model forms and disclosures page](https://www.consumerfinance.gov/compliance/compliance-resources/other-applicable-requirements/fair-credit-reporting-act/model-forms-and-disclosures/). This is also the document most often wrong in 2026 — see below.
+
+## The March 2024 CFPB form update — and why it still trips employers
+
+On March 20, 2024, a revised version of the Summary of Your Rights took effect. The old form, which had been used for years, was deemed non-compliant after that date. The substantive changes were small — primarily updates reflecting later CFPB rulemaking and clearer language about how consumers can dispute information — but the compliance impact is binary. If your packet still uses the pre-March-2024 form in 2026, every notice you have sent since the deadline is technically defective.
+
+We see this in audits more than any other single error. Background-check vendors automatically updated their templates, but employers who built their own notice packets in HRIS or ATS workflows often kept the older PDF embedded in the email or letter template and never refreshed it. The fix is mechanical — pull the current version directly from the CFPB and replace whatever you are sending today — but the legal exposure is not, because every defective notice is its own potential cause of action under the FCRA's statutory damages framework.
+
+## How long you must wait before final adverse action
+
+The FCRA does not specify a number of days between the pre-adverse notice and the final adverse action. It only requires a "reasonable" period, which has two components: enough time for the candidate to receive the package, and enough time to dispute information they believe is inaccurate or incomplete with the consumer reporting agency that produced the report.
+
+The durable industry minimum, anchored in informal FTC staff guidance and consistently echoed by the [FTC's plain-language guidance for employers](https://www.ftc.gov/business-guidance/resources/using-consumer-reports-what-employers-need-know), is **five business days**. Some employers wait longer — seven business days, or ten calendar days — particularly in regulated industries where a longer cushion provides additional defensibility. But five business days is the floor we recommend for any employer that wants to settle a dispute on the merits rather than on the timing question.
+
+A few important nuances. The clock starts when the candidate would reasonably have received the package, not when you put it in the mail. If you send by certified mail, you need delivery confirmation. If you send by email, you need to know it actually reached the candidate's inbox and not their spam folder. And if the candidate disputes the report during the waiting period, the clock pauses while the dispute is investigated — sending the final adverse action while a dispute is open is one of the fastest ways to trigger a class-action complaint.
+
+## What goes in the final adverse action notice
+
+If the waiting period passes and you still intend to take adverse action, the final notice must include the items required by [section 615(a) of the FCRA](https://www.law.cornell.edu/uscode/text/15/1681m), 15 U.S.C. § 1681m(a). Specifically: notice that adverse action has been taken; the name, address, and toll-free telephone number of the consumer reporting agency that provided the report; a clear statement that the consumer reporting agency did not make the decision and cannot explain the specific reasons for it; notice of the consumer's right to obtain a free copy of the file from the CRA within 60 days; and notice of the right to dispute the accuracy or completeness of any information in the report.
+
+State law often adds to this. California's [Investigative Consumer Reporting Agencies Act](https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?division=3.&chapter=&part=4.&lawCode=CIV&title=1.6A) (Cal. Civ. Code § 1786 et seq.) imposes additional disclosure requirements, and several jurisdictions — including New York City under its Fair Chance Act and Los Angeles under its Fair Chance Initiative for Hiring Ordinance — require employers to provide an individualized assessment before taking adverse action based on criminal history. These overlay requirements do not replace the federal procedure; they sit on top of it.
+
+## The four mistakes that produce the most lawsuits
+
+In our work auditing client adverse-action workflows, the same mistakes appear over and over.
+
+The first is sending the final adverse action notice too soon — within one or two days of the pre-adverse notice — usually because the hiring manager has already moved on to a different candidate and the HR team feels pressure to close the loop. The plaintiff's bar treats this as a strict-liability fact pattern.
+
+The second is using an outdated CFPB Summary of Rights, almost always because the form was hard-coded into a template years ago and never refreshed. The fix takes ten minutes and prevents an entire class of claims.
+
+The third is sending the pre-adverse notice without the actual report. This usually happens when the report is large, the cover letter says "see attached," and the attachment never makes it onto the email. The notice without the report is a deficient notice.
+
+The fourth is failing to send the pre-adverse notice at all when the employer relies on a third-party assessment — for example, a behavioral score, an AI-generated risk rating, or an algorithmic background dossier. The CFPB's [October 2024 advisory circular on background dossiers and algorithmic scores](https://www.consumerfinance.gov/about-us/newsroom/cfpb-issues-guidance-to-protect-consumers-from-illegal-background-dossier-checks/) made explicit that the FCRA's adverse action procedure applies to these third-party assessments just as it applies to traditional background reports. If a vendor's score influences the decision, the procedure applies.
+
+## What this means for employers
+
+A defensible pre-adverse process is mostly mechanical. Four operational steps protect you against the bulk of the litigation risk.
+
+First, **standardize one packet** — cover letter, full report, current CFPB Summary of Rights — and deliver it through a single, auditable channel (your background-check provider's adverse-action workflow, or a documented HRIS step). Stop sending pre-adverse notices from individual hiring-manager email accounts.
+
+Second, **set the wait at five business days minimum**, with a documented start clock based on candidate receipt rather than send date. Build the waiting period into your ATS so the final adverse action cannot be issued early.
+
+Third, **refresh your CFPB Summary of Rights at least annually** and any time CFPB issues a new model. Audit your live templates today against the current version on the CFPB's model forms page.
+
+Fourth, **train hiring managers that "I am still thinking about it" is adverse action.** Quietly removing a candidate from consideration based on the report — without sending the notice — is the same legal event as a formal rejection.
+
+If you would like a second pair of eyes on your adverse-action workflow, our [criminal records service team](/services/criminal-background-checks) can review your current notice templates, your timing protocols, and the way your CFPB Summary of Rights is delivered, and flag the most expensive gaps before a plaintiff's attorney does. You can reach us through our [contact page](/contact).
+
+## TL;DR
+
+- The FCRA pre-adverse action notice must include three documents: a cover letter, the full consumer report, and the current CFPB Summary of Your Rights — the version effective March 20, 2024.
+- The waiting period before final adverse action is statutorily "reasonable" but operationally five business days minimum, measured from candidate receipt rather than employer send date.
+- The same procedure applies to AI scores and algorithmic background dossiers under the CFPB's October 2024 circular — if a third-party assessment influences the decision, the two-notice procedure applies.
+`
+  },
+  {
     slug: "fcra-disclosure-and-authorization-form-what-most-employers-get-wrong",
     title: "The FCRA Disclosure and Authorization Form: What Most Employers Get Wrong",
     metaTitle: "FCRA Disclosure and Authorization Form: Common Employer Mistakes",
