@@ -150,7 +150,7 @@ export default function Home() {
             </Reveal>
           </div>
 
-          <div className="lg:col-span-5 relative">
+          <div className="lg:col-span-5 relative pb-16 lg:pb-12">
             <Reveal delay={0.1} y={32}>
               <div className="relative group">
                 <img
@@ -183,7 +183,7 @@ export default function Home() {
                   />
                 </div>
                 {/* Floating proof badge — gentle counter-lift on hover */}
-                <div className="absolute z-20 -bottom-6 -left-4 lg:-left-10 bg-white rounded-2xl shadow-xl border border-[#0B1F3A]/8 px-5 py-4 flex items-center gap-3 max-w-[260px] motion-safe:transition-transform motion-safe:duration-500 motion-safe:ease-out group-hover:-translate-y-1 group-hover:translate-x-1">
+                <div className="absolute z-20 -bottom-12 right-4 lg:-right-6 bg-white rounded-2xl shadow-xl border border-[#0B1F3A]/8 px-5 py-4 flex items-center gap-3 max-w-[260px] motion-safe:transition-transform motion-safe:duration-500 motion-safe:ease-out group-hover:-translate-y-1 group-hover:-translate-x-1">
                   <span className="inline-flex size-10 items-center justify-center rounded-full bg-[#0B1F3A] text-white">
                     <Clock3 className="size-5" />
                   </span>
