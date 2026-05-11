@@ -6,11 +6,13 @@
  */
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import { ArrowRight, ShieldCheck, Clock3, Sparkles, Plug, CheckCircle2, Star, HeartPulse, Truck, Building2, ShoppingBag, Landmark, Wrench } from "lucide-react";
+import { ArrowRight, ShieldCheck, Clock3, Sparkles, Plug, CheckCircle2, Star, HeartPulse, Truck, Building2, ShoppingBag, Landmark, Wrench, Phone, Headphones } from "lucide-react";
 import SEO from "@/components/site/SEO";
 import Reveal from "@/components/site/Reveal";
 import StatCounter from "@/components/site/StatCounter";
-import { ASSETS, SERVICES, INDUSTRIES, STATS, FAQ_ITEMS } from "@/content/site";
+import { ASSETS, SERVICES, INDUSTRIES, STATS, FAQ_ITEMS, COMPANY } from "@/content/site";
+import { TURNAROUND } from "@/content/turnaround";
+import { TEAM } from "@/content/team";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import type { LucideIcon } from "lucide-react";
 
@@ -189,13 +191,98 @@ export default function Home() {
                   </span>
                   <div>
                     <p className="text-[10px] uppercase tracking-[0.18em] text-[#0B1F3A]/60 font-semibold">Median turnaround · this week</p>
-                    <p className="font-display text-xl font-semibold text-[#0B1F3A] leading-tight">3 hr 52 min</p>
+                    <p className="font-display text-xl font-semibold text-[#0B1F3A] leading-tight">{TURNAROUND.medianThisWeek}</p>
                   </div>
                 </div>
               </div>
             </Reveal>
           </div>
         </div>
+
+        {/* ----------------------------------------------------------------
+             LIVE TURNAROUND TICKER
+             ----------------------------------------------------------------
+             Public proof of the speed claim. Numbers are sourced weekly
+             from /client/src/content/turnaround.ts — update that file
+             every Monday morning from the production reporting dashboard.
+             ---------------------------------------------------------------- */}
+        <section className="relative bg-[#0B1F3A] text-white" aria-labelledby="turnaround-heading">
+          {/* subtle red brushstroke peeking from the right edge */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -top-10 right-0 h-40 w-1/3
+                       bg-[radial-gradient(ellipse_at_top_right,rgba(183,35,42,0.35),transparent_70%)]"
+          />
+          <div className="container relative py-14 md:py-16">
+            <Reveal>
+              <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+                <div>
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#F2C8B0]">
+                    <span className="mr-2 inline-flex h-1.5 w-1.5 -translate-y-0.5 rounded-full bg-[#F2C8B0] motion-safe:animate-pulse" aria-hidden="true" />
+                    Live turnaround
+                  </p>
+                  <h2
+                    id="turnaround-heading"
+                    className="mt-2 font-display text-3xl md:text-4xl font-semibold leading-tight"
+                  >
+                    What our team actually delivered<br className="hidden md:block" /> this week.
+                  </h2>
+                </div>
+                <p className="text-[12px] text-white/55">
+                  Updated weekly &middot; {TURNAROUND.updatedLabel}
+                </p>
+              </div>
+            </Reveal>
+            <Reveal delay={0.08}>
+              <dl className="mt-10 grid grid-cols-1 gap-px overflow-hidden rounded-2xl bg-white/10 sm:grid-cols-2 lg:grid-cols-4">
+                <div className="flex flex-col gap-2 bg-[#0B1F3A] p-7">
+                  <dt className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white/55">
+                    Median report time
+                  </dt>
+                  <dd className="font-display text-3xl font-semibold leading-none">
+                    {TURNAROUND.medianThisWeek}
+                  </dd>
+                  <p className="text-[12px] text-white/55">end-to-end, this week</p>
+                </div>
+                <div className="flex flex-col gap-2 bg-[#0B1F3A] p-7">
+                  <dt className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white/55">
+                    Same-day completion
+                  </dt>
+                  <dd className="font-display text-3xl font-semibold leading-none">
+                    {TURNAROUND.sameDayPctThisWeek}
+                  </dd>
+                  <p className="text-[12px] text-white/55">of reports back same business day</p>
+                </div>
+                <div className="flex flex-col gap-2 bg-[#0B1F3A] p-7">
+                  <dt className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white/55">
+                    30-day median
+                  </dt>
+                  <dd className="font-display text-3xl font-semibold leading-none">
+                    {TURNAROUND.medianTrailing30}
+                  </dd>
+                  <p className="text-[12px] text-white/55">trailing four weeks</p>
+                </div>
+                <div className="flex flex-col gap-2 bg-[#0B1F3A] p-7">
+                  <dt className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white/55">
+                    Avg. phone pickup
+                  </dt>
+                  <dd className="font-display text-3xl font-semibold leading-none text-[#F2C8B0]">
+                    {TURNAROUND.avgPickupSeconds}
+                  </dd>
+                  <p className="text-[12px] text-white/55">to a US-based human</p>
+                </div>
+              </dl>
+            </Reveal>
+            <Reveal delay={0.16}>
+              <p className="mt-6 max-w-3xl text-sm text-white/65">
+                These numbers are pulled directly from our production reporting dashboard each Monday
+                morning &mdash; not a marketing aspiration. The big four CRAs do not publish these figures
+                because their offshore queues will not survive the comparison.
+                {TURNAROUND.reportsThisWeek ? " Based on " + TURNAROUND.reportsThisWeek.toLocaleString() + " reports completed this week." : null}
+              </p>
+            </Reveal>
+          </div>
+        </section>
 
         {/* Logo strip / social proof */}
         {/*
@@ -256,6 +343,105 @@ export default function Home() {
           {STATS.map((s) => (
             <StatCounter key={s.label} value={s.value} prefix={s.prefix} suffix={s.suffix} label={s.label} />
           ))}
+        </div>
+      </section>
+
+      {/* ----------------------------------------------------------------
+           SUPPORT TEAM PREVIEW
+           ----------------------------------------------------------------
+           Quick teaser of the American-staffed support desk. Three
+           overlapping headshots + a one-line value prop + link to
+           /support. Reads from /content/team.ts.
+           ---------------------------------------------------------------- */}
+      <section className="container py-24" aria-labelledby="support-preview-heading">
+        <div className="grid lg:grid-cols-12 gap-10 items-center">
+          <div className="lg:col-span-5 order-2 lg:order-1">
+            <Reveal>
+              <div className="relative h-[280px] sm:h-[340px]">
+                {TEAM.slice(0, 3).map((m, i) => (
+                  <motion.div
+                    key={m.slug}
+                    className="absolute rounded-2xl overflow-hidden shadow-[0_20px_45px_-25px_rgba(11,31,58,0.55)] ring-1 ring-white"
+                    style={{
+                      width: "60%",
+                      aspectRatio: "1 / 1",
+                      left: `${i * 18}%`,
+                      top: `${i * 22}px`,
+                      zIndex: 10 + i,
+                      transform: `rotate(${(i - 1) * 2.5}deg)`,
+                    }}
+                    initial={{ opacity: 0, y: 24 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-80px" }}
+                    transition={{ duration: 0.6, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+                  >
+                    <img
+                      src={m.photo}
+                      alt={`${m.name}, ${m.role}, ${m.region}`}
+                      loading="lazy"
+                      className="h-full w-full object-cover"
+                    />
+                  </motion.div>
+                ))}
+                {/* live pickup badge floating above the stack */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.92 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true, margin: "-80px" }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                  className="absolute right-0 lg:-right-2 bottom-2 z-30
+                             rounded-2xl bg-[#0B1F3A] text-white px-4 py-3
+                             shadow-[0_18px_30px_-18px_rgba(11,31,58,0.65)]"
+                >
+                  <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] text-[#F2C8B0] font-semibold">
+                    <Headphones className="size-3" /> Live
+                  </div>
+                  <p className="mt-1 font-display text-2xl font-semibold leading-none">
+                    {TURNAROUND.avgPickupSeconds}
+                  </p>
+                  <p className="mt-1 text-[11px] text-white/65">avg. phone pickup</p>
+                </motion.div>
+              </div>
+            </Reveal>
+          </div>
+          <div className="lg:col-span-7 order-1 lg:order-2">
+            <Reveal>
+              <span className="eyebrow inline-flex items-center gap-2">
+                <span className="size-1.5 rounded-full bg-[#B7232A]" /> American-staffed support
+              </span>
+              <h2
+                id="support-preview-heading"
+                className="display-lg mt-4 text-[#0B1F3A]"
+              >
+                Real people. Direct lines.{" "}
+                <span className="text-[#B7232A]">No offshore queue.</span>
+              </h2>
+            </Reveal>
+            <Reveal delay={0.06}>
+              <p className="mt-5 text-[17px] text-[#0B1F3A]/75 leading-relaxed max-w-2xl">
+                Four named specialists across Missouri, Texas, North Carolina,
+                and Pennsylvania run our support desk. They know FCRA, they know
+                your account, and they answer the phone in {TURNAROUND.avgPickupSeconds}
+                {" "}— not eight rings and a script.
+              </p>
+            </Reveal>
+            <Reveal delay={0.12}>
+              <div className="mt-7 flex flex-wrap items-center gap-3">
+                <Link
+                  href="/support"
+                  className="btn-coral rounded-full px-6 py-3 text-sm font-semibold inline-flex items-center gap-2"
+                >
+                  Meet the team <ArrowRight className="size-4" />
+                </Link>
+                <a
+                  href={`tel:${COMPANY.phoneRaw}`}
+                  className="btn-ghost-navy rounded-full px-6 py-3 text-sm font-semibold inline-flex items-center gap-2"
+                >
+                  <Phone className="size-4" /> {COMPANY.phone}
+                </a>
+              </div>
+            </Reveal>
+          </div>
         </div>
       </section>
 

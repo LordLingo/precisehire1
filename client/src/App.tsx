@@ -23,6 +23,7 @@ import Contact from "./pages/Contact";
 import Legal from "./pages/Legal";
 import Resources from "./pages/Resources";
 import ResourcePost from "./pages/ResourcePost";
+import Support from "./pages/Support";
 import NotFound from "./pages/NotFound";
 
 function Router() {
@@ -39,6 +40,7 @@ function Router() {
         <Route path="/about" component={About} />
         <Route path="/faq" component={FAQ} />
         <Route path="/contact" component={Contact} />
+        <Route path="/support" component={Support} />
         <Route path="/legal/:slug" component={Legal} />
         <Route path="/resources" component={Resources} />
         <Route path="/resources/:slug" component={ResourcePost} />
