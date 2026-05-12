@@ -546,7 +546,7 @@ export default function IndustriesTransportation() {
             </h2>
             <p className="mt-5 text-[#0B1F3A]/70 text-[15px] leading-relaxed">
               These are pulled from real intro calls. If yours isn't here,
-              call us — our Director of Compliance answers the phone.
+              call us — our compliance desk answers the phone.
             </p>
             <Link
               href="/compliance/checklist"
@@ -594,11 +594,10 @@ export default function IndustriesTransportation() {
                   Walk us through your fleet, your authority, and your last DOT audit finding.
                 </h2>
                 <p className="mt-4 text-white/75 max-w-xl text-[15.5px] leading-relaxed">
-                  Twenty-minute working call with a fleet-specialist account
-                  manager and our Director of Compliance. You leave with a
-                  written package proposal, a monitoring quote per active
-                  driver per month, and a written answer on whatever the
-                  auditor flagged last time.
+                  Twenty-minute working call with a fleet specialist on our
+                  compliance desk. You leave with a written package proposal,
+                  a monitoring quote per active driver per month, and a
+                  written answer on whatever the auditor flagged last time.
                 </p>
               </div>
               <div className="lg:col-span-4 flex flex-col gap-3">

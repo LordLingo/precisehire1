@@ -75,7 +75,7 @@ export default function AuthorPage() {
               <div className="relative">
                 <img
                   src={author.photo}
-                  alt={author.name}
+                  alt="PreciseHire editorial desk"
                   className="w-full max-w-[360px] rounded-[28px] border border-[#0B1F3A]/10 object-cover aspect-square"
                 />
                 <span className="absolute -bottom-3 left-6 inline-flex items-center px-3 py-1 rounded-full bg-[#B7232A] text-white text-[11px] font-semibold uppercase tracking-[0.14em]">
@@ -87,7 +87,7 @@ export default function AuthorPage() {
 
           <div className="lg:col-span-8">
             <Reveal delay={0.05}>
-              <p className="eyebrow"><span className="inline-block size-1.5 rounded-full bg-[#B7232A]" /> Author</p>
+              <p className="eyebrow"><span className="inline-block size-1.5 rounded-full bg-[#B7232A]" /> Byline</p>
               <h1 className="display-xl mt-4 text-[#0B1F3A]">{author.name}</h1>
               <p className="mt-3 font-display text-xl text-[#0B1F3A]/70">{author.role}</p>
             </Reveal>
@@ -109,8 +109,8 @@ export default function AuthorPage() {
             )}
             <Reveal delay={0.2}>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Link href="/contact?intent=compliance-question" className="btn-coral inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold">
-                  <Mail className="size-4" /> Reach the compliance desk
+                <Link href="/contact" className="btn-coral inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold">
+                  <Mail className="size-4" /> Reach the editorial desk
                 </Link>
                 <a href={`tel:${COMPANY.phoneRaw}`} className="btn-ghost-navy inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold">
                   <Phone className="size-4" /> {COMPANY.phone}
@@ -126,15 +126,15 @@ export default function AuthorPage() {
         <Reveal>
           <h2 className="display-md text-[#0B1F3A]">
             {authoredPosts.length > 0
-              ? `Articles by ${author.name.split(" ")[0]}`
-              : `${author.name.split(" ")[0]} hasn't published yet`}
+              ? `Articles by the ${author.name}`
+              : `Nothing published under this byline yet`}
           </h2>
         </Reveal>
 
         {authoredPosts.length === 0 ? (
           <Reveal delay={0.05}>
             <p className="mt-4 text-[#0B1F3A]/70 max-w-xl">
-              Their first piece is in the editorial queue. In the meantime, browse{" "}
+              The next piece is in the editorial queue. In the meantime, browse{" "}
               <Link href="/resources" className="text-[#B7232A] underline">all PreciseHire resources</Link>.
             </p>
           </Reveal>

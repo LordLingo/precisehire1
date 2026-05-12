@@ -1,59 +1,48 @@
 /*
  * PreciseHire — Authors directory
  *
- * Single source of truth for blog post bylines. Each post in posts.ts has an
- * `authorSlug` field that looks up into AUTHORS here. Rename, re-photo, or
- * re-bio in this one file and it propagates to every post page, every author
- * page, and every JSON-LD block.
+ * Single source of truth for blog post bylines. The site is owner-operated
+ * and we do not publish fictional individual bylines. All posts are
+ * attributed to the PreciseHire Editorial Team.
  *
- * NOTE: "Mark Cromwell" is a placeholder default byline chosen to give the
- * blog a credible named-author identity for E-E-A-T purposes. Replace with a
- * real team member's name + headshot when one is available.
+ * The "mark-cromwell" key is retained ONLY so that legacy posts in posts.ts
+ * which still reference authorSlug: "mark-cromwell" resolve cleanly to the
+ * editorial-team byline without requiring a migration of every post.
  */
 
 export type Author = {
-  slug: string;            // /authors/<slug>
-  name: string;            // display name on byline
-  role: string;            // job title for byline
-  shortBio: string;        // 1 sentence, used on post pages
-  longBio: string;         // 2-3 sentences, used on author page
-  credentials: string[];   // small chips on author page (PBSA, FCRA cert, etc.)
-  photo: string;           // square headshot URL (use compressed webp from CDN)
-  linkedIn?: string;       // optional external link
+  slug: string;
+  name: string;
+  role: string;
+  shortBio: string;
+  longBio: string;
+  credentials: string[];
+  photo: string;
+  linkedIn?: string;
+};
+
+const EDITORIAL_TEAM: Author = {
+  slug: "precisehire-team",
+  name: "PreciseHire Editorial Team",
+  role: "Compliance & Operations",
+  shortBio:
+    "The PreciseHire Editorial Team is the U.S.-based compliance and operations desk that runs the company day to day. We write the things we wish vendors would have written for us when we were on the buying side.",
+  longBio:
+    "The PreciseHire Editorial Team is the in-house compliance and operations desk that runs the company day to day. Owner-operated and U.S.-based, we publish under a single team byline because the work — FCRA workflow design, adverse-action sequencing, source-of-record verification, ATS integration, and state ban-the-box tracking — is the work of the whole desk, not the work of any one specialist. We write the kind of operational, regulation-grounded posts we wished vendors had written for us when we were on the buying side of pre-employment screening.",
+  credentials: [
+    "U.S.-based editorial desk",
+    "PBSA member organization",
+    "Owner-operated since 2003",
+  ],
+  photo:
+    "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/about-team-4vFYYmnbKTDnGef5EPiZW5.webp",
 };
 
 export const AUTHORS: Record<string, Author> = {
-  "mark-cromwell": {
-    slug: "mark-cromwell",
-    name: "Mark Cromwell",
-    role: "Director of Compliance",
-    shortBio:
-      "Mark leads compliance research at PreciseHire, where he reviews FCRA, EEOC, and state-level adverse-action workflows for employers across healthcare, transportation, and the trades.",
-    longBio:
-      "Mark leads compliance research at PreciseHire, where he reviews FCRA, EEOC, and state-level adverse-action workflows for employers across healthcare, transportation, and the trades. He has worked in pre-employment screening since 2011 and has spent the last decade tracking how state and city fair-chance laws change what an FCRA-compliant background check actually has to look like. He writes the PreciseHire compliance series for HR leaders who would rather read the regulation than skim a vendor blog.",
-    credentials: [
-      "PBSA member",
-      "FCRA Basic Certification",
-      "15+ yrs in pre-employment screening",
-    ],
-    photo:
-      "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/author-mark-cromwell-FU35dH2nFWWwzgfYSJTpgL.webp",
-  },
-
-  // Fallback for legacy posts that haven't been re-attributed yet.
-  "precisehire-team": {
-    slug: "precisehire-team",
-    name: "PreciseHire Team",
-    role: "Editorial",
-    shortBio:
-      "The PreciseHire editorial desk \u2014 our compliance and operations team writing collectively on hiring, screening, and FCRA workflow questions.",
-    longBio:
-      "The PreciseHire editorial desk publishes shorter operational pieces written collectively by our compliance and operations team. Longer compliance deep-dives are bylined by an individual specialist.",
-    credentials: ["U.S.-based editorial desk"],
-    photo:
-      // reuse the team-room image so the fallback page isn't broken visually
-      "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/about-team-4vFYYmnbKTDnGef5EPiZW5.webp",
-  },
+  "precisehire-team": EDITORIAL_TEAM,
+  // Legacy alias — keeps existing post.authorSlug values resolving without a
+  // bulk rewrite. New posts should use "precisehire-team".
+  "mark-cromwell": EDITORIAL_TEAM,
 };
 
 export function findAuthor(slug: string | undefined | null): Author | undefined {
@@ -63,5 +52,5 @@ export function findAuthor(slug: string | undefined | null): Author | undefined 
 
 /** Resolve a post's author with graceful fallback to the team byline. */
 export function resolveAuthor(authorSlug?: string): Author {
-  return findAuthor(authorSlug) ?? AUTHORS["precisehire-team"];
+  return findAuthor(authorSlug) ?? EDITORIAL_TEAM;
 }

@@ -127,7 +127,7 @@ export default function ResourcePost() {
             <span className="inline-flex items-center gap-2">
               <Clock className="size-4" /> {post.readingMin} min read
             </span>
-            <span>By <Link href={`/authors/${author.slug}`} className="text-[#0B1F3A] underline-offset-2 hover:underline">{author.name}</Link>{author.role ? `, ${author.role}` : ""}</span>
+            <span>By <span className="text-[#0B1F3A]">{author.name}</span></span>
           </div>
         </Reveal>
       </header>
@@ -169,7 +169,7 @@ export default function ResourcePost() {
                   We will audit your adverse-action workflow in 15 minutes — free.
                 </h3>
                 <p className="mt-2 text-[14.5px] text-white/70 leading-relaxed">
-                  Our Director of Compliance walks through your disclosure,
+                  Our compliance desk walks through your disclosure,
                   authorization, pre-adverse template, dispute handling, and
                   continuous-monitoring posture. Written summary, statute
                   citations, no sales follow-up unless you ask.
@@ -184,32 +184,21 @@ export default function ResourcePost() {
             </div>
           )}
 
-          {/* Author bio card */}
-          <div className="mt-12 rounded-2xl border border-[#0B1F3A]/10 bg-[#FFFCF7] p-6 sm:p-7 flex flex-col sm:flex-row gap-5 items-start">
-            <Link href={`/authors/${author.slug}`} className="shrink-0">
-              <img
-                src={author.photo}
-                alt={author.name}
-                className="size-20 sm:size-24 rounded-full object-cover border border-[#0B1F3A]/10"
-              />
-            </Link>
-            <div className="flex-1">
-              <p className="text-xs uppercase tracking-[0.14em] font-semibold text-[#B7232A]">About the author</p>
-              <Link href={`/authors/${author.slug}`} className="mt-1 block font-display text-xl font-semibold text-[#0B1F3A] hover:text-[#B7232A]">
-                {author.name}
-              </Link>
-              <p className="text-[13.5px] text-[#0B1F3A]/65 mt-0.5">{author.role}</p>
-              <p className="mt-3 text-[14.5px] text-[#0B1F3A]/80 leading-relaxed">{author.shortBio}</p>
-              {author.credentials.length > 0 && (
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {author.credentials.map((c) => (
-                    <span key={c} className="rounded-full bg-white border border-[#0B1F3A]/12 px-3 py-1 text-[11.5px] font-medium text-[#0B1F3A]/70">
-                      {c}
-                    </span>
-                  ))}
-                </div>
-              )}
-            </div>
+          {/* Editorial-team note */}
+          <div className="mt-12 rounded-2xl border border-[#0B1F3A]/10 bg-[#FFFCF7] p-6 sm:p-7">
+            <p className="text-xs uppercase tracking-[0.14em] font-semibold text-[#B7232A]">About this article</p>
+            <p className="mt-3 text-[14.5px] text-[#0B1F3A]/80 leading-relaxed">
+              Researched and written by the {author.name}. We cite primary sources — statutes, regulations, agency guidance, and case law — on every claim. PreciseHire is owner-operated and U.S.-based; we have screened candidates for U.S. employers since 2003. If anything in this article is wrong, please <Link href="/contact" className="text-[#B7232A] underline">tell us</Link> and we will correct it.
+            </p>
+            {author.credentials.length > 0 && (
+              <div className="mt-4 flex flex-wrap gap-2">
+                {author.credentials.map((c) => (
+                  <span key={c} className="rounded-full bg-white border border-[#0B1F3A]/12 px-3 py-1 text-[11.5px] font-medium text-[#0B1F3A]/70">
+                    {c}
+                  </span>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Tags + back link */}

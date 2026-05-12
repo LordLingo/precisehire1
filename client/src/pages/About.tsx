@@ -2,48 +2,41 @@
  * PreciseHire — About
  * Style: Trusted Modernism. Editorial spread feel.
  *
- * Expanded version: company story, why-we-exist, named leadership cards
- * (placeholder names — easy to rename in this file), HQ location, values,
- * and Organization JSON-LD so search engines see PreciseHire as a real
- * Organization entity with leadership and an address.
- *
- * NOTE: leadership names + bio + photos are placeholders selected to
- * give /about a credible, identifiable shape. Rename in one place.
+ * Owner-operated, single-proprietor company. No fictional leadership team.
+ * The previous "Leadership" grid was replaced with a "How we work" pillars
+ * section that explains the operating principles without inventing people.
  */
 import { Link } from "wouter";
-import { ArrowRight, MapPin, Phone, ShieldCheck, Sparkles } from "lucide-react";
+import {
+  ArrowRight,
+  MapPin,
+  Phone,
+  ShieldCheck,
+  Sparkles,
+  PhoneCall,
+  Scale,
+  FileSearch,
+} from "lucide-react";
 import SEO from "@/components/site/SEO";
 import Reveal from "@/components/site/Reveal";
 import StatCounter from "@/components/site/StatCounter";
 import { ASSETS, STATS } from "@/content/site";
-import { AUTHORS } from "@/content/authors";
 
-const LEADERSHIP = [
+const HOW_WE_WORK: { icon: typeof PhoneCall; title: string; body: string }[] = [
   {
-    slug: "rachel-sanders",
-    name: "Rachel Sanders",
-    role: "Founder & Chief Executive Officer",
-    bio: "Rachel founded PreciseHire in 2003 after eight years inside a national CRA where she watched recruiters wait three weeks for a single county check. Her thesis then is the same one we operate on now: U.S.-based researchers, source verification on every flag, and a phone that gets answered. She splits her time between client work and the company's compliance practice.",
-    photo:
-      "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/leadership-rachel-sanders-hkNG5uYsY5uGzDyNoayVH7.webp",
-    credentials: ["22+ yrs in pre-employment screening", "PBSA member since 2009"],
+    icon: PhoneCall,
+    title: "American team, full stop.",
+    body: "Every researcher, every compliance reviewer, and every phone line is in the United States. There is no offshore tier and no automated chat bouncing your candidate around. When you call, a person who actually works on the report picks up — typically within ten seconds during business hours.",
   },
   {
-    slug: "daniel-park",
-    name: "Daniel Park",
-    role: "Co-founder & Chief Operations Officer",
-    bio: "Daniel runs the operating side of the business — research desks, court access network, ATS integrations, and the candidate portal. He joined Rachel in 2004 from a Midwest logistics firm where he had been the operations lead responsible for hiring 600 drivers a year. He still personally reviews any account doing more than 1,000 checks a month.",
-    photo:
-      "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/leadership-daniel-park-jkV3vm2ig5xCNRPnYEa2PA.webp",
-    credentials: ["22 yrs in screening operations", "Bullhorn / Avionté / Workday integrations"],
+    icon: FileSearch,
+    title: "Source verification on every flag.",
+    body: "Database hits are leads, not findings. Before a record appears on a report, it is verified at the source courthouse, the source employer, or the source licensing board. That is how we keep dispute rates under half a percent and keep employers out of the FCRA accuracy headlines.",
   },
   {
-    slug: AUTHORS["mark-cromwell"].slug,
-    name: AUTHORS["mark-cromwell"].name,
-    role: AUTHORS["mark-cromwell"].role,
-    bio: AUTHORS["mark-cromwell"].longBio,
-    photo: AUTHORS["mark-cromwell"].photo,
-    credentials: AUTHORS["mark-cromwell"].credentials,
+    icon: Scale,
+    title: "Compliance is the default, not an upgrade.",
+    body: "FCRA pre-adverse and final adverse-action sequences, EEOC individualized-assessment prompts, and state-specific waiting periods are wired into the workflow on every account — not gated behind a higher-priced tier. The cheapest report we run goes out under the same compliance posture as the most expensive one.",
   },
 ];
 
@@ -67,8 +60,8 @@ const VALUES = [
 ];
 
 const TIMELINE = [
-  { year: "2003", title: "Founded in Tampa", body: "Rachel Sanders launches PreciseHire from a single back office in Tampa, Florida, supporting four local trucking firms." },
-  { year: "2004", title: "Daniel Park joins as COO", body: "First operations hire builds the courthouse runner network the company still uses today." },
+  { year: "2003", title: "Founded in Tampa", body: "PreciseHire opens in Tampa, Florida, supporting four local trucking firms from a single back office." },
+  { year: "2004", title: "Courthouse runner network", body: "First operations build-out: the source-courthouse runner network the company still uses today is established." },
   { year: "2009", title: "PBSA membership", body: "PreciseHire is admitted to the Professional Background Screening Association and adopts its accreditation standards." },
   { year: "2014", title: "Healthcare practice opens", body: "First dedicated OIG LEIE + SAM monitoring workflow shipped for a regional hospital system." },
   { year: "2019", title: "ATS integration layer", body: "Native integrations launch with Bullhorn, Avionté, and Workday; SFTP for everyone else." },
@@ -97,12 +90,6 @@ const JSONLD = {
     areaServed: "US",
     availableLanguage: ["en"],
   },
-  employee: LEADERSHIP.map((p) => ({
-    "@type": "Person",
-    name: p.name,
-    jobTitle: p.role,
-    image: p.photo,
-  })),
   memberOf: { "@type": "Organization", name: "Professional Background Screening Association" },
 };
 
@@ -111,7 +98,7 @@ export default function About() {
     <>
       <SEO
         title="About PreciseHire — 22 Years of U.S. Background Screening"
-        description="Founded 2003 in Tampa, Florida. U.S.-based researchers, SOC 2 Type II attested, PBSA member since 2009. Meet the leadership team running the company."
+        description="Founded 2003 in Tampa, Florida. U.S.-based researchers, SOC 2 Type II attested, PBSA member since 2009. Owner-operated, accountable, and answerable."
         canonical="https://precisehire.com/about"
         jsonLd={JSONLD}
       />
@@ -144,11 +131,12 @@ export default function About() {
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mt-6 text-[17px] leading-[1.7] text-[#0B1F3A]/75 max-w-2xl">
-                PreciseHire was founded in 2003 in Tampa, Florida by background-screening
-                veterans who were tired of slow, opaque legacy providers. Twenty-two
-                years and twelve million checks later, we still answer the phone, still
-                verify every flag at the source, and still believe employers deserve a
-                faster, fairer way to hire.
+                PreciseHire was founded in 2003 in Tampa, Florida as an independent
+                alternative to slow, opaque legacy providers. Twenty-two years and
+                twelve million checks later, we are still privately held, still
+                owner-operated, and still working under the same operating principle:
+                answer the phone, verify every flag at the source, and treat candidates
+                like people, not records.
               </p>
             </Reveal>
           </div>
@@ -246,53 +234,46 @@ export default function About() {
         </div>
       </section>
 
-      {/* LEADERSHIP */}
+      {/* HOW WE WORK — replaces former Leadership grid */}
       <section className="container py-24">
-        <Reveal>
-          <span className="eyebrow">Leadership</span>
-          <h2 className="display-lg mt-3 text-[#0B1F3A] max-w-3xl">
-            The people accountable for the work.
-          </h2>
-          <p className="mt-5 text-[#0B1F3A]/70 max-w-2xl text-[15.5px] leading-relaxed">
-            We are a privately-held, U.S.-based company. The leadership team
-            below answers to clients directly &mdash; not a holding company, not
-            a private-equity sponsor, not an offshore parent.
-          </p>
-        </Reveal>
-        <div className="mt-12 grid md:grid-cols-3 gap-6">
-          {LEADERSHIP.map((p, i) => (
-            <Reveal key={p.slug} delay={i * 0.05}>
-              <article className="h-full rounded-3xl bg-white border border-[#0B1F3A]/10 overflow-hidden flex flex-col">
-                <img
-                  src={p.photo}
-                  alt={`${p.name}, ${p.role}`}
-                  className="w-full aspect-[4/5] object-cover"
-                  loading="lazy"
-                />
-                <div className="p-6 flex-1 flex flex-col">
-                  <h3 className="font-display text-[20px] font-semibold text-[#0B1F3A]">
-                    {p.name}
-                  </h3>
-                  <p className="text-[12.5px] uppercase tracking-[0.16em] text-[#0B1F3A]/55 mt-1">
-                    {p.role}
-                  </p>
-                  <p className="mt-4 text-[14.5px] text-[#0B1F3A]/75 leading-relaxed flex-1">
-                    {p.bio}
-                  </p>
-                  <ul className="mt-5 flex flex-wrap gap-2">
-                    {p.credentials.map((c) => (
-                      <li
-                        key={c}
-                        className="rounded-full bg-[#FFF7F2] border border-[#B7232A]/20 text-[11.5px] text-[#0B1F3A]/80 px-3 py-1"
-                      >
-                        {c}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </article>
+        <div className="grid lg:grid-cols-12 gap-10">
+          <div className="lg:col-span-4">
+            <Reveal>
+              <span className="eyebrow">How we work</span>
+              <h2 className="display-lg mt-3 text-[#0B1F3A]">
+                Three principles we run every account against.
+              </h2>
+              <p className="mt-5 text-[#0B1F3A]/70 text-[15.5px] leading-relaxed">
+                PreciseHire is a privately-held, owner-operated, U.S.-based
+                company. We are not a portfolio asset of a private-equity sponsor
+                and we do not answer to an offshore parent. Every decision about
+                how we run a report, escalate a flag, or handle a dispute is made
+                by the same small group of people who started the company.
+              </p>
             </Reveal>
-          ))}
+          </div>
+          <div className="lg:col-span-8 grid sm:grid-cols-1 gap-5">
+            {HOW_WE_WORK.map((p, i) => {
+              const Icon = p.icon;
+              return (
+                <Reveal key={p.title} delay={i * 0.05}>
+                  <article className="rounded-3xl bg-white border border-[#0B1F3A]/10 p-7 flex gap-5 items-start">
+                    <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-full bg-[#FFF7F2] text-[#B7232A]">
+                      <Icon className="size-5" />
+                    </span>
+                    <div>
+                      <h3 className="font-display text-[20px] font-semibold text-[#0B1F3A]">
+                        {p.title}
+                      </h3>
+                      <p className="mt-3 text-[15px] text-[#0B1F3A]/75 leading-relaxed">
+                        {p.body}
+                      </p>
+                    </div>
+                  </article>
+                </Reveal>
+              );
+            })}
+          </div>
         </div>
       </section>
 
@@ -373,7 +354,7 @@ export default function About() {
                 href="/support"
                 className="rounded-full border border-white/25 px-7 py-3.5 text-sm font-semibold text-white hover:bg-white/5 inline-flex items-center gap-2"
               >
-                <Phone className="size-4 text-[#E26C72]" /> Meet the team
+                <Phone className="size-4 text-[#E26C72]" /> See our support hours
               </Link>
             </div>
           </div>

@@ -29,7 +29,6 @@ import { toast } from "sonner";
 import SEO from "@/components/site/SEO";
 import Reveal from "@/components/site/Reveal";
 import { ASSETS, COMPANY } from "@/content/site";
-import { AUTHORS } from "@/content/authors";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import {
   Field,
@@ -74,7 +73,7 @@ const REVIEW_AREAS: { icon: typeof ShieldCheck; title: string; body: string }[] 
 const FAQS: { q: string; a: string }[] = [
   {
     q: "Is this really free, or do I have to switch CRAs?",
-    a: "Really free. The audit is fifteen minutes on a Zoom or a phone call with our Director of Compliance. We will tell you what is working and what is not, in writing, and we will do that whether you ever become a customer. We have done it for plenty of employers we never sold to. The honest reason is that the conversation typically uncovers two or three workflow defects that cost less to fix than they cost to leave alone, and a meaningful percentage of those employers eventually do migrate \u2014 but the audit itself is not contingent on it.",
+    a: "Really free. The audit is fifteen minutes on a Zoom or a phone call with our compliance desk. We will tell you what is working and what is not, in writing, and we will do that whether you ever become a customer. We have done it for plenty of employers we never sold to. The honest reason is that the conversation typically uncovers two or three workflow defects that cost less to fix than they cost to leave alone, and a meaningful percentage of those employers eventually do migrate — but the audit itself is not contingent on it.",
   },
   {
     q: "What do I need to bring to the call?",
@@ -82,7 +81,7 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "Who actually runs the audit?",
-    a: "Mark Cromwell, our Director of Compliance, runs the audit personally. Mark has been working in pre-employment screening since 2011 and reviews FCRA, EEOC, and state-level adverse-action workflows for employers across healthcare, transportation, staffing, and the trades. You will not be handed off to a junior analyst or a sales engineer.",
+    a: "PreciseHire is owner-operated and U.S.-based. The audit is run by our compliance desk — the same people who review FCRA, EEOC, and state-level adverse-action workflows for employers across healthcare, transportation, staffing, and the trades every day. You will not be handed off to a junior analyst or a sales engineer.",
   },
   {
     q: "What happens after the call?",
@@ -128,7 +127,6 @@ const SURFACE_OPTIONS = [
 ];
 
 export default function Audit() {
-  const author = AUTHORS["mark-cromwell"];
   const [submitting, setSubmitting] = useState(false);
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
@@ -148,7 +146,7 @@ export default function Audit() {
 
     if (formData.get("_gotcha")) {
       toast.success(
-        "Thanks — Mark will email you within one business day with a few proposed times.",
+        "Thanks — our compliance desk will email you within one business day with a few proposed times.",
       );
       formEl.reset();
       return;
@@ -164,7 +162,7 @@ export default function Audit() {
       if (res.ok) {
         formEl.reset();
         toast.success(
-          "Thanks — Mark will email you within one business day with a few proposed times.",
+          "Thanks — our compliance desk will email you within one business day with a few proposed times.",
         );
       } else {
         toast.error(
@@ -191,7 +189,7 @@ export default function Audit() {
     },
     areaServed: { "@type": "Country", name: "United States" },
     description:
-      "A free 15-minute audit of your adverse-action workflow, FCRA disclosure and authorization, EEOC individualized assessment process, and continuous-monitoring posture. Run by PreciseHire's Director of Compliance.",
+      "A free 15-minute audit of your adverse-action workflow, FCRA disclosure and authorization, EEOC individualized assessment process, and continuous-monitoring posture. Run by PreciseHire's compliance desk.",
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
     mainEntity: {
       "@type": "FAQPage",
@@ -207,7 +205,7 @@ export default function Audit() {
     <>
       <SEO
         title="Free Compliance Audit | PreciseHire"
-        description="Fifteen minutes with our Director of Compliance. We review your pre-hire disclosure, your adverse-action workflow, your dispute handling, and your continuous-monitoring posture. Free, written summary, no sales pressure."
+        description="Fifteen minutes with our compliance desk. We review your pre-hire disclosure, your adverse-action workflow, your dispute handling, and your continuous-monitoring posture. Free, written summary, no sales pressure."
         jsonLd={jsonLd}
       />
 
@@ -243,7 +241,7 @@ export default function Audit() {
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mt-6 text-[17px] leading-[1.7] text-[#0B1F3A]/75 max-w-2xl">
-                Our Director of Compliance will walk through your pre-hire
+                Our compliance desk will walk through your pre-hire
                 disclosure, your pre-adverse and final adverse-action workflow,
                 your dispute handling, and your continuous-monitoring posture
                 against the federal FCRA floor and the four jurisdictions that
@@ -294,27 +292,25 @@ export default function Audit() {
             <Reveal delay={0.1}>
               <div className="rounded-[28px] border border-[#0B1F3A]/10 bg-white/85 backdrop-blur p-7 shadow-[0_24px_60px_-30px_rgba(11,31,58,0.35)]">
                 <div className="flex items-center gap-3">
-                  <img
-                    src={author?.photo}
-                    alt={author?.name ?? "Director of Compliance"}
-                    className="size-12 rounded-full object-cover ring-1 ring-[#0B1F3A]/10"
-                  />
+                  <span className="inline-flex size-12 items-center justify-center rounded-full bg-[#0B1F3A] text-white">
+                    <ShieldCheck className="size-5" />
+                  </span>
                   <div>
                     <div className="text-[15px] font-display font-semibold text-[#0B1F3A]">
-                      {author?.name}
+                      Run by the PreciseHire compliance desk
                     </div>
                     <div className="text-[12px] uppercase tracking-[0.14em] text-[#0B1F3A]/55">
-                      {author?.role}
+                      Owner-operated · U.S.-based
                     </div>
                   </div>
                 </div>
                 <p className="mt-5 text-[14.5px] leading-[1.65] text-[#0B1F3A]/80">
-                  &ldquo;Most of the workflow defects I find on these audits are
-                  small \u2014 a disclosure that quietly bundles the authorization,
+                  Most of the workflow defects we find on these audits are
+                  small — a disclosure that quietly bundles the authorization,
                   a pre-adverse template that omits the Summary of Rights, an
                   ATS that does not pause the clock when a dispute is filed.
                   They are also the same defects that turn into class-action
-                  exhibits when something goes wrong.&rdquo;
+                  exhibits when something goes wrong.
                 </p>
                 <ul className="mt-6 space-y-2.5 text-[14px] text-[#0B1F3A]/85">
                   <li className="flex items-start gap-2">
@@ -394,7 +390,7 @@ export default function Audit() {
                 {
                   n: "01",
                   t: "Book a slot",
-                  b: "Pick a 15-minute window on Mark's calendar. Tell us which industries you hire into and roughly how many checks you run a month \u2014 nothing else.",
+                  b: "Pick a 15-minute window with our compliance desk. Tell us which industries you hire into and roughly how many checks you run a month \u2014 nothing else.",
                 },
                 {
                   n: "02",
@@ -465,7 +461,7 @@ export default function Audit() {
             <div className="lg:col-span-5">
               <span className="eyebrow text-[#B7232A]">Book the audit</span>
               <h2 className="display-md mt-3 text-[#0B1F3A]">
-                Tell us a little about your program. Mark replies personally within one business day.
+                Tell us a little about your program. We reply personally within one business day.
               </h2>
               <p className="mt-5 text-[#0B1F3A]/75 leading-relaxed">
                 Fifteen minutes on Zoom or phone, written one-page summary delivered
@@ -488,17 +484,15 @@ export default function Audit() {
                 </li>
               </ul>
               <div className="mt-7 flex items-center gap-3">
-                <img
-                  src={author?.photo}
-                  alt={author?.name ?? "Director of Compliance"}
-                  className="size-12 rounded-full object-cover ring-1 ring-[#0B1F3A]/10"
-                />
+                <span className="inline-flex size-12 items-center justify-center rounded-full bg-[#FFF7F2] text-[#B7232A] ring-1 ring-[#0B1F3A]/10">
+                  <ShieldCheck className="size-5" />
+                </span>
                 <div>
                   <div className="text-[14px] font-display font-semibold text-[#0B1F3A]">
-                    Hosted by {author?.name}
+                    Hosted by the PreciseHire compliance desk
                   </div>
                   <div className="text-[12px] uppercase tracking-[0.14em] text-[#0B1F3A]/55">
-                    {author?.role}
+                    Owner-operated · U.S.-based
                   </div>
                 </div>
               </div>
@@ -553,7 +547,7 @@ export default function Audit() {
                 />
                 <TextareaField
                   name="notes"
-                  label="Anything specific you want Mark to come prepared for? (optional)"
+                  label="Anything specific you want our compliance desk to come prepared for? (optional)"
                   rows={4}
                 />
                 <Honeypot />

@@ -356,8 +356,8 @@ export default function Checklist() {
                   Bring the boxes you couldn't check to a free 15-minute call.
                 </h2>
                 <p className="mt-4 text-white/75 max-w-xl text-[15.5px] leading-relaxed">
-                  Our Director of Compliance walks through whatever is left on
-                  your list against the FCRA federal floor and the four
+                  Our compliance desk walks through whatever is left on your
+                  list against the FCRA federal floor and the four
                   jurisdictions that add the most overlay. You get a written
                   one-page summary in three business days. No sales follow-up
                   unless you ask.

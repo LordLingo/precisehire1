@@ -49,7 +49,7 @@ const BADGES = [
     cadence:
       "Our FCRA dispute and adverse-action procedures are reviewed each year by outside FCRA counsel; the last review concluded clean. Sample notices, model forms, and our dispute workflow runbook are available on request.",
     request:
-      "Email compliance@precisehire.com or call our Director of Compliance directly at (xxx) xxx-xxxx ext. 2. We will send the current model-notice pack and walk you through the dispute flow on the same call.",
+      "Email compliance@precisehire.com or call our compliance desk directly at (866) 773-5486. We will send the current model-notice pack and walk you through the dispute flow on the same call.",
     auditor: "Reviewed annually by outside FCRA counsel",
   },
 ];

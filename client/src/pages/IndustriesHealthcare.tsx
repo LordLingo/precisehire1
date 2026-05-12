@@ -541,7 +541,7 @@ export default function IndustriesHealthcare() {
             </h2>
             <p className="mt-5 text-[#0B1F3A]/70 text-[15px] leading-relaxed">
               These are pulled from real intro calls. If yours isn't here,
-              call us \u2014 our Director of Compliance answers the phone.
+              call us \u2014 our compliance desk answers the phone.
             </p>
             <Link
               href="/compliance/checklist"
@@ -589,11 +589,11 @@ export default function IndustriesHealthcare() {
                   Walk us through your roster, your states, and your last survey finding.
                 </h2>
                 <p className="mt-4 text-white/75 max-w-xl text-[15.5px] leading-relaxed">
-                  Twenty-minute working call with a healthcare-specialist
-                  account manager and our Director of Compliance. You leave
-                  with a written package proposal, a monitoring quote per
-                  active employee per month, and a written answer on whatever
-                  the surveyor flagged last time.
+                  Twenty-minute working call with a healthcare specialist on
+                  our compliance desk. You leave with a written package
+                  proposal, a monitoring quote per active employee per month,
+                  and a written answer on whatever the surveyor flagged last
+                  time.
                 </p>
               </div>
               <div className="lg:col-span-4 flex flex-col gap-3">
