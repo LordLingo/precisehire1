@@ -80,8 +80,8 @@ const JSONLD = {
     "FCRA-compliant employment background checks, drug testing, MVR, and I-9/E-Verify for U.S. employers across healthcare, transportation, staffing, and the trades.",
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Tampa",
-    addressRegion: "FL",
+    addressLocality: "McKinney",
+    addressRegion: "TX",
     addressCountry: "US",
   },
   contactPoint: {
