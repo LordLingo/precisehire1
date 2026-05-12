@@ -50,7 +50,7 @@ export default function FAQ() {
             <div className="p-7 rounded-3xl bg-white border border-[#0B1F3A]/10">
               <h2 className="font-display text-xl font-semibold text-[#0B1F3A]">Need a faster answer?</h2>
               <p className="mt-3 text-[15px] text-[#0B1F3A]/70 leading-relaxed">A real specialist (not a chatbot) responds in under an hour during business hours.</p>
-              <Link href="/contact" className="btn-coral mt-5 inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold">Contact us <ArrowRight className="size-4" /></Link>
+              <Link href="/talk-to-an-expert" className="btn-coral mt-5 inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold">Talk to a specialist <ArrowRight className="size-4" /></Link>
             </div>
           </Reveal>
         </div>

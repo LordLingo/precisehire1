@@ -137,7 +137,7 @@ export default function Support() {
                     href="/contact"
                     className="btn-ghost-navy rounded-full px-6 py-3 text-sm font-semibold inline-flex items-center gap-2"
                   >
-                    <MessageSquare className="size-4" /> Start a chat
+                    <MessageSquare className="size-4" /> Send us a message
                   </Link>
                   <a
                     href={`mailto:${COMPANY.email}`}
@@ -446,7 +446,7 @@ export default function Support() {
                   <Phone className="size-4" /> {COMPANY.phone}
                 </a>
                 <Link
-                  href="/contact"
+                  href="/talk-to-an-expert"
                   className="btn-ghost-navy rounded-full px-6 py-3 text-sm font-semibold inline-flex items-center gap-2"
                 >
                   Get started — Let's Talk <ArrowRight className="size-4" />

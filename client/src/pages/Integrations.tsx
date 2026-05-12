@@ -73,8 +73,8 @@ export default function Integrations() {
               </p>
             </div>
             <div className="lg:col-span-4 flex flex-col gap-3">
-              <Link href="/contact" className="btn-coral text-center rounded-full px-6 py-3.5 text-sm font-semibold inline-flex items-center justify-center gap-2"><Code2 className="size-4" /> Get API access</Link>
-              <Link href="/contact" className="text-center rounded-full px-6 py-3.5 text-sm font-semibold border border-white/30 hover:bg-white/10 transition-colors inline-flex items-center justify-center gap-2">Talk to an integrations engineer <ArrowRight className="size-4" /></Link>
+              <Link href="/get-a-quote" className="btn-coral text-center rounded-full px-6 py-3.5 text-sm font-semibold inline-flex items-center justify-center gap-2"><Code2 className="size-4" /> Get API access</Link>
+              <Link href="/talk-to-an-expert?topic=ATS%20or%20API%20integration" className="text-center rounded-full px-6 py-3.5 text-sm font-semibold border border-white/30 hover:bg-white/10 transition-colors inline-flex items-center justify-center gap-2">Talk to an integrations engineer <ArrowRight className="size-4" /></Link>
             </div>
           </div>
         </Reveal>

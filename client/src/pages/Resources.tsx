@@ -277,7 +277,7 @@ export default function Resources() {
               </p>
             </div>
             <div className="lg:col-span-4 flex lg:justify-end gap-3">
-              <Link href="/contact" className="btn-coral rounded-full px-6 py-3 font-semibold">
+              <Link href="/get-a-quote" className="btn-coral rounded-full px-6 py-3 font-semibold">
                 Get started
               </Link>
               <Link href="/pricing" className="btn-ghost-cream rounded-full px-6 py-3 font-semibold">

@@ -199,7 +199,7 @@ export default function Pricing() {
               <Reveal delay={0.1}>
                 <div className="mt-8 flex flex-wrap gap-3">
                   <Link
-                    href="/contact"
+                    href="/get-a-quote"
                     className="btn-coral inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold"
                   >
                     Get my quote — 1-hour reply <ArrowRight className="size-4" />
@@ -319,7 +319,7 @@ export default function Pricing() {
 
                   <div className="pt-8 mt-auto">
                     <Link
-                      href="/contact"
+                      href="/get-a-quote"
                       className={[
                         "inline-flex w-full items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold",
                         featured ? "btn-coral" : "btn-ghost-navy",
@@ -647,7 +647,7 @@ export default function Pricing() {
             </div>
             <div className="lg:col-span-4 flex flex-col gap-3">
               <Link
-                href="/contact"
+                href="/get-a-quote"
                 className="btn-coral text-center rounded-full px-6 py-3.5 text-sm font-semibold"
               >
                 Talk to a volume specialist

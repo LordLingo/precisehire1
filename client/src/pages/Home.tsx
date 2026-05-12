@@ -139,8 +139,8 @@ export default function Home() {
             </Reveal>
             <Reveal delay={0.15}>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Link href="/contact" className="btn-coral inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold">
-                  Get started — Let&rsquo;s Talk <ArrowRight className="size-4" />
+                <Link href="/get-a-quote" className="btn-coral inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold">
+                  Get a quote <ArrowRight className="size-4" />
                 </Link>
                 <Link href="/services" className="btn-ghost-navy inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold">
                   Explore services
@@ -614,7 +614,7 @@ export default function Home() {
               <p className="mt-5 text-[#0B1F3A]/70">
                 Don't see your question? Our specialists are one short conversation away.
               </p>
-              <Link href="/contact" className="btn-coral inline-flex items-center gap-2 rounded-full px-6 py-3 mt-6 text-sm font-semibold">
+              <Link href="/talk-to-an-expert" className="btn-coral inline-flex items-center gap-2 rounded-full px-6 py-3 mt-6 text-sm font-semibold">
                 Talk to a specialist <ArrowRight className="size-4" />
               </Link>
             </Reveal>
@@ -654,8 +654,8 @@ export default function Home() {
                 </p>
               </div>
               <div className="lg:col-span-4 flex flex-col gap-3">
-                <Link href="/contact" className="btn-coral text-center rounded-full px-7 py-3.5 text-sm font-semibold">
-                  Get started — Let&rsquo;s Talk
+                <Link href="/get-a-quote" className="btn-coral text-center rounded-full px-7 py-3.5 text-sm font-semibold">
+                  Get a quote
                 </Link>
               </div>
             </div>

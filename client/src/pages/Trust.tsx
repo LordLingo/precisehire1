@@ -179,7 +179,7 @@ export default function Trust() {
                 <ArrowRight className="size-4" />
               </a>
               <Link
-                href="/contact"
+                href="/talk-to-an-expert?topic=Compliance%20review"
                 className="inline-flex items-center justify-between rounded-full border border-white/25 px-6 py-3 font-semibold text-white hover:bg-white/5"
               >
                 <span className="inline-flex items-center gap-2">

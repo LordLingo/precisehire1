@@ -204,7 +204,7 @@ export default function IndustriesStaffing() {
             <Reveal delay={0.15}>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link
-                  href="/contact"
+                  href="/get-a-quote?industry=Staffing"
                   className="inline-flex items-center gap-2 rounded-full bg-[#B7232A] px-6 py-3 text-[15px] font-semibold text-white hover:bg-[#9A1A20]"
                 >
                   Quote a branch in 1 business hour
@@ -405,7 +405,7 @@ export default function IndustriesStaffing() {
             </div>
             <div className="lg:col-span-4 flex flex-col gap-3">
               <Link
-                href="/contact"
+                href="/get-a-quote?industry=Staffing"
                 className="inline-flex items-center justify-between rounded-full bg-white text-[#0B1F3A] px-6 py-3 font-semibold hover:bg-[#FFF7F2]"
               >
                 <span className="inline-flex items-center gap-2">

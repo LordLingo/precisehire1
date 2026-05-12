@@ -109,7 +109,7 @@ export default function AuthorPage() {
             )}
             <Reveal delay={0.2}>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Link href="/contact" className="btn-coral inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold">
+                <Link href="/contact?intent=compliance-question" className="btn-coral inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold">
                   <Mail className="size-4" /> Reach the compliance desk
                 </Link>
                 <a href={`tel:${COMPANY.phoneRaw}`} className="btn-ghost-navy inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold">

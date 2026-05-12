@@ -364,7 +364,7 @@ export default function About() {
             </div>
             <div className="flex flex-col sm:flex-row gap-3">
               <Link
-                href="/contact"
+                href="/talk-to-an-expert"
                 className="btn-coral rounded-full px-7 py-3.5 text-sm font-semibold inline-flex items-center gap-2"
               >
                 Talk to us <ArrowRight className="size-4" />

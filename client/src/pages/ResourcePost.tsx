@@ -275,8 +275,8 @@ export default function ResourcePost() {
               </p>
             </div>
             <div className="lg:col-span-4 flex lg:justify-end gap-3">
-              <Link href="/contact" className="btn-coral rounded-full px-6 py-3 font-semibold">
-                Talk to sales
+              <Link href="/talk-to-an-expert" className="btn-coral rounded-full px-6 py-3 font-semibold">
+                Talk to a specialist
               </Link>
               <Link href="/pricing" className="btn-ghost-cream rounded-full px-6 py-3 font-semibold">
                 See pricing

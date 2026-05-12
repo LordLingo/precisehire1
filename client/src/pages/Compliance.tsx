@@ -77,7 +77,7 @@ export default function Compliance() {
                 </li>
               ))}
             </ul>
-            <Link href="/contact" className="btn-coral inline-flex items-center gap-2 rounded-full px-6 py-3 mt-8 text-sm font-semibold">Request documents</Link>
+            <Link href="/contact" className="btn-coral inline-flex items-center gap-2 rounded-full px-6 py-3 mt-8 text-sm font-semibold">Request these documents</Link>
           </div>
         </Reveal>
       </section>

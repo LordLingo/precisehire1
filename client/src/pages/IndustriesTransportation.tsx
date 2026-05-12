@@ -242,7 +242,7 @@ export default function IndustriesTransportation() {
             <Reveal delay={0.15}>
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <Link
-                  href="/contact"
+                  href="/get-a-quote?industry=Transportation"
                   className="btn-coral inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold"
                 >
                   Build a fleet package <ArrowRight className="size-4" />
@@ -506,7 +506,7 @@ export default function IndustriesTransportation() {
                 your operating authority and state mix during the build call.
               </p>
               <Link
-                href="/contact"
+                href="/get-a-quote?industry=Transportation"
                 className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#B7232A] hover:underline"
               >
                 Talk to a fleet specialist <ArrowRight className="size-4" />
@@ -603,7 +603,7 @@ export default function IndustriesTransportation() {
               </div>
               <div className="lg:col-span-4 flex flex-col gap-3">
                 <Link
-                  href="/contact"
+                  href="/get-a-quote?industry=Transportation"
                   className="btn-coral inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold"
                 >
                   Book the working call <ArrowRight className="size-4" />

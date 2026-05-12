@@ -75,12 +75,12 @@ export default function Industries() {
                       return (
                         <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-2">
                           <Link href={dd} className="inline-flex items-center gap-2 text-sm font-semibold text-[#B7232A] hover:underline">Read the {label} deep-dive <ArrowRight className="size-4" /></Link>
-                          <Link href="/contact" className="inline-flex items-center gap-2 text-sm font-semibold text-[#0B1F3A]/65 hover:text-[#0B1F3A]">Or build a package directly <ArrowRight className="size-4" /></Link>
+                          <Link href={`/get-a-quote?industry=${encodeURIComponent(ind.title)}`} className="inline-flex items-center gap-2 text-sm font-semibold text-[#0B1F3A]/65 hover:text-[#0B1F3A]">Or get a quote directly <ArrowRight className="size-4" /></Link>
                         </div>
                       );
                     }
                     return (
-                      <Link href="/contact" className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-[#0B1F3A] hover:text-[#B7232A]">Build a {ind.title.toLowerCase()} package <ArrowRight className="size-4" /></Link>
+                      <Link href={`/get-a-quote?industry=${encodeURIComponent(ind.title)}`} className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-[#0B1F3A] hover:text-[#B7232A]">Build a {ind.title.toLowerCase()} package <ArrowRight className="size-4" /></Link>
                     );
                   })()}
                 </div>

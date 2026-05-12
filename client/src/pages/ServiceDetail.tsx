@@ -60,7 +60,7 @@ export default function ServiceDetail() {
               <h1 className="display-xl mt-3 text-[#0B1F3A]">{svc.headline}</h1>
               <p className="mt-6 text-lg text-[#0B1F3A]/75 leading-relaxed max-w-2xl">{svc.intro}</p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Link href="/contact" className="btn-coral inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold">
+                <Link href="/get-a-quote" className="btn-coral inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold">
                   Get this check <ArrowRight className="size-4" />
                 </Link>
                 <Link href="/pricing" className="btn-ghost-navy inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold">
@@ -175,7 +175,7 @@ export default function ServiceDetail() {
               <p className="mt-3 text-white/70 max-w-2xl">Mix and match to match your role and risk profile. Most accounts go live the same day.</p>
             </div>
             <div className="lg:col-span-4 flex flex-col gap-3">
-              <Link href="/contact" className="btn-coral text-center rounded-full px-6 py-3.5 text-sm font-semibold">Get started</Link>
+              <Link href="/get-a-quote" className="btn-coral text-center rounded-full px-6 py-3.5 text-sm font-semibold">Get started</Link>
               <Link href="/pricing" className="text-center rounded-full px-6 py-3.5 text-sm font-semibold border border-white/30 hover:bg-white/10 transition-colors">See pricing</Link>
             </div>
           </div>

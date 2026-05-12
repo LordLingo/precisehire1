@@ -73,7 +73,7 @@ export default function Header() {
           >
             Sign in
           </a>
-          <Link href="/contact" className="btn-coral rounded-full px-5 py-2.5 text-sm font-semibold">
+          <Link href="/get-a-quote" className="btn-coral rounded-full px-5 py-2.5 text-sm font-semibold">
             Get started
           </Link>
         </div>
@@ -105,7 +105,7 @@ export default function Header() {
               >
                 Sign in
               </a>
-              <Link href="/contact" className="btn-coral flex-1 text-center rounded-full px-4 py-2.5 text-sm font-semibold">
+              <Link href="/get-a-quote" className="btn-coral flex-1 text-center rounded-full px-4 py-2.5 text-sm font-semibold">
                 Get started
               </Link>
             </div>

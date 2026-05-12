@@ -26,6 +26,8 @@ import IndustriesStaffing from "./pages/IndustriesStaffing";
 import Trust from "./pages/Trust";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
+import GetAQuote from "./pages/GetAQuote";
+import TalkToAnExpert from "./pages/TalkToAnExpert";
 import Legal from "./pages/Legal";
 import Resources from "./pages/Resources";
 import ResourcePost from "./pages/ResourcePost";
@@ -53,6 +55,8 @@ function Router() {
         <Route path="/about" component={About} />
         <Route path="/faq" component={FAQ} />
         <Route path="/contact" component={Contact} />
+        <Route path="/get-a-quote" component={GetAQuote} />
+        <Route path="/talk-to-an-expert" component={TalkToAnExpert} />
         <Route path="/support" component={Support} />
         <Route path="/legal/:slug" component={Legal} />
         <Route path="/resources" component={Resources} />
