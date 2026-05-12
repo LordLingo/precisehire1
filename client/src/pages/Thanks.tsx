@@ -294,7 +294,7 @@ export default function Thanks() {
                 eyebrow: "Read",
                 title: "How we actually work",
                 body:
-                  "Owner-operated, U.S.-based, Tampa HQ + Texas. The pillars our team is built around.",
+                  "Owner-operated, U.S.-based, headquartered in McKinney, Texas. The pillars our team is built around.",
                 href: "/about",
               },
               {

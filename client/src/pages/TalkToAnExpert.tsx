@@ -144,7 +144,7 @@ export default function TalkToAnExpert() {
               </h1>
               <p className="mt-6 text-lg text-[#0B1F3A]/75 leading-relaxed">
                 Not a sales pitch. A 30-minute working session with a U.S.-based
-                screening specialist — Florida or Texas, never offshore — to talk
+                screening specialist in McKinney, Texas, never offshore — to talk
                 through FCRA compliance, package design, or a clean exit from your
                 current provider.
               </p>

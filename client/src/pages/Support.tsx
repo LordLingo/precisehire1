@@ -120,7 +120,7 @@ export default function Support() {
                 <p className="mt-6 text-lg text-[#0B1F3A]/75 leading-relaxed max-w-2xl">
                   No phone tree. No offshore call center. No "your ticket is
                   important to us" loop. When you call PreciseHire, one of four
-                  named specialists across Florida and Texas picks up — usually
+                  named U.S.-based specialists in McKinney, Texas picks up — usually
                   in under {TURNAROUND.avgPickupSeconds}. They know your account, they
                   know FCRA, and they have the authority to actually fix things.
                 </p>
@@ -178,7 +178,7 @@ export default function Support() {
                         Where we are
                       </p>
                       <p className="mt-1 text-sm text-white/90 leading-snug">
-                        4 US states
+                        McKinney, TX
                         <br />
                         Zero offshore
                       </p>

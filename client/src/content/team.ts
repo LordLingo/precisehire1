@@ -35,7 +35,7 @@ export const TEAM: TeamMember[] = [
     slug: "jenna-m",
     name: "Jenna M.",
     role: "Senior Account Specialist",
-    region: "Florida",
+    region: "McKinney, TX",
     ext: "",
     bio: "Onboards new staffing clients and runs point on day-to-day account questions. Picks up before the second ring more often than not.",
     photo:
@@ -46,7 +46,7 @@ export const TEAM: TeamMember[] = [
     slug: "marcus-t",
     name: "Marcus T.",
     role: "Compliance & Screening Lead",
-    region: "Texas",
+    region: "McKinney, TX",
     ext: "",
     bio: "Handles FCRA questions, adverse action workflows, and the trickier criminal-record dispositions. Ten-plus years in CRA operations.",
     photo:
@@ -57,7 +57,7 @@ export const TEAM: TeamMember[] = [
     slug: "priya-s",
     name: "Priya S.",
     role: "Client Success Specialist",
-    region: "Florida",
+    region: "McKinney, TX",
     ext: "",
     bio: "Quarterbacks renewals, package design, and the quarterly review calls. The person clients call when they want a real recommendation, not a script.",
     photo:
@@ -68,7 +68,7 @@ export const TEAM: TeamMember[] = [
     slug: "tyler-r",
     name: "Tyler R.",
     role: "Background Research Analyst",
-    region: "Florida",
+    region: "McKinney, TX",
     ext: "",
     bio: "Runs the verification desk — employment, education, and professional licenses. The reason your reports clear faster than the industry average.",
     photo:

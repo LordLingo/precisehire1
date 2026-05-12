@@ -171,7 +171,7 @@ export default function Home() {
                 >
                   <img
                     src={ASSETS.hero}
-                    alt="PreciseHire support specialists on calls in our Florida office"
+                    alt="PreciseHire support specialists on calls in our McKinney, Texas office"
                     className="block w-full h-auto object-cover motion-safe:transition-transform motion-safe:duration-[900ms] motion-safe:ease-out group-hover:scale-[1.035]"
                     loading="eager"
                     width={1408}
@@ -423,7 +423,7 @@ export default function Home() {
             </Reveal>
             <Reveal delay={0.06}>
               <p className="mt-5 text-[17px] text-[#0B1F3A]/75 leading-relaxed max-w-2xl">
-                Four named specialists across Florida and Texas run our support desk. They know FCRA, they know
+                Four named U.S.-based specialists run our support desk from McKinney, Texas. They know FCRA, they know
                 your account, and they answer the phone in {TURNAROUND.avgPickupSeconds}
                 {" "}— not eight rings and a script.
               </p>
