@@ -67,7 +67,7 @@ const VALUES = [
 ];
 
 const TIMELINE = [
-  { year: "2003", title: "Founded in Kansas City", body: "Rachel Sanders launches PreciseHire from a single back office, supporting four local trucking firms." },
+  { year: "2003", title: "Founded in Tampa", body: "Rachel Sanders launches PreciseHire from a single back office in Tampa, Florida, supporting four local trucking firms." },
   { year: "2004", title: "Daniel Park joins as COO", body: "First operations hire builds the courthouse runner network the company still uses today." },
   { year: "2009", title: "PBSA membership", body: "PreciseHire is admitted to the Professional Background Screening Association and adopts its accreditation standards." },
   { year: "2014", title: "Healthcare practice opens", body: "First dedicated OIG LEIE + SAM monitoring workflow shipped for a regional hospital system." },
@@ -87,8 +87,8 @@ const JSONLD = {
     "FCRA-compliant employment background checks, drug testing, MVR, and I-9/E-Verify for U.S. employers across healthcare, transportation, staffing, and the trades.",
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Kansas City",
-    addressRegion: "MO",
+    addressLocality: "Tampa",
+    addressRegion: "FL",
     addressCountry: "US",
   },
   contactPoint: {
@@ -111,7 +111,7 @@ export default function About() {
     <>
       <SEO
         title="About PreciseHire — 22 Years of U.S. Background Screening"
-        description="Founded 2003 in Kansas City. U.S.-based researchers, SOC 2 Type II attested, PBSA member since 2009. Meet the leadership team running the company."
+        description="Founded 2003 in Tampa, Florida. U.S.-based researchers, SOC 2 Type II attested, PBSA member since 2009. Meet the leadership team running the company."
         canonical="https://precisehire.com/about"
         jsonLd={JSONLD}
       />
@@ -144,7 +144,7 @@ export default function About() {
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mt-6 text-[17px] leading-[1.7] text-[#0B1F3A]/75 max-w-2xl">
-                PreciseHire was founded in 2003 in Kansas City by background-screening
+                PreciseHire was founded in 2003 in Tampa, Florida by background-screening
                 veterans who were tired of slow, opaque legacy providers. Twenty-two
                 years and twelve million checks later, we still answer the phone, still
                 verify every flag at the source, and still believe employers deserve a
@@ -159,7 +159,7 @@ export default function About() {
                   <MapPin className="size-3.5" /> Headquarters
                 </div>
                 <p className="mt-3 font-display text-[18px] font-semibold text-[#0B1F3A]">
-                  Kansas City, Missouri
+                  Tampa, Florida
                 </p>
                 <p className="mt-1 text-[14px] text-[#0B1F3A]/70 leading-relaxed">
                   U.S.-based research desks, U.S.-based phones. Mon&ndash;Fri 8a&ndash;8p ET, Sat 9a&ndash;1p.

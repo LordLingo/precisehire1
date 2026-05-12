@@ -120,7 +120,7 @@ export default function Support() {
                 <p className="mt-6 text-lg text-[#0B1F3A]/75 leading-relaxed max-w-2xl">
                   No phone tree. No offshore call center. No "your ticket is
                   important to us" loop. When you call PreciseHire, one of four
-                  named specialists in {TEAM.length === 4 ? "Missouri, Texas, North Carolina, or Pennsylvania" : "the United States"} picks up — usually
+                  named specialists across Florida and Texas picks up — usually
                   in under {TURNAROUND.avgPickupSeconds}. They know your account, they
                   know FCRA, and they have the authority to actually fix things.
                 </p>
@@ -278,12 +278,12 @@ export default function Support() {
 
               <div className="mt-5 pt-5 border-t border-[#0B1F3A]/10 flex items-center justify-between">
                 <a
-                  href={`tel:${COMPANY.phoneRaw},${m.ext}`}
+                  href={`tel:${COMPANY.phoneRaw}`}
                   className="inline-flex items-center gap-2 text-sm font-semibold text-[#0B1F3A]
                              hover:text-[#B7232A] transition-colors"
                 >
                   <Phone className="size-4" />
-                  Ext. {m.ext}
+                  Call direct
                 </a>
                 <span className="text-[11px] text-[#0B1F3A]/50">
                   {m.yearsExperience}+ yrs
@@ -297,7 +297,7 @@ export default function Support() {
           <p className="mt-10 text-center text-sm text-[#0B1F3A]/60 max-w-2xl mx-auto">
             Photos and names shown are placeholders for the public site preview
             and will be replaced with the live team roster on launch. The roles,
-            extensions, and coverage are real.
+            coverage, and main line are real.
           </p>
         </Reveal>
       </section>
