@@ -58,8 +58,7 @@ export default function Contact() {
     formData.append("_form", "contact-help-desk");
 
     if (formData.get("_gotcha")) {
-      toast.success("Message received — our help desk will respond within one business day.");
-      formEl.reset();
+      window.location.assign("/thanks?form=help");
       return;
     }
 
@@ -73,6 +72,8 @@ export default function Contact() {
       if (res.ok) {
         formEl.reset();
         toast.success("Message received — our help desk will respond within one business day.");
+        window.location.assign("/thanks?form=help");
+        return;
       } else {
         toast.error("Something went wrong. Please call (866) 773-5486 or email Info@precisehire.com.");
       }

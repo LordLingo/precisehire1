@@ -74,6 +74,100 @@ export function deriveTopic(p: { title: string; tags: string[] }): Exclude<PostT
 
 export const POSTS: Post[] = [
   {
+    slug: "fcra-section-613-public-records-employer-guide",
+    title: "FCRA §613 and Public-Record Background Checks — What Employers Need to Know About the Notice-or-Strict-Procedures Rule",
+    metaTitle: "FCRA §613 Public-Record Notice Rule: Employer Guide",
+    description:
+      "FCRA §613 forces every CRA reporting public-record information to either notify the candidate at the same time or maintain strict procedures for currency. Here's what each path actually means — and which one your CRA is using.",
+    category: "Compliance",
+    tags: ["FCRA", "Public Records", "Notice Rule", "Compliance"],
+    author: "PreciseHire Editorial Team",
+    authorSlug: "precisehire-team",
+    datePublished: "2026-05-22",
+    readingMin: 11,
+    image: ASSETS.serviceCriminal,
+    excerpt:
+      "§613 is the quietest section of the FCRA and one of the easiest to break. It governs how a CRA reports public-record information that may have an adverse effect on a candidate — and most employers have never asked their CRA which path it picked.",
+    markdown: `Most employers know FCRA §604 (permissible purpose), §611 (the dispute and reinvestigation rules we covered in [the dispute workflow article](/resources/background-check-disputes-what-employers-must-do)), and §615 (the pre-adverse and final adverse-action sequence we covered in [the pre-adverse notice walkthrough](/resources/pre-adverse-action-notice-requirements-timing-content-and-documents) and [the state-by-state cushion table](/resources/how-long-must-employers-wait-pre-adverse-action-state-by-state)). Almost no employer has ever asked their consumer reporting agency a single question about §613.
+
+§613 is the quietest section of the FCRA and one of the easiest to break. It governs the moment a CRA pulls a public criminal record — a court docket, an arrest blotter, a sex-offender registry hit, a civil judgment — and decides what to do with it. The statute gives the CRA two paths, and which path your CRA picked determines whether your screening program is exposed to a category of class-action litigation that has been growing steadily since the Eleventh Circuit's [Erickson v. First Advantage Background Services Corp.](https://law.justia.com/cases/federal/appellate-courts/ca11/19-13196/19-13196-2020-09-23.html) decision and the related wave of public-record-notice cases.
+
+This article walks through what §613 actually says, the two compliance paths it offers, the case law that has shaped each one, and the specific question every employer should ask their CRA before the next renewal cycle.
+
+## What §613 actually says
+
+The statutory text is short. [15 U.S.C. §1681k(a)](https://www.law.cornell.edu/uscode/text/15/1681k) provides that a consumer reporting agency that furnishes a consumer report **for employment purposes** and that includes in the report **public record information** that is **likely to have an adverse effect on the consumer's ability to obtain employment** must do one of two things.
+
+The first option, under §613(a)(1), is to notify the consumer at the time the public-record information is reported to the user, with the name and address of the user receiving the information. This is the "contemporaneous notice" path. The CRA pulls the public record, sends the report to the employer, and at the same time sends the candidate a notice that says "a public record was reported to [employer name] on [date]."
+
+The second option, under §613(a)(2), is to maintain strict procedures designed to ensure that the public-record information is complete and up to date. The statute specifies that records of arrests, indictments, convictions, suits, tax liens, and outstanding judgments must reflect the current public-record status as of the date of the report. This is the "strict procedures" path. The CRA does not have to notify the candidate at the time of the report, but in exchange it must guarantee the public-record data it furnishes is current as of the moment the report goes out.
+
+The two paths are mutually exclusive in practice. A CRA picks one and lives with the operational obligations that path imposes.
+
+## Why the choice matters — the litigation landscape
+
+The practical reason §613 matters is that both paths have been the subject of major federal litigation, and a CRA that thinks it is on the strict-procedures path but is actually relying on stale aggregator data is a CRA whose employer-clients are co-defendants when the class action lands.
+
+The leading case on the strict-procedures path is the Eleventh Circuit's 2020 decision in *Erickson v. First Advantage*, which held that a CRA reporting outdated criminal-record information — specifically, charges that had been dismissed but were reported as still pending — had failed to maintain the strict procedures the statute requires, and that the affected candidate's class action could proceed. The damages framework under [§616 (willful noncompliance)](https://www.law.cornell.edu/uscode/text/15/1681n) allows statutory damages between $100 and $1,000 per violation, plus punitive damages, plus attorney's fees — a class of even a few thousand candidates produces a settlement number that gets a CEO's attention.
+
+The leading line of cases on the contemporaneous-notice path is more procedural but no less important. Courts have consistently held that the §613(a)(1) notice must be sent **at the time** the public-record information is reported to the user, not days later, not bundled into the candidate's eventual pre-adverse action packet, not contingent on the employer making a decision. The notice is an independent statutory obligation that triggers the moment the report leaves the CRA's hands.
+
+## The two paths in operational terms
+
+**The contemporaneous-notice path (§613(a)(1)).** A CRA on this path runs a court records search, pulls a public-record hit, and at the moment of furnishing the report to the employer, simultaneously sends the candidate a written notice. The notice does not have to disclose what the public record says — the FCRA already gives the candidate a right to a free copy of the file under [§609](https://www.law.cornell.edu/uscode/text/15/1681g) — but it does have to identify the user (the employer) and the date of the report. The operational burden falls on the CRA's notice-generation system: every public-record hit triggers an automated candidate notice, and the CRA carries the proof of mailing or electronic delivery as part of its compliance file.
+
+**The strict-procedures path (§613(a)(2)).** A CRA on this path does not send a contemporaneous notice. Instead, it guarantees that every public-record item it reports is current as of the date of the report. In practice, this means the CRA cannot rely solely on a third-party criminal records aggregator that refreshes its data monthly or quarterly. The CRA must verify the current status of the public record at the source — a direct query to the relevant court's docket system, a fresh pull from the state criminal-history repository, a real-time check against the sex-offender registry. The operational burden falls on the CRA's research workflow: every public-record hit must be verified at the source before it is reported.
+
+The two paths produce different candidate experiences. Under the contemporaneous-notice path, the candidate often learns that an employer ran a background check and found a record before the employer has even decided what to do with it — which can be useful for early dispute resolution but also generates candidate confusion that the employer's recruiter has to manage. Under the strict-procedures path, the candidate's first notice is the pre-adverse action packet, which arrives later in the process but contains a more complete and current picture.
+
+## Which path your CRA picked — the question to ask
+
+Most employers have no idea which §613 path their current CRA is on. The question is rarely volunteered in sales conversations, and the answer is rarely documented in the master services agreement.
+
+The specific question to ask is this: **"Does your platform comply with FCRA §613 by sending contemporaneous candidate notices on every public-record report under §613(a)(1), or by maintaining direct-source verification under §613(a)(2)? Please describe the operational workflow that backs your answer."**
+
+A CRA on the contemporaneous-notice path should be able to describe its candidate-notice generation system in concrete operational terms — when the notice is generated, how it is delivered (mail, email, candidate portal), what proof of delivery is retained, and how the notice handles candidates whose contact information is incomplete. A CRA on the strict-procedures path should be able to describe its court-source verification workflow — which courts are queried directly, which courts require courthouse research, what the maximum age of any reported record is from the source-verification date, and how the CRA handles courts whose direct-access systems are temporarily unavailable.
+
+A CRA that cannot answer this question concretely — or that answers vaguely with phrases like "we comply with all applicable FCRA requirements" — is a CRA that has not done the operational work to actually be on either path. That is the CRA whose employer-clients become co-defendants.
+
+## The intersection with state law
+
+A handful of states have layered additional public-record reporting rules on top of §613, and the interaction matters.
+
+**California.** California's [Investigative Consumer Reporting Agencies Act (ICRAA)](https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?division=3.&chapter=2.5.&part=4.&lawCode=CIV&title=1.6A) requires CRAs that furnish investigative consumer reports for employment purposes in California to provide the consumer with a copy of any public-record information at the time the report is provided to the user, regardless of whether the CRA has chosen the strict-procedures path under federal §613. The California rule effectively forces a contemporaneous-notice operating model for any candidate whose application is in California.
+
+**New York.** New York's [Article 23-A of the Correction Law](https://www.nysenate.gov/legislation/laws/COR/A23-A) requires employers (not CRAs) to provide candidates with a written copy of the public-record information being considered before any adverse employment decision. The state-law obligation is layered on top of the federal §615(a) pre-adverse process and effectively requires the public-record copy to be in the candidate's hands earlier and more affirmatively than the federal floor requires.
+
+**Maryland and Washington.** Both states have their own consumer reporting statutes that mirror §613 with variations on the timing and content of the notice. A CRA operating nationally has to satisfy the most demanding state rule, which in practice means most national CRAs default to the contemporaneous-notice path because it is easier to operate uniformly than to maintain different state-specific workflows.
+
+## The internal question employers should ask themselves
+
+Even with a clean §613-compliant CRA, employers carry a related obligation that frequently slips through the cracks: the public-record information that lands in the candidate's pre-adverse action packet must be the same information the employer actually relied on. If your CRA is on the strict-procedures path and pulls a fresh court record on the date of the report, but your hiring manager makes the adverse decision two weeks later based on the stale version of the report stored in the ATS, the candidate's pre-adverse packet must contain the version of the report that was actually considered — not a fresher version pulled later, and not an older version that has since been superseded.
+
+The operational fix is to lock the version of the consumer report at the moment the employer makes the conditional decision to move toward adverse action, and to use that locked version as the document delivered with the pre-adverse notice. We covered the pre-adverse mechanics in detail in the [pre-adverse notice walkthrough](/resources/pre-adverse-action-notice-requirements-timing-content-and-documents); the §613 layer adds the requirement that the report version delivered to the candidate is the same version the employer actually considered.
+
+## The continuous-monitoring wrinkle
+
+For employers running continuous monitoring (which we covered in the [continuous monitoring vs. periodic re-screens article](/resources/continuous-monitoring-vs-periodic-rescreens)), §613 applies to every public-record alert the program generates, not just to the original pre-hire report. Each alert that includes new public-record information that may have an adverse effect on the employee's continued employment is a new §613 trigger.
+
+This is the operational reason most well-built continuous-monitoring programs default to the contemporaneous-notice path. The strict-procedures path requires source verification on every alert, every time, which is operationally expensive at scale. The contemporaneous-notice path lets the alert flow through, with the candidate receiving notice each time, and the employer making its individualized-assessment decision under the EEOC framework downstream.
+
+## The audit checklist
+
+If you want to audit your CRA's §613 posture in fifteen minutes, here is the framework. First, request in writing which §613 path the CRA operates under, and ask for the operational description of how that path is implemented. Second, request a sample of the contemporaneous notice (if (a)(1)) or a description of the source-verification workflow (if (a)(2)). Third, ask how the CRA handles California, New York, Maryland, and Washington candidates specifically. Fourth, ask whether the CRA is currently a defendant in any §613 litigation — a CRA on a clean (a)(2) path with a robust source-verification workflow has nothing to hide; a CRA whose answer is evasive is a flag.
+
+If the answer to any of the four questions is unsatisfying, a [free 15-minute compliance audit](/compliance/audit) with our compliance desk will walk through the specific exposure your current arrangement creates and what the remediation looks like — whether that means a process change inside your CRA, a contractual addendum, or (in the worst case) a CRA migration. The conversation is free and you do not need to be a customer.
+
+## TL;DR
+
+FCRA §613 governs how a CRA reports public-record information for employment purposes. The CRA picks one of two paths: contemporaneous notice to the candidate (§613(a)(1)) or strict procedures to ensure the data is current as of the report date (§613(a)(2)). Which path your CRA picked determines a meaningful slice of your class-action exposure.
+
+Most employers have never asked. The question to ask is concrete: "Which §613 path do you operate under, and please describe the workflow that backs your answer." A CRA that cannot answer concretely has not done the operational work to actually be on either path — and its employer-clients become co-defendants when the class action lands.
+
+State overlays in California, New York, Maryland, and Washington force most national CRAs onto the contemporaneous-notice path by default. Employers running continuous monitoring inherit §613 obligations on every public-record alert, not just the pre-hire report. And the version of the report the candidate receives in the pre-adverse packet must be the same version the employer actually relied on — not a fresher one, not a stale one.
+`,
+  },
+  {
     slug: "continuous-monitoring-vs-periodic-rescreens",
     title: "Continuous Criminal Monitoring vs. Periodic Re-Screens \u2014 When Each Makes Sense",
     metaTitle: "Continuous Monitoring vs. Annual Re-Screens: Employer Guide",

@@ -80,8 +80,7 @@ export default function GetAQuote() {
     formData.append("_form", "get-a-quote");
 
     if (formData.get("_gotcha")) {
-      toast.success("Thanks — a specialist will email a quote within one business hour.");
-      formEl.reset();
+      window.location.assign("/thanks?form=quote");
       return;
     }
 
@@ -95,6 +94,8 @@ export default function GetAQuote() {
       if (res.ok) {
         formEl.reset();
         toast.success("Got it — a specialist will email a custom quote within one business hour.");
+        window.location.assign("/thanks?form=quote");
+        return;
       } else {
         toast.error(
           "Something went wrong sending your request. Please call (866) 773-5486 or email Info@precisehire.com.",

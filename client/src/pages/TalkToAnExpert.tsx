@@ -88,8 +88,7 @@ export default function TalkToAnExpert() {
     formData.append("_form", "talk-to-an-expert");
 
     if (formData.get("_gotcha")) {
-      toast.success("Thanks — a specialist will reach out to book a time.");
-      formEl.reset();
+      window.location.assign("/thanks?form=talk");
       return;
     }
 
@@ -105,6 +104,8 @@ export default function TalkToAnExpert() {
         toast.success(
           "Got it — a specialist will reach out within 2 business days to book a 30-minute call.",
         );
+        window.location.assign("/thanks?form=talk");
+        return;
       } else {
         toast.error(
           "Something went wrong. Please call (866) 773-5486 or email Info@precisehire.com.",

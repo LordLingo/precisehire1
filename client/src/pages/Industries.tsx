@@ -3,10 +3,13 @@
  * Style: Trusted Modernism. Editorial intro + anchored deep links per industry.
  */
 import { Link } from "wouter";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Layers, Building2 } from "lucide-react";
 import SEO from "@/components/site/SEO";
 import Reveal from "@/components/site/Reveal";
 import { INDUSTRIES, SERVICES, ASSETS } from "@/content/site";
+
+const HERO_IMG =
+  "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/hero-industries-gWcwnvkp9GA3wQ4WE5fat8.webp";
 
 export default function Industries() {
   return (
@@ -17,18 +20,121 @@ export default function Industries() {
         canonical="https://precisehire.com/industries"
       />
 
-      <section className="relative overflow-hidden">
-        <img src={ASSETS.swooshCoral} alt="" aria-hidden="true" className="pointer-events-none absolute -top-20 -right-24 w-[460px] opacity-50 rotate-[20deg]" />
-        <div className="container pt-20 lg:pt-28 pb-12 max-w-3xl">
-          <Reveal>
-            <span className="eyebrow">Industries</span>
-            <h1 className="display-xl mt-4 text-[#0B1F3A]">Packages tuned to how your industry actually hires.</h1>
-            <p className="mt-6 text-lg text-[#0B1F3A]/75 leading-relaxed">
-              Different sectors face different risks, regulations, and timelines. Our
-              specialists pre-build screening packages that reflect each one — so
-              you're not paying for what you don't need or missing what you should.
-            </p>
-          </Reveal>
+      {/* HERO — editorial split */}
+      <section className="relative overflow-hidden bg-[#FAF7F2]">
+        <img
+          src={ASSETS.swooshSky}
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none absolute -top-24 -left-28 w-[520px] opacity-60"
+        />
+        <img
+          src={ASSETS.swooshCoral}
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none absolute -bottom-24 -right-20 w-[460px] opacity-50 rotate-[14deg]"
+        />
+        <div className="container pt-16 lg:pt-24 pb-20 grid lg:grid-cols-12 gap-10 lg:gap-14 items-center relative">
+          <div className="lg:col-span-6">
+            <Reveal>
+              <span className="eyebrow">
+                <Layers className="size-3.5 text-[#B7232A]" />
+                Industries
+              </span>
+            </Reveal>
+            <Reveal delay={0.05}>
+              <h1 className="display-xl mt-5 text-[#0B1F3A]">
+                Packages tuned to how your{" "}
+                <span className="italic relative inline-block">
+                  industry
+                  <span className="absolute left-0 right-0 -bottom-1 h-[6px] bg-[#B7232A]/85 rounded-full" />
+                </span>{" "}
+                actually hires.
+              </h1>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <p className="mt-6 text-[17px] leading-[1.7] text-[#0B1F3A]/75 max-w-2xl">
+                Different sectors face different risks, different regulators, and
+                different timelines. Our specialists pre-build screening
+                packages that reflect each one — so you are not paying for what
+                you do not need, and not missing what you should.
+              </p>
+            </Reveal>
+            <Reveal delay={0.15}>
+              <div className="mt-8 flex flex-wrap items-center gap-3">
+                <Link
+                  href="/get-a-quote"
+                  className="btn-coral inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold"
+                >
+                  Get a quote <ArrowRight className="size-4" />
+                </Link>
+                <a
+                  href="#healthcare"
+                  className="btn-ghost-navy inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold"
+                >
+                  Jump to your sector
+                </a>
+              </div>
+            </Reveal>
+            <Reveal delay={0.2}>
+              <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-[13px] text-[#0B1F3A]/70">
+                <span className="inline-flex items-center gap-1.5">
+                  <span className="size-1.5 rounded-full bg-[#B7232A]" />
+                  FCRA-compliant by default
+                </span>
+                <span className="inline-flex items-center gap-1.5">
+                  <span className="size-1.5 rounded-full bg-[#B7232A]" />
+                  SOC 2 Type II
+                </span>
+                <span className="inline-flex items-center gap-1.5">
+                  <span className="size-1.5 rounded-full bg-[#B7232A]" />
+                  PBSA-aligned researchers
+                </span>
+              </div>
+            </Reveal>
+          </div>
+
+          <div className="lg:col-span-6 relative">
+            <Reveal delay={0.1}>
+              <div className="relative rounded-[28px] overflow-hidden border border-[#0B1F3A]/10 shadow-[0_30px_70px_-30px_rgba(11,31,58,0.4)] aspect-[4/3]">
+                <img
+                  src={HERO_IMG}
+                  alt="PreciseHire operations team reviewing screening packages across multiple industries"
+                  className="size-full object-cover"
+                />
+              </div>
+            </Reveal>
+            {/* Floating stat — sectors served */}
+            <Reveal delay={0.18}>
+              <div className="absolute -bottom-6 -left-4 sm:left-6 lg:-left-8 rounded-2xl bg-white border border-[#0B1F3A]/10 shadow-[0_20px_50px_-25px_rgba(11,31,58,0.35)] px-5 py-4 flex items-center gap-3 max-w-[280px]">
+                <span className="inline-flex size-10 items-center justify-center rounded-full bg-[#0B1F3A] text-white shrink-0">
+                  <Building2 className="size-4" />
+                </span>
+                <div>
+                  <div className="text-[11px] uppercase tracking-[0.14em] text-[#0B1F3A]/55">
+                    Sectors served
+                  </div>
+                  <div className="font-display text-[19px] font-semibold text-[#0B1F3A] leading-tight">
+                    {INDUSTRIES.length}+ industries, one specialist team
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+            {/* Floating stat — turnaround */}
+            <Reveal delay={0.22}>
+              <div className="absolute -top-5 right-2 sm:right-6 lg:-right-4 rounded-2xl bg-[#0B1F3A] text-white shadow-[0_20px_50px_-25px_rgba(11,31,58,0.45)] px-5 py-4 max-w-[230px]">
+                <div className="text-[11px] uppercase tracking-[0.14em] text-white/55">
+                  Median TAT
+                </div>
+                <div className="font-display text-[20px] font-semibold leading-tight">
+                  87% cleared in under 4 hours
+                </div>
+                <div className="mt-1 text-[11px] text-white/60">
+                  Across all sectors, last 30 days
+                </div>
+              </div>
+            </Reveal>
+          </div>
         </div>
       </section>
 

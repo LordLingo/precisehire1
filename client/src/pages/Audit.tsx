@@ -145,10 +145,7 @@ export default function Audit() {
     formData.append("_form", "compliance-audit-booking");
 
     if (formData.get("_gotcha")) {
-      toast.success(
-        "Thanks — our compliance desk will email you within one business day with a few proposed times.",
-      );
-      formEl.reset();
+      window.location.assign("/thanks?form=audit");
       return;
     }
 
@@ -164,6 +161,8 @@ export default function Audit() {
         toast.success(
           "Thanks — our compliance desk will email you within one business day with a few proposed times.",
         );
+        window.location.assign("/thanks?form=audit");
+        return;
       } else {
         toast.error(
           "Something went wrong. Please call (866) 773-5486 or email Info@precisehire.com.",
