@@ -60,7 +60,7 @@ const VALUES = [
 ];
 
 const TIMELINE = [
-  { year: "2003", title: "Founded in Tampa", body: "PreciseHire opens in Tampa, Florida, supporting four local trucking firms from a single back office." },
+  { year: "2003", title: "Founded in McKinney", body: "PreciseHire opens in McKinney, Texas, supporting four local trucking firms from a single back office." },
   { year: "2004", title: "Courthouse runner network", body: "First operations build-out: the source-courthouse runner network the company still uses today is established." },
   { year: "2009", title: "PBSA membership", body: "PreciseHire is admitted to the Professional Background Screening Association and adopts its accreditation standards." },
   { year: "2014", title: "Healthcare practice opens", body: "First dedicated OIG LEIE + SAM monitoring workflow shipped for a regional hospital system." },
@@ -98,7 +98,7 @@ export default function About() {
     <>
       <SEO
         title="About PreciseHire — 22 Years of U.S. Background Screening"
-        description="Founded 2003 in Tampa, Florida. U.S.-based researchers, SOC 2 Type II attested, PBSA member since 2009. Owner-operated, accountable, and answerable."
+        description="Founded 2003 in McKinney, Texas. U.S.-based researchers, SOC 2 Type II attested, PBSA member since 2009. Owner-operated, accountable, and answerable."
         canonical="https://precisehire.com/about"
         jsonLd={JSONLD}
       />
@@ -131,7 +131,7 @@ export default function About() {
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mt-6 text-[17px] leading-[1.7] text-[#0B1F3A]/75 max-w-2xl">
-                PreciseHire was founded in 2003 in Tampa, Florida as an independent
+                PreciseHire was founded in 2003 in McKinney, Texas as an independent
                 alternative to slow, opaque legacy providers. Twenty-two years and
                 twelve million checks later, we are still privately held, still
                 owner-operated, and still working under the same operating principle:
