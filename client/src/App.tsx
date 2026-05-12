@@ -3,9 +3,10 @@
  * Style commitment: Trusted Modernism design system applies globally.
  * SiteLayout wraps every route with Header/Footer and the cream background.
  */
+import { useEffect } from "react";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { Route, Switch } from "wouter";
+import { Route, Switch, useLocation } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 
@@ -66,6 +67,25 @@ function Router() {
         <Route path="/thanks" component={Thanks} />
         {/* Legacy WordPress blog URLs redirect into the new Resources index */}
         <Route path="/blog" component={Resources} />
+
+        {/* Legacy WordPress URLs for the fast-background-check pillar.
+            Each of these used to rank — they now serve the new pillar in place. */}
+        <Route path="/category/background-checks/fast-background-check">
+          {() => <LegacyPostRedirect to="/resources/fast-background-check-employer-guide" />}
+        </Route>
+        <Route path="/category/background-checks/fast-background-check/:rest*">
+          {() => <LegacyPostRedirect to="/resources/fast-background-check-employer-guide" />}
+        </Route>
+        <Route path="/how-to-conduct-a-fast-background-check">
+          {() => <LegacyPostRedirect to="/resources/fast-background-check-employer-guide" />}
+        </Route>
+        <Route path="/fast-background-check">
+          {() => <LegacyPostRedirect to="/resources/fast-background-check-employer-guide" />}
+        </Route>
+        <Route path="/resources/how-to-conduct-a-fast-background-check">
+          {() => <LegacyPostRedirect to="/resources/fast-background-check-employer-guide" />}
+        </Route>
+        {/* Generic WordPress category fallback — sends any other /category/* into Resources index */}
         <Route path="/category/:cat*" component={Resources} />
 
         {/* Legacy redirects from old WordPress URLs to new equivalents */}
@@ -80,6 +100,23 @@ function Router() {
         <Route component={NotFound} />
       </Switch>
     </SiteLayout>
+  );
+}
+
+/**
+ * LegacyPostRedirect — sends old WordPress URLs to their new home with a 200-style
+ * client redirect. We use replaceState so the old URL is removed from history,
+ * and we render a tiny visible note for the brief moment before navigation.
+ */
+function LegacyPostRedirect({ to }: { to: string }) {
+  const [, navigate] = useLocation();
+  useEffect(() => {
+    navigate(to, { replace: true });
+  }, [to, navigate]);
+  return (
+    <div className="container py-24 text-center text-ink-700">
+      Loading…
+    </div>
   );
 }
 

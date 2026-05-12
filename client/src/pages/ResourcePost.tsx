@@ -53,7 +53,43 @@ export default function ResourcePost() {
   const url = `https://precisehire.com/resources/${post.slug}`;
   const author = resolveAuthor(post.authorSlug);
 
-  const jsonLd = [
+  // FAQPage schema is only injected for posts where we hand-curate the FAQ.
+  // For the fast-background-check pillar, this captures the seven questions in the
+  // article's FAQ section so Google can surface them as rich results.
+  const FAQ_BY_SLUG: Record<string, Array<{ q: string; a: string }>> = {
+    "fast-background-check-employer-guide": [
+      {
+        q: "How accurate are fast background checks?",
+        a: "Accuracy depends on whether the consumer reporting agency verifies database hits at the source before reporting them. A database-only search that reports hits without verification is fast but inaccurate. A reputable CRA source-verifies every hit before reporting it, which adds a few hours to a few days but produces results that are accurate at the moment the report is delivered.",
+      },
+      {
+        q: "Can I request a fast background check for an employee or tenant?",
+        a: "Yes, but the report must be ordered through a registered consumer reporting agency that complies with the FCRA, and the candidate must sign the FCRA disclosure and authorization before the report is ordered. The 'instant' online lookups that appear at the top of search results are not FCRA consumer reports and cannot legally be used for an employment or tenancy decision.",
+      },
+      {
+        q: "How long does a fast background check typically take?",
+        a: "For a clean candidate file in a U.S. county with electronic court access, tier-one components (identity, SSN trace, national criminal with source verification, federal criminal, sex-offender, motor vehicle record, watchlist, Work Number employment verification) return inside 12 to 24 hours. Tier-two components (county criminal in manual-courthouse counties, direct-contact verifications, negative drug screens) add another 24 to 48 hours. The full FCRA-compliant report on a typical file closes out in 2 to 4 business days.",
+      },
+      {
+        q: "Are fast background checks available for all types of screenings?",
+        a: "No. Some components cannot be sped up below the speed of their underlying data source. A non-negative drug screen requires laboratory confirmation and medical-review-officer review. An international education verification depends on a registrar's office in another country. A fast background check is always a fast version of the components that can be fast.",
+      },
+      {
+        q: "What is the risk of relying solely on fast background checks?",
+        a: "Three risk buckets: FCRA accuracy exposure under \u00a71681e(b) and the \u00a7613 currency rule, FCRA process exposure under \u00a71681b(b) (disclosure, authorization, pre-adverse and final adverse-action sequence), and Title VII disparate-impact exposure under the EEOC's 2012 enforcement guidance on the consideration of arrest and conviction records.",
+      },
+      {
+        q: "What is the difference between a fast background check and an instant background check?",
+        a: "A fast background check is a regulated FCRA consumer report produced by a CRA, with source verification on database hits, delivered on a compressed timeline. An instant background check is a consumer-grade public-records lookup with no source verification, sold for personal curiosity, and not legally usable for employment or tenancy decisions in the United States.",
+      },
+      {
+        q: "How fast can PreciseHire turn around a background check?",
+        a: "For a clean candidate file in a U.S. metropolitan area with electronic court coverage, our median tier-one turnaround is 12 hours and our median full-report turnaround is 36 to 48 hours. Files that touch manual-courthouse counties, international verifications, or non-negative drug screens extend into the following week on the slow tail.",
+      },
+    ],
+  };
+
+  const jsonLd: Array<Record<string, unknown>> = [
     {
       "@context": "https://schema.org",
       "@type": "BlogPosting",
@@ -86,6 +122,19 @@ export default function ResourcePost() {
       ],
     },
   ];
+
+  const faq = FAQ_BY_SLUG[post.slug];
+  if (faq && faq.length > 0) {
+    jsonLd.push({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faq.map(({ q, a }) => ({
+        "@type": "Question",
+        name: q,
+        acceptedAnswer: { "@type": "Answer", text: a },
+      })),
+    });
+  }
 
   return (
     <>
