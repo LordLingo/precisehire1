@@ -87,7 +87,7 @@ export default function GetAQuote() {
 
     setSubmitting(true);
     try {
-      const res = await fetch("https://formspree.io/f/xnjworvg", {
+      const res = await fetch("https://formspree.io/f/mykoobqk", {
         method: "POST",
         body: formData,
         headers: { Accept: "application/json" },
