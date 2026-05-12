@@ -64,10 +64,14 @@ export default function Industries() {
                     const deepDive: Record<string, string> = {
                       healthcare: "/industries/healthcare",
                       transportation: "/industries/transportation",
+                      staffing: "/industries/staffing",
                     };
                     const dd = deepDive[ind.slug];
                     if (dd) {
-                      const label = ind.slug === "healthcare" ? "healthcare" : "DOT & fleet";
+                      const label =
+                        ind.slug === "healthcare" ? "healthcare"
+                        : ind.slug === "transportation" ? "DOT & fleet"
+                        : "staffing & light industrial";
                       return (
                         <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-2">
                           <Link href={dd} className="inline-flex items-center gap-2 text-sm font-semibold text-[#B7232A] hover:underline">Read the {label} deep-dive <ArrowRight className="size-4" /></Link>

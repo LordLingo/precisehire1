@@ -22,6 +22,8 @@ import Integrations from "./pages/Integrations";
 import Industries from "./pages/Industries";
 import IndustriesHealthcare from "./pages/IndustriesHealthcare";
 import IndustriesTransportation from "./pages/IndustriesTransportation";
+import IndustriesStaffing from "./pages/IndustriesStaffing";
+import Trust from "./pages/Trust";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
 import Legal from "./pages/Legal";
@@ -41,7 +43,9 @@ function Router() {
         <Route path="/industries" component={Industries} />
         <Route path="/industries/healthcare" component={IndustriesHealthcare} />
         <Route path="/industries/transportation" component={IndustriesTransportation} />
+        <Route path="/industries/staffing" component={IndustriesStaffing} />
         <Route path="/pricing" component={Pricing} />
+        <Route path="/trust" component={Trust} />
         <Route path="/compliance" component={Compliance} />
         <Route path="/compliance/audit" component={Audit} />
         <Route path="/compliance/checklist" component={Checklist} />
