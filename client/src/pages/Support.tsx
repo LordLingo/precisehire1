@@ -277,16 +277,12 @@ export default function Support() {
               </div>
 
               <div className="mt-5 pt-5 border-t border-[#0B1F3A]/10 flex items-center justify-between">
-                <a
-                  href={`tel:${COMPANY.phoneRaw}`}
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-[#0B1F3A]
-                             hover:text-[#B7232A] transition-colors"
-                >
-                  <Phone className="size-4" />
-                  Call direct
-                </a>
-                <span className="text-[11px] text-[#0B1F3A]/50">
-                  {m.yearsExperience}+ yrs
+                <span className="text-[11px] uppercase tracking-[0.16em] text-[#0B1F3A]/55 font-semibold">
+                  Background screening
+                </span>
+                <span className="text-[11px] text-[#0B1F3A]/55 inline-flex items-center gap-1.5">
+                  <span className="inline-block size-1.5 rounded-full bg-[#B7232A]/70" aria-hidden="true" />
+                  {m.yearsExperience}+ years
                 </span>
               </div>
             </motion.article>
