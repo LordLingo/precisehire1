@@ -437,16 +437,17 @@ export default function Pricing() {
                     What does a typical custom-volume discount look like?
                   </AccordionTrigger>
                   <AccordionContent className="pb-6 text-[15px] leading-relaxed text-[#0B1F3A]/80">
-                    Volume discounts kick in around 250 checks per month and scale
-                    from there. As a directional benchmark, employers running 250
-                    – 500 Professional-tier checks per month typically see a 7–12%
-                    reduction off the published per-check rate; employers running
-                    500–1,500 per month typically see 12–20%; and staffing or
-                    enterprise contracts above 1,500 per month are priced against
-                    the actual jurisdictional mix and check composition. None of
-                    those tiers carry a setup fee or a multi-year lock-in. A
-                    specialist will put a real number on it within one business
-                    day if you share your typical monthly volume and role mix.
+                    Volume discounts kick in around 50 checks per month and scale
+                    from there. As a directional benchmark, employers running
+                    50 – 100 Professional-tier checks per month typically see a
+                    10–15% reduction off the published per-check rate; employers
+                    running 150–500 per month typically see 20–30%; and
+                    staffing or enterprise contracts above 1,000 per month are
+                    priced against the actual jurisdictional mix and check
+                    composition. None of those tiers carry a setup fee or a
+                    multi-year lock-in. A specialist will put a real number on
+                    it within one business day if you share your typical monthly
+                    volume and role mix.
                   </AccordionContent>
                 </AccordionItem>
 
@@ -574,7 +575,7 @@ export default function Pricing() {
                 A specialist will price your typical mix of checks against your
                 actual jurisdictional footprint and put together a custom contract
                 — usually within one business day. Volume discounts kick in around
-                250 checks per month and scale from there.
+                50 checks per month and scale from there.
               </p>
             </div>
             <div className="lg:col-span-4 flex flex-col gap-3">
