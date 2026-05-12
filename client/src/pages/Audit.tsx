@@ -10,6 +10,7 @@
  * here, as does the Support page CTA). It promises a free 15-minute audit of
  * the visitor's current adverse-action workflow with no signup wall.
  */
+import { useState, type FormEvent } from "react";
 import { Link } from "wouter";
 import {
   ShieldCheck,
@@ -22,12 +23,20 @@ import {
   ArrowRight,
   Phone,
   Calendar,
+  Loader2,
 } from "lucide-react";
+import { toast } from "sonner";
 import SEO from "@/components/site/SEO";
 import Reveal from "@/components/site/Reveal";
 import { ASSETS, COMPANY } from "@/content/site";
 import { AUTHORS } from "@/content/authors";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import {
+  Field,
+  TextareaField,
+  SelectField,
+  Honeypot,
+} from "@/components/site/FormPrimitives";
 
 const REVIEW_AREAS: { icon: typeof ShieldCheck; title: string; body: string }[] = [
   {
@@ -81,8 +90,95 @@ const FAQS: { q: string; a: string }[] = [
   },
 ];
 
+const COMPANY_SIZE_OPTIONS = [
+  "1–49 employees",
+  "50–249 employees",
+  "250–999 employees",
+  "1,000–4,999 employees",
+  "5,000+ employees",
+];
+
+const INDUSTRY_OPTIONS = [
+  "Healthcare",
+  "Transportation / DOT",
+  "Staffing & light industrial",
+  "Retail / hospitality",
+  "Financial services",
+  "Manufacturing / trades",
+  "Education / non-profit",
+  "Technology / professional services",
+  "Other",
+];
+
+const TIME_OPTIONS = [
+  "This week",
+  "Next week",
+  "Within 2–3 weeks",
+  "Just researching for now",
+];
+
+const SURFACE_OPTIONS = [
+  "Pre-hire disclosure & authorization",
+  "Pre-adverse action workflow",
+  "Waiting-period cushion by state/city",
+  "EEOC individualized assessment",
+  "Dispute handling (FCRA §611)",
+  "Continuous monitoring posture",
+  "Not sure yet — want a full review",
+];
+
 export default function Audit() {
   const author = AUTHORS["mark-cromwell"];
+  const [submitting, setSubmitting] = useState(false);
+
+  async function onSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const formEl = e.currentTarget;
+    const formData = new FormData(formEl);
+
+    const firstName = String(formData.get("firstName") || "").trim();
+    const company = String(formData.get("company") || "").trim();
+    formData.append(
+      "_subject",
+      ["PreciseHire — Compliance audit booking", company, firstName]
+        .filter(Boolean)
+        .join(" — "),
+    );
+    formData.append("_form", "compliance-audit-booking");
+
+    if (formData.get("_gotcha")) {
+      toast.success(
+        "Thanks — Mark will email you within one business day with a few proposed times.",
+      );
+      formEl.reset();
+      return;
+    }
+
+    setSubmitting(true);
+    try {
+      const res = await fetch("https://formspree.io/f/maqvvaeg", {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" },
+      });
+      if (res.ok) {
+        formEl.reset();
+        toast.success(
+          "Thanks — Mark will email you within one business day with a few proposed times.",
+        );
+      } else {
+        toast.error(
+          "Something went wrong. Please call (866) 773-5486 or email Info@precisehire.com.",
+        );
+      }
+    } catch {
+      toast.error(
+        "Network error. Please call (866) 773-5486 or email Info@precisehire.com.",
+      );
+    } finally {
+      setSubmitting(false);
+    }
+  }
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -159,12 +255,12 @@ export default function Audit() {
             </Reveal>
             <Reveal delay={0.15}>
               <div className="mt-8 flex flex-wrap items-center gap-3">
-                <Link
-                  href="/contact?topic=compliance-audit"
+                <a
+                  href="#book-the-audit"
                   className="btn-coral inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold"
                 >
                   <Calendar className="size-4" /> Book the 15-minute audit
-                </Link>
+                </a>
                 <a
                   href="tel:+18667735486"
                   className="btn-ghost-navy inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold"
@@ -362,6 +458,130 @@ export default function Audit() {
         </div>
       </section>
 
+      {/* BOOKING FORM */}
+      <section id="book-the-audit" className="container pb-20 scroll-mt-24">
+        <Reveal>
+          <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+            <div className="lg:col-span-5">
+              <span className="eyebrow text-[#B7232A]">Book the audit</span>
+              <h2 className="display-md mt-3 text-[#0B1F3A]">
+                Tell us a little about your program. Mark replies personally within one business day.
+              </h2>
+              <p className="mt-5 text-[#0B1F3A]/75 leading-relaxed">
+                Fifteen minutes on Zoom or phone, written one-page summary delivered
+                within three business days, statute and case-law citations on every
+                finding. Free for any U.S. employer — we do this whether you
+                ever become a customer.
+              </p>
+              <ul className="mt-7 grid gap-2.5 text-[14px] text-[#0B1F3A]/80">
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="size-4 mt-0.5 text-[#B7232A] shrink-0" />
+                  No PII, no signup wall, no auto-enrolled drip campaign.
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="size-4 mt-0.5 text-[#B7232A] shrink-0" />
+                  You set the agenda — we will not pitch unless you ask.
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="size-4 mt-0.5 text-[#B7232A] shrink-0" />
+                  If a fix is something you can do internally, we will tell you that.
+                </li>
+              </ul>
+              <div className="mt-7 flex items-center gap-3">
+                <img
+                  src={author?.photo}
+                  alt={author?.name ?? "Director of Compliance"}
+                  className="size-12 rounded-full object-cover ring-1 ring-[#0B1F3A]/10"
+                />
+                <div>
+                  <div className="text-[14px] font-display font-semibold text-[#0B1F3A]">
+                    Hosted by {author?.name}
+                  </div>
+                  <div className="text-[12px] uppercase tracking-[0.14em] text-[#0B1F3A]/55">
+                    {author?.role}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="lg:col-span-7">
+              <form
+                onSubmit={onSubmit}
+                className="rounded-3xl bg-white border border-[#0B1F3A]/10 p-6 lg:p-8 grid gap-5"
+              >
+                <div className="grid sm:grid-cols-2 gap-5">
+                  <Field name="firstName" label="First name" required autoComplete="given-name" />
+                  <Field name="lastName" label="Last name" required autoComplete="family-name" />
+                </div>
+                <div className="grid sm:grid-cols-2 gap-5">
+                  <Field name="email" label="Work email" type="email" required autoComplete="email" />
+                  <Field name="phone" label="Phone (optional)" type="tel" autoComplete="tel" />
+                </div>
+                <div className="grid sm:grid-cols-2 gap-5">
+                  <Field name="company" label="Company" required autoComplete="organization" />
+                  <Field name="role" label="Your role (e.g. Head of Talent)" autoComplete="organization-title" />
+                </div>
+                <div className="grid sm:grid-cols-2 gap-5">
+                  <SelectField
+                    name="companySize"
+                    label="Company size"
+                    options={COMPANY_SIZE_OPTIONS}
+                    required
+                  />
+                  <SelectField
+                    name="industry"
+                    label="Primary industry"
+                    options={INDUSTRY_OPTIONS}
+                    required
+                  />
+                </div>
+                <Field
+                  name="currentProvider"
+                  label="Current screening provider (if any)"
+                />
+                <SelectField
+                  name="timeline"
+                  label="When would you like to talk?"
+                  options={TIME_OPTIONS}
+                  required
+                />
+                <SelectField
+                  name="focusSurface"
+                  label="What do you most want us to look at?"
+                  options={SURFACE_OPTIONS}
+                  required
+                />
+                <TextareaField
+                  name="notes"
+                  label="Anything specific you want Mark to come prepared for? (optional)"
+                  rows={4}
+                />
+                <Honeypot />
+                <button
+                  type="submit"
+                  disabled={submitting}
+                  className="btn-coral inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold disabled:opacity-70"
+                >
+                  {submitting ? (
+                    <>
+                      <Loader2 className="size-4 animate-spin" /> Booking
+                    </>
+                  ) : (
+                    <>
+                      Request the audit <ArrowRight className="size-4" />
+                    </>
+                  )}
+                </button>
+                <p className="text-xs text-[#0B1F3A]/55">
+                  Free for any U.S. employer. By submitting, you agree to our
+                  privacy policy. We never share your details with anyone.
+                </p>
+              </form>
+            </div>
+          </div>
+        </Reveal>
+      </section>
+
       {/* CLOSING CTA */}
       <section className="container pb-24">
         <Reveal>
@@ -373,12 +593,12 @@ export default function Audit() {
               </h2>
             </div>
             <div className="lg:col-span-4 flex flex-col gap-3">
-              <Link
-                href="/contact?topic=compliance-audit"
+              <a
+                href="#book-the-audit"
                 className="btn-coral inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold"
               >
                 Book the audit <ArrowRight className="size-4" />
-              </Link>
+              </a>
               <a
                 href="tel:+18667735486"
                 className="btn-ghost-navy inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold"
