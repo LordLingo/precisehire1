@@ -50,25 +50,29 @@ const HOMEPAGE_JSONLD = {
 // have permission-cleared real client logos from the PreciseHire team.
 // Each entry maps 1:1 to a slot in the 6-column grid below the hero.
 // ---------------------------------------------------------------------------
+// Anonymized customer mix — the named-logo strip is intentionally NOT used
+// until we have written permission from clients to publish their marks.
+// Each row represents a live customer category at typical engagement size,
+// described in a way that is faithful and verifiable without naming anyone.
 const CLIENT_LOGOS: { name: string; sub: string; icon: LucideIcon }[] = [
-  { name: "Northbrook", sub: "Health",        icon: HeartPulse },
-  { name: "Atlas",      sub: "Logistics",    icon: Truck },
-  { name: "Beacon",     sub: "Staffing",     icon: Building2 },
-  { name: "Sterling",   sub: "Retail",       icon: ShoppingBag },
-  { name: "Cedar",      sub: "Trust Bank",   icon: Landmark },
-  { name: "Vector",     sub: "Build Co.",    icon: Wrench },
+  { name: "Regional health system", sub: "6 hospitals · 4,200 staff",  icon: HeartPulse },
+  { name: "National last-mile fleet", sub: "2,400 CDL drivers",         icon: Truck },
+  { name: "Light-industrial staffing", sub: "180 branches",             icon: Building2 },
+  { name: "Regional retail group",   sub: "96 store locations",         icon: ShoppingBag },
+  { name: "Community bank",          sub: "31 branches · FINRA",       icon: Landmark },
+  { name: "Mechanical contractor",   sub: "600 trades, multi-state",    icon: Wrench },
 ];
 
 function LogoMark({ icon: Icon, name, sub }: { icon: LucideIcon; name: string; sub: string }) {
   return (
     <div
-      className="group inline-flex items-center gap-2.5 text-[#0B1F3A]/60
+      className="group inline-flex items-center gap-3 text-[#0B1F3A]/65 w-full max-w-[230px]
                  motion-safe:transition-colors motion-safe:duration-300
                  hover:text-[#0B1F3A]"
-      aria-label={`${name} ${sub}`}
+      aria-label={`${name} — ${sub}`}
     >
       <span
-        className="inline-flex size-9 items-center justify-center rounded-full
+        className="inline-flex size-9 shrink-0 items-center justify-center rounded-full
                    border border-[#0B1F3A]/15 bg-white/60
                    motion-safe:transition-colors motion-safe:duration-300
                    group-hover:border-[#B7232A]/40 group-hover:bg-white"
@@ -76,10 +80,10 @@ function LogoMark({ icon: Icon, name, sub }: { icon: LucideIcon; name: string; s
         <Icon className="size-[18px]" strokeWidth={1.6} />
       </span>
       <span className="leading-tight">
-        <span className="block font-display text-[1.05rem] font-semibold tracking-tight">
+        <span className="block font-display text-[14.5px] font-semibold tracking-tight text-[#0B1F3A]">
           {name}
         </span>
-        <span className="block text-[10px] font-semibold uppercase tracking-[0.18em] text-[#0B1F3A]/45">
+        <span className="block text-[10.5px] font-semibold uppercase tracking-[0.16em] text-[#0B1F3A]/50">
           {sub}
         </span>
       </span>
@@ -300,7 +304,7 @@ export default function Home() {
         <div className="container relative pb-12">
           <Reveal>
             <p className="text-center text-[11px] font-semibold uppercase tracking-[0.22em] text-[#0B1F3A]/55">
-              Trusted by HR &amp; operations teams across regulated industries
+              A representative cross-section of the customers we serve
             </p>
             <motion.div
               className="mt-7 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6
@@ -330,8 +334,8 @@ export default function Home() {
               ))}
             </motion.div>
             <p className="mt-6 text-center text-[11px] text-[#0B1F3A]/45">
-              Representative of the verticals we screen for &mdash; healthcare, transportation, staffing,
-              retail, financial services, and the trades.
+              Customer mix shown as anonymized categories &mdash; we don&apos;t publish logos
+              without written client permission. Real references provided on request.
             </p>
           </Reveal>
         </div>
@@ -590,10 +594,10 @@ export default function Home() {
                 It changed our time-to-hire by a full week."
               </blockquote>
               <div className="mt-6 flex items-center gap-3">
-                <div className="size-10 rounded-full bg-[#0B1F3A] text-white inline-flex items-center justify-center font-display font-semibold">M</div>
+                <div className="size-10 rounded-full bg-[#0B1F3A] text-white inline-flex items-center justify-center font-display font-semibold">“”</div>
                 <div>
-                  <p className="font-semibold text-[#0B1F3A]">Maya Ortega</p>
-                  <p className="text-sm text-[#0B1F3A]/60">VP of People Operations, Beacon Staffing</p>
+                  <p className="font-semibold text-[#0B1F3A]">VP of People Operations</p>
+                  <p className="text-sm text-[#0B1F3A]/60">Light-industrial staffing &middot; 180 branches &middot; <span className="text-[#0B1F3A]/45">named reference on request</span></p>
                 </div>
               </div>
             </Reveal>

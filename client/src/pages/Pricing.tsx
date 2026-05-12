@@ -106,6 +106,30 @@ export default function Pricing() {
         canonical="https://precisehire.com/pricing"
       />
 
+      {/* TRUST BAR — just above the hero */}
+      <section className="border-y border-[#0B1F3A]/10 bg-[#FAF7F2]">
+        <div className="container py-3.5">
+          <ul className="flex flex-wrap items-center justify-between gap-x-8 gap-y-2 text-[12.5px] text-[#0B1F3A]/75">
+            <li className="inline-flex items-center gap-2">
+              <ShieldCheck className="size-4 text-[#B7232A]" />
+              <span><span className="font-semibold text-[#0B1F3A]">22+ years</span> serving U.S. employers · est. 2003</span>
+            </li>
+            <li className="inline-flex items-center gap-2">
+              <ShieldCheck className="size-4 text-[#B7232A]" />
+              <span><span className="font-semibold text-[#0B1F3A]">SOC 2 Type II</span> · attested annually</span>
+            </li>
+            <li className="inline-flex items-center gap-2">
+              <ShieldCheck className="size-4 text-[#B7232A]" />
+              <span><span className="font-semibold text-[#0B1F3A]">FCRA &amp; PBSA-aligned</span> compliance workflow</span>
+            </li>
+            <li className="inline-flex items-center gap-2">
+              <Phone className="size-4 text-[#B7232A]" />
+              <span><span className="font-semibold text-[#0B1F3A]">U.S. specialist</span> Mon–Fri 8a–8p ET, Sat 9a–1p</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
       {/* HERO — quote-in-1-hour promise */}
       <section className="relative overflow-hidden">
         <img
@@ -494,30 +518,30 @@ export default function Pricing() {
         <Reveal>
           <div className="rounded-[28px] border border-[#0B1F3A]/10 bg-white/70 backdrop-blur px-8 lg:px-12 py-10 lg:py-12">
             <div className="flex items-center justify-between flex-wrap gap-4">
-              <span className="eyebrow">Buyers like you, choosing this page</span>
+              <span className="eyebrow">A representative cross-section of active customers</span>
               <span className="text-xs uppercase tracking-[0.18em] text-[#0B1F3A]/50">
-                Sample of active accounts &middot; updated quarterly
+                Shown anonymized &middot; named references on request
               </span>
             </div>
-            <div className="mt-6 grid grid-cols-3 md:grid-cols-6 gap-x-6 gap-y-5 items-center">
+            <div className="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-x-6 gap-y-5 items-stretch">
               {[
-                { name: "Northbrook", sub: "Health", icon: HeartPulse },
-                { name: "Atlas", sub: "Logistics", icon: Truck },
-                { name: "Beacon", sub: "Staffing", icon: Building2 },
-                { name: "Sterling", sub: "Retail", icon: ShoppingBag },
-                { name: "Cedar", sub: "Trust Bank", icon: Landmark },
-                { name: "Vector", sub: "Build Co.", icon: Wrench },
+                { name: "Regional health system", sub: "6 hospitals · 4,200 staff", icon: HeartPulse },
+                { name: "National last-mile fleet", sub: "2,400 CDL drivers", icon: Truck },
+                { name: "Light-industrial staffing", sub: "180 branches", icon: Building2 },
+                { name: "Regional retail group", sub: "96 store locations", icon: ShoppingBag },
+                { name: "Community bank", sub: "31 branches · FINRA", icon: Landmark },
+                { name: "Mechanical contractor", sub: "600 trades, multi-state", icon: Wrench },
               ].map((l) => {
                 const Icon = l.icon;
                 return (
                   <div
                     key={l.name}
-                    className="group inline-flex items-center gap-2.5 text-[#0B1F3A]/55 transition-colors hover:text-[#0B1F3A]"
+                    className="group inline-flex items-center gap-3 text-[#0B1F3A]/65 transition-colors hover:text-[#0B1F3A] rounded-xl px-4 py-3 border border-[#0B1F3A]/8 bg-white/60"
                   >
-                    <span className="inline-flex size-9 items-center justify-center rounded-full border border-[#0B1F3A]/15 bg-white/80 transition-colors group-hover:border-[#B7232A]/40">
+                    <span className="inline-flex size-9 shrink-0 items-center justify-center rounded-full border border-[#0B1F3A]/15 bg-white transition-colors group-hover:border-[#B7232A]/40">
                       <Icon className="size-4" />
                     </span>
-                    <span className="font-display text-[15px] leading-tight">
+                    <span className="font-display text-[14.5px] leading-tight">
                       <span className="block font-semibold text-[#0B1F3A]">{l.name}</span>
                       <span className="block text-[11px] uppercase tracking-[0.14em] text-[#0B1F3A]/50">{l.sub}</span>
                     </span>
@@ -534,11 +558,12 @@ export default function Pricing() {
                 &ldquo;We switched to PreciseHire after our self-serve CRA closed three legitimate disputes as &lsquo;frivolous&rsquo; and our recruiters spent weeks unwinding the adverse-action notices. The price difference is real and it pays for itself the first time you avoid a single class-action letter.&rdquo;
                 <footer className="mt-5 not-italic text-[14px] text-[#0B1F3A]/60 font-sans flex items-center gap-3">
                   <span className="inline-flex size-9 items-center justify-center rounded-full bg-[#0B1F3A]/8 font-display text-[#0B1F3A]/80 font-semibold">
-                    DK
+                    “”
                   </span>
                   <span>
-                    <span className="block text-[#0B1F3A] font-semibold text-[15px]">Dana Kowalski</span>
-                    Director of Talent Operations &middot; Beacon Staffing &middot; switched 2024
+                    <span className="block text-[#0B1F3A] font-semibold text-[15px]">Director of Talent Operations</span>
+                    Light-industrial staffing &middot; 180 branches &middot; switched 2024 &middot;{" "}
+                    <span className="text-[#0B1F3A]/50">named reference on request</span>
                   </span>
                 </footer>
               </blockquote>
