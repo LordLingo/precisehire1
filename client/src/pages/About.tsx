@@ -147,10 +147,10 @@ export default function About() {
                   <MapPin className="size-3.5" /> Headquarters
                 </div>
                 <p className="mt-3 font-display text-[18px] font-semibold text-[#0B1F3A]">
-                  Tampa, Florida
+                  McKinney, Texas
                 </p>
                 <p className="mt-1 text-[14px] text-[#0B1F3A]/70 leading-relaxed">
-                  U.S.-based research desks, U.S.-based phones. Mon&ndash;Fri 8a&ndash;8p ET, Sat 9a&ndash;1p.
+                  U.S.-based research desks, U.S.-based phones. Mon&ndash;Fri 8a&ndash;8p CT, Sat 9a&ndash;1p.
                 </p>
                 <div className="mt-5 border-t border-[#0B1F3A]/10 pt-4">
                   <div className="eyebrow text-[#B7232A]">
