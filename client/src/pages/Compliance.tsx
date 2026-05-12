@@ -20,7 +20,7 @@ import Reveal from "@/components/site/Reveal";
 import { ASSETS } from "@/content/site";
 
 const HERO_IMG =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/hero-compliance-ZknXem5iquspqnkVtqFwRA.webp";
+  "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/hero-compliance-v2-j5T4FXWWAZk7h4khtiCgZk.webp";
 
 const PILLARS = [
   { icon: ShieldCheck, title: "FCRA", body: "Permissible-purpose enforcement, pre-adverse and adverse-action workflows, and a 30-day dispute response window — built into every report." },
@@ -171,6 +171,71 @@ export default function Compliance() {
             </Reveal>
           ))}
         </div>
+      </section>
+
+      {/* FEATURED RESOURCES — internal-link equity into top compliance posts */}
+      <section className="container pb-16">
+        <Reveal>
+          <div className="flex flex-wrap items-end justify-between gap-4 mb-6">
+            <div>
+              <span className="eyebrow"><span className="size-1.5 rounded-full bg-[#B7232A] inline-block" /> From the compliance desk</span>
+              <h2 className="display-md mt-2 text-[#0B1F3A]">Read these before your next renewal</h2>
+            </div>
+            <Link
+              href="/resources?cat=Compliance"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#B7232A] hover:underline"
+            >
+              All compliance posts <ArrowRight className="size-4" />
+            </Link>
+          </div>
+          <div className="grid md:grid-cols-3 gap-5">
+            {[
+              {
+                href: "/resources/fcra-section-613-public-records-employer-guide",
+                eyebrow: "FCRA §613",
+                title: "The notice-or-strict-procedures rule most CRAs get partially wrong",
+                body: "§613 is the quietest section of the FCRA and one of the easiest to break. The exact question to ask your CRA before the next renewal cycle.",
+                read: "11 min read",
+              },
+              {
+                href: "/resources/pre-adverse-action-notice-requirements-timing-content-and-documents",
+                eyebrow: "FCRA §615",
+                title: "Pre-adverse action: timing, content, and the documents inside the envelope",
+                body: "What §615(a) actually requires, what counts as a reasonable waiting period, and the four documents that must travel with the notice.",
+                read: "10 min read",
+              },
+              {
+                href: "/resources/how-long-must-employers-wait-pre-adverse-action-state-by-state",
+                eyebrow: "State overlays",
+                title: "How long must employers wait? The state-by-state cushion table",
+                body: "The federal floor is 'reasonable' — several states are explicit. Here is the per-state cushion plus the safe national default.",
+                read: "9 min read",
+              },
+            ].map((p) => (
+              <Link
+                key={p.href}
+                href={p.href}
+                className="group relative rounded-2xl border border-[#0B1F3A]/10 bg-white p-7 hover:border-[#B7232A]/40 transition-colors flex flex-col"
+              >
+                <span className="text-[11.5px] uppercase tracking-[0.16em] text-[#B7232A] font-semibold">
+                  {p.eyebrow}
+                </span>
+                <h3 className="mt-3 font-display text-[19px] font-semibold leading-snug text-[#0B1F3A] group-hover:text-[#B7232A]">
+                  {p.title}
+                </h3>
+                <p className="mt-3 text-[14.5px] leading-[1.65] text-[#0B1F3A]/70 flex-1">
+                  {p.body}
+                </p>
+                <span className="mt-5 inline-flex items-center gap-2 text-[12.5px] text-[#0B1F3A]/55">
+                  {p.read}
+                  <span className="text-[#B7232A] font-semibold inline-flex items-center gap-1 ml-auto">
+                    Read <ArrowRight className="size-3.5" />
+                  </span>
+                </span>
+              </Link>
+            ))}
+          </div>
+        </Reveal>
       </section>
 
       <section className="container pb-24">

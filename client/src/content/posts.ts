@@ -85,7 +85,8 @@ export const POSTS: Post[] = [
     authorSlug: "precisehire-team",
     datePublished: "2026-05-22",
     readingMin: 11,
-    image: ASSETS.serviceCriminal,
+    image:
+      "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/og-fcra-613-dysn5xUv8mAdsAFaGEF3Gp.webp",
     excerpt:
       "§613 is the quietest section of the FCRA and one of the easiest to break. It governs how a CRA reports public-record information that may have an adverse effect on a candidate — and most employers have never asked their CRA which path it picked.",
     markdown: `Most employers know FCRA §604 (permissible purpose), §611 (the dispute and reinvestigation rules we covered in [the dispute workflow article](/resources/background-check-disputes-what-employers-must-do)), and §615 (the pre-adverse and final adverse-action sequence we covered in [the pre-adverse notice walkthrough](/resources/pre-adverse-action-notice-requirements-timing-content-and-documents) and [the state-by-state cushion table](/resources/how-long-must-employers-wait-pre-adverse-action-state-by-state)). Almost no employer has ever asked their consumer reporting agency a single question about §613.

@@ -9,7 +9,7 @@ import Reveal from "@/components/site/Reveal";
 import { INDUSTRIES, SERVICES, ASSETS } from "@/content/site";
 
 const HERO_IMG =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/hero-industries-gWcwnvkp9GA3wQ4WE5fat8.webp";
+  "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/hero-industries-v2-ENewh8oWaLQGxWGutpznDF.webp";
 
 export default function Industries() {
   return (
