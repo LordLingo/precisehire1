@@ -25,8 +25,7 @@ import SEO from "@/components/site/SEO";
 import Reveal from "@/components/site/Reveal";
 import { ASSETS } from "@/content/site";
 import { toast } from "sonner";
-
-const PDF_HREF = "/manus-storage/PreciseHire-Compliance-Checklist_c78eb023.pdf";
+import jsPDF from "jspdf";
 
 type Item = { id: string; body: string; cite: string };
 type Surface = { n: string; title: string; intro: string; items: Item[] };
@@ -143,6 +142,167 @@ export default function Checklist() {
     toast.success("Checklist reset.");
   }
 
+  // Build a fresh PDF from the live checklist state and trigger a download.
+  function downloadPdf() {
+    try {
+      const doc = new jsPDF({ unit: "pt", format: "letter" });
+      const pageW = doc.internal.pageSize.getWidth();
+      const pageH = doc.internal.pageSize.getHeight();
+      const margin = 54;
+      const contentW = pageW - margin * 2;
+      const NAVY: [number, number, number] = [11, 31, 58];
+      const CORAL: [number, number, number] = [183, 35, 42];
+      const MUTED: [number, number, number] = [82, 90, 105];
+      let y = margin;
+
+      const ensureRoom = (need: number) => {
+        if (y + need > pageH - margin) {
+          doc.addPage();
+          y = margin;
+        }
+      };
+
+      // ---------- Cover header ----------
+      doc.setFont("helvetica", "bold");
+      doc.setFontSize(10);
+      doc.setTextColor(...CORAL);
+      doc.text("PRECISEHIRE", margin, y);
+      doc.setFont("helvetica", "normal");
+      doc.setTextColor(...MUTED);
+      doc.text("Compliance checklist  v.2026.05", pageW - margin, y, { align: "right" });
+      y += 8;
+      doc.setDrawColor(...CORAL);
+      doc.setLineWidth(1.2);
+      doc.line(margin, y, margin + 56, y);
+      y += 28;
+
+      doc.setFont("helvetica", "bold");
+      doc.setFontSize(22);
+      doc.setTextColor(...NAVY);
+      const titleLines = doc.splitTextToSize(
+        "The 24-point employer compliance checklist",
+        contentW,
+      );
+      doc.text(titleLines, margin, y);
+      y += titleLines.length * 26 + 6;
+
+      doc.setFont("helvetica", "normal");
+      doc.setFontSize(11);
+      doc.setTextColor(...MUTED);
+      const subLines = doc.splitTextToSize(
+        "Six surfaces \u2014 disclosure & authorization, pre-adverse workflow, waiting-period cushion, EEOC individualized assessment, dispute handling, and continuous-monitoring posture \u2014 with the statute, regulation, or case-law citation behind every line. Generated from your live progress on precisehire.com/resources/compliance-checklist.",
+        contentW,
+      );
+      doc.text(subLines, margin, y);
+      y += subLines.length * 14 + 16;
+
+      // ---------- Progress summary ----------
+      const date = new Date().toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      });
+      doc.setDrawColor(220, 215, 205);
+      doc.setLineWidth(0.6);
+      doc.line(margin, y, pageW - margin, y);
+      y += 18;
+      doc.setFont("helvetica", "bold");
+      doc.setFontSize(11);
+      doc.setTextColor(...NAVY);
+      doc.text(`Progress: ${completed} / ${TOTAL} complete  (${pct}%)`, margin, y);
+      doc.setFont("helvetica", "normal");
+      doc.setTextColor(...MUTED);
+      doc.text(`Generated ${date}`, pageW - margin, y, { align: "right" });
+      y += 12;
+      doc.line(margin, y, pageW - margin, y);
+      y += 24;
+
+      // ---------- Surfaces ----------
+      SURFACES.forEach((s) => {
+        ensureRoom(70);
+        // surface number badge
+        doc.setFillColor(...NAVY);
+        doc.roundedRect(margin, y - 12, 36, 22, 4, 4, "F");
+        doc.setFont("helvetica", "bold");
+        doc.setFontSize(10);
+        doc.setTextColor(255, 255, 255);
+        doc.text(s.n, margin + 18, y + 3, { align: "center" });
+
+        doc.setFont("helvetica", "bold");
+        doc.setFontSize(13);
+        doc.setTextColor(...NAVY);
+        doc.text(s.title, margin + 48, y + 3);
+        y += 24;
+
+        doc.setFont("helvetica", "normal");
+        doc.setFontSize(10);
+        doc.setTextColor(...MUTED);
+        const intro = doc.splitTextToSize(s.intro, contentW);
+        ensureRoom(intro.length * 13 + 8);
+        doc.text(intro, margin, y);
+        y += intro.length * 13 + 10;
+
+        s.items.forEach((it) => {
+          const isChecked = !!checked[it.id];
+          const bodyLines = doc.splitTextToSize(it.body, contentW - 28);
+          const citeLines = doc.splitTextToSize(`Citation: ${it.cite}`, contentW - 28);
+          const blockH = bodyLines.length * 13 + citeLines.length * 11 + 14;
+          ensureRoom(blockH);
+
+          // checkbox
+          doc.setDrawColor(...NAVY);
+          doc.setLineWidth(0.8);
+          doc.rect(margin, y - 9, 12, 12, "S");
+          if (isChecked) {
+            doc.setDrawColor(...CORAL);
+            doc.setLineWidth(1.6);
+            doc.line(margin + 2, y - 4, margin + 5, y - 1);
+            doc.line(margin + 5, y - 1, margin + 10, y - 7);
+            doc.setLineWidth(0.8);
+          }
+
+          // body
+          doc.setFont("helvetica", isChecked ? "normal" : "bold");
+          doc.setFontSize(10.5);
+          doc.setTextColor(...NAVY);
+          doc.text(bodyLines, margin + 22, y);
+          y += bodyLines.length * 13 + 2;
+
+          // citation
+          doc.setFont("helvetica", "italic");
+          doc.setFontSize(9);
+          doc.setTextColor(...MUTED);
+          doc.text(citeLines, margin + 22, y);
+          y += citeLines.length * 11 + 10;
+        });
+        y += 6;
+      });
+
+      // ---------- Footer on every page ----------
+      const total = doc.getNumberOfPages();
+      for (let i = 1; i <= total; i++) {
+        doc.setPage(i);
+        doc.setFont("helvetica", "normal");
+        doc.setFontSize(8);
+        doc.setTextColor(...MUTED);
+        doc.text(
+          "PreciseHire \u00b7 Background check services for U.S. employers \u00b7 precisehire.com",
+          margin,
+          pageH - 24,
+        );
+        doc.text(`${i} / ${total}`, pageW - margin, pageH - 24, { align: "right" });
+      }
+
+      doc.save(
+        `PreciseHire-Compliance-Checklist-${completed}-of-${TOTAL}.pdf`,
+      );
+      toast.success("Your checklist PDF has been downloaded.");
+    } catch (err) {
+      console.error("PDF generation failed", err);
+      toast.error("Could not build the PDF. Please try again.");
+    }
+  }
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "HowTo",
@@ -205,13 +365,14 @@ export default function Checklist() {
             </Reveal>
             <Reveal delay={0.15}>
               <div className="mt-8 flex flex-wrap items-center gap-3">
-                <a
-                  href={PDF_HREF}
-                  download="PreciseHire-Compliance-Checklist.pdf"
+                <button
+                  type="button"
+                  onClick={downloadPdf}
                   className="btn-coral inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold"
+                  aria-label="Download a PDF of your current checklist progress"
                 >
                   <Download className="size-4" /> Download the PDF
-                </a>
+                </button>
                 <button
                   type="button"
                   onClick={() => window.print()}
