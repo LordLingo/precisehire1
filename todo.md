@@ -1,6 +1,7 @@
-# Wire SOC 2 modal to dedicated Formspree form mdabqkdb
+# Audit blog post dates (today is May 15, 2026)
 
-- [ ] Edit Trust.tsx: TRUST_REPORT_ENDPOINT -> https://formspree.io/f/mdabqkdb (and update header comment)
-- [ ] cURL test against mdabqkdb to confirm 200 OK + ok:true
-- [ ] Browser E2E: open /trust, submit modal, watch confirmation panel
-- [ ] Save checkpoint and report
+- [ ] Inventory all `publishedAt`/`updatedAt` (or similar) fields across posts.ts
+- [ ] Grep article bodies for inline future-dated references
+- [ ] Rewrite any date > 2026-05-15 to a sensible past date
+- [ ] Eyeball /resources index + one detail page in browser
+- [ ] Save checkpoint

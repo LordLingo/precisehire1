@@ -301,7 +301,7 @@ If you want help building a screening program that moves at the speed your busin
     tags: ["FCRA", "Public Records", "Notice Rule", "Compliance"],
     author: "PreciseHire Editorial Team",
     authorSlug: "precisehire-team",
-    datePublished: "2026-05-22",
+    datePublished: "2026-04-22",
     readingMin: 11,
     image:
       "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/og-fcra-613-dysn5xUv8mAdsAFaGEF3Gp.webp",
@@ -396,7 +396,7 @@ State overlays in California, New York, Maryland, and Washington force most nati
     tags: ["Continuous Monitoring", "Re-Screening", "FCRA", "Post-Hire"],
     author: "PreciseHire Editorial Team",
     authorSlug: "precisehire-team",
-    datePublished: "2026-05-18",
+    datePublished: "2026-04-30",
     readingMin: 10,
     image: ASSETS.serviceCriminal,
     excerpt:
@@ -479,7 +479,7 @@ If you would like a second pair of eyes on either model, [reach out](/contact) a
     tags: ["FCRA", "Disputes", "Adverse Action", "Hiring Compliance"],
     author: "PreciseHire Editorial Team",
     authorSlug: "precisehire-team",
-    datePublished: "2026-05-15",
+    datePublished: "2026-05-08",
     readingMin: 9,
     image: ASSETS.serviceCriminal,
     excerpt:
