@@ -156,15 +156,16 @@ export default function Home() {
             </Reveal>
           </div>
 
-          <div className="lg:col-span-5 relative pb-12 lg:pb-6 overflow-hidden">
+          <div className="lg:col-span-5 relative pb-12 lg:pb-6">
             <Reveal delay={0.1} y={32}>
               <div className="relative group">
-                <img
-                  src={ASSETS.swooshCoral}
-                  alt=""
-                  aria-hidden="true"
-                  className="pointer-events-none select-none absolute -right-12 -top-10 w-[420px] opacity-80 rotate-[12deg] motion-safe:transition-transform motion-safe:duration-[900ms] motion-safe:ease-out group-hover:rotate-[14deg] group-hover:translate-x-1"
-                />
+                <div aria-hidden="true" className="pointer-events-none absolute -right-4 -top-10 w-[min(420px,_calc(100%+1rem))] overflow-hidden">
+                  <img
+                    src={ASSETS.swooshCoral}
+                    alt=""
+                    className="select-none w-full opacity-80 rotate-[12deg] motion-safe:transition-transform motion-safe:duration-[900ms] motion-safe:ease-out group-hover:rotate-[14deg] group-hover:translate-x-1"
+                  />
+                </div>
                 {/* Hero portrait card — subtle lift + image zoom on hover */}
                 <div
                   className="relative z-10 w-full max-w-[560px] mx-auto rounded-[28px] overflow-hidden shadow-[0_24px_60px_-22px_rgba(11,31,58,0.35)] motion-safe:transition-[transform,box-shadow] motion-safe:duration-500 motion-safe:ease-out group-hover:-translate-y-1.5 group-hover:shadow-[0_36px_70px_-20px_rgba(11,31,58,0.45)]"
