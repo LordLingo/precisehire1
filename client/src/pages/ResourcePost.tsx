@@ -5,12 +5,21 @@
  *
  * Note: We render Markdown via the Streamdown package that ships with the template.
  */
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, useParams, useLocation } from "wouter";
 import { ArrowLeft, ArrowRight, Calendar, Clock, Loader2 } from "lucide-react";
 import { Streamdown } from "streamdown";
 import SEO from "@/components/site/SEO";
 import Reveal from "@/components/site/Reveal";
+import ArticleToc from "@/components/site/ArticleToc";
+
+// Posts that get the right-rail Table of Contents (long-form compliance reads).
+const TOC_SLUGS = new Set<string>([
+  "fcra-section-613-public-records-employer-guide",
+  "pre-adverse-action-notice-requirements-timing-content-and-documents",
+  "fast-background-check-employer-guide",
+  "investigative-consumer-report-vs-consumer-report-employer-guide",
+]);
 import { COMPANY } from "@/content/site";
 import { findPost, relatedPosts, getInlineMarkdown } from "@/content/posts";
 import { resolveAuthor } from "@/content/authors";
@@ -46,6 +55,9 @@ export default function ResourcePost() {
 
   // scroll to top on slug change so the new article doesn't open mid-page
   useEffect(() => { window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior }); }, [slug]);
+
+  // Ref for the rendered article body — used by the right-rail TOC scroll-spy.
+  const articleBodyRef = useRef<HTMLDivElement | null>(null);
 
   if (!post) return <NotFound />;
 
@@ -190,10 +202,23 @@ export default function ResourcePost() {
         </Reveal>
       </div>
 
-      {/* Body */}
+      {/* Body — with optional right-rail TOC for long-form compliance posts */}
       <article className="container pb-20">
-        <div className="mx-auto max-w-4xl">
-          <div className="prose prose-lg prose-precisehire max-w-none">
+        <div
+          className={
+            TOC_SLUGS.has(post.slug)
+              ? "lg:grid lg:grid-cols-12 lg:gap-12"
+              : ""
+          }
+        >
+          <div
+            ref={articleBodyRef}
+            className={
+              TOC_SLUGS.has(post.slug)
+                ? "lg:col-span-9 prose prose-lg prose-precisehire max-w-none"
+                : "mx-auto max-w-4xl prose prose-lg prose-precisehire max-w-none"
+            }
+          >
             {body !== null ? (
               <Streamdown>{body}</Streamdown>
             ) : bodyError ? (
@@ -206,7 +231,16 @@ export default function ResourcePost() {
               </div>
             )}
           </div>
+          {TOC_SLUGS.has(post.slug) && (
+            <div className="lg:col-span-3">
+              <ArticleToc
+                containerRef={articleBodyRef}
+                reScanKey={body ? "loaded" : "empty"}
+              />
+            </div>
+          )}
 
+        <div className="mx-auto max-w-4xl">
           {/* Compliance category audit CTA */}
           {post.category === "Compliance" && (
             <div className="mt-12 rounded-2xl bg-[#0B1F3A] text-white p-6 sm:p-8 flex flex-col sm:flex-row gap-5 sm:items-center">
@@ -266,6 +300,7 @@ export default function ResourcePost() {
               <ArrowLeft className="size-4" /> Back to all resources
             </button>
           </div>
+        </div>
         </div>
       </article>
 
