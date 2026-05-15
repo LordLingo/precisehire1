@@ -188,8 +188,15 @@ export default function Compliance() {
               All compliance posts <ArrowRight className="size-4" />
             </Link>
           </div>
-          <div className="grid md:grid-cols-3 gap-5">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
             {[
+              {
+                href: "/resources/investigative-consumer-report-vs-consumer-report-employer-guide",
+                eyebrow: "FCRA § 1681d",
+                title: "Investigative consumer reports vs. consumer reports: when each one applies",
+                body: "The trigger is the sourcing, not the data type. The three federal additions, plus the California ICRAA box-check most disclosure packets miss.",
+                read: "8 min read",
+              },
               {
                 href: "/resources/fcra-section-613-public-records-employer-guide",
                 eyebrow: "FCRA §613",
