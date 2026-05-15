@@ -37,6 +37,8 @@ const ROLE = [
 
 export default function DisclosurePack() {
   const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [submittedEmail, setSubmittedEmail] = useState("");
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -44,6 +46,7 @@ export default function DisclosurePack() {
     const formData = new FormData(formEl);
 
     const firstName = String(formData.get("firstName") || "").trim();
+    const email = String(formData.get("email") || "").trim();
     const company = String(formData.get("company") || "").trim();
     formData.append(
       "_subject",
@@ -67,8 +70,21 @@ export default function DisclosurePack() {
       });
       if (res.ok) {
         formEl.reset();
-        toast.success("Sending your copy now — the download will start on the next page.");
-        window.location.assign("/thanks?form=disclosure-pack&dl=1");
+        setSubmittedEmail(email);
+        setSubmitted(true);
+        toast.success("You're on the list — starting your download now.");
+        // Trigger the in-page download right away so a user who stays on the
+        // confirmation panel still gets the file without a redirect.
+        try {
+          const a = document.createElement("a");
+          a.href = DISCLOSURE_PACK_PDF_URL;
+          a.download = "PreciseHire-FCRA-ICRAA-Disclosure-Pack.pdf";
+          document.body.appendChild(a);
+          a.click();
+          a.remove();
+        } catch {
+          /* ignored — the success panel still shows a manual download button */
+        }
         return;
       } else {
         toast.error(
@@ -178,9 +194,62 @@ export default function DisclosurePack() {
           <div className="lg:col-span-5">
             <Reveal delay={0.05}>
               <div className="sticky top-24">
+                {submitted ? (
+                  <div
+                    role="status"
+                    aria-live="polite"
+                    className="rounded-3xl bg-white border border-[#0B1F3A]/10 p-7 lg:p-8 grid gap-5 shadow-[0_24px_60px_-30px_rgba(11,31,58,0.25)]"
+                  >
+                    <div className="flex items-start gap-3">
+                      <div className="size-11 rounded-xl bg-[#0B1F3A] inline-flex items-center justify-center text-white shrink-0">
+                        <CheckCircle2 className="size-5" />
+                      </div>
+                      <div>
+                        <p className="font-display text-[20px] font-semibold leading-snug text-[#0B1F3A]">
+                          You’re on the list.
+                        </p>
+                        <p className="text-[13.5px] text-[#0B1F3A]/70 leading-snug mt-1">
+                          Your download just started. We also sent a copy to {" "}
+                          <span className="font-semibold text-[#0B1F3A]">{submittedEmail || "your inbox"}</span>{" "}
+                          so you can grab it again later.
+                        </p>
+                      </div>
+                    </div>
+
+                    <a
+                      href={DISCLOSURE_PACK_PDF_URL}
+                      download="PreciseHire-FCRA-ICRAA-Disclosure-Pack.pdf"
+                      className="btn-coral inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold"
+                    >
+                      <Download className="size-4" /> Download didn’t start? Click here.
+                    </a>
+
+                    <div className="rounded-2xl border border-[#0B1F3A]/10 bg-[#FAF7F2] p-5">
+                      <p className="text-[12px] uppercase tracking-[0.16em] text-[#B7232A] font-semibold">
+                        While you’re here
+                      </p>
+                      <p className="mt-2 text-[14px] leading-[1.6] text-[#0B1F3A]/75">
+                        Most teams pair this pack with our 24-point compliance checklist and the FCRA §615 pre-adverse runbook.
+                      </p>
+                      <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-[13.5px] font-semibold">
+                        <a href="/resources/compliance-checklist" className="text-[#B7232A] hover:underline underline-offset-4">24-point checklist →</a>
+                        <a href="/resources/pre-adverse-action-notice-requirements-timing-content-and-documents" className="text-[#B7232A] hover:underline underline-offset-4">§615 runbook →</a>
+                      </div>
+                    </div>
+
+                    <button
+                      type="button"
+                      onClick={() => { setSubmitted(false); setSubmittedEmail(""); }}
+                      className="text-[12px] text-[#0B1F3A]/55 hover:text-[#B7232A] inline-flex items-center gap-1 self-start"
+                    >
+                      Send to a different email
+                    </button>
+                  </div>
+                ) : (
                 <form
                   onSubmit={onSubmit}
                   className="rounded-3xl bg-white border border-[#0B1F3A]/10 p-6 lg:p-8 grid gap-5 shadow-[0_24px_60px_-30px_rgba(11,31,58,0.25)]"
+                  aria-busy={submitting}
                 >
                   <div className="flex items-start gap-3">
                     <div className="size-10 rounded-xl bg-[#FFF5F2] inline-flex items-center justify-center text-[#B7232A] shrink-0">
@@ -218,7 +287,8 @@ export default function DisclosurePack() {
                   >
                     {submitting ? (
                       <>
-                        <Loader2 className="size-4 animate-spin" /> Sending
+                        <Loader2 className="size-4 animate-spin" />
+                        <span>Sending your copy…</span>
                       </>
                     ) : (
                       <>
@@ -227,10 +297,18 @@ export default function DisclosurePack() {
                     )}
                   </button>
 
-                  <p className="text-[12px] text-[#0B1F3A]/55 leading-snug">
-                    By requesting the pack you agree to receive an email with the download link plus an occasional compliance update. Unsubscribe in one click.
-                  </p>
+                  {submitting ? (
+                    <p className="text-[12px] text-[#0B1F3A]/65 leading-snug inline-flex items-center gap-2">
+                      <Loader2 className="size-3.5 animate-spin text-[#B7232A]" />
+                      Logging your request and queuing the PDF — hold tight, this usually takes 2–3 seconds.
+                    </p>
+                  ) : (
+                    <p className="text-[12px] text-[#0B1F3A]/55 leading-snug">
+                      By requesting the pack you agree to receive an email with the download link plus an occasional compliance update. Unsubscribe in one click.
+                    </p>
+                  )}
                 </form>
+                )}
 
                 <a
                   href={DISCLOSURE_PACK_PDF_URL}

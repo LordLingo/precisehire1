@@ -1,8 +1,6 @@
-# Trust page + Compliance strip copy + DisclosurePack Formspree
+# Disclosure-pack UX + SOC 2 modal + FCRA pillar links
 
-- [ ] Build /trust attestations page: SOC 2 Type II letter request, PBSA Member ID, FCRA workflow diagram, contact for verification
-- [ ] Add /trust route to App.tsx
-- [ ] Add descriptive paragraph above the trust strip on Compliance.tsx ("independent attestations and memberships")
-- [ ] Ask user for real Formspree form ID for DisclosurePack
-- [ ] Replace placeholder `xnewlead00` in DisclosurePack.tsx with real ID once received
-- [ ] TypeScript check, save checkpoint, deliver
+- [ ] DisclosurePack: explicit submit-button loading spinner + post-submit success panel (replaces redirect-only feedback)
+- [ ] /trust SOC 2 card: add "Request Full Report" button that opens a contact modal (name + work email + company), Formspree-backed
+- [ ] /trust FCRA-aligned card: add internal links to FCRA pillar posts (§613, §615 pre-adverse, ICR vs consumer report, fast-bg-check pillar, FCRA+ICRAA disclosure pack)
+- [ ] TypeScript check + save checkpoint
