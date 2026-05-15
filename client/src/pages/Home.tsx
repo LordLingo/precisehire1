@@ -156,7 +156,7 @@ export default function Home() {
             </Reveal>
           </div>
 
-          <div className="lg:col-span-5 relative pb-12 lg:pb-6">
+          <div className="lg:col-span-5 relative pb-12 lg:pb-6 overflow-hidden">
             <Reveal delay={0.1} y={32}>
               <div className="relative group">
                 <img
