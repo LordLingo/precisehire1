@@ -42,8 +42,8 @@ export default function Header() {
   return (
     <header
       className={[
-        "sticky top-0 z-50 w-full transition-colors duration-300",
-        scrolled ? "bg-[#FAF7F2]/85 backdrop-blur-md border-b border-[#0B1F3A]/10" : "bg-transparent",
+        "sticky top-0 z-50 w-full transition-shadow duration-300 bg-[#FAF7F2] border-b",
+        scrolled ? "border-[#0B1F3A]/10 shadow-[0_2px_8px_-2px_rgba(11,31,58,0.08)]" : "border-transparent",
       ].join(" ")}
     >
       <div className="container flex h-[72px] items-center justify-between gap-6">
