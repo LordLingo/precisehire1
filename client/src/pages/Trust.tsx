@@ -38,9 +38,10 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 
-// Same Formspree endpoint used by the FCRA + ICRAA disclosure pack — both are
-// compliance-team lead inboxes.
-const TRUST_REPORT_ENDPOINT = "https://formspree.io/f/xbdwnljq";
+// Dedicated Formspree form for SOC 2 Type II report requests. Kept separate
+// from the FCRA + ICRAA disclosure-pack inbox (xbdwnljq) so compliance can
+// triage NDA requests without sifting through PDF downloads.
+const TRUST_REPORT_ENDPOINT = "https://formspree.io/f/mdabqkdb";
 
 const TEAM_ROLES = [
   "Procurement / Vendor risk",

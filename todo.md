@@ -1,6 +1,6 @@
-# Disclosure-pack UX + SOC 2 modal + FCRA pillar links
+# Wire SOC 2 modal to dedicated Formspree form mdabqkdb
 
-- [ ] DisclosurePack: explicit submit-button loading spinner + post-submit success panel (replaces redirect-only feedback)
-- [ ] /trust SOC 2 card: add "Request Full Report" button that opens a contact modal (name + work email + company), Formspree-backed
-- [ ] /trust FCRA-aligned card: add internal links to FCRA pillar posts (§613, §615 pre-adverse, ICR vs consumer report, fast-bg-check pillar, FCRA+ICRAA disclosure pack)
-- [ ] TypeScript check + save checkpoint
+- [ ] Edit Trust.tsx: TRUST_REPORT_ENDPOINT -> https://formspree.io/f/mdabqkdb (and update header comment)
+- [ ] cURL test against mdabqkdb to confirm 200 OK + ok:true
+- [ ] Browser E2E: open /trust, submit modal, watch confirmation panel
+- [ ] Save checkpoint and report
