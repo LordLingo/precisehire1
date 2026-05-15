@@ -168,12 +168,12 @@ export default function Home() {
                 </div>
                 {/* Hero portrait card — subtle lift + image zoom on hover */}
                 <div
-                  className="relative z-10 w-full max-w-[560px] mx-auto rounded-[28px] overflow-hidden shadow-[0_24px_60px_-22px_rgba(11,31,58,0.35)] motion-safe:transition-[transform,box-shadow] motion-safe:duration-500 motion-safe:ease-out group-hover:-translate-y-1.5 group-hover:shadow-[0_36px_70px_-20px_rgba(11,31,58,0.45)]"
+                  className="relative z-10 w-full max-w-[560px] mx-auto rounded-[28px] overflow-hidden shadow-[0_24px_60px_-22px_rgba(11,31,58,0.35)] ring-1 ring-transparent motion-safe:transition-[transform,box-shadow,--tw-ring-color,--tw-ring-offset-shadow] motion-safe:duration-500 motion-safe:ease-out group-hover:-translate-y-1.5 group-hover:shadow-[0_36px_70px_-20px_rgba(11,31,58,0.45)] group-hover:ring-[#B7232A]/40"
                 >
                   <img
                     src={ASSETS.hero}
                     alt="PreciseHire support specialists on calls in our McKinney, Texas office"
-                    className="block w-full h-auto object-cover motion-safe:transition-transform motion-safe:duration-[900ms] motion-safe:ease-out group-hover:scale-[1.035]"
+                    className="block w-full aspect-[4/3] object-cover motion-safe:transition-transform motion-safe:duration-[900ms] motion-safe:ease-out group-hover:scale-[1.035]"
                     loading="eager"
                     width={1408}
                     height={1056}
