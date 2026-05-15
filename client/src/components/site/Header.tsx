@@ -49,7 +49,7 @@ export default function Header() {
       <div className="container flex h-[72px] items-center justify-between gap-6">
         <Logo />
 
-        <nav aria-label="Primary" className="hidden lg:flex items-center gap-8">
+        <nav aria-label="Primary" className="hidden xl:flex items-center gap-6">
           {NAV_PRIMARY.map((item) => (
             <Link
               key={item.href}
@@ -61,7 +61,7 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="hidden lg:flex items-center gap-3">
+        <div className="hidden xl:flex items-center gap-3">
           <a href={`tel:${COMPANY.phoneRaw}`} className="inline-flex items-center gap-2 text-sm font-medium text-[#0B1F3A]/80 hover:text-[#0B1F3A] transition-colors">
             <Phone className="size-4" /> {COMPANY.phone}
           </a>
@@ -78,18 +78,26 @@ export default function Header() {
           </Link>
         </div>
 
-        <button
-          aria-label={open ? "Close menu" : "Open menu"}
-          aria-expanded={open}
-          onClick={() => setOpen((v) => !v)}
-          className="lg:hidden inline-flex size-10 items-center justify-center rounded-full border border-[#0B1F3A]/15 bg-white/70"
-        >
-          {open ? <X className="size-5" /> : <Menu className="size-5" />}
-        </button>
+        <div className="xl:hidden flex items-center gap-2">
+          <Link
+            href="/get-a-quote"
+            className="btn-coral hidden sm:inline-flex items-center justify-center rounded-full px-4 py-2 text-[13px] font-semibold whitespace-nowrap"
+          >
+            Get a quote
+          </Link>
+          <button
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            onClick={() => setOpen((v) => !v)}
+            className="inline-flex size-10 items-center justify-center rounded-full border border-[#0B1F3A]/15 bg-white/70"
+          >
+            {open ? <X className="size-5" /> : <Menu className="size-5" />}
+          </button>
+        </div>
       </div>
 
       {open && (
-        <div className="lg:hidden border-t border-[#0B1F3A]/10 bg-[#FAF7F2]">
+        <div className="xl:hidden border-t border-[#0B1F3A]/10 bg-[#FAF7F2]">
           <nav aria-label="Mobile" className="container py-5 grid gap-1">
             {NAV_PRIMARY.map((item) => (
               <Link key={item.href} href={item.href} className="px-2 py-3 text-base font-medium text-[#0B1F3A] border-b border-[#0B1F3A]/10">
