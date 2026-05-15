@@ -14,7 +14,6 @@ import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 import {
   Download,
-  FileText,
   Printer,
   Check,
   ShieldCheck,
@@ -212,14 +211,6 @@ export default function Checklist() {
                   className="btn-coral inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold"
                 >
                   <Download className="size-4" /> Download the PDF
-                </a>
-                <a
-                  href={PDF_HREF}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn-ghost-navy inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold"
-                >
-                  <FileText className="size-4" /> View in browser
                 </a>
                 <button
                   type="button"
