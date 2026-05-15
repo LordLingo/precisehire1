@@ -148,7 +148,7 @@ Third, decide once, at the program level, whether vendor-performed reference che
 
 Fourth, train recruiters to recognize when an internal investigation has drifted into general-character territory and looped a third-party investigator back into ICR territory. One slide of training prevents the most expensive failure in this area. The [PreciseHire compliance hub](/compliance) has a full operational checklist for the FCRA and ICRAA workflows above.
 
-If you want a sample stand-alone FCRA / ICRAA disclosure pack to compare against your own forms, [reach out to the PreciseHire compliance desk](/contact) and we will send the current version we use for employer clients.
+If you want a sample stand-alone FCRA / ICRAA disclosure pack to compare against your own forms, [download the free PreciseHire FCRA + California ICRAA disclosure pack](/resources/fcra-icraa-disclosure-pack) — three annotated sample documents and a fourteen-point pre-pull checklist. Or [reach out to the PreciseHire compliance desk](/contact) and we will send the current version we use for employer clients.
 
 ### tl;dr
 

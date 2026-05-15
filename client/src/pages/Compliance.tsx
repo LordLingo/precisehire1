@@ -245,6 +245,48 @@ export default function Compliance() {
         </Reveal>
       </section>
 
+      {/* LEAD MAGNET — gated FCRA + California ICRAA disclosure pack */}
+      <section className="container pb-16">
+        <Reveal>
+          <div className="relative overflow-hidden rounded-3xl bg-[#0B1F3A] text-white p-8 lg:p-12 grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            <div className="absolute -top-16 -right-16 size-64 rounded-full bg-[#B7232A]/30 blur-3xl pointer-events-none" />
+            <div className="absolute -bottom-20 -left-20 size-72 rounded-full bg-white/5 blur-3xl pointer-events-none" />
+            <div className="lg:col-span-7 relative">
+              <span className="inline-flex items-center gap-2 text-[11.5px] uppercase tracking-[0.18em] text-[#FFB6A6] font-semibold">
+                <span className="size-1.5 rounded-full bg-[#FFB6A6] inline-block" /> Free download
+              </span>
+              <h2 className="display-md mt-3 text-white">
+                The FCRA + California ICRAA <em className="italic text-[#FFB6A6] not-italic" style={{ fontStyle: "italic" }}>disclosure pack</em>.
+              </h2>
+              <p className="mt-4 text-[16px] leading-[1.7] text-white/80 max-w-2xl">
+                Three annotated sample disclosures (federal stand-alone, FCRA § 1681d investigative, California ICRAA), plus the same fourteen-point pre-pull checklist our compliance desk runs on the audit call. PDF, drafter-ready, free.
+              </p>
+              <ul className="mt-5 grid sm:grid-cols-2 gap-x-6 gap-y-2 text-[14px] text-white/75">
+                {[
+                  "Statute footnotes on every clause",
+                  "California ICRAA box-check included",
+                  "Editable in Word or Google Docs",
+                  "Updated May 2026",
+                ].map((line) => (
+                  <li key={line} className="flex items-start gap-2">
+                    <span className="mt-1.5 size-1.5 rounded-full bg-[#FFB6A6] shrink-0" />
+                    <span>{line}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="lg:col-span-5 relative flex lg:justify-end">
+              <Link
+                href="/resources/fcra-icraa-disclosure-pack"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#B7232A] hover:bg-[#A11E25] text-white px-7 py-4 text-sm font-semibold transition-colors"
+              >
+                Get the pack <ArrowRight className="size-4" />
+              </Link>
+            </div>
+          </div>
+        </Reveal>
+      </section>
+
       <section className="container pb-24">
         <Reveal>
           <div className="rounded-3xl bg-white border border-[#0B1F3A]/10 p-8 lg:p-12">

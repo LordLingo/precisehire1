@@ -25,7 +25,11 @@ import SEO from "@/components/site/SEO";
 import Reveal from "@/components/site/Reveal";
 import { ASSETS } from "@/content/site";
 
-type Intent = "quote" | "talk" | "help" | "audit" | "default";
+type Intent = "quote" | "talk" | "help" | "audit" | "disclosure-pack" | "default";
+
+// Public URL for the lead-magnet PDF.
+const DISCLOSURE_PACK_PDF_URL =
+  "/manus-storage/PreciseHire-FCRA-ICRAA-Disclosure-Pack_4d4da2f5.pdf";
 
 const COPY: Record<
   Intent,
@@ -118,6 +122,26 @@ const COPY: Record<
     primaryCta: { href: "/compliance/checklist", label: "Open the 24-point checklist" },
     secondaryCta: { href: "/resources?cat=Compliance", label: "Read the compliance posts" },
   },
+  "disclosure-pack": {
+    eyebrow: "Disclosure pack on the way",
+    headline: "Your download is starting now.",
+    body:
+      "Your copy of the FCRA + California ICRAA disclosure pack is downloading to this device, and a clean copy is also being emailed to the address you provided so you can forward it to counsel. The pack is annotated with the statute behind every clause — read the drafter notes inside each sample document before you put any of this in front of a candidate.",
+    nextSteps: [
+      {
+        title: "If the download did not start",
+        body:
+          "Click the primary button below to retrigger the download. If your browser is blocking it, the same link is in the email we just sent.",
+      },
+      {
+        title: "Want a second set of eyes on your current packet?",
+        body:
+          "Book a free 15-minute compliance audit and we will run your live disclosure documents past the same fourteen-point checklist that ships inside the pack.",
+      },
+    ],
+    primaryCta: { href: DISCLOSURE_PACK_PDF_URL, label: "Download again" },
+    secondaryCta: { href: "/compliance/audit", label: "Book a free 15-min audit" },
+  },
   default: {
     eyebrow: "Message received",
     headline: "Thanks — we have your message.",
@@ -148,13 +172,32 @@ function readIntent(): Intent {
   if (raw === "talk" || raw === "talk-to-an-expert") return "talk";
   if (raw === "help" || raw === "contact" || raw === "help-desk") return "help";
   if (raw === "audit" || raw === "compliance-audit-booking") return "audit";
+  if (raw === "disclosure-pack" || raw === "disclosure" || raw === "lead-magnet") return "disclosure-pack";
   return "default";
 }
 
 export default function Thanks() {
   const [intent, setIntent] = useState<Intent>("default");
   useEffect(() => {
-    setIntent(readIntent());
+    const next = readIntent();
+    setIntent(next);
+    // Auto-download for disclosure-pack flow when ?dl=1 is present.
+    if (next === "disclosure-pack" && typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get("dl") === "1") {
+        // Small delay so the page renders first; users see the headline,
+        // then the download fires.
+        const t = window.setTimeout(() => {
+          const a = document.createElement("a");
+          a.href = DISCLOSURE_PACK_PDF_URL;
+          a.download = "PreciseHire-FCRA-ICRAA-Disclosure-Pack.pdf";
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+        }, 600);
+        return () => window.clearTimeout(t);
+      }
+    }
   }, []);
   const copy = useMemo(() => COPY[intent], [intent]);
 
