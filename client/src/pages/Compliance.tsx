@@ -162,7 +162,23 @@ export default function Compliance() {
 
       {/* TRUST BAR — attestations & memberships with verification links */}
       <section className="border-y border-[#0B1F3A]/10 bg-[#FAF7F2]">
-        <div className="container py-4">
+        <div className="container pt-10 pb-6">
+          <Reveal>
+            <div className="max-w-3xl">
+              <div className="eyebrow text-[#B7232A]">
+                <ShieldCheck className="size-3.5" />
+                Independent attestations &amp; memberships
+              </div>
+              <p className="mt-3 text-[15.5px] leading-relaxed text-[#0B1F3A]/75">
+                Each mark below is backed by a real third-party report or an active
+                directory listing. Click <span className="font-semibold text-[#0B1F3A]">Verify</span>
+                {" "}on any of them to see scope, audit cadence, and how a procurement
+                or vendor-risk team can confirm it directly.
+              </p>
+            </div>
+          </Reveal>
+        </div>
+        <div className="container pb-5">
           <div className="flex flex-wrap items-center justify-between gap-x-8 gap-y-3">
             {/* Three real attestation/membership marks */}
             <Link

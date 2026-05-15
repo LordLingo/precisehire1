@@ -5,8 +5,7 @@
  * left column (what's inside) + right-column gated form. On submit, redirects
  * to /thanks?form=disclosure-pack&dl=1 which auto-fires the PDF download.
  *
- * NOTE: the Formspree endpoint below is a PLACEHOLDER. Replace
- * `xnewlead00` with the real Formspree form ID for the lead-magnet inbox.
+ * Formspree endpoint: https://formspree.io/f/xbdwnljq (lead-magnet inbox).
  */
 import { useState, type FormEvent } from "react";
 import { ArrowRight, Loader2, FileText, ShieldCheck, CheckCircle2, Download } from "lucide-react";
@@ -61,15 +60,12 @@ export default function DisclosurePack() {
 
     setSubmitting(true);
     try {
-      // PLACEHOLDER endpoint — replace `xnewlead00` with the real form ID.
-      const res = await fetch("https://formspree.io/f/xnewlead00", {
+      const res = await fetch("https://formspree.io/f/xbdwnljq", {
         method: "POST",
         body: formData,
         headers: { Accept: "application/json" },
       });
-      // Even if Formspree returns a 404 (placeholder ID), still deliver the
-      // download — the user explicitly opted in. Production: tighten this.
-      if (res.ok || res.status === 404) {
+      if (res.ok) {
         formEl.reset();
         toast.success("Sending your copy now — the download will start on the next page.");
         window.location.assign("/thanks?form=disclosure-pack&dl=1");
