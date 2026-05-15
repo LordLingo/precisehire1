@@ -14,6 +14,7 @@ import {
   ArrowRight,
   Calendar,
   CheckCircle2,
+  Phone,
 } from "lucide-react";
 import SEO from "@/components/site/SEO";
 import Reveal from "@/components/site/Reveal";
@@ -159,7 +160,73 @@ export default function Compliance() {
         </div>
       </section>
 
-      <section className="container pb-16">
+      {/* TRUST BAR — attestations & memberships with verification links */}
+      <section className="border-y border-[#0B1F3A]/10 bg-[#FAF7F2]">
+        <div className="container py-4">
+          <div className="flex flex-wrap items-center justify-between gap-x-8 gap-y-3">
+            {/* Three real attestation/membership marks */}
+            <Link
+              href="/trust"
+              className="group inline-flex items-center gap-3 text-[#0B1F3A]/80 hover:text-[#0B1F3A]"
+              aria-label="SOC 2 Type II attestation — verify scope and auditor"
+            >
+              <img
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/badge-soc2-type2-GcRr2QnYWi3Wh78xcatN4d.webp"
+                alt="SOC 2 Type II independently attested annually"
+                className="size-11 shrink-0 rounded-full bg-white ring-1 ring-[#0B1F3A]/10"
+              />
+              <span className="leading-tight">
+                <span className="block font-semibold text-[#0B1F3A] text-[12.5px]">SOC 2 Type II</span>
+                <span className="block text-[11px] text-[#0B1F3A]/55">Attested annually · <span className="underline decoration-[#B7232A]/60 underline-offset-2 group-hover:decoration-[#B7232A]">Verify</span></span>
+              </span>
+            </Link>
+
+            <Link
+              href="/trust"
+              className="group inline-flex items-center gap-3 text-[#0B1F3A]/80 hover:text-[#0B1F3A]"
+              aria-label="PBSA member — verify"
+            >
+              <img
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/badge-pbsa-member-DREztK99METgncgkeMJsoN.webp"
+                alt="Professional Background Screening Association member"
+                className="size-11 shrink-0 rounded-full bg-white ring-1 ring-[#0B1F3A]/10"
+              />
+              <span className="leading-tight">
+                <span className="block font-semibold text-[#0B1F3A] text-[12.5px]">PBSA Member</span>
+                <span className="block text-[11px] text-[#0B1F3A]/55">Since 2009 · <span className="underline decoration-[#B7232A]/60 underline-offset-2 group-hover:decoration-[#B7232A]">Verify</span></span>
+              </span>
+            </Link>
+
+            <Link
+              href="/trust"
+              className="group inline-flex items-center gap-3 text-[#0B1F3A]/80 hover:text-[#0B1F3A]"
+              aria-label="FCRA-aligned compliance workflow — verify"
+            >
+              <img
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/badge-fcra-aligned-JNb5yMVjPLcbHdm8X4nobt.webp"
+                alt="FCRA-aligned compliance workflow — 15 U.S.C. §1681"
+                className="size-11 shrink-0 rounded-full bg-white ring-1 ring-[#0B1F3A]/10"
+              />
+              <span className="leading-tight">
+                <span className="block font-semibold text-[#0B1F3A] text-[12.5px]">FCRA-aligned</span>
+                <span className="block text-[11px] text-[#0B1F3A]/55">15 U.S.C. §1681 workflow · <span className="underline decoration-[#B7232A]/60 underline-offset-2 group-hover:decoration-[#B7232A]">Verify</span></span>
+              </span>
+            </Link>
+
+            {/* Tenure + live-phone marker keep the original two text signals */}
+            <span className="inline-flex items-center gap-2 text-[12.5px] text-[#0B1F3A]/75">
+              <ShieldCheck className="size-4 text-[#B7232A]" />
+              <span><span className="font-semibold text-[#0B1F3A]">22+ years</span> · est. 2003</span>
+            </span>
+            <span className="inline-flex items-center gap-2 text-[12.5px] text-[#0B1F3A]/75">
+              <Phone className="size-4 text-[#B7232A]" />
+              <span><span className="font-semibold text-[#0B1F3A]">U.S. specialist</span> Mon–Fri 8a–8p ET, Sat 9a–1p</span>
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <section className="container pt-16 pb-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {PILLARS.map(({ icon: Icon, title, body }, i) => (
             <Reveal key={title} delay={i * 0.04}>
