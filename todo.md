@@ -1,8 +1,7 @@
-# Resources → Ban the Box
+# Custom OG images for top-tier pages
 
-- [ ] Study accurate.com/ban-the-box for structure & data
-- [ ] Find Resources nav config in this project
-- [ ] Build /resources/ban-the-box page (PreciseHire voice + design)
-- [ ] Wire route and submenu entry
-- [ ] Smoke test in browser
-- [ ] Save checkpoint
+- [ ] Generate 5 OG images (Home, Pricing, Compliance, Ban the Box, Trust) at 1200×630
+- [ ] Upload all to webdev CDN
+- [ ] Wire each <SEO image="..."> per page
+- [ ] Update default og:image in client/index.html
+- [ ] TS check, save checkpoint, deliver

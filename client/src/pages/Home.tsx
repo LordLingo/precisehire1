@@ -98,6 +98,7 @@ export default function Home() {
         title="Precise Hire — Background Checks Employers Trust"
         description="FCRA-compliant employment background checks, drug testing, MVR, and verifications — most reports back in under 4 hours. Trusted by employers for 22+ years."
         canonical="https://precisehire.com/"
+        image="https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/og-home-eKHpe6YmPeUxLLSrGYWz87.png"
         jsonLd={HOMEPAGE_JSONLD}
       />
 

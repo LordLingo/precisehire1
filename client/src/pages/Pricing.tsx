@@ -104,6 +104,7 @@ export default function Pricing() {
         title="Background Check Pricing for Employers | PreciseHire"
         description="Get a custom quote in 1 business hour. Transparent per-check pricing from $24.95 with no setup fees, no minimums, and U.S.-based compliance support included."
         canonical="https://precisehire.com/pricing"
+        image="https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/og-pricing-V2X5XCSovncYhRvXDUdi3r.png"
       />
 
       {/* HERO — quote-in-1-hour promise */}

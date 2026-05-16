@@ -15,7 +15,7 @@ type Props = {
   jsonLd?: object | object[];
 };
 
-const DEFAULT_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/hero-professional-KrXwCbeBT5hTvsMwqegzDw.webp";
+const DEFAULT_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/og-home-eKHpe6YmPeUxLLSrGYWz87.png";
 
 function setMeta(selector: string, attr: "name" | "property", key: string, content: string) {
   let el = document.head.querySelector<HTMLMetaElement>(selector);
