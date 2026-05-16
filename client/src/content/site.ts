@@ -348,13 +348,28 @@ export const FAQ_ITEMS: Faq[] = [
   },
 ];
 
-export const NAV_PRIMARY = [
+export type NavItem = {
+  label: string;
+  href: string;
+  children?: { label: string; href: string; description?: string }[];
+};
+
+export const NAV_PRIMARY: NavItem[] = [
   { label: "Services", href: "/services" },
   { label: "Industries", href: "/industries" },
   { label: "Pricing", href: "/pricing" },
   { label: "Compliance", href: "/compliance" },
   { label: "Support", href: "/support" },
-  { label: "Resources", href: "/resources" },
+  {
+    label: "Resources",
+    href: "/resources",
+    children: [
+      { label: "All articles", href: "/resources", description: "Field-tested guidance for hiring teams." },
+      { label: "Ban the Box", href: "/resources/ban-the-box", description: "State-and-local rules on when to ask about criminal history." },
+      { label: "FCRA + ICRAA disclosure pack", href: "/resources/fcra-icraa-disclosure-pack", description: "Free template kit for your hiring funnel." },
+      { label: "24-point compliance checklist", href: "/compliance/checklist", description: "Print-ready audit checklist." },
+    ],
+  },
   { label: "About", href: "/about" },
 ];
 

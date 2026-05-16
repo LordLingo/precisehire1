@@ -2,11 +2,14 @@
  * PreciseHire — site Header
  * Style: Trusted Modernism. Cream background, navy logotype with coral mark,
  * Inter nav links, coral CTA button. Sticky with subtle border on scroll.
+ *
+ * Nav supports a single layer of children (rendered as a hover/focus
+ * dropdown panel on desktop, expanded inline on mobile).
  */
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, Phone } from "lucide-react";
-import { NAV_PRIMARY, COMPANY } from "@/content/site";
+import { Menu, X, Phone, ChevronDown } from "lucide-react";
+import { NAV_PRIMARY, COMPANY, type NavItem } from "@/content/site";
 
 function Logo() {
   return (
@@ -22,6 +25,49 @@ function Logo() {
         Precise<span className="text-[#B7232A]">Hire</span>
       </span>
     </Link>
+  );
+}
+
+function DesktopNavItem({ item }: { item: NavItem }) {
+  if (!item.children?.length) {
+    return (
+      <Link
+        href={item.href}
+        className="text-[15px] font-medium text-[#0B1F3A]/80 hover:text-[#0B1F3A] transition-colors link-underline"
+      >
+        {item.label}
+      </Link>
+    );
+  }
+  return (
+    <div className="relative group">
+      <Link
+        href={item.href}
+        className="inline-flex items-center gap-1 text-[15px] font-medium text-[#0B1F3A]/80 hover:text-[#0B1F3A] transition-colors link-underline"
+        aria-haspopup="true"
+      >
+        {item.label}
+        <ChevronDown className="size-3.5 transition-transform group-hover:rotate-180" />
+      </Link>
+      <div
+        className="absolute left-1/2 -translate-x-1/2 top-full pt-3 invisible opacity-0 translate-y-1 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 focus-within:visible focus-within:opacity-100 focus-within:translate-y-0 transition-all duration-150 z-50"
+      >
+        <div className="min-w-[320px] rounded-2xl border border-[#0B1F3A]/10 bg-white shadow-[0_30px_60px_-25px_rgba(11,31,58,0.35)] p-2">
+          {item.children.map((c) => (
+            <Link
+              key={c.href}
+              href={c.href}
+              className="block rounded-xl px-4 py-3 hover:bg-[#FAF7F2] transition-colors"
+            >
+              <div className="text-[14.5px] font-semibold text-[#0B1F3A]">{c.label}</div>
+              {c.description && (
+                <div className="mt-0.5 text-[12.5px] leading-snug text-[#0B1F3A]/65">{c.description}</div>
+              )}
+            </Link>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -51,13 +97,7 @@ export default function Header() {
 
         <nav aria-label="Primary" className="hidden xl:flex items-center gap-6">
           {NAV_PRIMARY.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="text-[15px] font-medium text-[#0B1F3A]/80 hover:text-[#0B1F3A] transition-colors link-underline"
-            >
-              {item.label}
-            </Link>
+            <DesktopNavItem key={item.href} item={item} />
           ))}
         </nav>
 
@@ -100,9 +140,27 @@ export default function Header() {
         <div className="xl:hidden border-t border-[#0B1F3A]/10 bg-[#FAF7F2]">
           <nav aria-label="Mobile" className="container py-5 grid gap-1">
             {NAV_PRIMARY.map((item) => (
-              <Link key={item.href} href={item.href} className="px-2 py-3 text-base font-medium text-[#0B1F3A] border-b border-[#0B1F3A]/10">
-                {item.label}
-              </Link>
+              <div key={item.href}>
+                <Link
+                  href={item.href}
+                  className="block px-2 py-3 text-base font-medium text-[#0B1F3A] border-b border-[#0B1F3A]/10"
+                >
+                  {item.label}
+                </Link>
+                {item.children?.length ? (
+                  <div className="pl-4 border-b border-[#0B1F3A]/10">
+                    {item.children.map((c) => (
+                      <Link
+                        key={c.href}
+                        href={c.href}
+                        className="block px-2 py-2.5 text-[14.5px] text-[#0B1F3A]/75"
+                      >
+                        {c.label}
+                      </Link>
+                    ))}
+                  </div>
+                ) : null}
+              </div>
             ))}
             <div className="flex gap-3 pt-4">
               <a

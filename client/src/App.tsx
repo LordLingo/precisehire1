@@ -33,6 +33,7 @@ import Legal from "./pages/Legal";
 import Resources from "./pages/Resources";
 import ResourcePost from "./pages/ResourcePost";
 import DisclosurePack from "./pages/DisclosurePack";
+import BanTheBox from "./pages/BanTheBox";
 import Support from "./pages/Support";
 import AuthorPage from "./pages/AuthorPage";
 import Thanks from "./pages/Thanks";
@@ -64,6 +65,7 @@ function Router() {
         <Route path="/legal/:slug" component={Legal} />
         <Route path="/resources" component={Resources} />
         <Route path="/resources/fcra-icraa-disclosure-pack" component={DisclosurePack} />
+        <Route path="/resources/ban-the-box" component={BanTheBox} />
         <Route path="/resources/:slug" component={ResourcePost} />
         <Route path="/authors/:slug" component={AuthorPage} />
         <Route path="/thanks" component={Thanks} />
