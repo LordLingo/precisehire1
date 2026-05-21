@@ -1301,6 +1301,86 @@ You still own the decision and the assessment. We make the paperwork unmissable.
 
 > Not legal advice. Always consult employment counsel for sensitive cases.
 `
+  },
+  {
+    slug: "california-fair-chance-act-employer-compliance-guide-2026",
+    title: "California's Fair Chance Act: What Employers Must Do at Every Step of the Hiring Process",
+    metaTitle: "California Fair Chance Act Employer Guide 2026",
+    description:
+      "A step-by-step breakdown of what California's Fair Chance Act requires of employers — from job ads through final adverse action — updated for the 2026 enforcement climate.",
+    category: "Compliance",
+    tags: ["Fair Chance Act", "California", "ban the box", "criminal history", "adverse action"],
+    author: "PreciseHire Editorial",
+    authorSlug: "precisehire-team",
+    datePublished: "2026-05-20",
+    readingMin: 7,
+    image: ASSETS.serviceCriminal,
+    excerpt:
+      "A step-by-step breakdown of what California's Fair Chance Act requires of employers — from job ads through final adverse action — updated for the 2026 enforcement climate.",
+    markdown: `California's Fair Chance Act is the most prescriptive ban-the-box law in the country. It does not just say "don't ask about convictions on the application." It dictates what you can put in a job ad, when you may run a background check, how you must evaluate the results, what notices you must send, how long the applicant gets to respond, and what happens if you still decide to revoke the offer. Miss a step and the California Civil Rights Department (CRD) treats the entire adverse action as unlawful — regardless of how serious the conviction was.
+
+This guide walks through the full process as it stands in 2026, incorporating the expanded regulations that took effect October 1, 2023, and the enforcement posture the CRD has adopted since.
+
+## Who is covered — and the definition is broader than you think
+
+The Fair Chance Act applies to every employer with five or more employees, including staffing agencies, joint employers, and any entity that evaluates conviction history on behalf of an employer ([Cal. Gov. Code § 12952](https://codes.findlaw.com/ca/government-code/gov-sect-12952/)). The October 2023 regulations at [2 CCR § 11017.1](https://www.law.cornell.edu/regulations/california/2-CCR-11017.1) expanded the definition further to include any entity that "selects, obtains, or is provided workers from a pool or availability list." If you use a staffing partner to fill California roles, both you and the agency are independently responsible for compliance.
+
+The 2023 regulations also expanded "applicant" beyond new hires. It now covers current employees who have applied for a different position with the same employer, and current employees whose criminal history is being reviewed because of a change in ownership, management, or policy. A company that acquires a California operation and re-screens the workforce must follow the full Fair Chance Act process for every existing employee.
+
+## Step 1 — Job advertisements and applications
+
+Before a conditional offer is made, the employer may not include any question on an application that seeks disclosure of conviction history. The prohibition extends to job advertisements: you cannot state or imply that applicants with criminal records need not apply. The CRD publishes a voluntary [Ad and App Compliance Statement](https://calcivilrights.ca.gov/fair-chance-act/fca-forms/) that employers can add to postings to signal compliance with the law.
+
+If an applicant voluntarily discloses conviction history before a conditional offer — in a cover letter, during an interview, or on a form not required by the employer — the employer cannot consider that information until after the conditional offer and individualized assessment. Voluntary disclosure does not waive the applicant's rights.
+
+## Step 2 — The conditional offer and the background check
+
+Only after extending a conditional job offer may the employer run a criminal background check. The offer must be genuinely conditional — meaning the employer has decided to hire the applicant subject only to the background check and any other post-offer screening. An employer that routinely rescinds offers for unrelated reasons may face scrutiny that the "conditional offer" was pretextual.
+
+Once the report comes back, certain categories of records can never be considered: arrests that did not result in a conviction, referrals to or participation in a diversion program, convictions that have been sealed, dismissed, expunged, or statutorily eradicated, and non-felony marijuana convictions more than two years old. If the only records on the report fall into these categories, the employer must proceed with the hire.
+
+## Step 3 — The individualized assessment
+
+If the report contains convictions that are not categorically excluded, the employer must conduct an individualized assessment before making any adverse decision. The assessment evaluates whether the conviction history has a "direct and adverse relationship" with the specific duties of the job. The statute at [Gov. Code § 12952(c)(1)](https://codes.findlaw.com/ca/government-code/gov-sect-12952/) requires the employer to consider three factors: the nature and gravity of the criminal offense or conduct, the time that has passed since the offense or conduct and completion of the sentence, and the nature of the job held or sought.
+
+The CRD's [Individual Assessment Form](https://calcivilrights.ca.gov/fair-chance-act/fca-forms/) provides a template. Employers are not required to use the CRD's form, but must document the assessment in writing. If the applicant has presented evidence of rehabilitation or mitigating circumstances at any point, the employer must consider it during this step.
+
+## Step 4 — The preliminary notice to revoke
+
+If the individualized assessment leads to a preliminary decision that the conviction is disqualifying, the employer must send a written preliminary notice before taking final action. The notice must include the conviction or convictions that are the basis for the preliminary decision, a copy of the background check report (if one was used), an explanation of the applicant's right to respond, and the deadline for that response. The CRD publishes a [Preliminary Notice to Revoke Job Offer](https://calcivilrights.ca.gov/fair-chance-act/fca-forms/) template that satisfies these requirements.
+
+The 2023 regulations added a delivery-receipt requirement. The employer must either send the notice by a method that confirms receipt (certified mail, email with read receipt, hand delivery with signature) or, if using regular mail, wait an additional five calendar days before starting the response clock. The applicant then has at least five business days from receipt to respond. If the applicant requests additional time in writing, the employer must grant at least five more business days — for a potential total of ten business days or more.
+
+## Step 5 — The reassessment
+
+If the applicant responds within the deadline — with evidence of rehabilitation, an explanation of mitigating circumstances, a challenge to the accuracy of the report, or any other information — the employer must conduct a reassessment. The CRD's [Individual Reassessment Form](https://calcivilrights.ca.gov/fair-chance-act/fca-forms/) provides a template. The reassessment must consider the same three statutory factors plus whatever new information the applicant has provided. The employer cannot simply restate its original conclusion; it must demonstrate that it genuinely reconsidered.
+
+## Step 6 — The final notice
+
+If the employer still decides to revoke the offer after the reassessment, it must send a final written notice. The notice must inform the applicant of the final decision, identify any procedure the employer has for challenging the decision internally, and notify the applicant of the right to file a complaint with the CRD. The CRD's [Final Notice to Revoke Job Offer](https://calcivilrights.ca.gov/fair-chance-act/fca-forms/) satisfies these requirements. Only after this notice is delivered may the employer formally rescind the conditional offer and move to the next candidate.
+
+## The CRD's enforcement posture in 2025 and 2026
+
+The CRD has made clear that it will not treat the Fair Chance Act as a paperwork exercise. In August 2025, Littler Mendelson noted that the CRD has been "aggressively pressing an overly broad construction" of the statute — asserting discretion to second-guess an employer's final decision even if every procedural step was followed ([Littler ASAP, Aug. 18, 2025](https://www.littler.com/news-analysis/asap/california-civil-rights-department-crd-ramps-enforcement-california-fair-chance)). The CRD's position is that following the process is necessary but not sufficient; the substantive outcome must also be defensible.
+
+In April 2025, the CRD announced a $100,000 settlement with an Iowa-based trucking and logistics provider that rescinded a conditional offer for a senior leadership position without conducting an individualized assessment ([CRD settlement, reported Apr. 16, 2025](https://www.jdp.com/blog/fair-chance-act-violation-settled-by-california-civil-rights-department/)). The employer was also required to train hiring personnel, review policies, and report changes to the CRD within 45 days.
+
+## What this means for employers
+
+Four operational steps will bring most California hiring programs into defensible compliance in 2026.
+
+First, audit your job postings and applications. Remove any question or statement that asks about or implies consideration of criminal history before a conditional offer. If your ATS includes default criminal-history questions, disable them for California requisitions.
+
+Second, build the six-step notice sequence into your ATS so it fires automatically. The most common violation the CRD pursues is a skipped step, not a bad substantive decision. If your system does not enforce the preliminary-notice-then-wait-then-reassess sequence, a single recruiter in a hurry can generate a six-figure liability.
+
+Third, document the individualized assessment with specificity. "The conviction is too recent" is not sufficient. Name the conviction, the sentence completion date, the specific job duties that create the direct-and-adverse relationship, and the evidence of rehabilitation (or lack thereof) that you considered. Use the CRD's template or build your own that hits the same fields. PreciseHire's [criminal-records screening service](https://precisehire.com/services/criminal-records) delivers reports structured to support this analysis.
+
+Fourth, treat the response window as sacred. Do not send the final notice before the five-business-day clock has run from confirmed receipt. If the applicant asks for more time, grant it and document the extension. The CRD has taken the position that a premature final notice voids the entire process.
+
+If your organization hires in California and has not updated its Fair Chance Act workflow since the October 2023 regulations took effect, now is the time. [Talk to a PreciseHire compliance specialist](https://precisehire.com/contact) — we can map your current process against the six-step CRD framework and flag the gaps before the CRD does.
+
+> Not legal advice. Always consult employment counsel for sensitive cases.
+`
   }
 ];
 
