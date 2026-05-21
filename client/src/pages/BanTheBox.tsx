@@ -44,10 +44,12 @@ interface Jurisdiction {
   scope: "state" | "city" | "county" | "territory";
   stage: Stage;
   effective: string;
+  /** Optional internal link to a detailed compliance guide */
+  link?: string;
 }
 
 const JURISDICTIONS: Jurisdiction[] = [
-  { name: "California", state: "CA", scope: "state", stage: "Conditional offer", effective: "Jan 1, 2018" },
+  { name: "California", state: "CA", scope: "state", stage: "Conditional offer", effective: "Jan 1, 2018", link: "/resources/california-fair-chance-act-employer-compliance-guide-2026" },
   { name: "Los Angeles, CA", state: "CA", scope: "city", stage: "Conditional offer", effective: "Jan 22, 2017" },
   { name: "San Francisco, CA", state: "CA", scope: "city", stage: "Conditional offer", effective: "Oct 1, 2018" },
   { name: "Colorado", state: "CO", scope: "state", stage: "After application", effective: "Jun 24, 2019" },
@@ -70,7 +72,7 @@ const JURISDICTIONS: Jurisdiction[] = [
   { name: "St. Louis, MO", state: "MO", scope: "city", stage: "After interview", effective: "Jan 1, 2021" },
   { name: "New Jersey", state: "NJ", scope: "state", stage: "After interview", effective: "Mar 1, 2015" },
   { name: "New Mexico", state: "NM", scope: "state", stage: "After application", effective: "Jul 1, 2019" },
-  { name: "New York City, NY", state: "NY", scope: "city", stage: "Conditional offer", effective: "Jul 29, 2021" },
+  { name: "New York City, NY", state: "NY", scope: "city", stage: "Conditional offer", effective: "Jul 29, 2021", link: "/resources/nyc-fair-chance-act-employer-compliance-guide-2026" },
   { name: "Buffalo, NY", state: "NY", scope: "city", stage: "After interview", effective: "Jun 10, 2013" },
   { name: "Rochester, NY", state: "NY", scope: "city", stage: "After interview", effective: "Nov 18, 2014" },
   { name: "Suffolk County, NY", state: "NY", scope: "county", stage: "After interview", effective: "Aug 25, 2020" },
@@ -561,7 +563,7 @@ export default function BanTheBox() {
                     key={`${j.name}-${i}`}
                     className={i % 2 === 0 ? "bg-white" : "bg-[#FAF7F2]"}
                   >
-                    <td className="px-5 py-3.5 text-[#0B1F3A] font-medium">{j.name}</td>
+                    <td className="px-5 py-3.5 text-[#0B1F3A] font-medium">{j.link ? <Link href={j.link} className="underline decoration-[#C8102E]/40 hover:decoration-[#C8102E] transition-colors">{j.name}</Link> : j.name}</td>
                     <td className="px-5 py-3.5 text-[#0B1F3A]/65 capitalize hidden md:table-cell">{j.scope}</td>
                     <td className="px-5 py-3.5">
                       <span

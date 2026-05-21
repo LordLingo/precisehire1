@@ -1381,6 +1381,161 @@ If your organization hires in California and has not updated its Fair Chance Act
 
 > Not legal advice. Always consult employment counsel for sensitive cases.
 `
+  },
+  {
+    slug: "fcra-recordkeeping-requirements-employers-2026",
+    title: "FCRA Recordkeeping Requirements Every Employer Should Know in 2026",
+    metaTitle: "FCRA Recordkeeping for Employers in 2026",
+    description:
+      "How long employers must keep background check disclosures, authorizations, reports, and adverse-action notices in 2026 \u2014 federal and state rules in plain English.",
+    category: "Compliance",
+    tags: ["FCRA", "recordkeeping", "adverse action", "compliance"],
+    author: "PreciseHire Editorial",
+    authorSlug: "precisehire-team",
+    datePublished: "2026-05-18",
+    readingMin: 7,
+    image: ASSETS.serviceCriminal,
+    excerpt:
+      "How long employers must keep background check disclosures, authorizations, reports, and adverse-action notices in 2026 \u2014 federal and state rules in plain English.",
+    markdown: `Most employers we talk to assume the Fair Credit Reporting Act spells out exactly how long they must keep background check records. It does not. The FCRA tells you what to disclose, what to authorize, and how to handle adverse action \u2014 but it leaves the actual retention question to a patchwork of EEOC rules, FTC disposal rules, federal and state statutes of limitations, and industry-specific regulators like the DOT. The result is a quiet trap: an employer can run a perfectly compliant background check, then lose the litigation two years later because it cannot find the signed authorization form.
+
+This guide pulls the rules together for 2026. It covers what to keep, how long to keep it, how to dispose of it, and where state law and DOT rules raise the floor.
+
+## What the FCRA actually says about recordkeeping
+
+The Fair Credit Reporting Act ([15 U.S.C. \u00a7 1681 et seq.](https://www.ftc.gov/system/files/ftc_gov/pdf/fcra-may2023-508.pdf)) does not impose a general retention period on employers. The retention obligations come indirectly: \u00a7 1681b(b) requires a stand-alone disclosure, written authorization, and certification to the CRA before a report runs; \u00a7 1681b(b)(3) governs the pre-adverse and final adverse-action steps; and \u00a7 1681w requires proper disposal of consumer report information.
+
+None of those sections names a number of months or years. The practical floor instead comes from the FCRA's statute of limitations at [15 U.S.C. \u00a7 1681p](https://www.law.cornell.edu/uscode/text/15/1681p), which lets a plaintiff sue up to two years after discovering a violation or up to five years after it occurs, whichever is earlier. An employer that throws out a disclosure form after eighteen months may have done nothing wrong on hire day yet still face a class action with no paperwork to defend it.
+
+## The EEOC rule that quietly governs your background check files
+
+The hard floor for almost every employer is the EEOC rule at [29 CFR \u00a7 1602.14](https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XIV/part-1602/subpart-C/section-1602.14). Any personnel or employment record made or kept by an employer \u2014 including records \"having to do with hiring\" \u2014 must be preserved for at least one year from the date the record was made or the personnel action was taken, whichever is later. If the action is an involuntary termination, the records must be kept for one year from termination.
+
+The EEOC's [recordkeeping summary](https://www.eeoc.gov/employers/recordkeeping-requirements) confirms what's included: applications, hiring decisions, promotion and demotion records, training selections, and the supporting documents behind them. A pre-employment background check is a hiring record \u2014 and so are the disclosure, signed authorization, the report itself, the pre-adverse notice and summary of rights, the candidate's response (or absence of one), the individualized assessment, and the final adverse-action notice. All of it falls within \u00a7 1602.14.
+
+A separate EEOC rule extends the clock once a charge is filed. If a candidate or current employee files a discrimination charge with the EEOC, the employer must keep the related records until the final disposition of the charge \u2014 meaning the expiration of the 90-day right-to-sue window, or the end of any litigation including appeals. In practice, that converts a one-year file into a multi-year file the moment a charge is opened.
+
+## The FTC Disposal Rule: how you destroy records matters as much as how long you keep them
+
+When the records are no longer needed, the FCRA does not let you simply throw them in the bin. The [FTC Disposal Rule at 16 CFR Part 682](https://www.ecfr.gov/current/title-16/chapter-I/subchapter-F/part-682) requires anyone who has \"consumer report information or any compilation of consumer report information, derived from consumer reports for a business purpose\" to take reasonable measures to protect against unauthorized access or use in connection with disposal. Reasonable measures include burning, pulverizing, or shredding paper records, and erasing or destroying electronic media so the information cannot be reconstructed.
+
+The Disposal Rule applies to the employer, not just the consumer reporting agency, and it applies to electronic copies in HRIS, applicant tracking, and shared drives. Employers who delete a candidate file from the ATS but leave a copy of the report attached to an email thread are still in possession of consumer report information for purposes of the rule. The fix is a written disposal procedure that names the systems where reports live, the retention clock, and the destruction method for each.
+
+## State laws raise the floor \u2014 and you have to look at every state where you hire
+
+Several states impose retention rules stricter than the federal floor. California's Investigative Consumer Reporting Agencies Act ([Cal. Civ. Code \u00a7 1786.20(b)](https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=CIV&division=3.&title=1.81.26.&part=4.&chapter=&article=)) requires personally identifiable information from a report to be maintained for at least two years from the date the report was prepared, and California's Fair Chance Act layers documentation duties on the conditional-offer process and the individualized assessment.
+
+New York City's Fair Chance Act, codified at [NYC Admin. Code \u00a7 8-107(11-a)](https://www.nyc.gov/site/cchr/law/fair-chance-act.page), expects employers to retain the conditional offer, any criminal-history inquiry, the Article 23-A factors weighed, the Fair Chance Notice, and the candidate's response. The NYC Commission on Human Rights treats incomplete recordkeeping as evidence of a per-se violation. Multi-state employers should default to the longest applicable period rather than tracking different clocks state by state \u2014 a consistent five-year retention policy clears the FCRA statute of repose, the EEOC charge-filing window, the California ICRAA rule, and the NYC documentation expectation in one move.
+
+## DOT employers have a separate, stricter regime
+
+If you employ commercial drivers, the FMCSA layers its own clocks on top of the FCRA. The Driver Qualification File rule at [49 CFR \u00a7 391.51](https://www.ecfr.gov/current/title-49/subtitle-B/chapter-III/subchapter-B/part-391/subpart-E/section-391.51) requires the motor carrier to keep the driver's application, MVR responses, road-test certification, medical examiner's certificate, annual review of driving record, and list of violations for the duration of employment plus three years after the driver leaves. DOT drug and alcohol records run on a stricter clock under [49 CFR \u00a7 382.401](https://www.ecfr.gov/current/title-49/subtitle-B/chapter-III/subchapter-B/part-382/subpart-D/section-382.401): positive drug tests, alcohol results of 0.02 or greater, refusals, Substance Abuse Professional evaluations, and return-to-duty results are kept for five years; negatives for one year. A trucking, transit, or passenger-carrier employer should treat FCRA recordkeeping as the floor and FMCSA as the ceiling.
+
+## What this means for employers
+
+Build a single written retention schedule that covers every document a background check produces, then run it the same way every time. Four operational steps will get most employers to a defensible posture in 2026.
+
+First, keep every FCRA-related document for at least five years from the date of the hiring action \u2014 disclosure, authorization, the certification you sent the consumer reporting agency, the report itself, the pre-adverse notice with its summary of rights, the candidate's response, your individualized assessment, and the final adverse-action notice. Five years clears the FCRA statute of repose, the EEOC one-year floor with charge extensions, and most state law overlays. For a deeper walkthrough of the adverse-action paper trail, see [our adverse-action compliance walkthrough](https://precisehire.com/resources/adverse-action-fcra-step-by-step-walkthrough-for-hiring-managers).
+
+Second, write your disposal procedure into the same policy. Name the systems where reports live (ATS, HRIS, email, shared drives, paper files), the retention clock for each, the destruction method (cross-cut shred for paper, secure wipe for electronic), and the person responsible. The FTC Disposal Rule does not specify a software product, but it does require reasonable measures, and an unrun procedure is not reasonable.
+
+Third, treat the trigger events as exceptions to the schedule. Hold the file the moment you receive an EEOC charge, a CRA dispute, a candidate's pre-adverse response, or notice of any litigation. Document the legal hold in writing. The records you would have routinely destroyed at five years now stay until final disposition.
+
+Fourth, layer the industry-specific rules on top rather than trying to merge them. A DOT driver's file follows the FMCSA clock. A New York City conditional offer follows the Fair Chance Act clock. A California applicant follows the ICRAA clock. Your background-screening partner should be able to map each candidate's jurisdiction and role to the correct retention path. PreciseHire's [compliance program](https://precisehire.com/compliance) is built around exactly that mapping.
+
+Retention is half the requirement; access is the other half. The records have to be retrievable on the day a regulator asks for them. Employers most often fail audits not because they discarded the disclosure, but because they cannot find it inside a defunct ATS, an offboarded recruiter's mailbox, or a paper file in a closed branch. Build the retention schedule into the same system that runs your [criminal-records workflow](https://precisehire.com/services/criminal-records), and assign a named human owner.
+
+If you are reviewing your screening program this quarter, [talk to a PreciseHire compliance specialist](https://precisehire.com/contact) \u2014 we will walk through your current retention setup, flag the gaps against federal and state rules, and leave you with a written checklist you can put in front of counsel.
+
+> Not legal advice. Always consult employment counsel for sensitive cases.
+`
+  },
+  {
+    slug: "nyc-fair-chance-act-employer-compliance-guide-2026",
+    title: "NYC Fair Chance Act: What Every Employer Must Do Before and After the Conditional Offer",
+    metaTitle: "NYC Fair Chance Act Employer Compliance Guide 2026 | PreciseHire",
+    description: "A step-by-step compliance guide to the NYC Fair Chance Act (Local Law 63 of 2015, as amended 2021) — covering the two-tiered background check, Article 23-A analysis, the five-business-day hold, per se violations, and penalties up to $250,000.",
+    datePublished: "2026-05-21",
+    category: "Compliance",
+    tags: ["Fair Chance Act", "NYC", "ban the box", "criminal history", "adverse action"],
+    author: "PreciseHire Editorial",
+    image: "https://images.unsplash.com/photo-1534430480872-3498386e7856?w=1200&q=80",
+    readingMin: 8,
+    excerpt: "The NYC Fair Chance Act dictates the exact sequence of screening steps, the documents an employer must hand the applicant, the minimum days the position must stay open, and the written analysis that must accompany every withdrawal.",
+    markdown: `
+New York City's Fair Chance Act is the most prescriptive ban-the-box law in the country. It does not simply delay the criminal-history question — it dictates the exact sequence of screening steps, the documents an employer must hand the applicant, the minimum number of days the position must stay open, and the written analysis that must accompany every withdrawal. Since the July 2021 amendments expanded coverage to current employees and pending charges, the NYC Commission on Human Rights has stepped up enforcement, settling a case against a pharmaceutical company for $75,000 in 2024 simply because its application form stated "background check required." [1]
+
+This guide walks multi-state employers through each obligation in chronological order so your New York City hiring workflow stays compliant from requisition to Day One.
+
+## Who is covered
+
+The Fair Chance Act applies to every employer — private, public, or nonprofit — with four or more employees in New York City. [2] Temporary staffing firms are explicitly included; the Commission treats both the agency and the client employer as jointly responsible for compliance. [3] The only exemptions are positions where a specific federal, state, or local statute mandates a criminal background check (for example, certain childcare roles under the Social Services Law or FINRA-registered representatives). Industry custom alone does not create an exemption.
+
+## Before the conditional offer
+
+Criminal history cannot enter the hiring process in any form until after a conditional offer of employment is extended. The Commission's fact sheet spells out three concrete prohibitions. [2]
+
+First, job advertisements may not contain any reference to arrest or conviction history. Phrases such as "no felonies," "background check required," and "must have clean record" are per se violations that can trigger penalties without any showing of discriminatory intent. [3] Second, application forms and any agents acting on the employer's behalf may not ask whether an applicant has a criminal record, has open criminal cases, or must authorize a background check. Third, interviewers and recruiters may not ask questions about criminal history or attempt to discover it through informal channels.
+
+If an applicant voluntarily discloses a conviction during the interview, the employer must inform the applicant that any consideration of criminal history will happen only after a job offer is extended, then move the conversation to another topic and note the disclosure in the file. [2]
+
+## The two-tiered background check
+
+The 2021 amendments added an explicit sequencing requirement that catches many national employers off guard. A conditional offer may only be extended after all non-criminal screening — employment verification, education checks, professional-license confirmation, reference calls — has been completed and the applicant has passed. [3] Only after the conditional offer may the employer request or review the applicant's criminal history.
+
+This means consumer reporting agencies must produce separate non-criminal and criminal reports. If a CRA cannot bifurcate the report, the employer must implement an internal system that segregates the criminal-history portion from the hiring decision-maker until the conditional offer is on the table. [3] The Commission also instructs employers to avoid the phrase "background check" in any pre-offer authorization language; instead, use "consumer report" or "investigative consumer report" to avoid dissuading applicants with criminal histories from applying. [3]
+
+Driving records present a special case because they contain both criminal and non-criminal information. The Guidance directs employers to defer review of driving records until after the conditional offer. [3]
+
+## After the conditional offer — the Fair Chance Process
+
+Once the conditional offer is extended, the employer may ask about misdemeanor and felony convictions and pending criminal cases. The permissible question must exclude sealed records, adjournments in contemplation of dismissal, violations (such as disorderly conduct), and youthful-offender or juvenile-delinquency adjudications — even if they appear on a background check. [2]
+
+If the criminal-history review does not change the employer's decision, no further action is required and the applicant may be hired. If, however, the employer is considering withdrawing the offer, it must complete three mandatory steps before doing so.
+
+**Step 1 — Conduct the Fair Chance Analysis.** The employer must evaluate the applicant's record against the Article 23-A factors (for convictions) or the NYC Fair Chance Factors (for pending charges). These factors include New York's public policy favoring employment of people with criminal records, the specific duties of the job, the bearing of the offense on fitness for those duties, the time elapsed since the events leading to the conviction, the applicant's age at the time of the offense (age 25 or younger is a statutory mitigating factor), the seriousness of the conduct, any evidence of rehabilitation, and the employer's legitimate interest in protecting property or safety. [2] [3] A certificate of relief from disabilities or certificate of good conduct creates a presumption of rehabilitation that the employer must overcome to deny employment. [2]
+
+**Step 2 — Deliver the Fair Chance Notice.** The employer must provide the applicant with (a) a written copy of the Fair Chance Analysis explaining which factors weigh for and against the applicant, and (b) a copy of every document used to determine the applicant has a criminal record — the background-check report, internet printouts, public records, or a written summary of any oral information received. [2]
+
+**Step 3 — Hold the position open for five business days.** The employer must keep the job available for at least five business days from the date the applicant receives the notice, giving the applicant time to respond with additional information, corrections, or evidence of rehabilitation. [2] If the applicant responds, the employer must revisit the analysis in light of the new information, issue an updated written determination, and again allow the applicant to respond before making a final decision.
+
+## Current employees — the 2021 expansion
+
+Before July 29, 2021, the Fair Chance Act applied only to applicants. The amendments extended the full Fair Chance Process to current employees who acquire a pending criminal charge or conviction during employment. [3] The employer must apply the NYC Fair Chance Factors (a modified Article 23-A list) and must additionally consider the employee's record of positive job performance. [3]
+
+An employer may place the employee on leave while conducting the analysis, but the Commission considers any delay beyond five business days presumptively unreasonable. [3] The same notice, document-disclosure, and response-period requirements apply.
+
+## Per se violations
+
+Certain acts are automatic violations regardless of intent or outcome. [3]
+
+- Printing or circulating any statement that limits employment based on arrest or conviction history.
+- Making any inquiry or statement about criminal history before the conditional offer.
+- Withdrawing a conditional offer without completing the full Fair Chance Process.
+- Taking adverse action against a current employee without completing the Fair Chance Process.
+- Failing to hold the position open for five business days after delivering the Fair Chance Notice.
+
+Each per se violation can independently trigger enforcement without any need for the Commission to prove discriminatory motive.
+
+## Penalties
+
+The Commission may assess civil penalties of up to $125,000 per violation; willful, wanton, or malicious conduct raises the cap to $250,000. [4] Remedies also include compensatory damages (emotional distress, back pay, front pay), punitive damages, attorney's fees, mandatory policy changes, staff training, and monitoring. In 2024 the Commission settled a case against a pharmaceutical company for $75,000 plus policy overhaul after an investigation found the company's employment application informed applicants they would be subject to a criminal background check — a single per se violation. [1]
+
+## How PreciseHire helps
+
+Our [criminal-records workflow](/services/criminal-records) is built around the two-tiered sequencing the Commission requires. Non-criminal verifications (employment, education, professional licenses) run first and clear before the criminal search is ordered, so the conditional-offer gate is never breached. When a record does surface, PreciseHire's adjudication module walks your team through the Article 23-A and NYC Fair Chance Factors with pre-populated fields, generates the written Fair Chance Notice in the Commission's required format, and timestamps the five-business-day hold so no one accidentally moves to the next candidate too early.
+
+If you are hiring in New York City and want a screening partner that keeps the Fair Chance Process on rails, [talk to a PreciseHire compliance specialist](/contact) — we will audit your current workflow against the 2021 Guidance and flag every gap before the Commission does.
+
+## tldr
+
+- The NYC Fair Chance Act applies to all employers with four or more employees in the city and — since July 2021 — covers both applicants and current employees with pending charges or new convictions.
+- Criminal history may not enter the hiring process until after a conditional offer that follows completion of all non-criminal screening (the "two-tiered" background check).
+- If an employer considers withdrawing the offer, it must conduct a written Fair Chance Analysis using Article 23-A factors, deliver the analysis plus all supporting documents to the applicant, and hold the position open for at least five business days.
+- Per se violations (e.g., stating "background check required" on a job ad) trigger penalties up to $125,000 — or $250,000 for willful conduct — with no need to prove discriminatory intent.
+
+---
+`
   }
 ];
 
