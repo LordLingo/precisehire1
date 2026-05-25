@@ -184,6 +184,12 @@ export default function Trust() {
         description="Verify our SOC 2 Type II attestation, PBSA membership, and FCRA-aligned workflow. Scope, cadence, and how to request the underlying reports."
         canonical="https://precisehire.com/trust"
         image="https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/og-trust-kxdMApRDXBrfMPoEZLm84t.png"
+        keywords={[
+          "SOC 2 background check provider",
+          "PBSA accredited screening",
+          "FCRA compliant background check",
+          "background check verification",
+        ]}
       />
 
       {/* HERO */}

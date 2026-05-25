@@ -105,6 +105,13 @@ export default function Pricing() {
         description="Get a custom quote in 1 business hour. Transparent per-check pricing from $24.95 with no setup fees, no minimums, and U.S.-based compliance support included."
         canonical="https://precisehire.com/pricing"
         image="https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/og-pricing-V2X5XCSovncYhRvXDUdi3r.png"
+        keywords={[
+          "background check pricing",
+          "employment background check cost",
+          "pre-employment screening pricing",
+          "FCRA background check quote",
+          "per-check background screening price",
+        ]}
       />
 
       {/* HERO — quote-in-1-hour promise */}

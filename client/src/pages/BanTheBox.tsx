@@ -268,6 +268,12 @@ export default function BanTheBox() {
         description="An employer's guide to ban-the-box and fair-chance hiring laws across 16 states, DC, the U.S. Virgin Islands, and 20+ cities and counties. Includes a directory, employer playbook, and FAQs."
         canonical="https://precisehire.com/resources/ban-the-box"
         image="https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/og-banthebox-SDr8NMsoTeW3JpGURzypRr.png"
+        keywords={[
+          "ban the box laws by state",
+          "fair chance hiring",
+          "ban the box employer compliance",
+          "fair chance act 2026",
+        ]}
         jsonLd={jsonLd}
       />
 

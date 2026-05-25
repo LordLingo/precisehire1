@@ -40,6 +40,13 @@ export default function Compliance() {
         description="Every Precise Hire report is built around FCRA, EEOC, and state ban-the-box compliance. SOC 2 Type II security, GDPR-aware international workflows."
         canonical="https://precisehire.com/compliance"
         image="https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/og-compliance-gGN3dLNXfQ3Pa9r6LhcFmM.png"
+        keywords={[
+          "FCRA compliance background check",
+          "EEOC background check compliance",
+          "ban the box compliance",
+          "SOC 2 background check",
+          "adverse action FCRA",
+        ]}
       />
       {/* HERO — editorial split */}
       <section className="relative overflow-hidden bg-[#FAF7F2]">
