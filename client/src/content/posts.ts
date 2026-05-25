@@ -1536,6 +1536,165 @@ If you are hiring in New York City and want a screening partner that keeps the F
 
 ---
 `
+  },
+  {
+    slug: "illinois-joqaa-employer-compliance-checklist-2026",
+    title: "Illinois Job Opportunities for Qualified Applicants Act: Employer Compliance Checklist (2026)",
+    metaTitle: "Illinois JOQAA Employer Compliance Checklist 2026",
+    description:
+      "Illinois employers with 15+ staff must follow JOQAA timing rules and the IHRA conviction-record process. The 2026 employer compliance checklist.",
+    category: "Compliance",
+    tags: ["Illinois", "Ban the Box", "Criminal Records", "JOQAA", "IHRA"],
+    author: "PreciseHire Editorial",
+    authorSlug: "precisehire-team",
+    datePublished: "2026-05-22",
+    readingMin: 7,
+    image: ASSETS.serviceCriminal,
+    excerpt:
+      "Illinois employers with 15+ staff must follow JOQAA timing rules and the IHRA conviction-record process. The 2026 employer compliance checklist.",
+    markdown: `Illinois is one of the harder states to get fair-chance hiring right, and not because the rules are obscure. The problem is that two statutes — the Job Opportunities for Qualified Applicants Act and the Illinois Human Rights Act's conviction-record amendment — govern two different parts of the same hiring decision, and most employers learn the difference only after a charge is filed. JOQAA controls *when* you can ask about criminal history. The IHRA controls *what you can do* with the answer. Miss either and you have a problem.
+
+This guide is the 2026 compliance checklist for Illinois employers with fifteen or more employees. It walks the full hiring sequence — job posting, application, interview, conditional offer, report review, preliminary adverse decision, response window, and final decision — and names the statutory citations behind each step. If you operate in multiple states, treat Illinois as the more demanding overlay; the reverse is rarely true.
+
+## Who JOQAA covers and when it applies
+
+The Job Opportunities for Qualified Applicants Act took effect January 1, 2015, and is codified at [820 ILCS 75](https://www.ilga.gov/Legislation/ILCS/Articles?ActID=3564&ChapterID=68&Print=True). It applies to any private employer or employment agency with fifteen or more employees in the current or preceding calendar year (820 ILCS 75/10). Government employers are governed by separate provisions; the rules below are for the private-sector version.
+
+The statute's core prohibition is in section 15(a): an employer may not inquire about, consider, or require disclosure of an applicant's criminal record or criminal history until the applicant has been determined qualified for the position and either notified that they have been selected for an interview, or, if there is no interview, until after a conditional offer of employment has been extended. In practice, the first half of that sentence is the line most employers cross unintentionally — a checkbox on the application form, a question in an automated phone screen, a knockout filter in an applicant-tracking system that flags candidates who decline to provide criminal-history information. Each of those is a violation, even if no human ever reads the answer.
+
+There are three statutory exceptions in section 15(b): positions where federal or state law mandates the exclusion of applicants with certain convictions, positions that require a standard fidelity bond and where a specified conviction would disqualify the applicant from that bond, and employees licensed under the Emergency Medical Services Systems Act. Section 15(c) preserves an employer's right to *notify* applicants in writing — on the job posting itself — of the specific offenses that will disqualify them due to federal or state law or the employer's own policy. The distinction matters: you may tell applicants what disqualifies them, but you still cannot ask them to disclose their record until the timing trigger has been met.
+
+## The IHRA overlay: substantial relationship and interactive assessment
+
+JOQAA tells an Illinois employer when to ask. The 2021 amendment to the Illinois Human Rights Act tells the employer what to do with the answer. Public Act 101-0656, signed March 23, 2021, added "conviction record" to the IHRA's list of protected characteristics and built in a substantive process that closely tracks the federal EEOC's individualized-assessment model. The [Illinois Department of Human Rights' Conviction Record Protection FAQ](https://dhr.illinois.gov/conviction-record-protection-frequently-asked-questions.html) is the authoritative employer guide.
+
+Before adverse action, the employer must determine either (a) a substantial relationship between one or more prior offenses and the job, or (b) an unreasonable risk to property or to the safety or welfare of specific individuals or the public. That determination cannot be made in the abstract. The IDHR requires consideration of six mitigating factors: time since the conviction, number of convictions, nature and severity, facts or circumstances surrounding the conviction, the applicant's age at the time, and evidence of rehabilitation.
+
+If the preliminary decision is to deny employment, the IHRA requires a written preliminary notice identifying the specific conviction(s) at issue. The applicant has at least five business days to dispute the accuracy of the record or present mitigation evidence. The employer cannot make a final decision before that window elapses. After the final decision, the employer must issue a written final notice that includes the right to file an IDHR charge and the federal FCRA dispute rights.
+
+## How JOQAA and the IHRA stack on top of the federal FCRA
+
+Every step above runs inside the federal Fair Credit Reporting Act framework, not next to it. An Illinois employer using a consumer reporting agency to obtain a criminal-history report must still provide the FCRA stand-alone disclosure and authorization, the pre-adverse action notice with a copy of the report and the CFPB Summary of Your Rights, and the final adverse-action notice — see [15 U.S.C. § 1681b(b)(2)–(3)](https://www.law.cornell.edu/uscode/text/15/1681b) for the statutory text. The IHRA's five-business-day response window runs concurrently with the FCRA's "reasonable time" window, and the better practice is to satisfy both with the same notice package rather than treating them as separate workflows. PreciseHire's [criminal-records workflow](https://precisehire.com/services/criminal-records) is designed to produce a single, dual-compliant document set for Illinois clients on every adverse-action file.
+
+## Penalties: what IDOL and IDHR can do
+
+The JOQAA penalty schedule is moderate at first contact and escalates quickly. As of June 16, 2025, section 20 (amended by Public Act 104-2) authorizes the [Illinois Department of Labor](https://labor.illinois.gov/laws-rules/fls/job-opportunities-for-qualified-applicants-act.html) to issue a written warning for a first violation with thirty days to remedy, up to $500 for a second violation or an unremedied first, up to an additional $1,500 for a third or for one unremedied after sixty days, and an additional $1,500 every thirty days past ninety without compliance.
+
+The IHRA side is more consequential. A failure to follow the substantial-relationship test, the six-factor analysis, or the notice sequence is a civil-rights violation. Applicants have three hundred days to file an IDHR charge. Remedies include back pay, front pay, compensatory damages, attorney's fees, and orders to hire.
+
+## The 2026 compliance checklist
+
+The operational sequence below is what we recommend Illinois clients run, in order, on every requisition that involves a criminal-history component:
+
+1. Remove any criminal-history question from the job application, ATS knockout logic, and automated phone screen. If the role falls into a section 15(b) exception, document the legal basis in the requisition file.
+2. If federal or state law disqualifies certain convictions, list those offenses in the job posting under section 15(c). Do not ask applicants to self-report.
+3. Run resume review and qualifications screening on job-related criteria alone, without any criminal-history input.
+4. After the interview invitation or conditional offer, trigger the FCRA disclosure and authorization that meets [15 U.S.C. § 1681b(b)(2)(A)](https://www.law.cornell.edu/uscode/text/15/1681b).
+5. When the report returns, run the six-factor IHRA analysis on any conviction being considered for adverse action and document it in the requisition file.
+6. If the preliminary decision is to deny, send a combined FCRA pre-adverse and IHRA preliminary notice with the report, the CFPB Summary of Your Rights, the specific conviction(s), and a clear five-business-day response window.
+7. Wait the full window. Re-run the six-factor analysis on any response.
+8. If the decision is final, send a combined FCRA final adverse-action notice and IHRA final notice with the right to file an IDHR charge and the FCRA dispute right.
+
+## What this means for employers
+
+The two failures we see most often are timing failures and documentation failures. Timing failures are the JOQAA ones — an old application template, a recruiter who asks during a phone screen, an ATS field that still requires a yes/no on criminal history. Documentation failures are the IHRA ones — the six-factor analysis exists in someone's head but not in the file, the preliminary notice goes out by email without identifying the specific conviction, or the final notice goes out before the five-business-day response window has elapsed. Both are fixable with a written workflow and a single dual-compliant notice template. Both are expensive if you defer them until the first charge.
+
+If you run hiring in Illinois and you have not reviewed your application form, your ATS knockout rules, and your adverse-action templates against JOQAA and the 2021 IHRA amendment, [talk to a PreciseHire compliance specialist](https://precisehire.com/contact). We will walk through your current sequence, flag where it deviates from 820 ILCS 75 and the IHRA's conviction-record process, and leave you with a written checklist you can put in front of counsel. If you also operate in California or New York City, our [California Fair Chance Act guide](https://precisehire.com/resources/california-fair-chance-act-employer-compliance-guide-2026) and the [Ban the Box landing page](https://precisehire.com/resources/ban-the-box) will show you how the Illinois process maps onto the parallel obligations in those jurisdictions.
+
+## tldr
+
+- JOQAA (820 ILCS 75) applies to Illinois private employers with 15+ staff and bars any criminal-history inquiry until the applicant is selected for an interview or, absent an interview, has received a conditional offer; penalties under the 2025 amendment escalate from a written warning to $1,500 per thirty days for unremedied violations.
+- The 2021 Illinois Human Rights Act amendment (Public Act 101-0656) requires a substantial-relationship or unreasonable-risk analysis using six mitigating factors before any adverse decision based on a conviction record, plus written preliminary and final notices with at least five business days for the applicant to respond.
+- Stack JOQAA timing, the IHRA process, and the federal FCRA (15 U.S.C. § 1681b(b)) into a single, documented adverse-action workflow — both Illinois agencies and the federal regulator look at the same file, and a workflow that satisfies all three is the only one that will hold up on review.
+
+> Not legal advice. Always consult employment counsel for sensitive cases.
+`
+  },
+  {
+    slug: "massachusetts-cori-employer-compliance-guide-2026",
+    title: "Massachusetts CORI for Employers: A 2026 Compliance Guide",
+    metaTitle: "Massachusetts CORI Compliance Guide for Employers (2026)",
+    description:
+      "Massachusetts runs two background-check rule sets in parallel — CORI access mechanics and the c. 151B anti-discrimination overlay. The 2026 employer playbook.",
+    category: "Compliance",
+    tags: ["Massachusetts", "CORI", "Ban the Box", "Criminal Records", "State Compliance"],
+    author: "PreciseHire Editorial",
+    authorSlug: "precisehire-team",
+    datePublished: "2026-05-25",
+    readingMin: 7,
+    image: ASSETS.serviceCriminal,
+    excerpt:
+      "Massachusetts runs two background-check rule sets in parallel. CORI controls how you obtain criminal records through iCORI; Chapter 151B controls what you may consider after they arrive. Here is the 2026 employer playbook.",
+    markdown: `Massachusetts runs two background-check rule sets in parallel, and most compliance failures come from employers treating them as one. The Criminal Offender Record Information statute (MGL c. 6 § 171A and the regulations at 803 CMR 2.00) controls **how** you obtain criminal records through the iCORI system. The anti-discrimination statute (MGL c. 151B § 4(9) and § 4(9-1/2)) controls **what** you may consider after they arrive. Run them as one process and you can draw a Massachusetts Commission Against Discrimination charge or lose iCORI access entirely, even on an accurate report. This is the 2026 PreciseHire playbook for hiring in Massachusetts.
+
+## Who CORI covers
+
+The CORI framework reaches any private employer — large or small — who obtains criminal record information, whether directly from the Department of Criminal Justice Information Services through iCORI or indirectly through a consumer reporting agency. Healthcare facilities, schools, banks, religious organizations working with children, and security companies have **Required** access levels under 803 CMR 2.05 that return more data than the **Standard** access available to commercial employers. The rest of this guide assumes Standard access unless otherwise noted. The ban-the-box rule at § 4(9-1/2) reaches further: it applies to **any** employer using a written initial application form, regardless of whether the employer ever runs a formal background check. If your ATS has a checkbox asking about conviction history, you are inside the statute.
+
+## What iCORI Standard access actually returns
+
+The iCORI system applies its own filter before sending a record back. Under the Mass.gov access-levels schedule, **Standard access** returns convictions for murder, manslaughter, or sex offenses regardless of age; misdemeanor convictions less than five years old; felony convictions less than ten years old; and pending charges. The system does not return non-convictions, sealed or juvenile records, civil offenses, or convictions older than those windows. That filter is the floor, not the ceiling — § 4(9) requires the employer to apply a stricter second filter.
+
+## The lookback math employers must enforce themselves
+
+Section 4(9) bars an employer from requesting, recording, or holding against an applicant a misdemeanor conviction where the conviction date or completion of incarceration occurred **three or more years prior** to application, unless a new offense occurred within those three years. It also bars any arrest not resulting in conviction, six first-conviction misdemeanors (drunkenness, simple assault, speeding, minor traffic violations, affray, disturbance of the peace), and any sealed or expunged record.
+
+That three-year misdemeanor cap is two years shorter than iCORI Standard returns. A four-year-old misdemeanor will arrive on your CORI report and your hiring manager must ignore it. Building the three-year cutoff into the decision workflow — not relying on what iCORI shows you — is how Massachusetts charges are won and lost. The statute imposes no parallel cap on felonies, so the practical felony ceiling is the ten-year iCORI window. The EEOC Title VII individualized-assessment standard still applies.
+
+## Ban-the-box: the initial-application-form trigger
+
+Section 4(9-1/2) prohibits an employer from requesting criminal record information **on its initial written application form** unless a federal or state law creates a mandatory or presumptive disqualification for the position, or the employer is statutorily barred from employing persons with certain convictions. Unlike California or NYC, which use a **conditional-offer** trigger, Massachusetts uses an **application-form** trigger — the employer may inquire at the interview stage or any time after the application is submitted, just not on the form itself. Most multi-state employers configure their ATS on a California or NYC timeline and forget that Massachusetts allows earlier inquiry.
+
+## The Acknowledgment Form, written CORI policy, and 5+-checks threshold
+
+Before requesting a CORI from iCORI, the employer must obtain a signed CORI Acknowledgement Form from the applicant. Under 803 CMR 2.05, the form must include the applicant's full name, date of birth, last six digits of Social Security number, mother's maiden name, and place of birth, plus a statement of the purpose for the request. The signed form is valid for one year unless rescinded.
+
+Any employer that conducts five or more criminal background investigations per year — whether from iCORI directly or through a CRA — must maintain a **written CORI policy** under § 171A. The DCJIS Model Policy specifies that the policy must identify the person responsible for CORI use, require verification of identity before each request, restrict use of the CORI to the stated purpose, require secondary-dissemination logs, require destruction of CORI records consistent with retention rules, and require staff training before any access. The five-check threshold is low. Most PreciseHire clients exceed it before the end of January.
+
+## The Massachusetts adverse-action sequence
+
+Section 171A imposes a sequence that runs **on top of** — not instead of — the federal FCRA pre-adverse process at 15 U.S.C. § 1681b(b)(3):
+
+| Step | Source | Requirement |
+|---|---|---|
+| Confirm identity | 803 CMR 2.10 | Compare DOB and identifiers with the applicant before relying on the record. |
+| Provide a copy of the CORI | MGL c. 6 § 171A | Give the applicant a copy **before questioning them about it**. |
+| Provide the written CORI policy | MGL c. 6 § 171A | If you run 5+ checks per year, hand over the policy with the CORI. |
+| Identify the specific entries | MGL c. 6 § 171A | Name which entries are the basis of the potential adverse action. |
+| Provide dispute information | DCJIS guidance | Explain how to correct the record through DCJIS. |
+| FCRA pre-adverse notice | 15 U.S.C. § 1681b(b)(3) | If the CORI came through a CRA, send the pre-adverse notice with the report and FCRA Summary of Rights. |
+| Reasonable waiting period | FCRA + state best practice | Allow at least five business days for response. |
+| Final adverse-action notice | FCRA + § 171A | Document in writing and send the final notice. |
+
+The critical Massachusetts wrinkle is the pre-questioning copy. The federal FCRA only requires a copy before taking action; § 171A requires it before even discussing the record. Skip that step and you are in DCJIS territory.
+
+## Retention and destruction
+
+Under 803 CMR 2.13, personal CORI records and the associated dissemination logs must be **destroyed no later than seven years from the date of receipt** for housing decisions and **one year from the date of receipt** when used for employment, volunteer, or licensing decisions, unless a longer retention is required by another statute. The signed Acknowledgement Form must be retained for one year from signing.
+
+That one-year clock conflicts with two other regimes most multi-state employers run in parallel — the EEOC personnel-record rule at 29 CFR 1602.14 (one year minimum, longer if a charge is pending) and the FCRA five-year statute of repose at 15 U.S.C. § 1681p. The clean default for Massachusetts CORI documents specifically is one year on the calendar and shred — but the surrounding hiring file (application, disclosure, authorization, decision letter) should follow the longer FCRA-aligned five-year schedule we cover in our [FCRA recordkeeping guide](https://precisehire.com/resources/fcra-recordkeeping-requirements-employers-2026).
+
+## Penalty exposure
+
+Section 171A violations can trigger DCJIS investigation, a hearing, and sanctions that include suspending the employer's iCORI access. For an employer who runs continuous hiring in Massachusetts, suspension of iCORI is functionally a hiring freeze.
+
+Section 4(9) and § 4(9-1/2) violations are civil-rights violations under c. 151B, filed with the Massachusetts Commission Against Discrimination within 300 days of the act. Remedies include back pay, front pay, compensatory damages, attorney's fees, and injunctive relief. MCAD has been active over the last three years on initial-application-form cases — the "checked the box" violations — and a recent settlement track puts the practical exposure per incident comfortably into five figures.
+
+## What this means for employers
+
+Two patterns account for most Massachusetts CORI charges PreciseHire investigates: the form-design failure (an old application template still asks the conviction question on page one) and the lookback failure (a hiring manager relies on an iCORI five-year misdemeanor return without applying the § 4(9) three-year filter). Both are fixable with one written workflow, one combined notice template, and one disciplined decision matrix.
+
+A clean Massachusetts intake also depends on running CORI through the same workflow that handles your [criminal-records process](https://precisehire.com/services/criminal-records) elsewhere — same identity verification, same disclosure and authorization, same dispute path, and same retention clock. If you operate in California, NYC, or Illinois alongside Massachusetts, the [Ban the Box jurisdiction directory](https://precisehire.com/resources/ban-the-box) is the fastest way to see where each state's trigger sits and reconcile your single application form to all of them. When the state-by-state interplay starts to break your applicant tracking system, [talk to a PreciseHire compliance specialist](https://precisehire.com/contact). We will walk through your current setup, flag the gaps, and leave you with a written checklist.
+
+## tldr
+
+- Massachusetts runs two parallel rule sets: CORI access mechanics (MGL c. 6 § 171A, 803 CMR 2.00) and the anti-discrimination overlay (MGL c. 151B § 4(9) and § 4(9-1/2)).
+- iCORI Standard returns misdemeanors within five years, but § 4(9) caps employer consideration at three years — the gap is the employer's responsibility.
+- Ban-the-box bars conviction questions on the initial written application form; § 171A requires giving the applicant a copy of the CORI before questioning them, on top of the federal FCRA pre-adverse process.
+- CORI records must be destroyed one year after receipt under 803 CMR 2.13. Employers running five or more checks per year must maintain and distribute a written CORI policy.
+
+> Not legal advice. Always consult employment counsel for sensitive cases.
+`
   }
 ];
 
