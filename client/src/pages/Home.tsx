@@ -105,13 +105,7 @@ export default function Home() {
           "pre-employment screening",
           "criminal background check for employers",
           "drug testing for employers",
-          "MVR motor vehicle record check",
-          "employment verification service",
           "PBSA accredited background check",
-          "SOC 2 background check provider",
-          "adverse action notice FCRA",
-          "ban the box compliance",
-          "Precise Hire",
         ]}
         jsonLd={HOMEPAGE_JSONLD}
       />
