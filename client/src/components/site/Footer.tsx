@@ -17,8 +17,7 @@ export default function Footer() {
               <span className="inline-flex h-11 w-11 items-center justify-center rounded-md bg-white/95 p-1">
                 <img
                   src="/brand/precisehire-logo-icon.png"
-                  alt=""
-                  aria-hidden="true"
+                  alt="Precise Hire logo"
                   className="h-full w-auto"
                   draggable={false}
                 />

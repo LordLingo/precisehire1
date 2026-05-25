@@ -99,6 +99,20 @@ export default function Home() {
         description="FCRA-compliant employment background checks, drug testing, MVR, and verifications — most reports back in under 4 hours. Trusted by employers for 22+ years."
         canonical="https://precisehire.com/"
         image="https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/og-home-eKHpe6YmPeUxLLSrGYWz87.png"
+        keywords={[
+          "employment background check",
+          "FCRA compliant background check",
+          "pre-employment screening",
+          "criminal background check for employers",
+          "drug testing for employers",
+          "MVR motor vehicle record check",
+          "employment verification service",
+          "PBSA accredited background check",
+          "SOC 2 background check provider",
+          "adverse action notice FCRA",
+          "ban the box compliance",
+          "Precise Hire",
+        ]}
         jsonLd={HOMEPAGE_JSONLD}
       />
 
@@ -107,8 +121,7 @@ export default function Home() {
         {/* Decorative swooshes (behind everything else) */}
         <img
           src={ASSETS.swooshSky}
-          alt=""
-          aria-hidden="true"
+          alt="Sky-blue brand swoosh accent"
           className="pointer-events-none select-none absolute -top-20 -left-24 w-[520px] opacity-70 rotate-[-15deg]"
         />
         <div className="container relative pt-12 lg:pt-20 pb-16 lg:pb-24 grid lg:grid-cols-12 gap-10 items-center">
@@ -163,7 +176,7 @@ export default function Home() {
                 <div aria-hidden="true" className="pointer-events-none absolute -right-4 -top-10 w-[min(420px,_calc(100%+1rem))] overflow-hidden">
                   <img
                     src={ASSETS.swooshCoral}
-                    alt=""
+                    alt="Coral brand swoosh accent framing the hero portrait"
                     className="select-none w-full opacity-80 rotate-[12deg] motion-safe:transition-transform motion-safe:duration-[900ms] motion-safe:ease-out group-hover:rotate-[14deg] group-hover:translate-x-1"
                   />
                 </div>
@@ -507,7 +520,7 @@ export default function Home() {
                 />
               </div>
             </Reveal>
-            <img src={ASSETS.swooshSky} alt="" aria-hidden="true" className="pointer-events-none select-none absolute -bottom-10 -right-10 w-72 opacity-60" />
+            <img src={ASSETS.swooshSky} alt="Sky-blue brand swoosh accent in the lower right corner of the dashboard preview" className="pointer-events-none select-none absolute -bottom-10 -right-10 w-72 opacity-60" />
           </div>
           <div className="lg:col-span-6 order-1 lg:order-2">
             <Reveal>
@@ -644,7 +657,7 @@ export default function Home() {
       <section className="container pb-24">
         <Reveal>
           <div className="relative overflow-hidden rounded-[32px] bg-[#0B1F3A] text-white px-8 lg:px-16 py-14 lg:py-20">
-            <img src={ASSETS.handshake} alt="" aria-hidden="true" className="absolute inset-0 size-full object-cover opacity-25" />
+            <img src={ASSETS.handshake} alt="Hiring manager and new employee shaking hands after a clean background check" className="absolute inset-0 size-full object-cover opacity-25" />
             <div className="absolute inset-0 bg-gradient-to-r from-[#0B1F3A]/95 via-[#0B1F3A]/80 to-[#0B1F3A]/40" />
             <div className="relative grid lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-8">

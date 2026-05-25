@@ -1,7 +1,9 @@
-# Custom OG images for top-tier pages
+# Fix Google Search Console "Page with redirect"
 
-- [ ] Generate 5 OG images (Home, Pricing, Compliance, Ban the Box, Trust) at 1200×630
-- [ ] Upload all to webdev CDN
-- [ ] Wire each <SEO image="..."> per page
-- [ ] Update default og:image in client/index.html
-- [ ] TS check, save checkpoint, deliver
+- [ ] Extract every URL from sitemap.xml
+- [ ] curl -I each URL on precisehire.com to find 3xx responses
+- [ ] Group by redirect type (trailing slash, http→https, old slug, missing route, www→apex)
+- [ ] Decide fix strategy per group
+- [ ] Update sitemap.xml to canonical URLs OR fix the redirect at app level
+- [ ] Re-probe to confirm 200 everywhere
+- [ ] Checkpoint + instructions for user to resubmit in GSC

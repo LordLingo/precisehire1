@@ -13,6 +13,7 @@ type Props = {
   image?: string;
   noindex?: boolean;
   jsonLd?: object | object[];
+  keywords?: string[];
 };
 
 const DEFAULT_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/og-home-eKHpe6YmPeUxLLSrGYWz87.png";
@@ -37,11 +38,14 @@ function setLink(rel: string, href: string) {
   el.setAttribute("href", href);
 }
 
-export default function SEO({ title, description, canonical, image, noindex, jsonLd }: Props) {
+export default function SEO({ title, description, canonical, image, noindex, jsonLd, keywords }: Props) {
   useEffect(() => {
     document.title = title;
     setMeta('meta[name="description"]', "name", "description", description);
     setMeta('meta[name="robots"]', "name", "robots", noindex ? "noindex,nofollow" : "index,follow,max-image-preview:large");
+    if (keywords && keywords.length > 0) {
+      setMeta('meta[name="keywords"]', "name", "keywords", keywords.join(", "));
+    }
 
     const canon = canonical || (typeof window !== "undefined" ? `https://precisehire.com${window.location.pathname}` : "");
     if (canon) setLink("canonical", canon);
@@ -70,7 +74,7 @@ export default function SEO({ title, description, canonical, image, noindex, jso
         document.head.appendChild(s);
       });
     }
-  }, [title, description, canonical, image, noindex, jsonLd]);
+  }, [title, description, canonical, image, noindex, jsonLd, keywords]);
 
   return null;
 }
