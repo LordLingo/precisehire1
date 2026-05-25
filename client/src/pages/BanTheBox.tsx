@@ -56,7 +56,7 @@ const JURISDICTIONS: Jurisdiction[] = [
   { name: "Connecticut", state: "CT", scope: "state", stage: "After application", effective: "Jan 1, 2017" },
   { name: "District of Columbia", state: "DC", scope: "state", stage: "Conditional offer", effective: "Dec 17, 2014" },
   { name: "Gainesville, FL", state: "FL", scope: "city", stage: "Conditional offer", effective: "Jan 2023" },
-  { name: "Hawaii", state: "HI", scope: "state", stage: "Conditional offer", effective: "Jul 15, 1998" },
+  { name: "Hawaii", state: "HI", scope: "state", stage: "Conditional offer", effective: "Jul 15, 1998", link: "/resources/hawaii-ban-the-box-employer-compliance-guide-2026" },
   { name: "Illinois", state: "IL", scope: "state", stage: "Deemed qualified", effective: "Sep 15, 2020", link: "/resources/illinois-joqaa-employer-compliance-checklist-2026" },
   { name: "Chicago, IL", state: "IL", scope: "city", stage: "Conditional offer", effective: "Apr 24, 2023" },
   { name: "Waterloo, IA", state: "IA", scope: "city", stage: "Conditional offer", effective: "Jul 1, 2020" },

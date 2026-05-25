@@ -190,7 +190,7 @@ export default function Compliance() {
           <div className="flex flex-wrap items-center justify-between gap-x-8 gap-y-3">
             {/* Three real attestation/membership marks */}
             <Link
-              href="/trust"
+              href="/trust#soc2"
               className="group inline-flex items-center gap-3 text-[#0B1F3A]/80 hover:text-[#0B1F3A]"
               aria-label="SOC 2 Type II attestation — verify scope and auditor"
             >
@@ -206,7 +206,7 @@ export default function Compliance() {
             </Link>
 
             <Link
-              href="/trust"
+              href="/trust#pbsa"
               className="group inline-flex items-center gap-3 text-[#0B1F3A]/80 hover:text-[#0B1F3A]"
               aria-label="PBSA member — verify"
             >
@@ -222,7 +222,7 @@ export default function Compliance() {
             </Link>
 
             <Link
-              href="/trust"
+              href="/trust#fcra"
               className="group inline-flex items-center gap-3 text-[#0B1F3A]/80 hover:text-[#0B1F3A]"
               aria-label="FCRA-aligned compliance workflow — verify"
             >

@@ -1607,6 +1607,14 @@ If you run hiring in Illinois and you have not reviewed your application form, y
 - The 2021 Illinois Human Rights Act amendment (Public Act 101-0656) requires a substantial-relationship or unreasonable-risk analysis using six mitigating factors before any adverse decision based on a conviction record, plus written preliminary and final notices with at least five business days for the applicant to respond.
 - Stack JOQAA timing, the IHRA process, and the federal FCRA (15 U.S.C. § 1681b(b)) into a single, documented adverse-action workflow — both Illinois agencies and the federal regulator look at the same file, and a workflow that satisfies all three is the only one that will hold up on review.
 
+## Related resources
+
+- [California Fair Chance Act employer compliance guide (2026)](https://precisehire.com/resources/california-fair-chance-act-employer-compliance-guide-2026) — the conditional-offer trigger, written individualized assessment, and CRD enforcement posture.
+- [NYC Fair Chance Act employer compliance guide (2026)](https://precisehire.com/resources/nyc-fair-chance-act-employer-compliance-guide-2026) — two-tier sequencing, Article 23-A factors, and the five-business-day hold.
+- [Massachusetts CORI compliance guide (2026)](https://precisehire.com/resources/massachusetts-cori-employer-compliance-guide-2026) — iCORI mechanics, the three-year § 4(9) misdemeanor cap, and the pre-questioning copy rule.
+- [Ban the Box jurisdiction directory](https://precisehire.com/resources/ban-the-box) — every state, city, and county overlay in one filterable table.
+- [Pre-adverse action notice requirements: timing, content, and the documents you must include](https://precisehire.com/resources/pre-adverse-action-notice-requirements-timing-content-and-documents) — the FCRA §615 building block that sits underneath every state overlay.
+
 > Not legal advice. Always consult employment counsel for sensitive cases.
 `
   },
@@ -1692,6 +1700,115 @@ A clean Massachusetts intake also depends on running CORI through the same workf
 - iCORI Standard returns misdemeanors within five years, but § 4(9) caps employer consideration at three years — the gap is the employer's responsibility.
 - Ban-the-box bars conviction questions on the initial written application form; § 171A requires giving the applicant a copy of the CORI before questioning them, on top of the federal FCRA pre-adverse process.
 - CORI records must be destroyed one year after receipt under 803 CMR 2.13. Employers running five or more checks per year must maintain and distribute a written CORI policy.
+
+## Related resources
+
+- [Illinois JOQAA employer compliance checklist (2026)](https://precisehire.com/resources/illinois-joqaa-employer-compliance-checklist-2026) — the 15-employee threshold, the IHRA six-factor analysis, and the JOQAA penalty schedule.
+- [California Fair Chance Act employer compliance guide (2026)](https://precisehire.com/resources/california-fair-chance-act-employer-compliance-guide-2026) — the conditional-offer trigger and the CRD individualized-assessment framework.
+- [NYC Fair Chance Act employer compliance guide (2026)](https://precisehire.com/resources/nyc-fair-chance-act-employer-compliance-guide-2026) — two-tier sequencing, Article 23-A factors, and per-se violations.
+- [Ban the Box jurisdiction directory](https://precisehire.com/resources/ban-the-box) — every state, city, and county overlay in one filterable table.
+- [FCRA recordkeeping requirements every employer should know in 2026](https://precisehire.com/resources/fcra-recordkeeping-requirements-employers-2026) — how the 1-year CORI clock fits into the broader FCRA / EEOC retention schedule.
+
+> Not legal advice. Always consult employment counsel for sensitive cases.
+`
+  },
+  {
+    slug: "hawaii-ban-the-box-employer-compliance-guide-2026",
+    title: "Hawaii Ban-the-Box: The Strictest Conviction Lookback in the Country (2026 Employer Guide)",
+    metaTitle: "Hawaii Ban the Box Employer Compliance Guide 2026",
+    description:
+      "Hawaii's HRS \u00a7 378-2.5 is the oldest state ban-the-box law and the strictest. The 2026 employer compliance playbook \u2014 conditional offer, 7/5 lookback, rational relationship.",
+    category: "Compliance",
+    tags: ["Hawaii", "Ban the Box", "Criminal Records", "HRS 378-2.5", "State Compliance"],
+    author: "PreciseHire Editorial",
+    authorSlug: "precisehire-team",
+    datePublished: "2026-05-27",
+    readingMin: 7,
+    image: ASSETS.serviceCriminal,
+    excerpt:
+      "Hawaii's HRS \u00a7 378-2.5 is the oldest state ban-the-box law (1998) and one of the strictest \u2014 a conditional-offer trigger, a 7-year felony / 5-year misdemeanor lookback that excludes incarceration time, and a written rational-relationship analysis on every adverse decision.",
+    markdown: `Hawaii's ban-the-box law is the oldest in the country, the strictest in the country, and the one most often miscalibrated by mainland employers. It was the first state law of its kind — [HRS § 378-2.5](https://law.justia.com/codes/hawaii/title-21/chapter-378/section-378-2-5/) took effect in 1998 — and it sits inside an anti-discrimination statute that treats *arrest and court record* as a protected category, not as a procedural checkbox. The result is the tightest set of guardrails any private employer in the United States has to operate inside. This is the 2026 PreciseHire compliance playbook for hiring in Hawaii.
+
+## Who § 378-2.5 covers
+
+Section 378-2.5 reaches **all** private employers in Hawaii, regardless of headcount. There is no small-employer carve-out the way there is in Illinois (15+ employees) or NYC (4+ employees). It also reaches **both prospective and current** employees — the Hawaii Supreme Court confirmed in *Wright v. Home Depot U.S.A., Inc.*, 111 Haw. 401, 142 P.3d 265 (2006), that the statute is not limited to applicants. If you can adjust the terms or conditions of someone's employment based on a conviction, § 378-2.5 governs the analysis.
+
+A category of public-sector and licensed-private employers is carved out by § 378-2.5(d) — the State, the Department of Education, the judiciary, the counties, financial institutions with federally insured deposits, armed security and detective agencies, airport / aircraft security positions covered by 49 U.S.C. §§ 44901 and 44936(a), insurance employers, private schools, and several DOH and DHS positions. If your role doesn't fit cleanly into one of those nineteen statutory exceptions, the default rules below apply.
+
+## The conditional-offer trigger
+
+Under § 378-2.5(b), an employer may inquire into and consider a prospective employee's conviction record **only after a conditional offer of employment has been extended**. That is a hard rule, with no statutory exceptions for ATS knockout questions, recruiter phone screens, or supplemental supplier forms. The [Hawaii Civil Rights Commission](https://labor.hawaii.gov/hcrc/) reads the prohibition broadly: any pre-offer question, automated filter, or third-party assessment that *causes* the employer to learn an applicant's conviction record is an unlawful pre-offer inquiry.
+
+The offer may be withdrawn only if the conviction record bears a **rational relationship** to the duties and responsibilities of the position (§ 378-2.5(a)). Rational relationship is a substantive test, not a label. Hawaii does not have a published multi-factor list like California's six factors or Illinois's six factors, but the HCRC's 2022 [Arrest-and-Court-Record Fact Sheet](https://labor.hawaii.gov/hcrc/files/2020/09/Arrest-Court-Record-2022.pdf) expects employers to be able to articulate, in writing, why a specific conviction connects to specific job duties. A boilerplate "any felony is disqualifying" policy will not survive HCRC review.
+
+## The 7/5/–incarceration lookback
+
+The 2020 amendment is the part most multi-state employers still get wrong. Senate Bill 2193, enacted as Act 51 of 2020 and effective September 15, 2020, tightened the prior 10-year lookback. As of 2026, the statute reads:
+
+| Conviction type | Maximum lookback | Incarceration time |
+|---|---|---|
+| Felony | 7 years | Excluded from the 7 years |
+| Misdemeanor | 5 years | Excluded from the 5 years |
+| Arrest without conviction | Not considerable | n/a |
+| DAG / DANC plea not resulting in conviction | Not considerable | n/a |
+
+The exclusion of incarceration time is the lookback detail mainland templates routinely miss. A felony conviction with a five-year sentence served in full effectively yields a *twelve*-calendar-year window of employer consideration in Hawaii — seven years post-release plus the five years inside. If the candidate disputes the length of incarceration, § 378-2.5(c) requires the employer to give them an opportunity to submit documentary evidence of the release date.
+
+## Arrests and deferred-plea outcomes
+
+HRS § 378-1 defines "arrest and court record" broadly to include questioning, custody, detention, charging, and trial — not just convictions — and § 378-2(a)(1) makes discrimination on the basis of arrest and court record an unlawful discriminatory practice. The combined effect is that an employer may not consider:
+
+- arrests that did not result in a conviction;
+- charges that were dismissed, nolle prossed, or acquitted;
+- Deferred Acceptance of Guilty (DAG) or Deferred Acceptance of No Contest (DANC) pleas that were not ultimately entered as convictions; or
+- juvenile adjudications protected by HRS § 571-84.
+
+If the report from your consumer reporting agency surfaces any of these, the safer rule is to document them out of the analysis in writing and proceed only on entries that meet the § 378-2.5(c) conviction definition.
+
+## How § 378-2.5 stacks on top of the federal FCRA
+
+The Fair Credit Reporting Act still applies. Every Hawaii hire that involves a consumer reporting agency triggers the [15 U.S.C. § 1681b(b)(2)](https://www.law.cornell.edu/uscode/text/15/1681b) stand-alone disclosure and authorization, the § 1681b(b)(3) pre-adverse-action notice with a copy of the report and the CFPB Summary of Your Rights, and the final adverse-action notice. The Hawaii layer adds the conditional-offer trigger, the 7/5 lookback, the incarceration carve-out, and the rational-relationship analysis on top of the federal sequence. The clean way to satisfy both regimes is to package the rational-relationship analysis as a written attachment to the pre-adverse-action notice — candidate sees the report, the analysis, and the dispute window in the same envelope. PreciseHire's [criminal-records workflow](https://precisehire.com/services/criminal-records) produces a single dual-compliant document set for Hawaii clients on every adverse-action file.
+
+## Enforcement
+
+Charges are filed with the Hawaii Civil Rights Commission within **180 days** of the alleged discriminatory practice — a tighter clock than the EEOC's 300-day window. The HCRC's [pre-complaint questionnaire](https://labor.hawaii.gov/hcrc/files/2023/11/PCQ-Employment-2023-FINAL.pdf) confirms the 180-day window. Available remedies under HRS § 368-17 include back pay, front pay, hiring or reinstatement, compensatory and punitive damages, and attorney's fees. Because *Wright v. Home Depot* extends § 378-2.5 to current employees, terminations and demotions are inside the statute too — not just refusals to hire.
+
+## The 2026 compliance checklist
+
+The operational sequence we recommend to Hawaii clients, in order, on every requisition that involves a criminal-history component:
+
+1. Strip every conviction question from the application form, ATS knockout logic, recruiter scripts, and any supplemental supplier intake. If the role qualifies for a § 378-2.5(d) exception, document the statutory basis in the requisition file.
+2. Run resume review and qualifications screening on job-related criteria alone. Do not commission a criminal background report.
+3. Extend a written conditional offer of employment. Make the contingency on a background check explicit.
+4. Trigger the FCRA stand-alone disclosure and authorization that meets [15 U.S.C. § 1681b(b)(2)(A)](https://www.law.cornell.edu/uscode/text/15/1681b).
+5. When the report returns, filter out arrests-without-conviction, DAG / DANC outcomes, and any conviction outside the 7-year felony or 5-year misdemeanor window measured post-release.
+6. For any conviction that remains, run a written rational-relationship analysis tied to the specific duties listed on the requisition.
+7. If the preliminary decision is to withdraw the offer, send a combined FCRA pre-adverse notice and HCRC rational-relationship memo with the report, the CFPB Summary of Your Rights, the specific conviction(s) being considered, and a reasonable response window (at least five business days as a best practice).
+8. If the candidate disputes the length of incarceration or the accuracy of the record, accept documentary evidence and re-run the lookback math.
+9. If the decision is final, send a combined FCRA final adverse-action notice that names the rational-relationship analysis as the basis for the decision and preserves the candidate's FCRA dispute rights.
+
+## What this means for employers
+
+Two failure patterns account for almost every Hawaii arrest-and-court-record charge PreciseHire reviews. The first is the *pre-offer inquiry*: an application form that asks about convictions, an ATS knockout that flags candidates who decline to answer, or a recruiter who slips the question into a phone screen. The second is the *stale lookback*: a national 10-year template applied to a Hawaii hire without subtracting incarceration. Both are operational rather than legal problems, and both are fixable with a documented workflow and one written notice template.
+
+The harder pattern is the rational-relationship analysis itself. Hawaii's "rational relationship" language is shorter than California's six factors or Illinois's six factors, but it is no less demanding — the HCRC expects the employer to articulate the connection between specific duties and the specific conviction. The cleanest way to defend that analysis is to capture it on the same page as the pre-adverse notice and store both in the requisition file.
+
+If you hire in Hawaii and you have not reviewed your application form, your ATS knockout rules, and your adverse-action templates against § 378-2.5 since the 2020 amendment, [talk to a PreciseHire compliance specialist](https://precisehire.com/contact). We will walk through your current sequence, flag where it deviates from the HCRC's 2022 fact sheet, and leave you with a written checklist you can put in front of counsel.
+
+## Related resources
+
+- [California Fair Chance Act employer compliance guide (2026)](https://precisehire.com/resources/california-fair-chance-act-employer-compliance-guide-2026) — the conditional-offer trigger and the CRD individualized-assessment framework.
+- [NYC Fair Chance Act employer compliance guide (2026)](https://precisehire.com/resources/nyc-fair-chance-act-employer-compliance-guide-2026) — two-tier sequencing, Article 23-A factors, and per-se violations.
+- [Illinois JOQAA employer compliance checklist (2026)](https://precisehire.com/resources/illinois-joqaa-employer-compliance-checklist-2026) — the 15-employee threshold and the IHRA six-factor analysis.
+- [Massachusetts CORI compliance guide (2026)](https://precisehire.com/resources/massachusetts-cori-employer-compliance-guide-2026) — iCORI mechanics and the three-year § 4(9) misdemeanor cap.
+- [Ban the Box jurisdiction directory](https://precisehire.com/resources/ban-the-box) — every state, city, and county overlay in one filterable table.
+
+## tldr
+
+- Hawaii's HRS § 378-2.5 is the oldest state ban-the-box law (1998) and applies to **all** private employers regardless of headcount, plus current employees as well as applicants.
+- Conviction inquiry is permitted **only after a conditional offer**, withdrawal is permitted **only if a rational relationship** exists, and the lookback is **7 years for felonies / 5 years for misdemeanors, excluding incarceration time** (Act 51 of 2020).
+- Arrests without conviction and DAG / DANC pleas may not be considered; nineteen statutory carve-outs in § 378-2.5(d) cover specific public-sector and licensed-private roles only.
+- HCRC charges must be filed within **180 days** of the act; document the rational-relationship analysis in writing and stack the Hawaii layer on top of the federal FCRA § 1681b(b) sequence — not next to it.
 
 > Not legal advice. Always consult employment counsel for sensitive cases.
 `
