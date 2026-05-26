@@ -41,7 +41,7 @@ type Stage =
 interface Jurisdiction {
   name: string;
   state: string; // 2-letter
-  scope: "state" | "city" | "county" | "territory";
+  scope: "state" | "city" | "county" | "territory" | "federal";
   stage: Stage;
   effective: string;
   /** Optional internal link to a detailed compliance guide */
@@ -49,6 +49,7 @@ interface Jurisdiction {
 }
 
 const JURISDICTIONS: Jurisdiction[] = [
+  { name: "Federal contractors (Fair Chance Act)", state: "US", scope: "federal", stage: "Conditional offer", effective: "Dec 20, 2021", link: "/resources/federal-contractors-fair-chance-act-employer-compliance-guide-2026" },
   { name: "California", state: "CA", scope: "state", stage: "Conditional offer", effective: "Jan 1, 2018", link: "/resources/california-fair-chance-act-employer-compliance-guide-2026" },
   { name: "Los Angeles, CA", state: "CA", scope: "city", stage: "Conditional offer", effective: "Jan 22, 2017" },
   { name: "San Francisco, CA", state: "CA", scope: "city", stage: "Conditional offer", effective: "Oct 1, 2018" },
@@ -226,7 +227,7 @@ const STATE_DOTS: { code: string; x: number; y: number }[] = [
 
 export default function BanTheBox() {
   const [stage, setStage] = useState<"All" | Stage>("All");
-  const [scope, setScope] = useState<"All" | "state" | "city" | "county" | "territory">("All");
+  const [scope, setScope] = useState<"All" | "state" | "city" | "county" | "territory" | "federal">("All");
   const [q, setQ] = useState("");
 
   const filtered = useMemo(() => {
@@ -535,7 +536,7 @@ export default function BanTheBox() {
             </label>
             <div className="flex items-center gap-2 text-[13px]">
               <span className="text-[#0B1F3A]/55">Scope:</span>
-              {(["All", "state", "city", "county", "territory"] as const).map((s) => (
+              {(["All", "federal", "state", "city", "county", "territory"] as const).map((s) => (
                 <button
                   key={s}
                   type="button"

@@ -1812,6 +1812,138 @@ If you hire in Hawaii and you have not reviewed your application form, your ATS 
 
 > Not legal advice. Always consult employment counsel for sensitive cases.
 `
+  },
+  {
+    slug: "federal-contractors-fair-chance-act-employer-compliance-guide-2026",
+    title: "Federal Contractors and the Fair Chance Act: A 2026 Compliance Guide",
+    metaTitle: "Federal Contractors Fair Chance Act Compliance Guide (2026)",
+    description:
+      "41 U.S.C. \u00a7 4714 sits on top of every state ban-the-box law in your stack. The 2026 PreciseHire compliance playbook for federal contractors \u2014 conditional-offer trigger, contract-payment suspension, FCRA stack.",
+    category: "Compliance",
+    tags: ["Federal Contractors", "Fair Chance Act", "Ban the Box", "FCRA", "OPM", "GSA"],
+    author: "PreciseHire Editorial",
+    authorSlug: "precisehire-team",
+    datePublished: "2026-05-27",
+    readingMin: 9,
+    image: ASSETS.serviceCriminal,
+    excerpt:
+      "The Fair Chance to Compete for Jobs Act of 2019 is the federal ban-the-box law for federal contractors. Effective December 20, 2021, codified at 41 U.S.C. \u00a7 4714, it bars criminal-history requests until after a conditional offer \u2014 with contract-payment suspension on the menu of penalties for repeat violations.",
+    markdown: `If your company holds a federal civilian or defense contract — or is competing for one — the Fair Chance to Compete for Jobs Act of 2019 sits on top of every other ban-the-box law in your stack. It is narrower in substance than California's six-factor analysis or Illinois's JOQAA penalty schedule, but it is broader in *who it pulls in*. Any private employer that hires a person whose duties relate to the performance of a covered federal contract is now operating under a federal conditional-offer rule, with a federal agency as enforcement authority and contract-payment suspension on the menu of penalties. This is the 2026 PreciseHire compliance playbook for federal contractors.
+
+## The two-track statute
+
+The Fair Chance Act is one law with two tracks. Both were enacted on December 20, 2019 as Subtitle B of Title XI of the FY2020 [National Defense Authorization Act](https://www.congress.gov/116/plaws/publ92/PLAW-116publ92.pdf) (Pub. L. 116-92, §§ 1121-1124). Both took effect on December 20, 2021.
+
+| Track | Codification | Who it covers | Oversight |
+|---|---|---|---|
+| Federal agency hiring | 5 U.S.C. § 9202; 5 CFR Part 920 | Executive, legislative, and judicial branch appointments | OPM (executive); OCWR (legislative); Administrative Office of the U.S. Courts (judicial) |
+| Federal contractor hiring | [41 U.S.C. § 4714](https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title41-section4714&num=0&edition=prelim) (civilian); 10 U.S.C. § 4651 (defense) | Private employers hiring "a position related to work under" a covered federal contract | Head of the contracting agency; complaint intake by GSA |
+
+Federal contractors care about Track 2. The contractor restriction applies to contracts awarded pursuant to solicitations issued *after* December 20, 2021, which means new awards, recompetes, and option-year extensions executed since that date are inside the rule. OPM finalized [5 CFR Part 920](https://www.federalregister.gov/documents/2023/09/01/2023-18242/fair-chance-to-compete-for-jobs) on October 2, 2023 to implement the agency track; GSA and DOD implemented the contractor track via amendments to the Federal Acquisition Regulation.
+
+## What the contractor rule actually prohibits
+
+41 U.S.C. § 4714(a)(1)(B) requires every covered federal contract to include a clause stating that the contractor "may not verbally, or through written form, request the disclosure of criminal history record information regarding an applicant for a position related to work under such contract before the contractor extends a conditional offer to the applicant." The plain reading is the rule:
+
+The pre-conditional-offer prohibition is **information-based**, not source-based. It bars *requests* for criminal history record information — from the applicant directly, from a consumer reporting agency, or from any other source the contractor causes to disclose the information. An ATS screening question, a recruiter phone-screen question, a paper application form, and a vendor intake portal are each a "request" within the meaning of the statute. So is a pre-offer authorization-and-disclosure form sent with the application packet that asks the applicant to consent to a criminal background check before an offer has been extended.
+
+The trigger that lifts the prohibition is a "conditional offer," which the statute defines as "an offer of employment for a position related to work under a contract that is conditioned upon the results of a criminal history inquiry." The contingency must be tied to the *background check itself*, not just to a generic "subject to satisfactory references" clause.
+
+## Who counts as a covered position
+
+Section 4714 reaches "a position related to work under" the contract — language that is broader than "an employee performing on the contract." A 2026 PreciseHire compliance posture treats three populations as inside the rule:
+
+1. **Direct contract performers.** Anyone whose work hours will be billed against the contract or whose duties are explicitly referenced in the statement of work.
+2. **Functional support staff for the contract.** Project managers, contract administrators, security officers, IT and cybersecurity staff supporting contract systems, and quality assurance personnel whose duties are reasonably "related to" contract performance even if not directly billable.
+3. **Subcontractor hires.** Flow-down clauses are required by the FAR; a subcontractor hiring for a position related to the prime's contract scope is a covered hire.
+
+A position that has *no* nexus to a federal contract — for example, a marketing hire at a contractor's commercial-only line of business — is outside the federal rule. State ban-the-box laws still apply to that hire on their own terms.
+
+## Statutory exceptions
+
+The federal contractor rule has two categorical exceptions in § 4714(a)(3) and one functional exception in § 4714(a)(2):
+
+The first categorical exception covers contracts that require the hire to access classified information or to have sensitive law enforcement or national security duties. This is a position-by-position analysis, not an award-wide one. A cleared software engineer at a defense contractor is exempt; the procurement analyst on the same contract who never touches classified material is not.
+
+The second categorical exception covers positions that the GSA Administrator (in consultation with DOD) identifies by regulation as exempt, "giving due consideration to positions that involve interaction with minors, access to sensitive information, or managing financial transactions." The implementing regulations issued by GSA and DOD in 2023 carry this list and must be checked against the specific requisition.
+
+The functional exception in § 4714(a)(2) covers positions for which "consideration of criminal history record information prior to a conditional offer with respect to the position is otherwise required by law." This is narrower than it looks: most federal background-check requirements specify *what* must be checked, not *when* in the hiring sequence the check must happen, and where the timing is silent the FCA still controls.
+
+## Enforcement and penalties
+
+Federal contractor enforcement runs through the head of the contracting executive agency. GSA hosts the [complaint intake](https://www.gsa.gov/about-us/organization/office-of-government-wide-policy/office-of-acquisition-policy/fair-chance-act) under § 4714(b). The penalty schedule is structured to escalate:
+
+| Step | Trigger | Action |
+|---|---|---|
+| First violation | Agency head determines a violation of § 4714(a)(1)(B) | Written notice; 30-day appeal window; written warning describing the violation and remedies for subsequent violations |
+| Subsequent violation | Same contractor, second determination | Written notice; 30-day appeal window; one or more of: written guidance that contract eligibility requires compliance, a 30-day affirmative-response requirement, **and suspension of payment under the contract** for which the applicant was considered until compliance is demonstrated |
+
+Suspension of contract payment is the operative threat. It is materially worse than the civil penalties available against federal-agency hiring officials under 5 U.S.C. § 9202(d) (up to $1,000 per violation), and it is the reason federal contractors should not treat the FCA as a federal-only paper rule.
+
+## How the FCA stacks with the federal FCRA
+
+The Fair Chance Act does not displace the Fair Credit Reporting Act. When a federal contractor uses a consumer reporting agency to run the post-conditional-offer background check, the full FCRA stack still applies:
+
+1. Stand-alone disclosure and authorization that meets [15 U.S.C. § 1681b(b)(2)(A)](https://www.law.cornell.edu/uscode/text/15/1681b) — but issued *after* the conditional offer, not at application.
+2. Pre-adverse-action notice under 15 U.S.C. § 1681b(b)(3)(A), with the report and a copy of the CFPB Summary of Your Rights.
+3. A reasonable waiting period (most federal contractors anchor on five business days as a documented safe harbor).
+4. Final adverse-action notice if the offer is withdrawn.
+
+The FCA simply moves the FCRA trigger date for the criminal-history portion of that workflow to "after conditional offer." Background-check authorization forms written for a pre-offer process must be re-engineered for post-offer use; the language and sequence are different.
+
+## How the FCA stacks with state ban-the-box laws
+
+The FCA is a floor for federal hiring and federal-contractor hiring, not a ceiling. State and local laws still apply on their own terms, and the contractor's compliance posture must satisfy *both* layers:
+
+- A federal contractor hiring in **California** for a covered position runs the federal conditional-offer trigger plus the state's [Fair Chance Act](https://precisehire.com/resources/california-fair-chance-act-employer-compliance-guide-2026) six-factor written individualized assessment and CRD-mandated notices.
+- A federal contractor hiring in **NYC** runs the federal trigger plus the NYC FCA's [two-tier sequencing](https://precisehire.com/resources/nyc-fair-chance-act-employer-compliance-guide-2026), Article 23-A factors, and five-business-day hold.
+- A federal contractor hiring in **Illinois** for a 15+ employee headcount runs the federal trigger plus [JOQAA](https://precisehire.com/resources/illinois-joqaa-employer-compliance-checklist-2026) and the IHRA six-factor analysis.
+- A federal contractor hiring in **Massachusetts** runs the federal trigger plus the [CORI access mechanics](https://precisehire.com/resources/massachusetts-cori-employer-compliance-guide-2026) and the c. 151B § 4(9) three-year cap.
+- A federal contractor hiring in **Hawaii** runs the federal trigger plus the [HRS § 378-2.5](https://precisehire.com/resources/hawaii-ban-the-box-employer-compliance-guide-2026) 7/5/–incarceration lookback and the rational-relationship test.
+
+The cleanest operational posture is to treat the federal trigger as the *start* of the substantive analysis, then layer the state-specific written analysis on top before issuing any pre-adverse notice.
+
+## The 2026 contractor compliance checklist
+
+The operational sequence we recommend to federal contractor clients, on every requisition tied to a covered award:
+
+1. Audit your application form, ATS knockout logic, recruiter scripts, and supplier intake portals. Strip every conviction question from the pre-offer pipeline. Document the contract nexus of each requisition in the requisition file.
+2. For requisitions claiming an exception under § 4714(a)(3), capture the position-specific basis — classified access, sensitive law enforcement, national security, or a GSA-listed exempt position — in writing before posting.
+3. Run resume review and qualifications screening on job-related criteria alone. Do not commission a criminal background report.
+4. Extend a written conditional offer of employment that names the background check as the contingency.
+5. Trigger the FCRA stand-alone disclosure and authorization, post-offer.
+6. When the report returns, run the substantive analysis required by the applicable state law (California six factors, NYC Article 23-A, Illinois IHRA, Massachusetts c. 151B, Hawaii rational-relationship), and the EEOC 2012 guidance for any state that has no published framework.
+7. If the preliminary decision is to withdraw the offer, send a combined FCRA pre-adverse-action notice and state-law analysis with the report and CFPB Summary of Your Rights.
+8. If the decision is final, send a combined FCRA final adverse-action notice that names the state-law analysis as the basis.
+9. Flow the FAR clause down to subcontractors and audit subcontractor hiring practices on covered awards at least annually.
+
+## What this means for federal contractors
+
+The two failure patterns PreciseHire sees most often on contractor compliance reviews are the *application form* and the *flow-down*. Application-form failures usually trace back to a single ATS template that pre-dates December 2021 and still asks the conviction question on intake; the fix is a one-template change and a documented nexus rule for which requisitions sit inside the federal trigger. Flow-down failures usually trace back to a subcontractor that signed the FAR clause but never updated its own application packet; the fix is an annual subcontractor compliance attestation paired with a sampled application-form audit.
+
+The harder pattern is the *position-related-to-work* analysis. The statutory language is broader than "performs on the contract" and the safest contractor posture is to apply the federal trigger to every requisition that has a non-trivial connection to contract performance, even if the role is not direct-billable. That is a more conservative posture than the statute strictly requires, but it is dramatically cheaper than defending a § 4714 complaint with payment suspension on the table.
+
+If you hold a federal civilian or defense contract and you have not audited your hiring sequence against 41 U.S.C. § 4714 since the 2023 GSA/DOD final rule, [talk to a PreciseHire compliance specialist](https://precisehire.com/contact). We will walk through your current sequence, map it against the federal trigger and the state overlays for every state you hire in, and leave you with a written checklist you can put in front of counsel.
+
+## Related resources
+
+- [California Fair Chance Act employer compliance guide (2026)](https://precisehire.com/resources/california-fair-chance-act-employer-compliance-guide-2026) — the conditional-offer trigger and the CRD individualized-assessment framework.
+- [NYC Fair Chance Act employer compliance guide (2026)](https://precisehire.com/resources/nyc-fair-chance-act-employer-compliance-guide-2026) — two-tier sequencing, Article 23-A factors, and per-se violations.
+- [Illinois JOQAA employer compliance checklist (2026)](https://precisehire.com/resources/illinois-joqaa-employer-compliance-checklist-2026) — the 15-employee threshold and the IHRA six-factor analysis.
+- [Massachusetts CORI compliance guide (2026)](https://precisehire.com/resources/massachusetts-cori-employer-compliance-guide-2026) — iCORI mechanics and the three-year § 4(9) misdemeanor cap.
+- [Hawaii ban-the-box employer compliance guide (2026)](https://precisehire.com/resources/hawaii-ban-the-box-employer-compliance-guide-2026) — the 7/5/–incarceration lookback and the rational-relationship test.
+- [Ban the Box jurisdiction directory](https://precisehire.com/resources/ban-the-box) — every state, city, and county overlay in one filterable table.
+
+## tldr
+
+- The Fair Chance to Compete for Jobs Act of 2019 has two tracks. Federal contractors operate under 41 U.S.C. § 4714, which took effect for contracts solicited after December 20, 2021 and requires a conditional offer before any criminal-history request.
+- The rule is information-based: ATS knockouts, recruiter screens, paper applications, and pre-offer authorization-and-disclosure forms are all "requests" within the meaning of § 4714(a)(1)(B).
+- Statutory exceptions are position-specific (classified, sensitive law enforcement / national security, GSA-listed exempt positions) or "otherwise required by law"; award-wide exemption claims do not fly.
+- Enforcement runs through the head of the contracting agency; the escalating penalty for repeat violations is **suspension of contract payment** under § 4714(c)(2)(C).
+- The FCA does not displace the FCRA or state ban-the-box laws — it sits on top of both. The 2026 contractor compliance posture is to treat the federal trigger as the start of the substantive analysis, layer state-specific written analysis on top, and store the dual-layer record with the adverse-action file.
+
+> Not legal advice. Always consult employment counsel for sensitive cases.
+`
   }
 ];
 
