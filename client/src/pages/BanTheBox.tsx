@@ -340,10 +340,10 @@ export default function BanTheBox() {
                     Get a fair-chance ready quote <ArrowRight className="size-4" />
                   </Link>
                   <Link
-                    href="/compliance/checklist"
+                    href="/resources/multi-state-employers-ban-the-box-one-compliant-process-2026"
                     className="btn-ghost-navy inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold"
                   >
-                    24-point compliance checklist
+                    Multi-state: build one compliant process
                   </Link>
                 </div>
               </Reveal>
