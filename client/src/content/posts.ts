@@ -2033,6 +2033,85 @@ If you hire in more than one state and have not audited your sequence against th
 
 > Not legal advice. Always consult employment counsel for sensitive cases.
 `
+  },
+  {
+    slug: "disparate-impact-background-screening-statistics-employers-2026",
+    title: "Disparate Impact in Background Screening: The Statistics Every HR Leader Should Understand",
+    metaTitle: "Disparate Impact Background Screening Statistics",
+    description: "Criminal background checks produce measurable disparate impact by race. Here are the federal statistics, what the law requires, and how to stay compliant.",
+    category: "Compliance",
+    tags: ["Disparate Impact", "Title VII", "EEOC", "Criminal Records", "Background Checks"],
+    author: "PreciseHire Editorial",
+    datePublished: "2026-06-03",
+    readingMin: 7,
+    image: ASSETS.serviceCriminal,
+    excerpt:
+      "Criminal background checks produce measurable disparate impact by race. Here are the federal statistics, what the law requires, and how to stay compliant.",
+    markdown: `If your organization uses criminal background checks in hiring \u2014 and roughly 94 percent of U.S. employers do, according to the [Professional Background Screening Association\u2019s 2024 industry survey](https://www.thepbsa.org/about-us/industry-survey/) \u2014 you are operating a selection tool that produces measurable disparate impact by race. That is not a political statement. It is a statistical fact published by the Bureau of Justice Statistics, cited by the EEOC, and confirmed by every federal court that has examined the question.
+
+The practical consequence is straightforward. Under Title VII of the Civil Rights Act of 1964, as amended by the Civil Rights Act of 1991 (42 U.S.C. \u00a7 2000e-2(k)), a facially neutral employment practice that disproportionately excludes a protected group is unlawful unless the employer can demonstrate that the practice is job-related and consistent with business necessity. Criminal background checks are facially neutral. The incarceration data makes the disproportionate exclusion easy to prove. That leaves the burden on you to demonstrate job-relatedness \u2014 and if you cannot, you are exposed to a class-action claim regardless of your intent.
+
+## The numbers that establish disparate impact
+
+The Bureau of Justice Statistics\u2019 [Prisoners in 2023 \u2014 Statistical Tables](https://bjs.ojp.gov/document/p23st.pdf), published in September 2025, reports the following imprisonment rates for adults sentenced to more than one year in state or federal prison as of December 31, 2023:
+
+- Black adults: 1,218 per 100,000
+- Hispanic adults: 606 per 100,000
+- White adults: 231 per 100,000
+
+Black adults are imprisoned at 5.3 times the rate of white adults. Hispanic adults are imprisoned at 2.6 times the rate of white adults. These ratios have narrowed over the past decade \u2014 the Black imprisonment rate declined 33 percent from 2013 to 2023, and the Hispanic rate declined 35 percent \u2014 but the gap remains large enough that any criminal-records screen applied uniformly to a racially diverse applicant pool will, as a statistical matter, exclude Black and Hispanic applicants at a higher rate than white applicants.
+
+The EEOC\u2019s [2012 enforcement guidance on the consideration of arrest and conviction records](https://www.eeoc.gov/laws/guidance/enforcement-guidance-consideration-arrest-and-conviction-records-employment-decisions) cites this same BJS data as the statistical foundation for its conclusion that criminal-record exclusions have a disparate impact based on race and national origin. The guidance has never been rescinded.
+
+## What disparate impact means under Title VII
+
+Disparate impact is not the same as intentional discrimination. The Supreme Court recognized the doctrine in Griggs v. Duke Power Co., 401 U.S. 424 (1971), and Congress codified it in the Civil Rights Act of 1991. The burden-shifting framework works in three steps. First, the plaintiff establishes that a facially neutral practice causes a statistically significant disparity in outcomes for a protected group. Second, the burden shifts to the employer to prove that the practice is job-related and consistent with business necessity. Third, even if the employer meets that burden, the plaintiff can still prevail by showing that an alternative practice with less disparate impact would serve the employer\u2019s legitimate needs equally well.
+
+For criminal background checks, the first step is straightforward \u2014 the BJS data does the work. The second step is where most employers fail. A blanket exclusion policy (\u201cno felonies in the past seven years\u201d) is almost impossible to defend as job-related for every position in a multi-role organization. The EEOC\u2019s guidance and every state ban-the-box statute that has followed it require the employer to demonstrate a connection between the specific offense, the time elapsed, and the specific duties of the specific job.
+
+## The callback gap: what the research shows about employer behavior
+
+The statistical case for disparate impact does not rest solely on incarceration rates. Devah Pager\u2019s landmark audit study, published in the American Journal of Sociology in 2003 and [presented to the EEOC in 2008](https://www.eeoc.gov/meetings/meeting-november-20-2008-employment-discrimination-faced-individuals-arrest-and-conviction/pager), sent matched pairs of testers \u2014 identical in qualifications, differing only in race and criminal-record status \u2014 to apply for entry-level jobs in Milwaukee. White applicants with a criminal record received callbacks at a rate of 17 percent. Black applicants without any criminal record received callbacks at only 14 percent. The criminal record reduced callbacks for white applicants by roughly half, but for Black applicants the reduction was even steeper \u2014 from 14 percent to 5 percent.
+
+The study has been replicated in New York City with similar results. The implication for employers is that criminal-records screens do not operate in a vacuum. They interact with existing racial bias in hiring to amplify exclusion. An employer that layers a blanket criminal-records policy on top of an already-biased callback process compounds its Title VII exposure.
+
+## The 2025 enforcement shift \u2014 and why it does not eliminate the risk
+
+On April 23, 2025, President Trump signed Executive Order 14173, \u201cRestoring Equality of Opportunity and Meritocracy,\u201d directing federal agencies to deprioritize disparate-impact enforcement. Following the order, the EEOC [administratively closed all pending charges based solely on disparate impact by September 30, 2025](https://www.franczek.com/blog/eeoc-to-close-all-pending-disparate-impact-investigations-by-september-30-2025/) and issued right-to-sue letters by October 31.
+
+This is a change in federal enforcement posture, not a change in law. Disparate impact remains codified in Title VII\u2019s text at 42 U.S.C. \u00a7 2000e-2(k). Private plaintiffs retain the full right to bring class-action claims in federal court, and the right-to-sue letters the EEOC issued in late 2025 gave every closed charging party 90 days to file suit independently. State enforcement agencies \u2014 California\u2019s Civil Rights Department, the New York City Commission on Human Rights, the Illinois Department of Human Rights \u2014 continue to investigate and litigate disparate-impact claims under their own statutes. The EEOC\u2019s pullback shifted the enforcement burden from the government to private counsel and state agencies; it did not eliminate the underlying liability.
+
+## How courts have applied these statistics
+
+Two federal cases from 2015 illustrate the range of outcomes.
+
+In [EEOC v. BMW Manufacturing Co.](https://www.eeoc.gov/newsroom/bmw-pay-16-million-and-offer-jobs-settle-federal-race-discrimination-lawsuit), No. 7:13-cv-01583 (D.S.C. 2015), BMW paid $1.6 million and offered jobs to roughly 90 African-American applicants who had been excluded under a blanket criminal-records policy applied to logistics contractors at its Spartanburg, South Carolina plant. The consent decree required BMW to adopt an individualized assessment and stop applying a one-size-fits-all conviction bar.
+
+In EEOC v. Freeman, 778 F.3d 463 (4th Cir. 2015), the Fourth Circuit affirmed summary judgment for the employer after the EEOC\u2019s statistical expert was excluded for methodological flaws. The court did not reject the disparate-impact theory \u2014 it rejected the EEOC\u2019s proof in that specific case. The takeaway is that statistical evidence must be rigorous, not that blanket exclusion policies are safe.
+
+Together, these cases tell employers two things. First, the disparate impact of criminal-records screens is well-established and courts accept it. Second, the quality of the statistical evidence and the employer\u2019s documented individualized assessment determine the outcome.
+
+## What this means for employers
+
+For any employer running [pre-employment criminal background checks](/services/criminal-records) in 2026, four operational steps reduce disparate-impact exposure to a defensible level.
+
+1. **Eliminate blanket exclusion policies.** If your ATS or screening workflow automatically disqualifies candidates based on any conviction, any felony, or any conviction within a fixed lookback period without an individualized assessment, you have built the same policy that cost BMW $1.6 million. Replace it with a job-specific assessment that considers the nature of the offense, the time elapsed, and the duties of the role.
+
+2. **Document every individualized assessment in writing.** The [EEOC\u2019s 2012 guidance](https://www.eeoc.gov/laws/guidance/enforcement-guidance-consideration-arrest-and-conviction-records-employment-decisions) and every state [ban-the-box law](/resources/ban-the-box) that has followed it require a written, job-specific analysis. If you cannot explain in writing why this specific conviction is directly and adversely related to this specific job, you should not be withdrawing the offer.
+
+3. **Know your own numbers.** Pull your screening data for the past 12 months and calculate the adverse-action rate by race. If Black or Hispanic applicants are being excluded at a rate that exceeds the four-fifths rule (80 percent of the rate for the group with the lowest exclusion rate), you have a statistical signal that a plaintiff\u2019s expert could use to establish a prima facie case. Fix the policy before a charge is filed.
+
+4. **Treat the federal enforcement pullback as temporary.** The 2012 guidance has survived three presidential transitions. State enforcement agencies are not bound by Executive Order 14173. Private class-action firms are actively filing. Build your process to the standard, not to the enforcement climate.
+
+If your organization has not audited its [criminal-records screening program](/services/criminal-records) against the disparate-impact data since the start of 2025, [talk to a PreciseHire compliance specialist](https://precisehire.com/contact). We will pull your screening metrics, run the four-fifths calculation, and hand you a written gap analysis for counsel \u2014 before a plaintiff\u2019s firm does it for you.
+
+## tldr
+
+- Black adults are imprisoned at 5.3 times the rate of white adults (BJS, 2023), which means any criminal-records screen applied uniformly to a diverse applicant pool will produce measurable disparate impact \u2014 the statistical foundation for a Title VII class action.
+- The EEOC closed all pending disparate-impact investigations in September 2025 following Executive Order 14173, but the underlying law (42 U.S.C. \u00a7 2000e-2(k)) has not changed, private plaintiffs retain the right to sue, and state enforcement agencies continue to litigate.
+- The operational fix is the same as it has been since 2012: replace blanket exclusion policies with documented, job-specific individualized assessments, and audit your own screening data for racial disparity before a plaintiff\u2019s expert does.
+
+> Not legal advice. Always consult employment counsel for sensitive cases.`
   }
 ];
 
