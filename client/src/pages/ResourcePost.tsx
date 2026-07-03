@@ -20,6 +20,25 @@ const TOC_SLUGS = new Set<string>([
   "fast-background-check-employer-guide",
   "investigative-consumer-report-vs-consumer-report-employer-guide",
 ]);
+
+// Some old migrated posts target consumer, tenant, or off-topic searches rather
+// than employer background-check buyers. Keep the URLs available, but noindex
+// them so they do not dilute the stronger employer-focused resource library.
+const RESOURCE_NOINDEX_PATTERNS = [
+  /tenant/i,
+  /eviction/i,
+  /direct-express/i,
+  /background-check-app/i,
+  /people-background-checks/i,
+  /fbi-background-checks/i,
+  /failed-background-check/i,
+  /identity-verification-solutions/i,
+  /clear-identity-verification/i,
+];
+
+function shouldNoindexResource(slug: string) {
+  return RESOURCE_NOINDEX_PATTERNS.some((pattern) => pattern.test(slug));
+}
 import { COMPANY } from "@/content/site";
 import { findPost, relatedPosts, getInlineMarkdown } from "@/content/posts";
 import { resolveAuthor } from "@/content/authors";
@@ -64,6 +83,7 @@ export default function ResourcePost() {
   const related = relatedPosts(post.slug, 3);
   const url = `https://precisehire.com/resources/${post.slug}`;
   const author = resolveAuthor(post.authorSlug);
+  const noindex = shouldNoindexResource(post.slug);
 
   // FAQPage schema is only injected for posts where we hand-curate the FAQ.
   // For the fast-background-check pillar, this captures the seven questions in the
@@ -88,7 +108,7 @@ export default function ResourcePost() {
       },
       {
         q: "What is the risk of relying solely on fast background checks?",
-        a: "Three risk buckets: FCRA accuracy exposure under \u00a71681e(b) and the \u00a7613 currency rule, FCRA process exposure under \u00a71681b(b) (disclosure, authorization, pre-adverse and final adverse-action sequence), and Title VII disparate-impact exposure under the EEOC's 2012 enforcement guidance on the consideration of arrest and conviction records.",
+        a: "Three risk buckets: FCRA accuracy exposure under §1681e(b) and the §613 currency rule, FCRA process exposure under §1681b(b) (disclosure, authorization, pre-adverse and final adverse-action sequence), and Title VII disparate-impact exposure under the EEOC's 2012 enforcement guidance on the consideration of arrest and conviction records.",
       },
       {
         q: "What is the difference between a fast background check and an instant background check?",
@@ -156,6 +176,7 @@ export default function ResourcePost() {
         canonical={url}
         image={post.image}
         jsonLd={jsonLd}
+        noindex={noindex}
       />
 
       {/* Breadcrumbs */}
