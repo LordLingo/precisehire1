@@ -37,6 +37,7 @@ import BanTheBox from "./pages/BanTheBox";
 import Support from "./pages/Support";
 import AuthorPage from "./pages/AuthorPage";
 import Thanks from "./pages/Thanks";
+import Referral from "./pages/Referral";
 import NotFound from "./pages/NotFound";
 
 function Router() {
@@ -62,6 +63,7 @@ function Router() {
         <Route path="/get-a-quote" component={GetAQuote} />
         <Route path="/talk-to-an-expert" component={TalkToAnExpert} />
         <Route path="/support" component={Support} />
+        <Route path="/referral" component={Referral} />
         <Route path="/legal/:slug" component={Legal} />
         <Route path="/resources" component={Resources} />
         <Route path="/resources/fcra-icraa-disclosure-pack" component={DisclosurePack} />
