@@ -68,6 +68,7 @@ export default function Footer() {
             <Link href="/legal/terms" className="hover:text-white">Terms</Link>
             <Link href="/legal/accessibility" className="hover:text-white">Accessibility</Link>
             <Link href="/compliance" className="hover:text-white">FCRA Compliance</Link>
+            <Link href="/referral" className="hover:text-white">Referral Partner Program</Link>
           </div>
         </div>
       </div>
