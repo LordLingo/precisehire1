@@ -22,20 +22,41 @@ const SEO_ENTRY_POINTS = [
   { label: "Volunteer Screening", href: "/industries/nonprofit-volunteer-background-checks", group: "Industry" },
 ];
 
+const RESOURCE_HUB_EXCLUDE_PATTERNS = [
+  /tenant/i,
+  /eviction/i,
+  /direct-express/i,
+  /background-check-app/i,
+  /people-background-checks/i,
+  /fbi-background-checks/i,
+  /failed-background-check/i,
+  /identity-verification-solutions/i,
+  /clear-identity-verification/i,
+];
+
+function shouldHideFromResourcesHub(slug: string) {
+  return RESOURCE_HUB_EXCLUDE_PATTERNS.some((pattern) => pattern.test(slug));
+}
+
 export default function Resources() {
   const [cat, setCat] = useState<typeof POST_CATEGORIES[number]>("All");
   const [topic, setTopic] = useState<typeof POST_TOPICS[number]>("All Topics");
   const [q, setQ] = useState("");
 
+  const visiblePosts = useMemo(
+    () => ALL_POSTS_INDEX.filter((post) => !shouldHideFromResourcesHub(post.slug)),
+    []
+  );
+
   // Pre-compute counts per topic so chip labels can show "Drug & Alcohol · 34"
   const topicCounts = useMemo(() => {
-    const map: Record<string, number> = { "All Topics": ALL_POSTS_INDEX.length };
-    for (const p of ALL_POSTS_INDEX) map[p.topic] = (map[p.topic] || 0) + 1;
+    const map: Record<string, number> = { "All Topics": visiblePosts.length };
+    for (const p of visiblePosts) map[p.topic] = (map[p.topic] || 0) + 1;
     return map;
-  }, []);
+  }, [visiblePosts]);
 
   const filtered = useMemo(() => {
-    let pool = ALL_POSTS_INDEX;
+    let pool = visiblePosts;
     if (cat !== "All") pool = pool.filter((p) => p.category === cat);
     if (topic !== "All Topics") pool = pool.filter((p) => p.topic === topic);
     if (!q.trim()) return pool;
@@ -46,11 +67,11 @@ export default function Resources() {
         p.excerpt.toLowerCase().includes(needle) ||
         p.tags.some((t) => t.toLowerCase().includes(needle))
     );
-  }, [cat, topic, q]);
+  }, [cat, topic, q, visiblePosts]);
 
   const isFiltered = cat !== "All" || topic !== "All Topics" || q.trim() !== "";
 
-  const featured = ALL_POSTS_INDEX[0];
+  const featured = visiblePosts[0];
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -58,7 +79,7 @@ export default function Resources() {
     name: "PreciseHire Resources",
     url: "https://precisehire.com/resources",
     publisher: { "@type": "Organization", name: COMPANY.legalName },
-    blogPost: ALL_POSTS_INDEX.slice(0, 50).map((p) => ({
+    blogPost: visiblePosts.slice(0, 50).map((p) => ({
       "@type": "BlogPosting",
       headline: p.title,
       datePublished: p.datePublished,
@@ -135,43 +156,45 @@ export default function Resources() {
       </section>
 
       {/* Featured post */}
-      <section className="container pb-12">
-        <Reveal>
-          <Link
-            href={`/resources/${featured.slug}`}
-            className="group grid lg:grid-cols-12 gap-8 items-center rounded-3xl bg-white border border-[#0B1F3A]/10 p-6 lg:p-8 hover:border-[#B7232A]/40 transition-colors"
-          >
-            <div className="lg:col-span-5">
-              <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-[#FAF7F2]">
-                <img
-                  src={featured.image}
-                  alt=""
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-                />
+      {featured && (
+        <section className="container pb-12">
+          <Reveal>
+            <Link
+              href={`/resources/${featured.slug}`}
+              className="group grid lg:grid-cols-12 gap-8 items-center rounded-3xl bg-white border border-[#0B1F3A]/10 p-6 lg:p-8 hover:border-[#B7232A]/40 transition-colors"
+            >
+              <div className="lg:col-span-5">
+                <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-[#FAF7F2]">
+                  <img
+                    src={featured.image}
+                    alt=""
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                  />
+                </div>
               </div>
-            </div>
-            <div className="lg:col-span-7">
-              <div className="flex items-center gap-3 text-xs uppercase tracking-[0.18em] text-[#B7232A] font-semibold">
-                <span>Featured</span>
-                <span aria-hidden="true">·</span>
-                <span className="text-[#0B1F3A]/60">{featured.category}</span>
+              <div className="lg:col-span-7">
+                <div className="flex items-center gap-3 text-xs uppercase tracking-[0.18em] text-[#B7232A] font-semibold">
+                  <span>Featured</span>
+                  <span aria-hidden="true">·</span>
+                  <span className="text-[#0B1F3A]/60">{featured.category}</span>
+                </div>
+                <h2 className="mt-3 font-display text-3xl lg:text-4xl font-semibold text-[#0B1F3A] leading-tight">
+                  {featured.title}
+                </h2>
+                <p className="mt-3 text-[#0B1F3A]/70 text-[17px]">{featured.excerpt}</p>
+                <div className="mt-5 flex items-center gap-4 text-sm text-[#0B1F3A]/60">
+                  <span>{new Date(featured.datePublished).toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" })}</span>
+                  <span>·</span>
+                  <span>{featured.readingMin} min read</span>
+                </div>
+                <span className="mt-6 inline-flex items-center gap-2 font-semibold text-[#B7232A] group-hover:gap-3 transition-all">
+                  Read article <ArrowRight className="size-4" />
+                </span>
               </div>
-              <h2 className="mt-3 font-display text-3xl lg:text-4xl font-semibold text-[#0B1F3A] leading-tight">
-                {featured.title}
-              </h2>
-              <p className="mt-3 text-[#0B1F3A]/70 text-[17px]">{featured.excerpt}</p>
-              <div className="mt-5 flex items-center gap-4 text-sm text-[#0B1F3A]/60">
-                <span>{new Date(featured.datePublished).toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" })}</span>
-                <span>·</span>
-                <span>{featured.readingMin} min read</span>
-              </div>
-              <span className="mt-6 inline-flex items-center gap-2 font-semibold text-[#B7232A] group-hover:gap-3 transition-all">
-                Read article <ArrowRight className="size-4" />
-              </span>
-            </div>
-          </Link>
-        </Reveal>
-      </section>
+            </Link>
+          </Reveal>
+        </section>
+      )}
 
       {/* Filters */}
       <section className="container pb-6">
@@ -258,7 +281,7 @@ export default function Resources() {
             )}
           </div>
           <p className="mt-3 text-xs text-[#0B1F3A]/55">
-            Showing <span className="font-semibold text-[#0B1F3A]">{filtered.length}</span> of {ALL_POSTS_INDEX.length} articles
+            Showing <span className="font-semibold text-[#0B1F3A]">{filtered.length}</span> of {visiblePosts.length} employer-focused articles
           </p>
         </div>
       </section>
