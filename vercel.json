@@ -13,6 +13,7 @@
     { "source": "/category/:path*", "destination": "/resources", "permanent": true },
     { "source": "/criminal-background-checks", "destination": "/services/criminal-background-checks", "permanent": true },
     { "source": "/employment-verification", "destination": "/services/employment-verification", "permanent": true },
+    { "source": "/services/employment", "destination": "/services/employment-verification", "permanent": true },
     { "source": "/driving-record-checks-mvr", "destination": "/services/driving-record-checks-mvr", "permanent": true },
     { "source": "/drug-testing", "destination": "/services/drug-testing", "permanent": true },
     { "source": "/education-verification", "destination": "/services/education-verification", "permanent": true },
