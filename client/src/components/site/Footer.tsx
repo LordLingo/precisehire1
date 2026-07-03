@@ -17,6 +17,13 @@ const POPULAR_INDUSTRIES = [
   { label: "Construction Background Checks", href: "/industries/construction-background-checks" },
 ];
 
+const RESOURCE_GUIDES = [
+  { label: "Employer Background Check Program Guide", href: "/resources/employer-background-check-program-guide" },
+  { label: "Criminal Background Check Policy Guide", href: "/resources/criminal-background-check-policy-guide" },
+  { label: "Employment Verification Program Guide", href: "/resources/employment-verification-program-guide" },
+  { label: "Employee Drug Testing Policy Guide", href: "/resources/employee-drug-testing-policy-guide" },
+];
+
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
@@ -82,6 +89,17 @@ export default function Footer() {
                 ))}
               </ul>
             </div>
+          </div>
+        </div>
+
+        <div className="mt-12 rounded-2xl border border-white/10 bg-white/5 p-6">
+          <h4 className="text-xs font-semibold uppercase tracking-[0.18em] text-[#B7232A]">Employer resource guides</h4>
+          <div className="mt-4 flex flex-wrap gap-x-6 gap-y-3">
+            {RESOURCE_GUIDES.map((link) => (
+              <Link key={link.href} href={link.href} className="text-[15px] text-white/75 hover:text-white transition-colors">
+                {link.label}
+              </Link>
+            ))}
           </div>
         </div>
 
