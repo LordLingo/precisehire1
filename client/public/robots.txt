@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://precisehire.com/sitemap.xml
+Sitemap: https://precisehire.com/sitemap-extra.xml
