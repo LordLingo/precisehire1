@@ -11,6 +11,17 @@ import Reveal from "@/components/site/Reveal";
 import { ASSETS, COMPANY } from "@/content/site";
 import { ALL_POSTS_INDEX, POST_CATEGORIES, POST_TOPICS } from "@/content/posts";
 
+const SEO_ENTRY_POINTS = [
+  { label: "Criminal Background Checks", href: "/services/criminal-background-checks", group: "Service" },
+  { label: "Employment Verification", href: "/services/employment-verification", group: "Service" },
+  { label: "MVR Checks", href: "/services/driving-record-checks-mvr", group: "Service" },
+  { label: "Drug Testing", href: "/services/drug-testing", group: "Service" },
+  { label: "Staffing Agencies", href: "/industries/staffing", group: "Industry" },
+  { label: "Healthcare", href: "/industries/healthcare", group: "Industry" },
+  { label: "Retail & Hospitality", href: "/industries/retail-hospitality-background-checks", group: "Industry" },
+  { label: "Volunteer Screening", href: "/industries/nonprofit-volunteer-background-checks", group: "Industry" },
+];
+
 export default function Resources() {
   const [cat, setCat] = useState<typeof POST_CATEGORIES[number]>("All");
   const [topic, setTopic] = useState<typeof POST_TOPICS[number]>("All Topics");
@@ -92,6 +103,35 @@ export default function Resources() {
             </p>
           </Reveal>
         </div>
+      </section>
+
+      {/* SEO entry points */}
+      <section className="container pb-12">
+        <Reveal>
+          <div className="rounded-[1.75rem] border border-[#0B1F3A]/10 bg-white p-6 shadow-sm">
+            <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#B7232A]">Popular background check topics</p>
+                <h2 className="mt-2 text-2xl font-semibold text-[#0B1F3A]">Jump to service and industry guides.</h2>
+              </div>
+              <Link href="/industries" className="inline-flex items-center gap-2 text-sm font-semibold text-[#0B1F3A] hover:text-[#B7232A]">
+                View all industries <ArrowRight className="size-4" />
+              </Link>
+            </div>
+            <div className="mt-5 flex flex-wrap gap-2.5">
+              {SEO_ENTRY_POINTS.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="inline-flex items-center gap-2 rounded-full border border-[#0B1F3A]/15 bg-[#FAF7F2] px-4 py-2 text-sm font-semibold text-[#0B1F3A] hover:border-[#B7232A]/50 hover:text-[#B7232A]"
+                >
+                  <span className="text-[11px] uppercase tracking-[0.14em] text-[#0B1F3A]/45">{item.group}</span>
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </Reveal>
       </section>
 
       {/* Featured post */}
