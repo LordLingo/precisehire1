@@ -11,6 +11,25 @@ import { INDUSTRIES, SERVICES, ASSETS } from "@/content/site";
 const HERO_IMG =
   "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/hero-industries-v2-ENewh8oWaLQGxWGutpznDF.webp";
 
+const FEATURED_INDUSTRY_LINKS = [
+  { label: "Healthcare", href: "/industries/healthcare", description: "License, sanctions, drug testing, and clinical role screening." },
+  { label: "Transportation", href: "/industries/transportation", description: "DOT-ready MVR, CDLIS, drug testing, and fleet screening." },
+  { label: "Staffing agencies", href: "/industries/staffing", description: "High-volume screening packages for branch-based staffing firms." },
+  { label: "Retail & hospitality", href: "/industries/retail-hospitality-background-checks", description: "Fast packages for hourly, seasonal, franchise, and guest-facing roles." },
+  { label: "Nonprofit volunteers", href: "/industries/nonprofit-volunteer-background-checks", description: "Volunteer, youth-program, driver, and vulnerable-population screening." },
+  { label: "Churches & ministries", href: "/industries/church-background-checks", description: "Volunteer, child-safety, youth ministry, and church staff checks." },
+  { label: "Property management", href: "/industries/property-management-background-checks", description: "Screen leasing, maintenance, onsite staff, contractors, and key-access roles." },
+  { label: "Construction", href: "/industries/construction-background-checks", description: "Criminal checks, MVRs, and drug testing for jobsite and field crews." },
+];
+
+const INDUSTRY_DEEP_DIVES: Record<string, { href: string; label: string }> = {
+  healthcare: { href: "/industries/healthcare", label: "healthcare" },
+  transportation: { href: "/industries/transportation", label: "DOT & fleet" },
+  staffing: { href: "/industries/staffing", label: "staffing & light industrial" },
+  retail: { href: "/industries/retail-hospitality-background-checks", label: "retail & hospitality" },
+  nonprofit: { href: "/industries/nonprofit-volunteer-background-checks", label: "nonprofit & volunteer" },
+};
+
 export default function Industries() {
   return (
     <>
@@ -69,10 +88,10 @@ export default function Industries() {
                   Get a quote <ArrowRight className="size-4" />
                 </Link>
                 <a
-                  href="#healthcare"
+                  href="#industry-guides"
                   className="btn-ghost-navy inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold"
                 >
-                  Jump to your sector
+                  View industry guides
                 </a>
               </div>
             </Reveal>
@@ -115,7 +134,7 @@ export default function Industries() {
                     Sectors served
                   </div>
                   <div className="font-display text-[19px] font-semibold text-[#0B1F3A] leading-tight">
-                    {INDUSTRIES.length}+ industries, one specialist team
+                    8+ industry guides, one specialist team
                   </div>
                 </div>
               </div>
@@ -138,7 +157,42 @@ export default function Industries() {
         </div>
       </section>
 
-      <section className="container pb-24 space-y-16">
+      <section id="industry-guides" className="bg-white border-y border-[#0B1F3A]/8">
+        <div className="container py-14 lg:py-18">
+          <Reveal>
+            <div className="mx-auto max-w-3xl text-center">
+              <span className="eyebrow justify-center">
+                <Building2 className="size-3.5 text-[#B7232A]" />
+                Industry SEO guides
+              </span>
+              <h2 className="display-md mt-4 text-[#0B1F3A]">Choose the screening guide closest to your business.</h2>
+              <p className="mt-4 text-[16px] leading-7 text-[#0B1F3A]/70">
+                These deep-dive pages help search engines and buyers understand the
+                packages we recommend for each hiring environment.
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+            {FEATURED_INDUSTRY_LINKS.map((item, index) => (
+              <Reveal key={item.href} delay={index * 0.03}>
+                <Link
+                  href={item.href}
+                  className="group block h-full rounded-[1.5rem] border border-[#0B1F3A]/10 bg-[#FAF7F2] p-5 transition-all hover:-translate-y-0.5 hover:border-[#B7232A]/40 hover:bg-white hover:shadow-[0_18px_34px_-24px_rgba(11,31,58,0.28)]"
+                >
+                  <h3 className="text-lg font-semibold text-[#0B1F3A] group-hover:text-[#B7232A]">{item.label}</h3>
+                  <p className="mt-3 text-sm leading-6 text-[#0B1F3A]/68">{item.description}</p>
+                  <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#0B1F3A] group-hover:text-[#B7232A]">
+                    Read guide <ArrowRight className="size-4" />
+                  </span>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="container py-20 lg:py-24 space-y-16">
         {INDUSTRIES.map((ind, i) => {
           const services = ind.recommended.map((slug) => SERVICES.find((s) => s.slug === slug)).filter(Boolean) as typeof SERVICES;
           const reverse = i % 2 === 1;
@@ -167,20 +221,11 @@ export default function Industries() {
                     </ul>
                   </div>
                   {(() => {
-                    const deepDive: Record<string, string> = {
-                      healthcare: "/industries/healthcare",
-                      transportation: "/industries/transportation",
-                      staffing: "/industries/staffing",
-                    };
-                    const dd = deepDive[ind.slug];
+                    const dd = INDUSTRY_DEEP_DIVES[ind.slug];
                     if (dd) {
-                      const label =
-                        ind.slug === "healthcare" ? "healthcare"
-                        : ind.slug === "transportation" ? "DOT & fleet"
-                        : "staffing & light industrial";
                       return (
                         <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-2">
-                          <Link href={dd} className="inline-flex items-center gap-2 text-sm font-semibold text-[#B7232A] hover:underline">Read the {label} deep-dive <ArrowRight className="size-4" /></Link>
+                          <Link href={dd.href} className="inline-flex items-center gap-2 text-sm font-semibold text-[#B7232A] hover:underline">Read the {dd.label} deep-dive <ArrowRight className="size-4" /></Link>
                           <Link href={`/get-a-quote?industry=${encodeURIComponent(ind.title)}`} className="inline-flex items-center gap-2 text-sm font-semibold text-[#0B1F3A]/65 hover:text-[#0B1F3A]">Or get a quote directly <ArrowRight className="size-4" /></Link>
                         </div>
                       );
