@@ -16,7 +16,7 @@ type Props = {
   keywords?: string[];
 };
 
-const DEFAULT_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/og-home-eKHpe6YmPeUxLLSrGYWz87.png";
+const DEFAULT_IMAGE = "https://precisehire.com/brand/og-default.svg";
 
 const ORGANIZATION_JSONLD = {
   "@context": "https://schema.org",
