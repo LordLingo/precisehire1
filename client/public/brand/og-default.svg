@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Precise Hire — Background Checks Employers Trust</title>
+  <desc id="desc">Default Open Graph image for Precise Hire.</desc>
+  <rect width="1200" height="630" fill="#0B1F3A" />
+  <circle cx="1020" cy="110" r="180" fill="#B7232A" opacity="0.28" />
+  <circle cx="140" cy="520" r="220" fill="#FAF7F2" opacity="0.08" />
+  <g transform="translate(88 92)">
+    <rect width="108" height="108" rx="24" fill="#FAF7F2" />
+    <circle cx="34" cy="34" r="11" fill="#0B1F3A" />
+    <circle cx="74" cy="34" r="11" fill="#B7232A" />
+    <circle cx="34" cy="74" r="11" fill="#B7232A" />
+    <circle cx="74" cy="74" r="11" fill="#0B1F3A" />
+  </g>
+  <text x="88" y="278" fill="#FAF7F2" font-family="Inter, Arial, sans-serif" font-size="72" font-weight="800" letter-spacing="-2">
+    Precise<tspan fill="#E26C72">Hire</tspan>
+  </text>
+  <text x="88" y="356" fill="#FAF7F2" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="700">
+    Background checks employers trust.
+  </text>
+  <text x="88" y="430" fill="#FAF7F2" opacity="0.78" font-family="Inter, Arial, sans-serif" font-size="27">
+    Criminal records • Verifications • MVR • Drug testing • Compliance
+  </text>
+  <rect x="88" y="500" width="320" height="58" rx="29" fill="#B7232A" />
+  <text x="128" y="538" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">
+    precisehire.com
+  </text>
+</svg>
