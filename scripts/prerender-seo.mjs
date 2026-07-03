@@ -162,6 +162,30 @@ const routes = [
       "Employer guides for FCRA compliance, criminal background checks, adverse action, ban-the-box rules, MVRs, drug testing, and hiring.",
   },
   {
+    path: "/resources/employer-background-check-program-guide",
+    title: "Employer Background Check Program Guide | Precise Hire",
+    description:
+      "A practical employer guide to building a compliant background check program: package design, FCRA workflow, turnaround speed, candidate experience, and internal controls.",
+  },
+  {
+    path: "/resources/criminal-background-check-policy-guide",
+    title: "Employer Criminal Background Check Policy Guide",
+    description:
+      "A practical employer guide to criminal background check policy, source verification, fair-chance review, individualized assessment, and adverse action.",
+  },
+  {
+    path: "/resources/employment-verification-program-guide",
+    title: "Employment Verification Program Guide | Precise Hire",
+    description:
+      "Employer guide to employment verification: what to verify, how to handle delays, when to use database verification, and how to support staffing and HR teams.",
+  },
+  {
+    path: "/resources/employee-drug-testing-policy-guide",
+    title: "Employee Drug Testing Policy Guide | Precise Hire",
+    description:
+      "Employer guide to drug testing policy, safety-sensitive roles, DOT and non-DOT testing, marijuana rules, candidate timing, and compliance workflow.",
+  },
+  {
     path: "/referral",
     title: "Referral Partner Program | Earn Monthly | Precise Hire",
     description:
