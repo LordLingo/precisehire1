@@ -24,6 +24,7 @@ import Industries from "./pages/Industries";
 import IndustriesHealthcare from "./pages/IndustriesHealthcare";
 import IndustriesTransportation from "./pages/IndustriesTransportation";
 import IndustriesStaffing from "./pages/IndustriesStaffing";
+import AdditionalIndustryPage from "./pages/AdditionalIndustryPage";
 import Trust from "./pages/Trust";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
@@ -51,6 +52,7 @@ function Router() {
         <Route path="/industries/healthcare" component={IndustriesHealthcare} />
         <Route path="/industries/transportation" component={IndustriesTransportation} />
         <Route path="/industries/staffing" component={IndustriesStaffing} />
+        <Route path="/industries/:slug" component={AdditionalIndustryPage} />
         <Route path="/pricing" component={Pricing} />
         <Route path="/trust" component={Trust} />
         <Route path="/compliance" component={Compliance} />
