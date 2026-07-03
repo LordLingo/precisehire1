@@ -1,37 +1,24 @@
 import { Link, useLocation } from "wouter";
-import {
-  ArrowRight,
-  BookOpenCheck,
-  CheckCircle2,
-  ClipboardCheck,
-  FileSearch,
-  FlaskConical,
-  ShieldCheck,
-  Users,
-} from "lucide-react";
-import type { LucideIcon } from "lucide-react";
+import { ArrowRight, CheckCircle2, ClipboardCheck, ShieldCheck } from "lucide-react";
 import SEO from "@/components/site/SEO";
 import Reveal from "@/components/site/Reveal";
 import NotFound from "./NotFound";
 
-const GUIDE_DATA: Record<
-  string,
-  {
-    icon: LucideIcon;
-    eyebrow: string;
-    title: string;
-    metaTitle: string;
-    description: string;
-    datePublished: string;
-    readingMin: number;
-    intro: string;
-    sections: { heading: string; body: string; bullets: string[] }[];
-    links: { label: string; href: string; note: string }[];
-    faqs: { q: string; a: string }[];
-  }
-> = {
+type Guide = {
+  eyebrow: string;
+  title: string;
+  metaTitle: string;
+  description: string;
+  datePublished: string;
+  readingMin: number;
+  intro: string;
+  sections: { heading: string; body: string; bullets: string[] }[];
+  links: { label: string; href: string; note: string }[];
+  faqs: { q: string; a: string }[];
+};
+
+const GUIDE_DATA: Record<string, Guide> = {
   "employer-background-check-program-guide": {
-    icon: BookOpenCheck,
     eyebrow: "Employer background check program guide",
     title: "How to Build an Employer Background Check Program That Is Fast, Compliant, and Scalable",
     metaTitle: "Employer Background Check Program Guide | Precise Hire",
@@ -45,10 +32,10 @@ const GUIDE_DATA: Record<
       {
         heading: "Start with role risk, not a one-size-fits-all package",
         body:
-          "The biggest mistake employers make is ordering the same background check for every job. A warehouse role, a delivery driver, a nurse, an accounting manager, and a volunteer working with children do not create the same risk. A better program uses package tiers tied to job duties.",
+          "A warehouse role, a delivery driver, a nurse, an accounting manager, and a volunteer working with children do not create the same risk. A better program uses package tiers tied to actual job duties.",
         bullets: [
           "Use a light package for low-risk hourly roles where speed and cost matter most.",
-          "Add MVR checks when the candidate drives for work or may operate company vehicles.",
+          "Add MVR checks when the candidate drives or may operate company vehicles.",
           "Add license, sanctions, or credential verification for healthcare and regulated roles.",
           "Add employment or education verification when credentials materially affect the hiring decision.",
         ],
@@ -56,7 +43,7 @@ const GUIDE_DATA: Record<
       {
         heading: "Build the FCRA workflow before the first order",
         body:
-          "A compliant program starts before the report is ordered. Employers need a clean disclosure, written authorization, permissible-purpose certification, state notices where required, and a controlled adverse-action process if the report affects the hiring decision.",
+          "A compliant program starts before the report is ordered. Employers need a clean disclosure, written authorization, permissible-purpose certification, required state notices, and a controlled adverse-action process.",
         bullets: [
           "Keep the disclosure standalone and free from extra liability language.",
           "Collect written authorization before ordering the report.",
@@ -65,25 +52,14 @@ const GUIDE_DATA: Record<
         ],
       },
       {
-        heading: "Design for speed without selling an impossible turnaround",
+        heading: "Design for speed without cutting corners",
         body:
-          "Fast screening comes from parallel processing, clean candidate intake, mobile authorization, source verification, and fast exception handling. It does not come from skipping county searches or reporting unverified database hits.",
+          "Fast screening comes from parallel processing, clean candidate intake, mobile authorization, source verification, and fast exception handling. It does not come from reporting unverified database hits.",
         bullets: [
-          "Launch parallel searches immediately after authorization instead of sequencing them manually.",
-          "Use mobile-friendly candidate intake to reduce delays at the front of the process.",
-          "Track exceptions separately from normal reports so missing data does not sit in a queue.",
-          "Tell hiring managers which components can return quickly and which cannot be rushed.",
-        ],
-      },
-      {
-        heading: "Create operating controls hiring managers can follow",
-        body:
-          "The best screening program is one managers can execute without guessing. Package selection, candidate communication, escalation, adverse-action timing, and final decision authority should be documented in one simple playbook.",
-        bullets: [
-          "Limit who can order non-standard packages.",
-          "Use consistent decision matrices for role-related criminal records.",
-          "Train managers not to finalize adverse decisions before the waiting period ends.",
-          "Review package usage quarterly to remove unnecessary cost and add missing controls.",
+          "Launch parallel searches immediately after authorization.",
+          "Use mobile-friendly candidate intake to reduce front-end delays.",
+          "Track exceptions separately so missing data does not sit in a queue.",
+          "Tell managers which components can return quickly and which cannot be rushed.",
         ],
       },
     ],
@@ -104,7 +80,6 @@ const GUIDE_DATA: Record<
     ],
   },
   "criminal-background-check-policy-guide": {
-    icon: FileSearch,
     eyebrow: "Criminal records policy guide",
     title: "How Employers Should Use Criminal Background Checks Without Creating Compliance Risk",
     metaTitle: "Employer Criminal Background Check Policy Guide",
@@ -113,7 +88,7 @@ const GUIDE_DATA: Record<
     datePublished: "2026-07-03",
     readingMin: 8,
     intro:
-      "Criminal background checks are useful only when the employer knows what the report means, which records can legally be considered, and how the decision connects to the job. A policy that says 'no criminal history' is both too broad and too risky.",
+      "Criminal background checks are useful only when the employer knows what the report means, which records can legally be considered, and how the decision connects to the job. A policy that says no criminal history is both too broad and too risky.",
     sections: [
       {
         heading: "Separate search results from reportable records",
@@ -127,9 +102,9 @@ const GUIDE_DATA: Record<
         ],
       },
       {
-        heading: "Tie review standards to the actual job",
+        heading: "Tie review standards to the job",
         body:
-          "A defensible criminal-record policy considers the nature of the offense, how much time has passed, and how the conduct relates to the specific job duties. This is the operational core of fair-chance hiring.",
+          "A defensible criminal-record policy considers the nature of the offense, how much time has passed, and how the conduct relates to the specific job duties.",
         bullets: [
           "Create role categories before reviewing reports.",
           "Document job-related reasons for any preliminary adverse decision.",
@@ -166,7 +141,6 @@ const GUIDE_DATA: Record<
     ],
   },
   "employment-verification-program-guide": {
-    icon: Users,
     eyebrow: "Employment verification program guide",
     title: "Employment Verification for Employers: How to Confirm Work History Without Slowing Hiring",
     metaTitle: "Employment Verification Program Guide | Precise Hire",
@@ -175,7 +149,7 @@ const GUIDE_DATA: Record<
     datePublished: "2026-07-03",
     readingMin: 7,
     intro:
-      "Employment verification is one of the highest-friction parts of a background check because the speed depends on prior employers, payroll databases, HR departments, and candidate documentation. A strong program defines what matters before the verification starts.",
+      "Employment verification is one of the highest-friction parts of a background check because speed depends on prior employers, payroll databases, HR departments, and candidate documentation. A strong program defines what matters before the verification starts.",
     sections: [
       {
         heading: "Decide what needs to be verified",
@@ -204,7 +178,7 @@ const GUIDE_DATA: Record<
         body:
           "Candidates can often help close a verification faster if the process is mobile-friendly and gives clear instructions. The best programs ask for documentation only when needed and keep the candidate informed.",
         bullets: [
-          "Request W-2s, pay stubs, or offer letters only through a secure candidate portal.",
+          "Request documents only through a secure candidate portal.",
           "Explain exactly what information can be redacted.",
           "Give candidates a clear deadline for supporting documentation.",
           "Document substitutions so the hiring file explains how the verification was closed.",
@@ -228,7 +202,6 @@ const GUIDE_DATA: Record<
     ],
   },
   "employee-drug-testing-policy-guide": {
-    icon: FlaskConical,
     eyebrow: "Drug testing policy guide",
     title: "Employee Drug Testing for Employers: Building a Policy That Works Across Roles and States",
     metaTitle: "Employee Drug Testing Policy Guide | Precise Hire",
@@ -298,9 +271,8 @@ export default function ConsolidatedResourceGuide() {
 
   if (!guide) return <NotFound />;
 
-  const Icon = guide.icon;
   const canonical = `https://precisehire.com/resources/${slug}`;
-  const jsonLd = [
+  const jsonLd: object[] = [
     {
       "@context": "https://schema.org",
       "@type": "Article",
@@ -334,12 +306,7 @@ export default function ConsolidatedResourceGuide() {
 
   return (
     <>
-      <SEO
-        title={guide.metaTitle}
-        description={guide.description}
-        canonical={canonical}
-        jsonLd={jsonLd}
-      />
+      <SEO title={guide.metaTitle} description={guide.description} canonical={canonical} jsonLd={jsonLd} />
 
       <nav aria-label="Breadcrumb" className="container pt-10 pb-2 text-sm text-[#0B1F3A]/55">
         <Link href="/" className="hover:text-[#B7232A]">Home</Link>
@@ -354,7 +321,7 @@ export default function ConsolidatedResourceGuide() {
           <div className="lg:col-span-8">
             <Reveal>
               <span className="eyebrow">
-                <Icon className="size-3.5 text-[#B7232A]" />
+                <ClipboardCheck className="size-3.5 text-[#B7232A]" />
                 {guide.eyebrow}
               </span>
             </Reveal>
