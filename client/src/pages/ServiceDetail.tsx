@@ -15,19 +15,32 @@ export default function ServiceDetail() {
   const svc = SERVICES.find((s) => s.slug === params?.slug);
   if (!svc) return <NotFound />;
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: svc.title,
-    description: svc.metaDescription,
-    provider: {
-      "@type": "Organization",
-      name: "Precise Hire",
-      url: "https://precisehire.com/",
+  const url = `https://precisehire.com/services/${svc.slug}`;
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      name: svc.title,
+      description: svc.metaDescription,
+      provider: {
+        "@type": "Organization",
+        name: "Precise Hire",
+        url: "https://precisehire.com/",
+      },
+      areaServed: "United States",
+      serviceType: svc.title,
+      url,
     },
-    areaServed: "United States",
-    serviceType: svc.title,
-  };
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://precisehire.com/" },
+        { "@type": "ListItem", position: 2, name: "Services", item: "https://precisehire.com/services" },
+        { "@type": "ListItem", position: 3, name: svc.title, item: url },
+      ],
+    },
+  ];
 
   // Find related services (next two in the array, looping)
   const idx = SERVICES.findIndex((s) => s.slug === svc.slug);
@@ -39,7 +52,7 @@ export default function ServiceDetail() {
         title={svc.metaTitle}
         description={svc.metaDescription}
         image={svc.hero}
-        canonical={`https://precisehire.com/services/${svc.slug}`}
+        canonical={url}
         jsonLd={jsonLd}
       />
 
