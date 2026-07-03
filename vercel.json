@@ -3,7 +3,53 @@
   "outputDirectory": "dist/public",
   "installCommand": "pnpm install",
   "framework": null,
+  "redirects": [
+    { "source": "/blog", "destination": "/resources", "permanent": true },
+    { "source": "/category/background-checks/fast-background-check", "destination": "/resources/fast-background-check-employer-guide", "permanent": true },
+    { "source": "/category/background-checks/fast-background-check/:path*", "destination": "/resources/fast-background-check-employer-guide", "permanent": true },
+    { "source": "/how-to-conduct-a-fast-background-check", "destination": "/resources/fast-background-check-employer-guide", "permanent": true },
+    { "source": "/fast-background-check", "destination": "/resources/fast-background-check-employer-guide", "permanent": true },
+    { "source": "/resources/how-to-conduct-a-fast-background-check", "destination": "/resources/fast-background-check-employer-guide", "permanent": true },
+    { "source": "/category/:path*", "destination": "/resources", "permanent": true },
+    { "source": "/criminal-background-checks", "destination": "/services/criminal-background-checks", "permanent": true },
+    { "source": "/employment-verification", "destination": "/services/employment-verification", "permanent": true },
+    { "source": "/driving-record-checks-mvr", "destination": "/services/driving-record-checks-mvr", "permanent": true },
+    { "source": "/drug-testing", "destination": "/services/drug-testing", "permanent": true },
+    { "source": "/education-verification", "destination": "/services/education-verification", "permanent": true },
+    { "source": "/international-background-checks", "destination": "/services/international-background-checks", "permanent": true }
+  ],
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/services", "destination": "/index.html" },
+    { "source": "/services/:slug", "destination": "/index.html" },
+    { "source": "/industries", "destination": "/index.html" },
+    { "source": "/industries/:slug", "destination": "/index.html" },
+    { "source": "/pricing", "destination": "/index.html" },
+    { "source": "/trust", "destination": "/index.html" },
+    { "source": "/compliance", "destination": "/index.html" },
+    { "source": "/compliance/audit", "destination": "/index.html" },
+    { "source": "/compliance/checklist", "destination": "/index.html" },
+    { "source": "/integrations", "destination": "/index.html" },
+    { "source": "/about", "destination": "/index.html" },
+    { "source": "/faq", "destination": "/index.html" },
+    { "source": "/contact", "destination": "/index.html" },
+    { "source": "/get-a-quote", "destination": "/index.html" },
+    { "source": "/talk-to-an-expert", "destination": "/index.html" },
+    { "source": "/support", "destination": "/index.html" },
+    { "source": "/referral", "destination": "/index.html" },
+    { "source": "/legal/:slug", "destination": "/index.html" },
+    { "source": "/resources", "destination": "/index.html" },
+    { "source": "/resources/:slug", "destination": "/index.html" },
+    { "source": "/authors/:slug", "destination": "/index.html" },
+    { "source": "/thanks", "destination": "/index.html" },
+    { "source": "/404", "destination": "/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/404.html",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
+      ]
+    }
   ]
 }
