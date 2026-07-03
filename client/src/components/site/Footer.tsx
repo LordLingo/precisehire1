@@ -6,6 +6,17 @@ import { Link } from "wouter";
 import { FOOTER_NAV, COMPANY } from "@/content/site";
 import { Mail, Phone, MapPin } from "lucide-react";
 
+const POPULAR_INDUSTRIES = [
+  { label: "Healthcare Background Checks", href: "/industries/healthcare" },
+  { label: "Staffing Agency Background Checks", href: "/industries/staffing" },
+  { label: "Transportation Background Checks", href: "/industries/transportation" },
+  { label: "Retail & Hospitality Checks", href: "/industries/retail-hospitality-background-checks" },
+  { label: "Volunteer Background Checks", href: "/industries/nonprofit-volunteer-background-checks" },
+  { label: "Church Background Checks", href: "/industries/church-background-checks" },
+  { label: "Property Management Checks", href: "/industries/property-management-background-checks" },
+  { label: "Construction Background Checks", href: "/industries/construction-background-checks" },
+];
+
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
@@ -43,7 +54,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="lg:col-span-8 grid sm:grid-cols-3 gap-10">
+          <div className="lg:col-span-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
             {FOOTER_NAV.map((col) => (
               <div key={col.title}>
                 <h4 className="text-xs font-semibold uppercase tracking-[0.18em] text-[#B7232A]">{col.title}</h4>
@@ -58,6 +69,19 @@ export default function Footer() {
                 </ul>
               </div>
             ))}
+
+            <div>
+              <h4 className="text-xs font-semibold uppercase tracking-[0.18em] text-[#B7232A]">Popular Industries</h4>
+              <ul className="mt-5 space-y-3">
+                {POPULAR_INDUSTRIES.map((link) => (
+                  <li key={link.href}>
+                    <Link href={link.href} className="text-[15px] text-white/75 hover:text-white transition-colors">
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
 
