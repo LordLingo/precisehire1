@@ -18,6 +18,49 @@ type Props = {
 
 const DEFAULT_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/og-home-eKHpe6YmPeUxLLSrGYWz87.png";
 
+const ORGANIZATION_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://precisehire.com/#org",
+  name: "Precise Hire",
+  legalName: "Precise Hire",
+  url: "https://precisehire.com/",
+  logo: "https://precisehire.com/brand/precisehire-logo-icon.png",
+  foundingDate: "2003-01-01",
+  telephone: "+18667735486",
+  email: "Info@precisehire.com",
+  areaServed: {
+    "@type": "Country",
+    name: "United States",
+  },
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      telephone: "+18667735486",
+      contactType: "sales",
+      areaServed: "US",
+      availableLanguage: "English",
+    },
+    {
+      "@type": "ContactPoint",
+      telephone: "+18667735486",
+      contactType: "customer support",
+      areaServed: "US",
+      availableLanguage: "English",
+    },
+  ],
+  knowsAbout: [
+    "Employment background checks",
+    "FCRA compliance",
+    "Criminal background checks",
+    "Employment verification",
+    "Education verification",
+    "Motor vehicle records",
+    "Drug testing",
+    "Adverse action workflows",
+  ],
+};
+
 function setMeta(selector: string, attr: "name" | "property", key: string, content: string) {
   let el = document.head.querySelector<HTMLMetaElement>(selector);
   if (!el) {
@@ -36,6 +79,15 @@ function setLink(rel: string, href: string) {
     document.head.appendChild(el);
   }
   el.setAttribute("href", href);
+}
+
+function getJsonLdItems(jsonLd?: object | object[]) {
+  const provided = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
+  const hasOrg = provided.some((item) => {
+    const maybe = item as { "@id"?: string };
+    return maybe["@id"] === "https://precisehire.com/#org";
+  });
+  return hasOrg ? provided : [ORGANIZATION_JSONLD, ...provided];
 }
 
 export default function SEO({ title, description, canonical, image, noindex, jsonLd, keywords }: Props) {
@@ -64,16 +116,14 @@ export default function SEO({ title, description, canonical, image, noindex, jso
     // JSON-LD
     const existing = document.head.querySelectorAll('script[data-seo="ld"]');
     existing.forEach((n) => n.remove());
-    if (jsonLd) {
-      const arr = Array.isArray(jsonLd) ? jsonLd : [jsonLd];
-      arr.forEach((obj) => {
-        const s = document.createElement("script");
-        s.type = "application/ld+json";
-        s.dataset.seo = "ld";
-        s.text = JSON.stringify(obj);
-        document.head.appendChild(s);
-      });
-    }
+    const arr = getJsonLdItems(jsonLd);
+    arr.forEach((obj) => {
+      const s = document.createElement("script");
+      s.type = "application/ld+json";
+      s.dataset.seo = "ld";
+      s.text = JSON.stringify(obj);
+      document.head.appendChild(s);
+    });
   }, [title, description, canonical, image, noindex, jsonLd, keywords]);
 
   return null;
