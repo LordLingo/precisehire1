@@ -8,162 +8,157 @@ const root = path.resolve(__dirname, "..");
 const dist = path.join(root, "dist", "public");
 const templatePath = path.join(dist, "index.html");
 
+const SITE_URL = "https://rapidhiresolutions.com";
+const ORG_NAME = "Rapid Hire Solutions";
+
 const orgJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "@id": "https://precisehire.com/#org",
-  name: "Precise Hire",
-  url: "https://precisehire.com/",
-  foundingDate: "2003-01-01",
-  telephone: "+18667735486",
-  contactPoint: [
-    {
-      "@type": "ContactPoint",
-      telephone: "+18667735486",
-      contactType: "sales",
-      areaServed: "US",
-      availableLanguage: "English",
-    },
-  ],
+  "@id": `${SITE_URL}/#org`,
+  name: ORG_NAME,
+  url: `${SITE_URL}/`,
+  description:
+    "Rapid Hire Solutions provides FCRA-certified employment background checks, pre-employment screening, criminal background checks, verifications, MVR checks, drug screening, continuous monitoring, and ATS-connected workflows for U.S. employers.",
+  areaServed: "US",
 };
 
 const routes = [
   {
     path: "/",
-    title: "Precise Hire — Background Checks Employers Trust",
+    title: "Rapid Hire Solutions — Fast Background Checks",
     description:
-      "FCRA-compliant employment background checks, drug testing, MVR, and verifications — most reports back in under 4 hours.",
-    jsonLd: [orgJsonLd, { "@context": "https://schema.org", "@type": "WebSite", name: "Precise Hire", url: "https://precisehire.com/" }],
+      "FCRA-certified employment background checks, drug screening, MVR checks, verifications, and ATS-connected workflows for high-volume hiring.",
+    jsonLd: [orgJsonLd, { "@context": "https://schema.org", "@type": "WebSite", name: ORG_NAME, url: `${SITE_URL}/` }],
   },
   {
     path: "/services",
-    title: "Background Check Services for Employers | Precise Hire",
+    title: "Background Check Services | Rapid Hire Solutions",
     description:
-      "Employment background check services including criminal records, verifications, MVR, drug testing, and international screening.",
+      "Employment background check services including criminal records, verifications, MVR checks, drug screening, continuous monitoring, and ATS workflows.",
   },
   {
     path: "/services/criminal-background-checks",
-    title: "Criminal Background Checks for Employers | Precise Hire",
+    title: "Criminal Background Checks | Rapid Hire Solutions",
     description:
-      "Fast, FCRA-compliant criminal background checks across county, state, federal, and national databases. Most reports returned in under 4 hours.",
+      "Fast, FCRA-certified criminal background checks across county, state, federal, and national sources for employers and hiring teams.",
   },
   {
     path: "/services/employment-verification",
-    title: "Employment Verification Services | Precise Hire",
+    title: "Employment Verification | Rapid Hire Solutions",
     description:
-      "Verify past employers, job titles, dates, and reasons for leaving directly from the source before making a final hiring decision.",
+      "Verify past employers, job titles, dates, and employment history directly from the source before making a final hiring decision.",
   },
   {
     path: "/services/driving-record-checks-mvr",
-    title: "Driving Record Checks (MVR) for Employers | Precise Hire",
+    title: "MVR Checks for Employers | Rapid Hire Solutions",
     description:
-      "DOT-compliant Motor Vehicle Records pulled from all 50 states to identify violations, license status, restrictions, and CDL history.",
+      "Motor vehicle record checks help employers review license status, violations, restrictions, and driving history before putting workers on the road.",
   },
   {
     path: "/services/drug-testing",
-    title: "Drug & Alcohol Testing for Employers | Precise Hire",
+    title: "Drug Screening for Employers | Rapid Hire Solutions",
     description:
-      "Pre-employment, random, and post-incident drug screening with nationwide collection sites, MRO review, and DOT-compliant programs.",
+      "Pre-employment, random, and post-incident drug screening workflows for employers, staffing teams, transportation, healthcare, and safety-sensitive roles.",
   },
   {
     path: "/services/education-verification",
-    title: "Education Verification Services | Precise Hire",
+    title: "Education Verification | Rapid Hire Solutions",
     description:
-      "Confirm degrees, attendance dates, and credentials directly with schools, colleges, trade institutions, and international sources.",
+      "Confirm degrees, attendance dates, credentials, and education history with schools, colleges, trade institutions, and international sources.",
   },
   {
     path: "/services/international-background-checks",
-    title: "International Background Checks | Precise Hire",
+    title: "International Background Checks | Rapid Hire Solutions",
     description:
-      "Cross-border employment, education, criminal, and credential verifications in 200+ countries with privacy-aware processes.",
+      "Cross-border employment, education, criminal, and credential verifications for employers hiring candidates with international history.",
   },
   {
     path: "/industries",
-    title: "Background Checks by Industry | Precise Hire",
+    title: "Background Checks by Industry | Rapid Hire Solutions",
     description:
-      "Role-based background check packages for healthcare, staffing, transportation, retail, nonprofits, construction, and more.",
+      "Role-based background check workflows for staffing, healthcare, transportation, retail, nonprofits, construction, small business, and more.",
   },
   {
     path: "/industries/healthcare",
-    title: "Healthcare Background Checks | Precise Hire",
+    title: "Healthcare Background Checks | Rapid Hire Solutions",
     description:
-      "Healthcare screening for hospitals, clinics, home health, allied staffing, sanctions checks, license verification, and drug testing.",
+      "Healthcare screening workflows for hospitals, clinics, home health, allied staffing, sanctions checks, license verification, and drug screening.",
   },
   {
     path: "/industries/transportation",
-    title: "Transportation Background Checks | Precise Hire",
+    title: "Transportation Background Checks | Rapid Hire Solutions",
     description:
-      "DOT-ready background checks, MVRs, CDLIS, drug testing, and continuous license monitoring for transportation employers.",
+      "Transportation screening workflows for MVR checks, driver background checks, drug screening, CDL-related screening, and fleet hiring.",
   },
   {
     path: "/industries/staffing",
-    title: "Background Checks for Staffing Agencies | Precise Hire",
+    title: "Staffing Background Checks | Rapid Hire Solutions",
     description:
-      "High-volume screening for staffing firms with per-client packages, branch billing, ATS workflows, I-9, E-Verify, and WOTC support.",
+      "High-volume background screening for staffing firms with candidate workflows, client-ready packages, ATS integrations, and fast turnaround.",
   },
   {
     path: "/industries/retail-hospitality-background-checks",
-    title: "Retail & Hospitality Background Checks | Precise Hire",
+    title: "Retail Background Checks | Rapid Hire Solutions",
     description:
-      "Fast, affordable retail and hospitality background checks for high-turnover hiring teams that need compliant reports without slowing offers.",
+      "Fast retail and hospitality background checks for high-turnover hiring teams that need compliant reports without slowing down offers.",
   },
   {
     path: "/industries/nonprofit-volunteer-background-checks",
-    title: "Volunteer Background Checks for Nonprofits | Precise Hire",
+    title: "Volunteer Background Checks | Rapid Hire Solutions",
     description:
-      "Volunteer background checks for nonprofits, youth programs, schools, ministries, and community organizations that need safe screening.",
+      "Volunteer background checks for nonprofits, youth programs, schools, ministries, and community organizations that need safer screening.",
   },
   {
     path: "/industries/church-background-checks",
-    title: "Church Background Checks for Volunteers | Precise Hire",
+    title: "Church Background Checks | Rapid Hire Solutions",
     description:
-      "Church background checks for volunteers, ministry staff, youth workers, drivers, and leadership teams with simple packages.",
+      "Church background checks for volunteers, ministry staff, youth workers, drivers, and leadership teams with simple screening workflows.",
   },
   {
     path: "/industries/property-management-background-checks",
-    title: "Property Management Background Checks | Precise Hire",
+    title: "Property Management Checks | Rapid Hire Solutions",
     description:
       "Employment background checks for property management firms hiring leasing agents, maintenance staff, onsite managers, and contractors.",
   },
   {
     path: "/industries/construction-background-checks",
-    title: "Construction Background Checks | Precise Hire",
+    title: "Construction Background Checks | Rapid Hire Solutions",
     description:
-      "Background checks, MVRs, and drug testing for construction companies, contractors, field crews, and safety-sensitive roles.",
+      "Background checks, MVR checks, and drug screening for construction companies, contractors, field crews, and safety-sensitive roles.",
   },
   {
     path: "/pricing",
-    title: "Background Check Pricing | Precise Hire",
+    title: "Background Check Pricing | Rapid Hire Solutions",
     description:
-      "Transparent employment background check pricing for criminal records, verifications, MVR, drug testing, and custom packages.",
+      "Employment background check pricing for criminal records, verifications, MVR checks, drug screening, continuous monitoring, and custom packages.",
   },
   {
     path: "/compliance",
-    title: "FCRA Background Check Compliance | Precise Hire",
+    title: "FCRA Background Check Compliance | Rapid Hire Solutions",
     description:
       "FCRA compliance resources, adverse action workflows, disclosure support, and screening guidance for employment background checks.",
   },
   {
     path: "/integrations",
-    title: "Background Check ATS Integrations | Precise Hire",
+    title: "Background Check ATS Integrations | Rapid Hire Solutions",
     description:
-      "Connect Precise Hire background checks with applicant tracking systems, HR platforms, APIs, and hiring workflows.",
+      "Connect Rapid Hire Solutions background checks with applicant tracking systems, HR platforms, APIs, and high-volume hiring workflows.",
   },
   {
     path: "/about",
-    title: "About Precise Hire | Employment Background Checks",
+    title: "About Rapid Hire Solutions | Background Checks",
     description:
-      "Learn about Precise Hire, a background check provider serving employers, staffing firms, and HR teams across the United States.",
+      "Learn about Rapid Hire Solutions, a U.S.-based background check provider serving employers, staffing firms, and HR teams.",
   },
   {
     path: "/resources",
-    title: "Background Check Resources for Employers | Precise Hire",
+    title: "Background Check Resources | Rapid Hire Solutions",
     description:
-      "Employer guides for FCRA compliance, criminal background checks, adverse action, ban-the-box rules, MVRs, drug testing, and hiring.",
+      "Employer guides for FCRA compliance, criminal background checks, adverse action, ban-the-box rules, MVR checks, drug screening, and hiring.",
   },
   {
     path: "/resources/employer-background-check-program-guide",
-    title: "Employer Background Check Program Guide | Precise Hire",
+    title: "Employer Background Check Program Guide",
     description:
       "A practical employer guide to building a compliant background check program: package design, FCRA workflow, turnaround speed, candidate experience, and internal controls.",
   },
@@ -175,33 +170,33 @@ const routes = [
   },
   {
     path: "/resources/employment-verification-program-guide",
-    title: "Employment Verification Program Guide | Precise Hire",
+    title: "Employment Verification Program Guide",
     description:
       "Employer guide to employment verification: what to verify, how to handle delays, when to use database verification, and how to support staffing and HR teams.",
   },
   {
     path: "/resources/employee-drug-testing-policy-guide",
-    title: "Employee Drug Testing Policy Guide | Precise Hire",
+    title: "Employee Drug Testing Policy Guide",
     description:
       "Employer guide to drug testing policy, safety-sensitive roles, DOT and non-DOT testing, marijuana rules, candidate timing, and compliance workflow.",
   },
   {
     path: "/referral",
-    title: "Referral Partner Program | Earn Monthly | Precise Hire",
+    title: "Referral Partner Program | Rapid Hire Solutions",
     description:
       "Refer businesses that need background checks and earn monthly referral partner revenue share from eligible client billing.",
   },
   {
     path: "/get-a-quote",
-    title: "Get a Background Check Quote | Precise Hire",
+    title: "Get a Background Check Quote | Rapid Hire Solutions",
     description:
       "Request background check pricing and package recommendations for your company, staffing firm, nonprofit, or hiring team.",
   },
   {
     path: "/contact",
-    title: "Contact Precise Hire | Background Check Services",
+    title: "Contact Rapid Hire Solutions | Background Checks",
     description:
-      "Contact Precise Hire for employment background check services, support, compliance questions, integrations, and pricing.",
+      "Contact Rapid Hire Solutions for employment background checks, support, compliance questions, integrations, and pricing.",
   },
 ];
 
@@ -218,7 +213,7 @@ function setTag(html, pattern, replacement) {
 }
 
 function injectMeta(template, route) {
-  const canonical = `https://precisehire.com${route.path === "/" ? "/" : route.path}`;
+  const canonical = `${SITE_URL}${route.path === "/" ? "/" : route.path}`;
   let html = template;
 
   html = setTag(html, /<title>[\s\S]*?<\/title>/i, `<title>${escapeHtml(route.title)}</title>`);
