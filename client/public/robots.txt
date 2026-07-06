@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://precisehire.com/sitemap.xml
-Sitemap: https://precisehire.com/sitemap-extra.xml
+Sitemap: https://rapidhiresolutions.com/sitemap.xml
+Sitemap: https://rapidhiresolutions.com/sitemap-extra.xml
