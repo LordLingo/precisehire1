@@ -30,6 +30,14 @@ const PAGES: Record<string, { title: string; metaTitle: string; metaDescription:
         ],
       },
       {
+        heading: "SMS notifications and mobile opt-in",
+        body: [
+          "When an employer or authorized client requests a background check, applicants may provide a mobile number and choose to receive SMS messages related to the background check process. SMS messages may include secure invitation links, reminders to complete required information, requests for additional information, and status-related notices.",
+          "Mobile numbers and SMS consent records are used only for background check communications. We do not sell mobile numbers, and we do not share SMS opt-in data or consent with third parties for their marketing or promotional purposes.",
+          "Applicants may reply STOP to opt out of SMS messages or HELP for assistance. Message frequency varies based on the background check process. Message and data rates may apply.",
+        ],
+      },
+      {
         heading: "How we share information",
         body: [
           "We share completed reports only with the employer that ordered the check and with the candidate upon valid request. We may share data with sub-processors (such as research and verification partners) under written confidentiality and security obligations.",
@@ -51,6 +59,47 @@ const PAGES: Record<string, { title: string; metaTitle: string; metaDescription:
         heading: "Contact",
         body: [
           "For privacy questions or to exercise your rights, contact privacy@precisehire.com.",
+        ],
+      },
+    ],
+  },
+  sms: {
+    title: "SMS Terms & Candidate Notifications",
+    metaTitle: "SMS Terms | Precise Hire",
+    metaDescription: "SMS terms, opt-in instructions, STOP and HELP information, and candidate background check notification details for Precise Hire.",
+    intro:
+      "These SMS Terms explain how applicants may opt in to receive text messages related to employment background check invitations and required background screening steps.",
+    sections: [
+      {
+        heading: "Use of SMS messages",
+        body: [
+          "Precise Hire sends transactional SMS messages to applicants only for background check related purposes. Messages may include secure invitation links, reminders to complete required information, requests for additional information, and status-related notices connected to an employer-requested background check.",
+          "SMS messages are not used for marketing, promotions, loan offers, or direct lending information.",
+        ],
+      },
+      {
+        heading: "Where SMS opt-in is collected",
+        body: [
+          "SMS opt-in is collected inside the secure applicant background check workflow. A reviewer can verify this by going to the public website, opening the footer link titled SMS Terms, and reviewing this section. The applicant-facing opt-in appears after an employer or authorized client starts a background check and the applicant opens the secure background check invitation link.",
+          "On the applicant information and authorization screen, the applicant is shown SMS consent language before submitting their mobile number or continuing the background check process. The applicant may choose SMS reminders and notifications, or may continue using email and support contact options instead.",
+        ],
+      },
+      {
+        heading: "Applicant opt-in language",
+        body: [
+          "The applicant-facing SMS checkbox states: I agree to receive SMS messages from Precise Hire related to my background check, including secure invitation links, reminders, status notices, and requests for additional information. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. SMS consent is optional and is not required to complete a background check; applicants may use email or contact support instead.",
+        ],
+      },
+      {
+        heading: "Opt-out and help",
+        body: [
+          "Applicants may reply STOP to opt out of SMS messages at any time. Applicants may reply HELP for assistance or contact support using the information listed on the website.",
+        ],
+      },
+      {
+        heading: "Privacy",
+        body: [
+          "Mobile numbers and SMS consent records are used only for background check communications. We do not sell mobile numbers, and we do not share SMS opt-in data or consent with third parties for their marketing or promotional purposes. For more details, see the Privacy Policy linked in the website footer.",
         ],
       },
     ],
