@@ -107,6 +107,7 @@ export default function Footer() {
           <p>© {year} Precise Hire. All rights reserved.</p>
           <div className="flex flex-wrap gap-6">
             <Link href="/legal/privacy" className="hover:text-white">Privacy</Link>
+            <Link href="/legal/sms" className="hover:text-white">SMS Terms</Link>
             <Link href="/legal/terms" className="hover:text-white">Terms</Link>
             <Link href="/legal/accessibility" className="hover:text-white">Accessibility</Link>
             <Link href="/compliance" className="hover:text-white">FCRA Compliance</Link>
