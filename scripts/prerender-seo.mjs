@@ -162,6 +162,12 @@ const routes = [
       "Employer guides for FCRA compliance, criminal background checks, adverse action, ban-the-box rules, MVRs, drug testing, and hiring.",
   },
   {
+    path: "/resources/background-check-pricing-for-staffing-agencies",
+    title: "Background Check Pricing for Staffing Agencies",
+    description:
+      "A practical pricing guide for staffing firms comparing background check vendors: package design, pass-through fees, ATS costs, drug testing, and compliance support.",
+  },
+  {
     path: "/resources/employer-background-check-program-guide",
     title: "Employer Background Check Program Guide | Precise Hire",
     description:
