@@ -34,6 +34,7 @@ import Legal from "./pages/Legal";
 import Resources from "./pages/Resources";
 import ResourcePost from "./pages/ResourcePost";
 import BackgroundCheckPricingStaffingAgencies from "./pages/BackgroundCheckPricingStaffingAgencies";
+import HealthcareBackgroundCheckChecklist from "./pages/HealthcareBackgroundCheckChecklist";
 import ConsolidatedResourceGuide from "./pages/ConsolidatedResourceGuide";
 import DisclosurePack from "./pages/DisclosurePack";
 import BanTheBox from "./pages/BanTheBox";
@@ -77,6 +78,7 @@ function Router() {
         <Route path="/resources/employment-verification-program-guide" component={ConsolidatedResourceGuide} />
         <Route path="/resources/employee-drug-testing-policy-guide" component={ConsolidatedResourceGuide} />
         <Route path="/resources/background-check-pricing-for-staffing-agencies" component={BackgroundCheckPricingStaffingAgencies} />
+        <Route path="/resources/healthcare-background-check-checklist" component={HealthcareBackgroundCheckChecklist} />
         <Route path="/resources/:slug" component={ResourcePost} />
         <Route path="/authors/:slug" component={AuthorPage} />
         <Route path="/thanks" component={Thanks} />
