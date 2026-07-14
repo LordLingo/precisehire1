@@ -162,6 +162,12 @@ const routes = [
       "Employer guides for FCRA compliance, criminal background checks, adverse action, ban-the-box rules, MVRs, drug testing, and hiring.",
   },
   {
+    path: "/resources/healthcare-background-check-checklist",
+    title: "Healthcare Background Check Checklist | PreciseHire",
+    description:
+      "A practical healthcare screening checklist covering criminal records, license verification, OIG exclusions, NPDB, employment, education, and drug testing.",
+  },
+  {
     path: "/resources/background-check-pricing-for-staffing-agencies",
     title: "Background Check Pricing for Staffing Agencies",
     description:
