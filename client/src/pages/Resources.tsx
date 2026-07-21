@@ -12,6 +12,7 @@ import { ASSETS, COMPANY } from "@/content/site";
 import { ALL_POSTS_INDEX, POST_CATEGORIES, POST_TOPICS } from "@/content/posts";
 import { WEEKLY_RESOURCE_POST } from "@/content/weekly_resource_post";
 import { HEALTHCARE_BACKGROUND_CHECK_POST } from "@/content/healthcare_background_check_post";
+import { ATS_INTEGRATION_GUIDE_POST } from "@/content/ats_integration_guide_post";
 
 const SEO_ENTRY_POINTS = [
   { label: "Criminal Background Checks", href: "/services/criminal-background-checks", group: "Service" },
@@ -46,7 +47,7 @@ export default function Resources() {
   const [q, setQ] = useState("");
 
   const visiblePosts = useMemo(
-    () => [HEALTHCARE_BACKGROUND_CHECK_POST, WEEKLY_RESOURCE_POST, ...ALL_POSTS_INDEX]
+    () => [ATS_INTEGRATION_GUIDE_POST, HEALTHCARE_BACKGROUND_CHECK_POST, WEEKLY_RESOURCE_POST, ...ALL_POSTS_INDEX]
       .filter((post) => !shouldHideFromResourcesHub(post.slug)),
     [],
   );
