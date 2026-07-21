@@ -162,6 +162,12 @@ const routes = [
       "Employer guides for FCRA compliance, criminal background checks, adverse action, ban-the-box rules, MVRs, drug testing, and hiring.",
   },
   {
+    path: "/resources/background-check-ats-integration-guide",
+    title: "Background Check ATS Integration Guide | PreciseHire",
+    description:
+      "A buyer's guide to background check ATS integrations covering workflow, security, candidate experience, adverse action, billing, support, and implementation.",
+  },
+  {
     path: "/resources/healthcare-background-check-checklist",
     title: "Healthcare Background Check Checklist | PreciseHire",
     description:
