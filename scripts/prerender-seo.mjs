@@ -162,6 +162,12 @@ const routes = [
       "Employer guides for FCRA compliance, criminal background checks, adverse action, ban-the-box rules, MVRs, drug testing, and hiring.",
   },
   {
+    path: "/resources/dot-vs-non-dot-drug-testing-employer-guide",
+    title: "DOT vs. Non-DOT Drug Testing Guide | PreciseHire",
+    description:
+      "Compare DOT and non-DOT drug testing panels, forms, collections, MRO review, Clearinghouse duties, and vendor questions before choosing a program.",
+  },
+  {
     path: "/resources/background-check-ats-integration-guide",
     title: "Background Check ATS Integration Guide | PreciseHire",
     description:
