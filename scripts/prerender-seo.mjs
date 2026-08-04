@@ -162,6 +162,12 @@ const routes = [
       "Employer guides for FCRA compliance, criminal background checks, adverse action, ban-the-box rules, MVRs, drug testing, and hiring.",
   },
   {
+    path: "/resources/employment-verification-services-staffing-guide",
+    title: "Employment Verification Services: Staffing Guide",
+    description:
+      "Compare employment verification vendors on turnaround, source methods, ATS integration, discrepancies, pricing, and support before you choose a provider.",
+  },
+  {
     path: "/resources/dot-vs-non-dot-drug-testing-employer-guide",
     title: "DOT vs. Non-DOT Drug Testing Guide | PreciseHire",
     description:
