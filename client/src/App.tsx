@@ -38,6 +38,7 @@ import HealthcareBackgroundCheckChecklist from "./pages/HealthcareBackgroundChec
 import BackgroundCheckATSIntegrationGuide from "./pages/BackgroundCheckATSIntegrationGuide";
 import DOTVsNonDOTDrugTestingGuide from "./pages/DOTVsNonDOTDrugTestingGuide";
 import EmploymentVerificationStaffingGuide from "./pages/EmploymentVerificationStaffingGuide";
+import BackgroundCheckAdverseActionGuide from "./pages/BackgroundCheckAdverseActionGuide";
 import ConsolidatedResourceGuide from "./pages/ConsolidatedResourceGuide";
 import DisclosurePack from "./pages/DisclosurePack";
 import BanTheBox from "./pages/BanTheBox";
@@ -85,6 +86,7 @@ function Router() {
         <Route path="/resources/background-check-ats-integration-guide" component={BackgroundCheckATSIntegrationGuide} />
         <Route path="/resources/dot-vs-non-dot-drug-testing-employer-guide" component={DOTVsNonDOTDrugTestingGuide} />
         <Route path="/resources/employment-verification-services-staffing-guide" component={EmploymentVerificationStaffingGuide} />
+        <Route path="/resources/background-check-adverse-action-employer-guide" component={BackgroundCheckAdverseActionGuide} />
         <Route path="/resources/:slug" component={ResourcePost} />
         <Route path="/authors/:slug" component={AuthorPage} />
         <Route path="/thanks" component={Thanks} />
