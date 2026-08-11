@@ -162,6 +162,12 @@ const routes = [
       "Employer guides for FCRA compliance, criminal background checks, adverse action, ban-the-box rules, MVRs, drug testing, and hiring.",
   },
   {
+    path: "/resources/background-check-adverse-action-employer-guide",
+    title: "Background Check Adverse Action Guide (2026)",
+    description:
+      "Build a defensible FCRA adverse-action workflow with pre-adverse notices, dispute handling, final notices, ATS controls, and vendor questions.",
+  },
+  {
     path: "/resources/employment-verification-services-staffing-guide",
     title: "Employment Verification Services: Staffing Guide",
     description:
