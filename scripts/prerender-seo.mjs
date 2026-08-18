@@ -162,6 +162,12 @@ const routes = [
       "Employer guides for FCRA compliance, criminal background checks, adverse action, ban-the-box rules, MVRs, drug testing, and hiring.",
   },
   {
+    path: "/resources/county-vs-national-criminal-background-checks",
+    title: "County vs. National Criminal Background Checks",
+    description:
+      "Compare county court searches and national criminal databases on coverage, accuracy, turnaround, pricing, and hiring risk before choosing a screening package.",
+  },
+  {
     path: "/resources/background-check-adverse-action-employer-guide",
     title: "Background Check Adverse Action Guide (2026)",
     description:
