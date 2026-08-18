@@ -39,6 +39,7 @@ import BackgroundCheckATSIntegrationGuide from "./pages/BackgroundCheckATSIntegr
 import DOTVsNonDOTDrugTestingGuide from "./pages/DOTVsNonDOTDrugTestingGuide";
 import EmploymentVerificationStaffingGuide from "./pages/EmploymentVerificationStaffingGuide";
 import BackgroundCheckAdverseActionGuide from "./pages/BackgroundCheckAdverseActionGuide";
+import CountyVsNationalCriminalBackgroundChecks from "./pages/CountyVsNationalCriminalBackgroundChecks";
 import ConsolidatedResourceGuide from "./pages/ConsolidatedResourceGuide";
 import DisclosurePack from "./pages/DisclosurePack";
 import BanTheBox from "./pages/BanTheBox";
@@ -87,6 +88,7 @@ function Router() {
         <Route path="/resources/dot-vs-non-dot-drug-testing-employer-guide" component={DOTVsNonDOTDrugTestingGuide} />
         <Route path="/resources/employment-verification-services-staffing-guide" component={EmploymentVerificationStaffingGuide} />
         <Route path="/resources/background-check-adverse-action-employer-guide" component={BackgroundCheckAdverseActionGuide} />
+        <Route path="/resources/county-vs-national-criminal-background-checks" component={CountyVsNationalCriminalBackgroundChecks} />
         <Route path="/resources/:slug" component={ResourcePost} />
         <Route path="/authors/:slug" component={AuthorPage} />
         <Route path="/thanks" component={Thanks} />
