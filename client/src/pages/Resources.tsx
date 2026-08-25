@@ -17,6 +17,7 @@ import { DOT_VS_NON_DOT_DRUG_TESTING_POST } from "@/content/dot_vs_non_dot_drug_
 import { EMPLOYMENT_VERIFICATION_STAFFING_GUIDE_POST } from "@/content/employment_verification_staffing_guide_post";
 import { ADVERSE_ACTION_EMPLOYER_GUIDE_POST } from "@/content/adverse_action_employer_guide_post";
 import { COUNTY_VS_NATIONAL_CRIMINAL_CHECKS_POST } from "@/content/county_vs_national_criminal_checks_post";
+import { BACKGROUND_CHECK_VENDOR_SELECTION_POST } from "@/content/background_check_vendor_selection_post";
 
 const SEO_ENTRY_POINTS = [
   { label: "Criminal Background Checks", href: "/services/criminal-background-checks", group: "Service" },
@@ -52,6 +53,7 @@ export default function Resources() {
 
   const visiblePosts = useMemo(
     () => [
+      BACKGROUND_CHECK_VENDOR_SELECTION_POST,
       COUNTY_VS_NATIONAL_CRIMINAL_CHECKS_POST,
       ADVERSE_ACTION_EMPLOYER_GUIDE_POST,
       EMPLOYMENT_VERIFICATION_STAFFING_GUIDE_POST,
