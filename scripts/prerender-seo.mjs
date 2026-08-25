@@ -162,6 +162,12 @@ const routes = [
       "Employer guides for FCRA compliance, criminal background checks, adverse action, ban-the-box rules, MVRs, drug testing, and hiring.",
   },
   {
+    path: "/resources/how-to-choose-background-check-company-employer-guide",
+    title: "How to Choose a Background Check Company: 15 Questions",
+    description:
+      "Compare employment background check companies on accuracy, turnaround, pricing, compliance support, ATS integration, drug testing, and service.",
+  },
+  {
     path: "/resources/county-vs-national-criminal-background-checks",
     title: "County vs. National Criminal Background Checks",
     description:
