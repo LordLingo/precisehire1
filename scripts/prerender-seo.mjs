@@ -162,6 +162,12 @@ const routes = [
       "Employer guides for FCRA compliance, criminal background checks, adverse action, ban-the-box rules, MVRs, drug testing, and hiring.",
   },
   {
+    path: "/resources/background-check-turnaround-time-employer-guide",
+    title: "Background Check Turnaround Time: Employer Guide",
+    description:
+      "See what controls background check turnaround time, why reports get delayed, and how employers can reduce hiring delays without sacrificing accuracy.",
+  },
+  {
     path: "/resources/how-to-choose-background-check-company-employer-guide",
     title: "How to Choose a Background Check Company: 15 Questions",
     description:
