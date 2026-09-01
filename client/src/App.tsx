@@ -41,6 +41,7 @@ import EmploymentVerificationStaffingGuide from "./pages/EmploymentVerificationS
 import BackgroundCheckAdverseActionGuide from "./pages/BackgroundCheckAdverseActionGuide";
 import CountyVsNationalCriminalBackgroundChecks from "./pages/CountyVsNationalCriminalBackgroundChecks";
 import BackgroundCheckVendorSelectionGuide from "./pages/BackgroundCheckVendorSelectionGuide";
+import BackgroundCheckTurnaroundTimeGuide from "./pages/BackgroundCheckTurnaroundTimeGuide";
 import ConsolidatedResourceGuide from "./pages/ConsolidatedResourceGuide";
 import DisclosurePack from "./pages/DisclosurePack";
 import BanTheBox from "./pages/BanTheBox";
@@ -91,6 +92,7 @@ function Router() {
         <Route path="/resources/background-check-adverse-action-employer-guide" component={BackgroundCheckAdverseActionGuide} />
         <Route path="/resources/county-vs-national-criminal-background-checks" component={CountyVsNationalCriminalBackgroundChecks} />
         <Route path="/resources/how-to-choose-background-check-company-employer-guide" component={BackgroundCheckVendorSelectionGuide} />
+        <Route path="/resources/background-check-turnaround-time-employer-guide" component={BackgroundCheckTurnaroundTimeGuide} />
         <Route path="/resources/:slug" component={ResourcePost} />
         <Route path="/authors/:slug" component={AuthorPage} />
         <Route path="/thanks" component={Thanks} />
