@@ -8,18 +8,18 @@
  */
 
 export const ASSETS = {
-  hero: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663030097116/uKhQhkUWELYRvJyh.png",
-  team: "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/about-team-4vFYYmnbKTDnGef5EPiZW5.webp",
-  handshake: "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/cta-handshake-GwWopeADZ8kzKCsYCydWCb.webp",
-  swooshCoral: "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/swoosh-red-T8JxWZgdAP94rTzeUjKULQ.webp",
-  swooshSky: "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/swoosh-gray-LrNEWs7iuUZsWG6AS3H5Xs.webp",
-  dashboard: "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/dashboard-mockup-K5y8zhKUo4bNHg8aAeUWnV.webp",
-  serviceCriminal: "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/service-criminal-RrCKBHUw4xaavBpRG9Hb5Q.webp",
-  serviceMVR: "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/service-mvr-ZrMAmy8u8r6NrpCq3bedLi.webp",
-  serviceDrug: "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/service-drug-urine-nFW4D4ZQjMtm8CDKWkrkQ8.webp",
-  serviceEducation: "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/service-education-mqKcqVhLm8eeMBTQ6kdZML.webp",
-  serviceEmployment: "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/service-employment-J3EG3dWFr9Zq9kp2DFnjhw.webp",
-  serviceInternational: "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/service-international-XpB2FPcKkD4B5AN8CwMHNS.webp",
+  hero: "/images/hero-support-team.webp",
+  team: "/images/operations-team.webp",
+  handshake: "/images/hiring-handshake.webp",
+  swooshCoral: "/images/swoosh-red.svg",
+  swooshSky: "/images/swoosh-gray.svg",
+  dashboard: "/images/dashboard-preview.webp",
+  serviceCriminal: "/images/service-criminal.webp",
+  serviceMVR: "/images/service-mvr.webp",
+  serviceDrug: "/images/service-drug-testing.webp",
+  serviceEducation: "/images/service-education.webp",
+  serviceEmployment: "/images/service-employment.webp",
+  serviceInternational: "/images/service-international.webp",
 };
 
 export const COMPANY = {

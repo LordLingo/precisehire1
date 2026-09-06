@@ -12,7 +12,6 @@ import Reveal from "@/components/site/Reveal";
 import StatCounter from "@/components/site/StatCounter";
 import { ASSETS, SERVICES, INDUSTRIES, STATS, FAQ_ITEMS, COMPANY } from "@/content/site";
 import { TURNAROUND } from "@/content/turnaround";
-import { TEAM } from "@/content/team";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import type { LucideIcon } from "lucide-react";
 
@@ -98,7 +97,7 @@ export default function Home() {
         title="Precise Hire — Background Checks Employers Trust"
         description="FCRA-compliant employment background checks, drug testing, MVR, and verifications — most reports back in under 4 hours. Trusted by employers for 22+ years."
         canonical="https://precisehire.com/"
-        image="https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/og-home-eKHpe6YmPeUxLLSrGYWz87.png"
+        image="https://precisehire.com/images/hero-support-team.webp"
         keywords={[
           "employment background check",
           "FCRA compliant background check",
@@ -362,40 +361,28 @@ export default function Home() {
       {/* ----------------------------------------------------------------
            SUPPORT TEAM PREVIEW
            ----------------------------------------------------------------
-           Quick teaser of the American-staffed support desk. Three
-           overlapping headshots + a one-line value prop + link to
-           /support. Reads from /content/team.ts.
+           Quick teaser of the American-staffed support desk with a
+           team photo, one-line value prop, and link to /support.
            ---------------------------------------------------------------- */}
       <section className="container py-24" aria-labelledby="support-preview-heading">
         <div className="grid lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-5 order-2 lg:order-1">
             <Reveal>
               <div className="relative h-[280px] sm:h-[340px]">
-                {TEAM.slice(0, 3).map((m, i) => (
-                  <motion.div
-                    key={m.slug}
-                    className="absolute rounded-2xl overflow-hidden shadow-[0_20px_45px_-25px_rgba(11,31,58,0.55)] ring-1 ring-white"
-                    style={{
-                      width: "60%",
-                      aspectRatio: "1 / 1",
-                      left: `${i * 18}%`,
-                      top: `${i * 22}px`,
-                      zIndex: 10 + i,
-                      transform: `rotate(${(i - 1) * 2.5}deg)`,
-                    }}
-                    initial={{ opacity: 0, y: 24 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-80px" }}
-                    transition={{ duration: 0.6, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
-                  >
-                    <img
-                      src={m.photo}
-                      alt={`${m.name}, ${m.role}, ${m.region}`}
-                      loading="lazy"
-                      className="h-full w-full object-cover"
-                    />
-                  </motion.div>
-                ))}
+                <motion.div
+                  className="absolute inset-0 rounded-3xl overflow-hidden shadow-[0_24px_50px_-28px_rgba(11,31,58,0.55)] ring-1 ring-white"
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-80px" }}
+                  transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                >
+                  <img
+                    src={ASSETS.team}
+                    alt="Precise Hire support specialists collaborating on a background check workflow"
+                    loading="lazy"
+                    className="h-full w-full object-cover"
+                  />
+                </motion.div>
                 {/* live pickup badge floating above the stack */}
                 <motion.div
                   initial={{ opacity: 0, scale: 0.92 }}
