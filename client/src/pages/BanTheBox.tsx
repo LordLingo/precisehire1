@@ -268,7 +268,7 @@ export default function BanTheBox() {
         title="Ban the Box Laws by State & Jurisdiction | PreciseHire"
         description="An employer's guide to ban-the-box and fair-chance hiring laws across 16 states, DC, the U.S. Virgin Islands, and 20+ cities and counties. Includes a directory, employer playbook, and FAQs."
         canonical="https://precisehire.com/resources/ban-the-box"
-        image="https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/og-banthebox-SDr8NMsoTeW3JpGURzypRr.png"
+        image="https://precisehire.com/brand/og-default.svg"
         keywords={[
           "ban the box laws by state",
           "fair chance hiring",
@@ -279,7 +279,7 @@ export default function BanTheBox() {
       />
 
       {/* HERO */}
-      <section className="relative overflow-hidden bg-[#FAF7F2]">
+      <section className="ph-page-hero relative overflow-hidden bg-[#FAF7F2]">
         <img
           src={ASSETS.swooshSky}
           alt=""

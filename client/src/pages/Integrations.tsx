@@ -33,7 +33,7 @@ export default function Integrations() {
         canonical="https://precisehire.com/integrations"
       />
 
-      <section className="relative overflow-hidden">
+      <section className="ph-page-hero relative overflow-hidden">
         <img src={ASSETS.swooshSky} alt="" aria-hidden="true" className="pointer-events-none absolute -top-20 -right-20 w-[420px] opacity-50 rotate-[15deg]" />
         <div className="container pt-20 lg:pt-28 pb-12 max-w-3xl">
           <Reveal>

@@ -316,7 +316,7 @@ export default function ConsolidatedResourceGuide() {
         <span className="text-[#0B1F3A]/80">{guide.eyebrow}</span>
       </nav>
 
-      <section className="bg-[#FAF7F2] border-b border-[#0B1F3A]/8">
+      <section className="ph-page-hero bg-[#FAF7F2] border-b border-[#0B1F3A]/8">
         <div className="container py-14 lg:py-20 grid lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-8">
             <Reveal>

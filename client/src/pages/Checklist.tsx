@@ -329,7 +329,7 @@ export default function Checklist() {
       />
 
       {/* HERO */}
-      <section className="relative overflow-hidden">
+      <section className="ph-page-hero relative overflow-hidden">
         <div
           className="absolute -top-12 -right-32 size-[520px] opacity-65 pointer-events-none select-none"
           style={{ backgroundImage: `url(${ASSETS.swooshSky})`, backgroundSize: "contain", backgroundRepeat: "no-repeat" }}
@@ -355,10 +355,10 @@ export default function Checklist() {
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mt-6 text-[17px] leading-[1.7] text-[#0B1F3A]/75 max-w-2xl">
-                Six surfaces \u2014 disclosure and authorization, pre-adverse
+                Six surfaces — disclosure and authorization, pre-adverse
                 workflow, waiting-period cushion, EEOC individualized
                 assessment, dispute handling, and continuous-monitoring posture
-                \u2014 with the statute, regulation, or case-law citation behind
+                — with the statute, regulation, or case-law citation behind
                 every line. Use it interactively below, or download the PDF and
                 walk through it with your team.
               </p>
@@ -412,7 +412,7 @@ export default function Checklist() {
                   />
                 </div>
                 <p className="mt-5 text-[13.5px] leading-[1.6] text-[#0B1F3A]/65">
-                  Most employers we audit can confidently check 16\u201320 of
+                  Most employers we audit can confidently check 16–20 of
                   the 24 boxes without further work. The remaining four to
                   eight are typically where the litigation risk lives. Your
                   progress is saved on this device only.
@@ -543,7 +543,7 @@ export default function Checklist() {
             FCRA, EEOC, and state-law obligations evolve; citations are current
             as of May 2026. For jurisdiction-specific application, consult
             counsel. PreciseHire publishes this checklist openly so any U.S.
-            employer \u2014 customer or not \u2014 can self-audit.
+            employer — customer or not — can self-audit.
           </p>
         </div>
       </section>

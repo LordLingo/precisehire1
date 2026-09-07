@@ -92,7 +92,7 @@ export default function Contact() {
         canonical="https://precisehire.com/contact"
       />
 
-      <section className="relative overflow-hidden">
+      <section className="ph-page-hero relative overflow-hidden">
         <img
           src={ASSETS.swooshCoral}
           alt=""

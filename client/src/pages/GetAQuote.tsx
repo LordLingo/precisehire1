@@ -116,7 +116,7 @@ export default function GetAQuote() {
         canonical="https://precisehire.com/get-a-quote"
       />
 
-      <section className="relative overflow-hidden">
+      <section className="ph-page-hero relative overflow-hidden">
         <img
           src={ASSETS.swooshCoral}
           alt=""

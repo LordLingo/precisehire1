@@ -33,9 +33,10 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
   }, [location]);
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-[#0B1F3A]">
+    <div className="ph-site min-h-screen flex flex-col">
+      <a className="ph-skip" href="#main-content">Skip to content</a>
       <Header />
-      <main className="flex-1">{children}</main>
+      <main id="main-content" className="ph-main flex-1" data-page-kind={location === "/" ? "home" : "interior"}>{children}</main>
       <Footer />
     </div>
   );

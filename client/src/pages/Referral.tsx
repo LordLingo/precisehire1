@@ -110,7 +110,7 @@ export default function Referral() {
         jsonLd={JSONLD}
       />
 
-      <section className="relative overflow-hidden bg-[#FAF7F2] border-b border-[#0B1F3A]/8">
+      <section className="ph-page-hero relative overflow-hidden bg-[#FAF7F2] border-b border-[#0B1F3A]/8">
         <div className="absolute inset-x-0 top-0 h-1 bg-[#B7232A]" />
         <div className="container py-16 lg:py-24 text-center">
           <Reveal>

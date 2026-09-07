@@ -209,7 +209,7 @@ export default function Audit() {
       />
 
       {/* HERO */}
-      <section className="relative overflow-hidden">
+      <section className="ph-page-hero relative overflow-hidden">
         <div
           className="absolute -top-12 -left-24 size-[520px] opacity-70 pointer-events-none select-none"
           style={{ backgroundImage: `url(${ASSETS.swooshSky})`, backgroundSize: "contain", backgroundRepeat: "no-repeat" }}
@@ -343,7 +343,7 @@ export default function Audit() {
               <p className="mt-5 text-[#0B1F3A]/75 leading-relaxed">
                 We do not audit everything. We audit the six surfaces that
                 actually generate FCRA, EEOC, and state-law class actions
-                against employers \u2014 the pre-hire disclosure, the
+                against employers — the pre-hire disclosure, the
                 authorization, the pre-adverse workflow, the waiting-period
                 math, the individualized assessment documentation, and the
                 dispute pipeline. If your CRA gets all six right, you are very
@@ -425,7 +425,7 @@ export default function Audit() {
                 The questions employers actually ask before booking.
               </h2>
               <p className="mt-4 text-[#0B1F3A]/70 leading-relaxed">
-                If yours is not here, just ask on the call \u2014 it is fifteen
+                If yours is not here, just ask on the call — it is fifteen
                 minutes and you set the agenda.
               </p>
             </Reveal>

@@ -73,7 +73,7 @@ export default function AiSearchFacts() {
         jsonLd={jsonLd}
       />
 
-      <section className="bg-[#FAF7F2] border-b border-[#0B1F3A]/8">
+      <section className="ph-page-hero bg-[#FAF7F2] border-b border-[#0B1F3A]/8">
         <div className="container py-16 lg:py-24">
           <Reveal>
             <span className="eyebrow">

@@ -37,6 +37,7 @@ const allowedExact = new Set([
   "/resources",
   "/resources/ban-the-box",
   "/resources/fcra-icraa-disclosure-pack",
+  "/services",
   "/support",
   "/talk-to-an-expert",
   "/thanks",

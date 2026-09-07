@@ -41,7 +41,7 @@ import Reveal from "@/components/site/Reveal";
 import { ASSETS, COMPANY } from "@/content/site";
 
 const HERO_IMG =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/industries-transportation-hero-N4hQFWd4ohFEJaAy3Yyw9f.webp";
+  "/images/service-mvr.webp";
 
 /* ---------------------------------------------- regulatory stack */
 const STACK = [
@@ -201,7 +201,7 @@ export default function IndustriesTransportation() {
       />
 
       {/* HERO ------------------------------------------------------------ */}
-      <section className="relative overflow-hidden">
+      <section className="ph-page-hero relative overflow-hidden">
         <div
           className="absolute -top-16 -right-32 size-[520px] opacity-60 pointer-events-none select-none"
           style={{

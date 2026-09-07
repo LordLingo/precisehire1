@@ -126,7 +126,7 @@ export default function TalkToAnExpert() {
         canonical="https://precisehire.com/talk-to-an-expert"
       />
 
-      <section className="relative overflow-hidden">
+      <section className="ph-page-hero relative overflow-hidden">
         <img
           src={ASSETS.swooshSky}
           alt=""

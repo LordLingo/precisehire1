@@ -138,7 +138,7 @@ export default function Legal() {
   return (
     <>
       <SEO title={page.metaTitle} description={page.metaDescription} canonical={`https://precisehire.com/legal/${slug}`} />
-      <section className="container pt-20 lg:pt-28 pb-24 max-w-3xl">
+      <section className="ph-page-hero container pt-20 lg:pt-28 pb-24 max-w-3xl">
         <Reveal>
           <span className="eyebrow">Legal</span>
           <h1 className="display-xl mt-4 text-[#0B1F3A]">{page.title}</h1>

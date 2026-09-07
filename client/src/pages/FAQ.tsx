@@ -30,7 +30,7 @@ export default function FAQ() {
         jsonLd={FAQ_JSONLD}
       />
 
-      <section className="relative overflow-hidden">
+      <section className="ph-page-hero relative overflow-hidden">
         <img src={ASSETS.swooshSky} alt="" aria-hidden="true" className="pointer-events-none absolute -top-20 -right-24 w-[420px] opacity-50 rotate-[12deg]" />
         <div className="container pt-20 lg:pt-28 pb-12 max-w-3xl">
           <Reveal>

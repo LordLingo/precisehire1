@@ -189,7 +189,7 @@ export default function ResourcePost() {
       </nav>
 
       {/* Header */}
-      <header className="container pt-6 pb-10 max-w-4xl">
+      <header className="ph-article-header container pt-6 pb-10 max-w-4xl">
         <Reveal>
           <p className="eyebrow">
             <span className="inline-block size-1.5 rounded-full bg-[#B7232A]" /> {post.category}

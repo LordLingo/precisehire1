@@ -35,7 +35,7 @@ const EDITORIAL_TEAM: Author = {
     "Owner-operated since 2003",
   ],
   photo:
-    "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/about-team-4vFYYmnbKTDnGef5EPiZW5.webp",
+    "/images/operations-team.webp",
 };
 
 export const AUTHORS: Record<string, Author> = {

@@ -106,7 +106,7 @@ export default function DisclosurePack() {
         canonical="https://precisehire.com/resources/fcra-icraa-disclosure-pack"
       />
 
-      <section className="relative overflow-hidden">
+      <section className="ph-page-hero relative overflow-hidden">
         <div className="container pt-20 lg:pt-28 pb-16 grid lg:grid-cols-12 gap-12">
           {/* LEFT — what's inside */}
           <div className="lg:col-span-7">

@@ -91,7 +91,7 @@ export default function Support() {
            Asymmetric: 7-col headline + 5-col proof card. Cream background,
            red accent under the eyebrow, navy display headline.
            ---------------------------------------------------------------- */}
-      <section className="relative overflow-hidden">
+      <section className="ph-page-hero relative overflow-hidden">
         <img
           src={ASSETS.swooshCoral}
           alt=""

@@ -12,7 +12,7 @@ export default function NotFound() {
   return (
     <>
       <SEO title="Page not found | Precise Hire" description="That page doesn't exist anymore — but here are some places that might help." noindex />
-      <section className="relative overflow-hidden">
+      <section className="ph-page-hero relative overflow-hidden">
         <img src={ASSETS.swooshSky} alt="" aria-hidden="true" className="pointer-events-none absolute -top-20 -left-20 w-[420px] opacity-50 rotate-[-15deg]" />
         <div className="container py-24 lg:py-32 max-w-3xl text-center">
           <span className="eyebrow">404</span>

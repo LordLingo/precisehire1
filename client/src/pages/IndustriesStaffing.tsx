@@ -39,7 +39,7 @@ import {
 } from "@/components/ui/accordion";
 
 const HERO_IMG =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/industries-staffing-hero-8MFymmyjQZNE5DbusecSC3.webp";
+  "/images/service-employment.webp";
 
 const STAKES = [
   {
@@ -172,7 +172,7 @@ export default function IndustriesStaffing() {
       />
 
       {/* HERO */}
-      <section className="bg-[#FAF7F2] border-b border-[#0B1F3A]/8">
+      <section className="ph-page-hero bg-[#FAF7F2] border-b border-[#0B1F3A]/8">
         <div className="container py-16 lg:py-20 grid lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-7">
             <Reveal>

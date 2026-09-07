@@ -211,7 +211,7 @@ export default function Thanks() {
       />
 
       {/* HERO */}
-      <section className="relative overflow-hidden bg-[#FAF7F2]">
+      <section className="ph-page-hero relative overflow-hidden bg-[#FAF7F2]">
         <img
           src={ASSETS.swooshSky}
           alt=""

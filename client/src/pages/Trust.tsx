@@ -91,7 +91,7 @@ const BADGES = [
     key: "soc2",
     title: "SOC 2 Type II",
     sub: "Attested annually by an independent CPA firm",
-    img: "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/badge-soc2-type2-GcRr2QnYWi3Wh78xcatN4d.webp",
+    img: "/redesign/soc2-type2.svg",
     scope:
       "Our SOC 2 Type II report covers the AICPA Trust Services Criteria for Security, Availability, and Confidentiality across the production environment that hosts the candidate portal, the researcher workbench, the adverse-action workflow, and the customer-facing client portal.",
     cadence:
@@ -105,7 +105,7 @@ const BADGES = [
     key: "pbsa",
     title: "PBSA Member",
     sub: "Professional Background Screening Association — member since 2009",
-    img: "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/badge-pbsa-member-DREztK99METgncgkeMJsoN.webp",
+    img: "/redesign/pbsa-member.svg",
     scope:
       "PBSA is the industry association for U.S. consumer reporting agencies that perform employment background checks. Members agree to abide by the PBSA Background Screening Agency Accreditation Program standards covering data security, legal compliance, client education, researcher and data standards, and verification services.",
     cadence:
@@ -118,7 +118,7 @@ const BADGES = [
     key: "fcra",
     title: "FCRA-aligned",
     sub: "Fair Credit Reporting Act — 15 U.S.C. §1681 workflow",
-    img: "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/badge-fcra-aligned-JNb5yMVjPLcbHdm8X4nobt.webp",
+    img: "/redesign/fcra-aligned.svg",
     scope:
       "Every report we issue is produced under a permissible-purpose certification from the employer, paired with a §604(b)(2) standalone disclosure and authorization for the consumer, with §613 public-record procedures, §611/§1681i reinvestigation handling, and a §615(a) pre-adverse / §615(a)(2) final-adverse action workflow stitched into the client portal.",
     cadence:
@@ -183,7 +183,7 @@ export default function Trust() {
         title="Trust & Verification | PreciseHire"
         description="Verify our SOC 2 Type II attestation, PBSA membership, and FCRA-aligned workflow. Scope, cadence, and how to request the underlying reports."
         canonical="https://precisehire.com/trust"
-        image="https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/og-trust-kxdMApRDXBrfMPoEZLm84t.png"
+        image="https://precisehire.com/brand/og-default.svg"
         keywords={[
           "SOC 2 background check provider",
           "PBSA accredited screening",
@@ -193,7 +193,7 @@ export default function Trust() {
       />
 
       {/* HERO */}
-      <section className="bg-[#FAF7F2]">
+      <section className="ph-page-hero bg-[#FAF7F2]">
         <div className="container py-16 lg:py-20 grid lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-7">
             <Reveal>

@@ -9,7 +9,7 @@ import Reveal from "@/components/site/Reveal";
 import { INDUSTRIES, SERVICES, ASSETS } from "@/content/site";
 
 const HERO_IMG =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/hero-industries-v2-ENewh8oWaLQGxWGutpznDF.webp";
+  "/images/hiring-handshake.webp";
 
 const FEATURED_INDUSTRY_LINKS = [
   { label: "Healthcare", href: "/industries/healthcare", description: "License, sanctions, drug testing, and clinical role screening." },
@@ -40,7 +40,7 @@ export default function Industries() {
       />
 
       {/* HERO — editorial split */}
-      <section className="relative overflow-hidden bg-[#FAF7F2]">
+      <section className="ph-page-hero relative overflow-hidden bg-[#FAF7F2]">
         <img
           src={ASSETS.swooshSky}
           alt=""

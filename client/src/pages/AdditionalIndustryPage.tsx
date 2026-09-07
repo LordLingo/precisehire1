@@ -250,7 +250,7 @@ export default function AdditionalIndustryPage() {
         jsonLd={jsonLd}
       />
 
-      <section className="bg-[#FAF7F2] border-b border-[#0B1F3A]/8">
+      <section className="ph-page-hero bg-[#FAF7F2] border-b border-[#0B1F3A]/8">
         <div className="container py-16 lg:py-24 grid lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-7">
             <Reveal>

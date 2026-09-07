@@ -21,7 +21,7 @@ import Reveal from "@/components/site/Reveal";
 import { ASSETS } from "@/content/site";
 
 const HERO_IMG =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/hero-compliance-v2-j5T4FXWWAZk7h4khtiCgZk.webp";
+  "/images/service-criminal.webp";
 
 const PILLARS = [
   { icon: ShieldCheck, title: "FCRA", body: "Permissible-purpose enforcement, pre-adverse and adverse-action workflows, and a 30-day dispute response window — built into every report." },
@@ -39,7 +39,7 @@ export default function Compliance() {
         title="FCRA Compliance & Data Security | Precise Hire"
         description="Every Precise Hire report is built around FCRA, EEOC, and state ban-the-box compliance. SOC 2 Type II security, GDPR-aware international workflows."
         canonical="https://precisehire.com/compliance"
-        image="https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/og-compliance-gGN3dLNXfQ3Pa9r6LhcFmM.png"
+        image="https://precisehire.com/brand/og-default.svg"
         keywords={[
           "FCRA compliance background check",
           "EEOC background check compliance",
@@ -49,7 +49,7 @@ export default function Compliance() {
         ]}
       />
       {/* HERO — editorial split */}
-      <section className="relative overflow-hidden bg-[#FAF7F2]">
+      <section className="ph-page-hero relative overflow-hidden bg-[#FAF7F2]">
         <img
           src={ASSETS.swooshSky}
           alt=""
@@ -195,7 +195,7 @@ export default function Compliance() {
               aria-label="SOC 2 Type II attestation — verify scope and auditor"
             >
               <img
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/badge-soc2-type2-GcRr2QnYWi3Wh78xcatN4d.webp"
+                src="/redesign/soc2-type2.svg"
                 alt="SOC 2 Type II independently attested annually"
                 className="size-11 shrink-0 rounded-full bg-white ring-1 ring-[#0B1F3A]/10"
               />
@@ -211,7 +211,7 @@ export default function Compliance() {
               aria-label="PBSA member — verify"
             >
               <img
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/badge-pbsa-member-DREztK99METgncgkeMJsoN.webp"
+                src="/redesign/pbsa-member.svg"
                 alt="Professional Background Screening Association member"
                 className="size-11 shrink-0 rounded-full bg-white ring-1 ring-[#0B1F3A]/10"
               />
@@ -227,7 +227,7 @@ export default function Compliance() {
               aria-label="FCRA-aligned compliance workflow — verify"
             >
               <img
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/badge-fcra-aligned-JNb5yMVjPLcbHdm8X4nobt.webp"
+                src="/redesign/fcra-aligned.svg"
                 alt="FCRA-aligned compliance workflow — 15 U.S.C. §1681"
                 className="size-11 shrink-0 rounded-full bg-white ring-1 ring-[#0B1F3A]/10"
               />

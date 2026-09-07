@@ -19,7 +19,7 @@ export default function Services() {
       />
 
       {/* Hero */}
-      <section className="relative overflow-hidden">
+      <section className="ph-page-hero relative overflow-hidden">
         <img
           src={ASSETS.swooshSky}
           alt=""
@@ -101,7 +101,7 @@ export default function Services() {
               <div className="relative">
                 <div className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-[#0B1F3A]/10 shadow-[0_30px_60px_-30px_rgba(11,31,58,0.45)]">
                   <img
-                    src="https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/services-hero-REU7sQh98qrYa3kpnchVnE.webp"
+                    src="/images/operations-team.webp"
                     alt="A Precise Hire research specialist reviewing live candidate reports with a colleague in our McKinney, Texas operations office"
                     className="absolute inset-0 size-full object-cover"
                   />

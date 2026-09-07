@@ -38,7 +38,7 @@ import Reveal from "@/components/site/Reveal";
 import { ASSETS, COMPANY } from "@/content/site";
 
 const HERO_IMG =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/industries-healthcare-hero-b9WPJ5TiqbpbpKxVeffnWc.webp";
+  "/images/service-drug-testing.webp";
 
 /* ---------------------------------------------- regulatory stack */
 const STACK = [
@@ -198,7 +198,7 @@ export default function IndustriesHealthcare() {
       />
 
       {/* HERO ------------------------------------------------------------ */}
-      <section className="relative overflow-hidden">
+      <section className="ph-page-hero relative overflow-hidden">
         <div
           className="absolute -top-16 -right-32 size-[520px] opacity-60 pointer-events-none select-none"
           style={{
@@ -312,12 +312,12 @@ export default function IndustriesHealthcare() {
             <p className="mt-5 text-white/75 text-[15.5px] leading-relaxed">
               When an excluded individual touches services billed to Medicare,
               Medicaid, or any federal health-care program, the bill comes due
-              per item, per service \u2014 not per employee. A missed monthly
+              per item, per service — not per employee. A missed monthly
               check on a single nurse can compound into seven figures of
               exposure inside a year.
             </p>
             <p className="mt-4 text-white/55 text-[13px] italic">
-              42 U.S.C. \u00a71320a-7a; 45 C.F.R. \u00a7102.3 (CMP inflation
+              42 U.S.C. §1320a-7a; 45 C.F.R. §102.3 (CMP inflation
               adjustments); OIG Special Advisory Bulletin (May 8, 2013).
             </p>
           </div>
@@ -369,7 +369,7 @@ export default function IndustriesHealthcare() {
             <p className="mt-5 text-[#0B1F3A]/70 text-[15px] leading-relaxed">
               We run all four sources against the same active-employee roster
               every month and reconcile mismatches before the report reaches
-              your HRIS. The output is exception-only \u2014 you only see hits.
+              your HRIS. The output is exception-only — you only see hits.
             </p>
           </header>
           <ul className="lg:col-span-8 grid md:grid-cols-2 gap-5">
@@ -416,7 +416,7 @@ export default function IndustriesHealthcare() {
                 Six layers run as one workflow. Direct-care roles add abuse
                 registries, OSHA respirator clearance, and TB / Hep B titers.
                 Telehealth and revenue-cycle roles drop the clinical add-ons
-                but keep the full sanctions stack \u2014 because billing-touch
+                but keep the full sanctions stack — because billing-touch
                 is what triggers the federal exposure, not bedside contact.
               </p>
             </div>
@@ -541,7 +541,7 @@ export default function IndustriesHealthcare() {
             </h2>
             <p className="mt-5 text-[#0B1F3A]/70 text-[15px] leading-relaxed">
               These are pulled from real intro calls. If yours isn't here,
-              call us \u2014 our compliance desk answers the phone.
+              call us — our compliance desk answers the phone.
             </p>
             <Link
               href="/compliance/checklist"

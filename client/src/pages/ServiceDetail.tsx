@@ -57,7 +57,7 @@ export default function ServiceDetail() {
       />
 
       {/* Hero */}
-      <section className="relative overflow-hidden">
+      <section className="ph-page-hero relative overflow-hidden">
         <img src={ASSETS.swooshSky} alt="" aria-hidden="true" className="pointer-events-none absolute -top-24 -left-24 w-[460px] opacity-50 rotate-[-12deg]" />
         <div className="container pt-16 lg:pt-24 pb-16 grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7">

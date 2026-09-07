@@ -126,7 +126,7 @@ Two more substantive guardrails apply to the vendor. Under § 1681d(d)(3), the v
 
 Three patterns generate almost every investigative-consumer-report compliance failure we see in audits.
 
-The most common is the **vendor-performed reference check**. If the employer asks the vendor — not its own internal recruiter — to call three references and ask open-ended questions about the candidate's reliability, judgment, or temperament, the resulting written summary is an investigative consumer report. Vendors typically expose this option as an unobtrusive checkbox on the order screen, which the requestor clicks past in seconds. The same employer that signed a § 1681b(b) disclosure now needs the § 1681d(a) disclosure too, and most do not have one drafted. PreciseHire treats reference-check orders as triggering the ICR workflow by default; the [PreciseHire employment verifications service page](/services/employment) lays out how the reference flow is scoped.
+The most common is the **vendor-performed reference check**. If the employer asks the vendor — not its own internal recruiter — to call three references and ask open-ended questions about the candidate's reliability, judgment, or temperament, the resulting written summary is an investigative consumer report. Vendors typically expose this option as an unobtrusive checkbox on the order screen, which the requestor clicks past in seconds. The same employer that signed a § 1681b(b) disclosure now needs the § 1681d(a) disclosure too, and most do not have one drafted. PreciseHire treats reference-check orders as triggering the ICR workflow by default; the [PreciseHire employment verifications service page](/services/employment-verification) lays out how the reference flow is scoped.
 
 The second pattern is **executive-level due diligence**. For senior or director-level hires, employers often commission deeper investigations that include media searches, interviews with former colleagues, and lifestyle inquiries. Those are textbook investigative consumer reports.
 
@@ -170,7 +170,7 @@ If you want a sample stand-alone FCRA / ICRAA disclosure pack to compare against
     datePublished: "2026-05-12",
     readingMin: 18,
     image:
-      "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/hero-fast-background-check-2VP29nMjtxT5LteTxnJBgN.webp",
+      "/images/operations-team.webp",
     excerpt:
       "Most 'fast background check' promises break in the same place. Here's what's realistically returnable inside 24, 48, and 72 hours \u2014 and why the 'instant' consumer lookups that flood the search results are not legal for hiring decisions.",
     markdown: `Most "fast background check" promises break in the same place: a vendor quotes a one-hour turnaround on the sales call, the report sits at "in progress" for three days, the hiring manager loses the candidate to a competitor, and nobody can explain where the time went. The honest answer is that speed in background screening is not a single number \u2014 it is a portfolio of search types, each with its own data source, each with its own physics. Some of those sources return in seconds. Some require a clerk to walk to a filing cabinet in a county courthouse. A reputable consumer reporting agency (CRA) cannot make the courthouse run faster, but it can sequence the work, automate everything that can be automated, and tell you honestly which parts of the report will be ready in twelve hours and which parts will take three days.
@@ -304,7 +304,7 @@ If you want help building a screening program that moves at the speed your busin
     datePublished: "2026-04-22",
     readingMin: 11,
     image:
-      "https://d2xsxph8kpxj0f.cloudfront.net/310419663030097116/hnYYKv3TxuisbFtWcEuJez/og-fcra-613-dysn5xUv8mAdsAFaGEF3Gp.webp",
+      "/brand/og-default.svg",
     excerpt:
       "§613 is the quietest section of the FCRA and one of the easiest to break. It governs how a CRA reports public-record information that may have an adverse effect on a candidate — and most employers have never asked their CRA which path it picked.",
     markdown: `Most employers know FCRA §604 (permissible purpose), §611 (the dispute and reinvestigation rules we covered in [the dispute workflow article](/resources/background-check-disputes-what-employers-must-do)), and §615 (the pre-adverse and final adverse-action sequence we covered in [the pre-adverse notice walkthrough](/resources/pre-adverse-action-notice-requirements-timing-content-and-documents) and [the state-by-state cushion table](/resources/how-long-must-employers-wait-pre-adverse-action-state-by-state)). Almost no employer has ever asked their consumer reporting agency a single question about §613.
