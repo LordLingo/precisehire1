@@ -1,0 +1,168 @@
+/*
+ * PreciseHire — App router
+ * Style commitment: Trusted Modernism design system applies globally.
+ * SiteLayout wraps every route with Header/Footer and the cream background.
+ */
+import { useEffect } from "react";
+import { Toaster } from "@/components/ui/sonner";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { Route, Switch, useLocation } from "wouter";
+import ErrorBoundary from "./components/ErrorBoundary";
+import { ThemeProvider } from "./contexts/ThemeContext";
+
+import SiteLayout from "@/components/site/SiteLayout";
+import Home from "./pages/Home";
+import Services from "./pages/Services";
+import ServiceDetail from "./pages/ServiceDetail";
+import Pricing from "./pages/Pricing";
+import About from "./pages/About";
+import Compliance from "./pages/Compliance";
+import Audit from "./pages/Audit";
+import Checklist from "./pages/Checklist";
+import Integrations from "./pages/Integrations";
+import Industries from "./pages/Industries";
+import IndustriesHealthcare from "./pages/IndustriesHealthcare";
+import IndustriesTransportation from "./pages/IndustriesTransportation";
+import IndustriesStaffing from "./pages/IndustriesStaffing";
+import AdditionalIndustryPage from "./pages/AdditionalIndustryPage";
+import Trust from "./pages/Trust";
+import FAQ from "./pages/FAQ";
+import Contact from "./pages/Contact";
+import GetAQuote from "./pages/GetAQuote";
+import TalkToAnExpert from "./pages/TalkToAnExpert";
+import Legal from "./pages/Legal";
+import Resources from "./pages/Resources";
+import ResourcePost from "./pages/ResourcePost";
+import BackgroundCheckPricingStaffingAgencies from "./pages/BackgroundCheckPricingStaffingAgencies";
+import HealthcareBackgroundCheckChecklist from "./pages/HealthcareBackgroundCheckChecklist";
+import BackgroundCheckATSIntegrationGuide from "./pages/BackgroundCheckATSIntegrationGuide";
+import DOTVsNonDOTDrugTestingGuide from "./pages/DOTVsNonDOTDrugTestingGuide";
+import EmploymentVerificationStaffingGuide from "./pages/EmploymentVerificationStaffingGuide";
+import BackgroundCheckAdverseActionGuide from "./pages/BackgroundCheckAdverseActionGuide";
+import CountyVsNationalCriminalBackgroundChecks from "./pages/CountyVsNationalCriminalBackgroundChecks";
+import BackgroundCheckVendorSelectionGuide from "./pages/BackgroundCheckVendorSelectionGuide";
+import BackgroundCheckTurnaroundTimeGuide from "./pages/BackgroundCheckTurnaroundTimeGuide";
+import InternationalBackgroundChecksBuyingGuide from "./pages/InternationalBackgroundChecksBuyingGuide";
+import ConsolidatedResourceGuide from "./pages/ConsolidatedResourceGuide";
+import DisclosurePack from "./pages/DisclosurePack";
+import BanTheBox from "./pages/BanTheBox";
+import Support from "./pages/Support";
+import AuthorPage from "./pages/AuthorPage";
+import Thanks from "./pages/Thanks";
+import Referral from "./pages/Referral";
+import NotFound from "./pages/NotFound";
+
+function Router() {
+  return (
+    <SiteLayout>
+      <Switch>
+        <Route path="/" component={Home} />
+        <Route path="/services" component={Services} />
+        <Route path="/services/:slug" component={ServiceDetail} />
+        <Route path="/industries" component={Industries} />
+        <Route path="/industries/healthcare" component={IndustriesHealthcare} />
+        <Route path="/industries/transportation" component={IndustriesTransportation} />
+        <Route path="/industries/staffing" component={IndustriesStaffing} />
+        <Route path="/industries/:slug" component={AdditionalIndustryPage} />
+        <Route path="/pricing" component={Pricing} />
+        <Route path="/trust" component={Trust} />
+        <Route path="/compliance" component={Compliance} />
+        <Route path="/compliance/audit" component={Audit} />
+        <Route path="/compliance/checklist" component={Checklist} />
+        <Route path="/integrations" component={Integrations} />
+        <Route path="/about" component={About} />
+        <Route path="/faq" component={FAQ} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/get-a-quote" component={GetAQuote} />
+        <Route path="/talk-to-an-expert" component={TalkToAnExpert} />
+        <Route path="/support" component={Support} />
+        <Route path="/referral" component={Referral} />
+        <Route path="/legal/:slug" component={Legal} />
+        <Route path="/resources" component={Resources} />
+        <Route path="/resources/fcra-icraa-disclosure-pack" component={DisclosurePack} />
+        <Route path="/resources/ban-the-box" component={BanTheBox} />
+        <Route path="/resources/employer-background-check-program-guide" component={ConsolidatedResourceGuide} />
+        <Route path="/resources/criminal-background-check-policy-guide" component={ConsolidatedResourceGuide} />
+        <Route path="/resources/employment-verification-program-guide" component={ConsolidatedResourceGuide} />
+        <Route path="/resources/employee-drug-testing-policy-guide" component={ConsolidatedResourceGuide} />
+        <Route path="/resources/background-check-pricing-for-staffing-agencies" component={BackgroundCheckPricingStaffingAgencies} />
+        <Route path="/resources/healthcare-background-check-checklist" component={HealthcareBackgroundCheckChecklist} />
+        <Route path="/resources/background-check-ats-integration-guide" component={BackgroundCheckATSIntegrationGuide} />
+        <Route path="/resources/dot-vs-non-dot-drug-testing-employer-guide" component={DOTVsNonDOTDrugTestingGuide} />
+        <Route path="/resources/employment-verification-services-staffing-guide" component={EmploymentVerificationStaffingGuide} />
+        <Route path="/resources/background-check-adverse-action-employer-guide" component={BackgroundCheckAdverseActionGuide} />
+        <Route path="/resources/county-vs-national-criminal-background-checks" component={CountyVsNationalCriminalBackgroundChecks} />
+        <Route path="/resources/how-to-choose-background-check-company-employer-guide" component={BackgroundCheckVendorSelectionGuide} />
+        <Route path="/resources/background-check-turnaround-time-employer-guide" component={BackgroundCheckTurnaroundTimeGuide} />
+        <Route path="/resources/international-background-checks-employer-buying-guide" component={InternationalBackgroundChecksBuyingGuide} />
+        <Route path="/resources/:slug" component={ResourcePost} />
+        <Route path="/authors/:slug" component={AuthorPage} />
+        <Route path="/thanks" component={Thanks} />
+        {/* Legacy WordPress blog URLs redirect into the new Resources index */}
+        <Route path="/blog" component={Resources} />
+
+        {/* Legacy WordPress URLs for the fast-background-check pillar.
+            Each of these used to rank — they now serve the new pillar in place. */}
+        <Route path="/category/background-checks/fast-background-check">
+          {() => <LegacyPostRedirect to="/resources/fast-background-check-employer-guide" />}
+        </Route>
+        <Route path="/category/background-checks/fast-background-check/:rest*">
+          {() => <LegacyPostRedirect to="/resources/fast-background-check-employer-guide" />}
+        </Route>
+        <Route path="/how-to-conduct-a-fast-background-check">
+          {() => <LegacyPostRedirect to="/resources/fast-background-check-employer-guide" />}
+        </Route>
+        <Route path="/fast-background-check">
+          {() => <LegacyPostRedirect to="/resources/fast-background-check-employer-guide" />}
+        </Route>
+        <Route path="/resources/how-to-conduct-a-fast-background-check">
+          {() => <LegacyPostRedirect to="/resources/fast-background-check-employer-guide" />}
+        </Route>
+        {/* Generic WordPress category fallback — sends any other /category/* into Resources index */}
+        <Route path="/category/:cat*" component={Resources} />
+
+        {/* Legacy redirects from old WordPress URLs to new equivalents */}
+        <Route path="/criminal-background-checks">{() => <ServiceDetail />}</Route>
+        <Route path="/employment-verification">{() => <ServiceDetail />}</Route>
+        <Route path="/driving-record-checks-mvr">{() => <ServiceDetail />}</Route>
+        <Route path="/drug-testing">{() => <ServiceDetail />}</Route>
+        <Route path="/education-verification">{() => <ServiceDetail />}</Route>
+        <Route path="/international-background-checks">{() => <ServiceDetail />}</Route>
+
+        <Route path="/404" component={NotFound} />
+        <Route component={NotFound} />
+      </Switch>
+    </SiteLayout>
+  );
+}
+
+/**
+ * LegacyPostRedirect — sends old WordPress URLs to their new home with a 200-style
+ * client redirect. We use replaceState so the old URL is removed from history,
+ */
+function LegacyPostRedirect({ to }: { to: string }) {
+  const [, navigate] = useLocation();
+  useEffect(() => {
+    navigate(to, { replace: true });
+  }, [to, navigate]);
+  return (
+    <div className="container py-24 text-center text-ink-700">
+      Loading…
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <ErrorBoundary>
+      <ThemeProvider defaultTheme="light">
+        <TooltipProvider>
+          <Toaster richColors position="top-center" />
+          <Router />
+        </TooltipProvider>
+      </ThemeProvider>
+    </ErrorBoundary>
+  );
+}
+
+export default App;
