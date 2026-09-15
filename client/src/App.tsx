@@ -1,1 +1,1 @@
-export { default } from "./AppWithWeeklyGuides";
+export { default } from "./AppWithMVRGuide";
