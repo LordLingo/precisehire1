@@ -1,1 +1,1 @@
-export { default } from "./ResourcesWithWeeklyGuides";
+export { default } from "./ResourcesWithMVRGuide";
