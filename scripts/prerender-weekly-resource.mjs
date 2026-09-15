@@ -8,12 +8,24 @@ const root = path.resolve(__dirname, "..");
 const dist = path.join(root, "dist", "public");
 const templatePath = path.join(dist, "index.html");
 
-const route = {
-  path: "/resources/international-background-checks-employer-buying-guide",
-  title: "International Background Checks: Employer Buying Guide",
-  description:
-    "Compare international background check vendors on country coverage, criminal records, employment and education verification, privacy, pricing, and turnaround.",
-};
+const routes = [
+  {
+    path: "/resources/mvr-background-checks-employer-guide",
+    title: "MVR Background Checks for Employers: 2026 Guide",
+    headline: "MVR Background Checks: What Employers Should Check Before Hiring Drivers",
+    description:
+      "Compare MVR background check providers on state coverage, CDL records, PSP, Clearinghouse queries, monitoring, turnaround, pricing, and ATS workflow.",
+    datePublished: "2026-09-15",
+  },
+  {
+    path: "/resources/international-background-checks-employer-buying-guide",
+    title: "International Background Checks: Employer Buying Guide",
+    headline: "International Background Checks: What Employers Should Ask Before Buying",
+    description:
+      "Compare international background check vendors on country coverage, criminal records, employment and education verification, privacy, pricing, and turnaround.",
+    datePublished: "2026-09-08",
+  },
+];
 
 function escapeHtml(value) {
   return String(value)
@@ -31,44 +43,49 @@ if (!fs.existsSync(templatePath)) {
   throw new Error(`Missing Vite output: ${templatePath}`);
 }
 
-const canonical = `https://precisehire.com${route.path}`;
-let html = fs.readFileSync(templatePath, "utf-8");
+const template = fs.readFileSync(templatePath, "utf-8");
 
-html = setTag(html, /<title>[\s\S]*?<\/title>/i, `<title>${escapeHtml(route.title)}</title>`);
-html = setTag(
-  html,
-  /<meta\s+name="description"\s+content="[^"]*"\s*\/>/i,
-  `<meta name="description" content="${escapeHtml(route.description)}" />`,
-);
-html = setTag(
-  html,
-  /<link\s+rel="canonical"\s+href="[^"]*"\s*\/>/i,
-  `<link rel="canonical" href="${canonical}" />`,
-);
-html = setTag(html, /<meta\s+property="og:title"\s+content="[^"]*"\s*\/>/i, `<meta property="og:title" content="${escapeHtml(route.title)}" />`);
-html = setTag(html, /<meta\s+property="og:description"\s+content="[^"]*"\s*\/>/i, `<meta property="og:description" content="${escapeHtml(route.description)}" />`);
-html = setTag(html, /<meta\s+property="og:url"\s+content="[^"]*"\s*\/>/i, `<meta property="og:url" content="${canonical}" />`);
-html = setTag(html, /<meta\s+name="twitter:title"\s+content="[^"]*"\s*\/>/i, `<meta name="twitter:title" content="${escapeHtml(route.title)}" />`);
-html = setTag(html, /<meta\s+name="twitter:description"\s+content="[^"]*"\s*\/>/i, `<meta name="twitter:description" content="${escapeHtml(route.description)}" />`);
+for (const route of routes) {
+  const canonical = `https://precisehire.com${route.path}`;
+  let html = template;
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  headline: "International Background Checks: What Employers Should Ask Before Buying",
-  description: route.description,
-  datePublished: "2026-09-08",
-  dateModified: "2026-09-08",
-  author: { "@type": "Organization", name: "Precise Hire" },
-  publisher: { "@type": "Organization", name: "Precise Hire" },
-  mainEntityOfPage: { "@type": "WebPage", "@id": canonical },
-};
+  html = setTag(html, /<title>[\s\S]*?<\/title>/i, `<title>${escapeHtml(route.title)}</title>`);
+  html = setTag(
+    html,
+    /<meta\s+name="description"\s+content="[^"]*"\s*\/>/i,
+    `<meta name="description" content="${escapeHtml(route.description)}" />`,
+  );
+  html = setTag(
+    html,
+    /<link\s+rel="canonical"\s+href="[^"]*"\s*\/>/i,
+    `<link rel="canonical" href="${canonical}" />`,
+  );
+  html = setTag(html, /<meta\s+property="og:title"\s+content="[^"]*"\s*\/>/i, `<meta property="og:title" content="${escapeHtml(route.title)}" />`);
+  html = setTag(html, /<meta\s+property="og:description"\s+content="[^"]*"\s*\/>/i, `<meta property="og:description" content="${escapeHtml(route.description)}" />`);
+  html = setTag(html, /<meta\s+property="og:url"\s+content="[^"]*"\s*\/>/i, `<meta property="og:url" content="${canonical}" />`);
+  html = setTag(html, /<meta\s+name="twitter:title"\s+content="[^"]*"\s*\/>/i, `<meta name="twitter:title" content="${escapeHtml(route.title)}" />`);
+  html = setTag(html, /<meta\s+name="twitter:description"\s+content="[^"]*"\s*\/>/i, `<meta name="twitter:description" content="${escapeHtml(route.description)}" />`);
 
-html = html.replace(
-  "</head>",
-  `  <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>\n</head>`,
-);
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: route.headline,
+    description: route.description,
+    datePublished: route.datePublished,
+    dateModified: route.datePublished,
+    author: { "@type": "Organization", name: "Precise Hire" },
+    publisher: { "@type": "Organization", name: "Precise Hire" },
+    mainEntityOfPage: { "@type": "WebPage", "@id": canonical },
+  };
 
-const outputPath = path.join(dist, route.path.replace(/^\//, ""), "index.html");
-fs.mkdirSync(path.dirname(outputPath), { recursive: true });
-fs.writeFileSync(outputPath, html, "utf-8");
-console.log(`SEO prerendered weekly resource: ${route.path}`);
+  html = html.replace(
+    "</head>",
+    `  <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>\n</head>`,
+  );
+
+  const outputPath = path.join(dist, route.path.replace(/^\//, ""), "index.html");
+  fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+  fs.writeFileSync(outputPath, html, "utf-8");
+}
+
+console.log(`SEO prerendered ${routes.length} weekly resource shells.`);
