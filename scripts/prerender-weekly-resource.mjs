@@ -10,6 +10,14 @@ const templatePath = path.join(dist, "index.html");
 
 const routes = [
   {
+    path: "/resources/continuous-background-check-monitoring-employer-guide",
+    title: "Continuous Background Checks: Employer Buying Guide",
+    headline: "Continuous Background Checks: What Employers Should Monitor After Hire",
+    description:
+      "Compare continuous background check monitoring on criminal records, MVRs, healthcare exclusions, alerts, FCRA workflow, pricing, and integrations.",
+    datePublished: "2026-09-22",
+  },
+  {
     path: "/resources/mvr-background-checks-employer-guide",
     title: "MVR Background Checks for Employers: 2026 Guide",
     headline: "MVR Background Checks: What Employers Should Check Before Hiring Drivers",
