@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { Route, Switch } from "wouter";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -8,7 +9,7 @@ import OIGExclusionScreeningHealthcareGuide from "./pages/OIGExclusionScreeningH
 import ResourcesWithOIGExclusionGuide from "./pages/ResourcesWithOIGExclusionGuide";
 import AppWithMVRGuide from "./AppWithMVRGuide";
 
-function PageShell({ children }: { children: React.ReactNode }) {
+function PageShell({ children }: { children: ReactNode }) {
   return (
     <ErrorBoundary>
       <ThemeProvider defaultTheme="light">

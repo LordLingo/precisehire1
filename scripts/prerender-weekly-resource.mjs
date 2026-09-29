@@ -10,6 +10,14 @@ const templatePath = path.join(dist, "index.html");
 
 const routes = [
   {
+    path: "/resources/oig-exclusion-screening-healthcare-employers",
+    title: "OIG Exclusion Screening for Healthcare Employers",
+    headline: "OIG Exclusion Screening for Healthcare Employers: What to Ask Before You Buy",
+    description:
+      "Compare OIG exclusion screening vendors on LEIE checks, match verification, monitoring, state lists, ATS workflow, turnaround, and pricing.",
+    datePublished: "2026-09-29",
+  },
+  {
     path: "/resources/continuous-background-check-monitoring-employer-guide",
     title: "Continuous Background Checks: Employer Buying Guide",
     headline: "Continuous Background Checks: What Employers Should Monitor After Hire",
