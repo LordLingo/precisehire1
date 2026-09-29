@@ -5,25 +5,35 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import SiteLayout from "@/components/site/SiteLayout";
 import OIGExclusionScreeningHealthcareGuide from "./pages/OIGExclusionScreeningHealthcareGuide";
+import ResourcesWithOIGExclusionGuide from "./pages/ResourcesWithOIGExclusionGuide";
 import AppWithMVRGuide from "./AppWithMVRGuide";
 
-function OIGGuideApp() {
+function PageShell({ children }: { children: React.ReactNode }) {
   return (
     <ErrorBoundary>
       <ThemeProvider defaultTheme="light">
         <TooltipProvider>
           <Toaster richColors position="top-center" />
-          <SiteLayout><OIGExclusionScreeningHealthcareGuide /></SiteLayout>
+          <SiteLayout>{children}</SiteLayout>
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
   );
 }
 
+function OIGGuideApp() {
+  return <PageShell><OIGExclusionScreeningHealthcareGuide /></PageShell>;
+}
+
+function ResourcesHubApp() {
+  return <PageShell><ResourcesWithOIGExclusionGuide /></PageShell>;
+}
+
 export default function AppWithOIGExclusionGuide() {
   return (
     <Switch>
       <Route path="/resources/oig-exclusion-screening-healthcare-employers" component={OIGGuideApp} />
+      <Route path="/resources" component={ResourcesHubApp} />
       <Route component={AppWithMVRGuide} />
     </Switch>
   );
